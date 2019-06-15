@@ -4,7 +4,7 @@
 
 Yusuf Pisan is a Senior Lecturer in the (Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
 
-His research interests include enabling technologies for computer games, the design of virtual environments that support collaborative work, and computer science education. He founded the [Australisan Conference on Interactive Entertainment](http://ieconference.org/) conference series and helped foster the Australian games community. His list of publications can be found at [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
+His research interests include enabling technologies for computer games, the design of virtual environments that support collaborative work, and computer science education. He founded the [Australasian Conference on Interactive Entertainment](http://ieconference.org/) conference series and helped foster the Australian games community. His list of publications can be found at [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
 
 Yusuf has a Ph.D. in Artificial Intelligence from Northwestern University. Before moving to Seattle in 2017, Yusuf lived in Chicago area for 10 years and in Sydney for 20 years.
 
