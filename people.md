@@ -14,14 +14,14 @@
 # Masters Students
 
 - 2019 - committee member
-   - Anup Bhatt
-   - Joshua Lanman: [Volumetric Fog](./people/joshualanman)
    - Ashish Goel
+   - Joshua Lanman: [Volumetric Fog](./people/joshualanman)
 - 2018 - committee member
-   - Aaron C. Hitchcock: [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
    - Jeremy Albert: [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
-   - Thomas M. Brown
    - Robert Bezirganyan
+   - Thomas M. Brown: [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
+   - Aaron C. Hitchcock: [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
+
   
 
 ***
