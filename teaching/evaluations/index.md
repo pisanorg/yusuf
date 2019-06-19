@@ -113,3 +113,7 @@ also is an interesting and fun historical record! Happy spelunking!
  - 2000 Autumn (Macquarie)
  - 1999 Spring (UNSW)
 
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
