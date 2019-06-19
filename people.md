@@ -17,6 +17,11 @@
    - Anup Bhatt
    - Joshua Lanman: [Volumetric Fog](./people/joshualanman)
    - Ashish Goel
+- 2018 - committee member
+   - Aaron C. Hitchcock
+   - Jeremy Albert: [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
+   - Thomas M. Brown
+   - Robert Bezirganyan
   
 
 ***
