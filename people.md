@@ -2,14 +2,17 @@
 # Capstone Students
 
 - 2019
-  - Mohamed Abdi
+  - Mohamed Abdi: [React Native Mobile App Development](./people/mohamedabdi)
   - Rithik Bansal
-  - Mariia V Lundvall
-  - William Ngyuen
   - Conrad Dudziak
   - Leighlyn Ha
+  - Mariia V Lundvall  
+  - Samreen Fatima Mohammed
+  - William Ngyuen
+  - Nathan Phan
   - Luke Smiley
   - Christine Tran
+  - Pratit Vithalani
 
 # Masters Students
 
