@@ -25,6 +25,10 @@ I have taught small classes, large (700-person) classes, first-year classes, gra
 
 I have decided to make all my evaluations public to help future students make more informed choices, or at least know what they are getting into when they decide to take a course from me. It also is an interesting and fun historical record! Happy spelunking into my [teaching evaluations](teaching/evaluations/) going back for many many years.
 
+
+## People
+[Students](./people) I supervised.
+
 ## Resources
 
 Visit [my resources wiki](https://github.com/pisanorg/w/wiki) for all sorts of information from C++ style to UWB Resources
