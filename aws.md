@@ -185,8 +185,42 @@ Shell scripts are programs that work as if we had typed the commands on the comm
 
 Create a new file `simplecompile.sh` using [this template](cpp/simplecompile.sh).
 You can use `./simplecompile.sh` to compile your program and run checks using cppcheck, cpplint, valgrind and clang-tidy.
-Modify `./simplecompile.sh` as needed. For example, your programs probably does not need copyright notice, so
+
+Modify `simplecompile.sh` as needed. For example, your programs probably does not need copyright notice, so
 `-legal/copyright` flag is appropriate.
+
+### Using Travis CI
+Travis CI is a continuous integration platorm that works with GitHub. When configured properly, every time you push your project to GitHub, Travis CI will compile and run it on a new virtual machine. This lets you see if your program actually works on another machine.
+
+To setup Travis CI, create a new file, `.travis.yml` in your project with the following content:
+```
+# Travis.ci file https://docs.travis-ci.com/user/tutorial/
+# Continous integration
+
+# Login to https://travis-ci.com/ using your github credentials
+# Add this repository to travis
+# Every time there is a commit, this script will be run and result emailed
+
+language: cpp
+
+dist: xenial
+
+before_install:
+  - sudo apt-get install valgrind
+  - sudo apt-get install cppcheck
+  - sudo -H pip install cpplint
+  - sudo apt install clang-tidy
+  - uname -a
+  - cppcheck --version
+  - pip show cpplint
+  - g++ --version
+  - valgrind --version
+
+
+script:
+    - ./simplecompile.sh
+    - echo "Travis CI is done!"
+ ```
 
 
     
