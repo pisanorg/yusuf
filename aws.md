@@ -156,7 +156,7 @@ We would like to add some additional tools we can use
 - Clang tidy: `sudo apt install clang-tidy`
     
 ### Setting up CMake
-CMake is used for compiling large projects. It is also used by CLion. A simple CmakeList.txt file follows
+CMake is used for compiling large projects. It is also used by CLion. A simple CMakeLists.txt file follows
 ```
 project(hello)
 
@@ -183,8 +183,10 @@ files, you can use `make` to create a new executable
 ### A Shell Script: simplecompile.sh
 Shell scripts are programs that work as if we had typed the commands on the command line.
 
-Create a new file `simplecompile.sh` using [this template](cpp/simplecompile.sh)
-
+Create a new file `simplecompile.sh` using [this template](cpp/simplecompile.sh).
+You can use `./simplecompile.sh` to compile your program and run checks using cppcheck, cpplint, valgrind and clang-tidy.
+Modify `./simplecompile.sh` as needed. For example, your programs probably does not need copyright notice, so
+`-legal/copyright` flag is appropriate.
 
 
     
