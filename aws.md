@@ -192,9 +192,9 @@ Modify `simplecompile.sh` as needed. For example, your programs probably does no
 
 ### Using Travis CI
 
-** Travis CI only works on public repositories **
-
 Travis CI is a continuous integration platorm that works with GitHub. When configured properly, every time you push your project to GitHub, Travis CI will compile and run it on a new virtual machine. This lets you see if your program actually works on another machine.
+
+Travis CI is free for 100 builds. After that, you'll need to pay **unless** your project is part of an educational organization, such as a course, setup by your instructor. Talk to your instructor or email me for getting unlimited builds (as long as you are a student).
 
 1. Login to Travis CI and "Activate the GitHub Apps integration"
 To setup Travis CI, create a new file, `.travis.yml` in your project with the following content:
@@ -232,10 +232,10 @@ Cloud9 normally hides files that start with `.`, to make them visible click on t
 `C and C++  Spaces: 4` at the boottom right of `hello.cpp` (or any file really) and select `Show Invisibles`
 
 2. Add this new file to your git repository and push it to GitHub
-```
-   $ git add .travis.yml
-   $ git commit -a -m "added travis"
-   $ git push
+```sh
+  $ git add .travis.yml
+  $ git commit -a -m "added travis"
+  $ git push
 ```
 3. Login to Travis CI. Select your repository. You might have to choose More Options > Trigger Build to get the compilation started the first time around.
 
