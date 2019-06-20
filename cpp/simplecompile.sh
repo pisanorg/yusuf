@@ -18,17 +18,20 @@ date
 echo "*** Compiling"
 g++ -std=c++11 -Wall -Wextra -Wno-sign-compare *.cpp -g -o myprogram.exe
 
+# Modify cpplint warnings to suit your preferences
 echo "*** cpplint"
-cpplint *.cpp
+cpplint --filter=-legal/copyright,-build/include_subdir,-build/header_guard,-build/namespaces *.cpp
 
+# Modify cppcheck warnings to suit your preferences
 echo "*** cppcheck"
-# cppcheck in CSS Linux Lab only knows about c++11
 cppcheck --enable=all --force --inconclusive --language=c++ --std=c++11 --suppress=missingIncludeSystem *.cpp
 
 
-echo "*** clang-tidy"
-# perform all possible checks
+
+# Modify clang-tidy warnings to suit your preferences
+# -checks="*" performs all possible checks
 # The "--" at the end is important. If cmake has created compile_commands.json file, it can be omitted
+echo "*** clang-tidy"
 clang-tidy -checks="*" *.cpp --
 
 echo "*** running"
