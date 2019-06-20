@@ -198,7 +198,6 @@ Travis CI is free for 100 builds. After that, you'll need to pay **unless** your
 
 1. Login to Travis CI and "Activate the GitHub Apps integration"
 To setup Travis CI, create a new file, `.travis.yml` in your project with the following content:
-
 ```
 # Travis.ci file https://docs.travis-ci.com/user/tutorial/
 # Continous integration
@@ -227,17 +226,17 @@ script:
     - ./simplecompile.sh
     - echo "Travis CI is done!"
  ```
- 
-Cloud9 normally hides files that start with `.`, to make them visible click on the `gear icon` next to
+
+2. Cloud9 normally hides files that start with `.`, to make them visible click on the `gear icon` next to
 `C and C++  Spaces: 4` at the boottom right of `hello.cpp` (or any file really) and select `Show Invisibles`
 
-2. Add this new file to your git repository and push it to GitHub
+3. Add this new file to your git repository and push it to GitHub
 ```sh
   $ git add .travis.yml
   $ git commit -a -m "added travis"
   $ git push
 ```
-3. Login to Travis CI. Select your repository. You might have to choose More Options > Trigger Build to get the compilation started the first time around.
+4. Login to Travis CI. Select your repository. You might have to choose More Options > Trigger Build to get the compilation started the first time around.
 
 
 
