@@ -140,8 +140,9 @@ but a better way is to save it on GitHub
         Total 6 (delta 0), reused 0 (delta 0)
         To github.com:myGitHubUserName/HelloWorldProject.git
            e111206..16de09d  master -> master
-```
-    2. When cloning a GitHub repository, you can now use: `git clone git@github.com:myGitHubUserName/HelloWorldProject.git`
+   ```
+   2. When cloning a GitHub repository, you can now use: `git clone git@github.com:myGitHubUserName/HelloWorldProject.git`
+
 
 ### Setting up Toolchain
 We would like to add some additional tools we can use
