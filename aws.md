@@ -26,7 +26,7 @@ but a better way is to save it on GitHub
   2. On GitHub, create a new repository. Let's call it HelloWorldProject. Make this a private repository,
   so you can selectively share your work rather than making it public to the whole world
   3. On Cloud9 IDE, use the terminal (titled "bash")
-  ```
+  ```sh
   $ cd HelloWorldProject/
   $ git init
         Initialized empty Git repository in /home/ubuntu/environment/HelloWorldProject/.git/
@@ -56,7 +56,7 @@ but a better way is to save it on GitHub
 
 ### Loading a Project from GitHub
   1. On Cloud9 IDE, use the terminal (titled "bash")
-  ```
+  ```sh
   $ git clone https://github.com/myGitHubUserName/HelloWorldProject
         Cloning into 'HelloWorldProject'...
         Username for 'https://github.com': myGitHubUserName
@@ -85,7 +85,7 @@ but a better way is to save it on GitHub
   1. On Cloud9 IDE, use the terminal (titled "bash") to create an shh key-pair.
   The ssh key is for this instance only. If you delete this instance (or environment), you will need to
   repeat this step.
-  ```
+  ```sh
   $ ssh-keygen
         Generating public/private rsa key pair.
         Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): 
