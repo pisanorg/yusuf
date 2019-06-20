@@ -198,7 +198,7 @@ Travis CI is free for 100 builds. After that, you'll need to pay **unless** your
 
 1. Login to Travis CI and "Activate the GitHub Apps integration"
 To setup Travis CI, create a new file, `.travis.yml` in your project with the following content:
-```
+```sh
 # Travis.ci file https://docs.travis-ci.com/user/tutorial/
 # Continous integration
 
