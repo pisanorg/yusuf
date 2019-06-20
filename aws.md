@@ -145,14 +145,15 @@ but a better way is to save it on GitHub
 
 ### Setting up Toolchain
 We would like to add some additional tools we can use
-    - CMake for building and testing: `sudo snap install cmake --classic`
-    - cppcheck for checking google-style compliance: `sudo snap install cppcheck`
-    - cpplint for static code analysis: `pip install cpplint`
-    - valgrind for memory leaks: `sudo snap install valgrind --classic`
-    - Update the list of packages: `sudo apt update`
-    - Clang for compiling and analyzing programs: `sudo apt install clang`
-    - Clang tools: `sudo apt install clang-tools`
-    - Clang tidy: `sudo apt install clang-tidy`
+
+- CMake for building and testing: `sudo snap install cmake --classic`
+- cppcheck for checking google-style compliance: `sudo snap install cppcheck`
+- cpplint for static code analysis: `pip install cpplint`
+- valgrind for memory leaks: `sudo snap install valgrind --classic`
+- Update the list of packages: `sudo apt update`
+- Clang for compiling and analyzing programs: `sudo apt install clang`
+- Clang tools: `sudo apt install clang-tools`
+- Clang tidy: `sudo apt install clang-tidy`
     
 ### Setting up CMake
 CMake is used for compiling large projects. It is also used by CLion. A simple CmakeList.txt file follows
@@ -161,18 +162,21 @@ project(hello)
 
 set(CMAKE_CXX_STANDARD 11)
 
+# Needed so clang-tidy knows how we compiled this project
+# Generates the compile_commands.json file
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # have compiler give warnings, but not for signed/unsigned
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra -Wno-sign-compare")
 
 add_executable(hello hello.cpp)
+
+# First time compiling program, use:
+# $ cmake CMakeLists.txt ; make clean; make
+# If you changed .cpp files but not CmakeLists.txt, to recompile use:
+# $ make
 ```
 
-To use the cmake file and compile the program, use
-```
-  $ cmake CMakeLists.txt 
-  $ make
-  $ ./hello
-```
 If you add files to the project, you will need to run `cmake CMakeLists.txt` again. If you have just modified
 files, you can use `make` to create a new executable
 
