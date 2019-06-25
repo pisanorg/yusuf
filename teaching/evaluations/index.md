@@ -13,6 +13,10 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Teaching Evaluations
 
+- 2019 Spring
+   - [Operating Systems](Pisan-SP19-CSS430A.pdf)
+   - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf)
+   - [IMD 363: Studio Elements III: Practicum](Pisan-SP19-B-IMD363A.pdf)
 - 2019 Winter
     - [CSS 343B: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf)
     - [CSS 133: Computer Programming for Engineers I](Pisan-WI19-CSS133A.pdf)
