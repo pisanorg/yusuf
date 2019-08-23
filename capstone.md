@@ -100,3 +100,7 @@ The typical schedule for colloquiuim is 11:30-12:30 poster presentations followe
 
 Refer [http://courses.washington.edu/css497](http://courses.washington.edu/css497) to see how to create a quality poster and presentation slides
 
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
