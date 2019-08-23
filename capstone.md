@@ -1,11 +1,11 @@
 # CSS 497: CSSE Capstone
 
 Visit the following pages for requirements, details, contract and important dates
-- Student Guide (https://www.uwb.edu/css/capstone/student-guide)[https://www.uwb.edu/css/capstone/student-guide]
-- Specific Guidelines (http://courses.washington.edu/css497)[http://courses.washington.edu/css497]
-- Forms (https://www.uwb.edu/css/forms)[https://www.uwb.edu/css/forms]
-- Colloquim Schedule (https://www.uwb.edu/bscsse/capstone/colloq-schedule)[https://www.uwb.edu/bscsse/capstone/colloq-schedule]
-- Resources and advice for presenting at a symposium (http://www.washington.edu/undergradresearch/symposium/participant-info/)[http://www.washington.edu/undergradresearch/symposium/participant-info/]
+- Student Guide [https://www.uwb.edu/css/capstone/student-guide](https://www.uwb.edu/css/capstone/student-guide)
+- Specific Guidelines [http://courses.washington.edu/css497](http://courses.washington.edu/css497)
+- Forms [https://www.uwb.edu/css/forms](https://www.uwb.edu/css/forms)
+- Colloquim Schedule [https://www.uwb.edu/bscsse/capstone/colloq-schedule](https://www.uwb.edu/bscsse/capstone/colloq-schedule)
+- Resources and advice for presenting at a symposium [http://www.washington.edu/undergradresearch/symposium/participant-info/](http://www.washington.edu/undergradresearch/symposium/participant-info/)
 
 ## Process
 
@@ -90,13 +90,13 @@ be allowed to present.
 
 The typical schedule for colloquiuim is 11:30-12:30 poster presentations followed by 1:00-4:00 for oral presentations. This can change, so make sure you watch for emails from capstone coordinator.
 
-1) Schedule will be posted at: (https://www.uwb.edu/bscsse/capstone/colloq-schedule)[https://www.uwb.edu/bscsse/capstone/colloq-schedule]
+1) Schedule will be posted at: [https://www.uwb.edu/bscsse/capstone/colloq-schedule](https://www.uwb.edu/bscsse/capstone/colloq-schedule)
 
-2) Abstract: Please submit it 10 days prior to the colloquium. It should be 200-400 words. (http://www.uwb.edu/css/css497/student-guide/abstract-information)[http://www.uwb.edu/css/css497/student-guide/abstract-information]
+2) Abstract: Please submit it 10 days prior to the colloquium. It should be 200-400 words. [http://www.uwb.edu/css/css497/student-guide/abstract-information](http://www.uwb.edu/css/css497/student-guide/abstract-information)
 
 3) Poster, presentation slides: Please submit it 7 days prior to the colloquium, so that we can review together. Poster will include (for example), background, related works, methods, experiments/results, and conclusion
 
 4) Presentation slides: Make ~ 10 slides that include background (introduction), related works, methods, experiments/results, and conclusion etc.
 
-Refer (http://courses.washington.edu/css497)[http://courses.washington.edu/css497] to see how to create a quality poster and presentation slides
+Refer [http://courses.washington.edu/css497](http://courses.washington.edu/css497) to see how to create a quality poster and presentation slides
 
