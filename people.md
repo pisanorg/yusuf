@@ -1,18 +1,26 @@
 
 # Capstone Students
 
-- 2019
-  - Mohamed Abdi: [React Native Mobile App Development](./people/mohamedabdi)
+- 2019 Autumn
   - Rithik Bansal
-  - Conrad Dudziak
   - Leighlyn Ha
-  - Mariia V Lundvall  
   - Samreen Fatima Mohammed
-  - William Ngyuen
   - Nathan Phan
-  - Luke Smiley
-  - Christine Tran
   - Pratit Vithalani
+  
+- 2019 Summer
+  - Conrad Dudziak: [Genetic Algorithm Applications in Artificial Creativity](./people/conraddudziak)
+  - Mariia V Lundvall: [Software Development for Network Automation - T-Mobile](./people/mariialundvall)
+  - William Ngyuen
+  - Luke Smiley: [Digital Future Lab: Development Internship](./people/lukesmiley)
+  - Christine Tran: [coming soon](./people/christinetran)
+  - Zihan Sun: [XML & XDT Manipulation Desktop Application](./people/zihansun)
+
+  
+- 2019 Spring
+  - Mohamed Abdi: [React Native Mobile App Development](./people/mohamedabdi)
+
+
 
 # Masters Students
 
