@@ -24,14 +24,20 @@
 
 # Masters Students
 
-- 2019 - committee member
-   - Ashish Goel
-   - Joshua Lanman: [Volumetric Fog](./people/joshualanman)
-- 2018 - committee member
-   - Jeremy Albert: [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
-   - Robert Bezirganyan
-   - Thomas M. Brown: [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
-   - Aaron C. Hitchcock: [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
+- 2020
+  - Yingming Dang (Kelvin Sung, Chair)
+  - Kaihua Hu (Kelvin Sung, Chair)
+  - Greg Smith (Kelvin Sung, Chair)
+  
+- 2019
+   - Ashish Goel (Kelvin Sung, Chair)
+   - Joshua Lanman:  (Kelvin Sung, Chair) [Volumetric Fog](./people/joshualanman)
+   
+- 2018
+   - Jeremy Albert:  (Kelvin Sung, Chair) [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
+   - Robert Bezirganyan  (Kelvin Sung, Chair)
+   - Thomas M. Brown:  (Kelvin Sung, Chair) [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
+   - Aaron C. Hitchcock:  (Kelvin Sung, Chair) [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
 
   
 
