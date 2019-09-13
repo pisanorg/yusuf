@@ -11,7 +11,7 @@
 - 2019 Summer
   - Conrad Dudziak: [Genetic Algorithm Applications in Artificial Creativity](./people/conraddudziak)
   - Mariia V Lundvall: [Software Development for Network Automation - T-Mobile](./people/mariialundvall)
-  - William Ngyuen: [University Esports Program Development](./people/williamngyuen)
+  - William Ngyuen: [University Esports Program Development](./people/williamnguyen)
   - Luke Smiley: [Digital Future Lab: Development Internship](./people/lukesmiley)
   - Christine Tran: [SEED: Software Development at DFL](./people/christinetran)
   - Zihan Sun: [XML & XDT Manipulation Desktop Application](./people/zihansun)
