@@ -9,7 +9,7 @@ Visit the following pages for requirements, details, contract and important date
 
 ## Process
 
-1. Check your eligibility for CSS 497. Check whether I am a good fit to supervise your capstone (completed a course with me, topic in my research area, etc). Have a look at the abstracts from students whom I have supervised [./people](link students)
+1. Check your eligibility for CSS 497. Check whether I am a good fit to supervise your capstone (completed a course with me, topic in my research area, etc). Have a look at the abstracts from students whom I have supervised [link students](./people)
 
 2. Explore capstone project options and talk to CSS 497 coordinator if necessary
 
