@@ -1,6 +1,10 @@
 
 # Capstone Students
 
+- 2020 Winter
+  - Thong Le: Software Development in Remote Online Laboratory
+
+
 - 2019 Autumn
   - Rithik Bansal
   - Leighlyn Ha
