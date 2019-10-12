@@ -16,7 +16,7 @@ Happy to accept connection requests on [LinkedIn](https://www.linkedin.com/in/pi
 
 [Research](research.html)
 
-[CSS 497 Capstone](capstone.html) guidelines, advice and [project ideas](capstone-ideas). Past [students](./people) I have supervised.
+[CSS 497 Capstone](capstone.html) guidelines, advice and [project ideas](capstone-ideas.html). Past [students](./people) I have supervised.
 
 
 ## Teaching
