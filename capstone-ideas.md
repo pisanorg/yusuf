@@ -26,7 +26,8 @@ industrial strength tools that can be used to provide feedback, but these tools 
 produce cryptic messages which confuse novice programmers even more.
   - There are many systems that test a given program on a large set of possible inputs
   to determine if the program is correct, such as [zybooks](https://www.zybooks.com/), 
-  [leetcode](https://leetcode.com), etc. These systems are useful because they are easy to build,
+  [leetcode](https://leetcode.com), [codelab](https://www.turingscraft.com/), [recurtutor](https://vtechworks.lib.vt.edu/handle/10919/64249), [uAssign](https://www.ideals.illinois.edu/handle/2142/101068) etc.
+  These systems are useful because they are easy to build,
   but do not incorporate any pedagogical knowledge. They have no way of guiding a student to a suitable
   next problem based on the types of mistakes (or misconceptions) observed. There is much that can be done in this area.
   - For novice students, using complex tools to analyze programs can be difficult and frustrating. 
@@ -40,10 +41,9 @@ and middle school levels as well as societal perceptions. [Research](https://www
 shows that facts alone are not sufficient to change beliefs. Explore how we can change beliefs about CS at 
 any of the levels.
 
-- [CS for Scoial Good](http://www.sigcas.org/csged/). Projects that make the world a better place.
+- [CS for Social Good](http://www.sigcas.org/csged/). Projects that make the world a better place.
 
 
-### IN-PROGRESS
 
 # Artificial Intelligence
 
