@@ -43,6 +43,8 @@ any of the levels.
 - [CS for Scoial Good](http://www.sigcas.org/csged/). Projects that make the world a better place.
 
 
+### IN-PROGRESS
+
 # Artificial Intelligence
 
 # Video Games / Augmented and Virtual Reality
