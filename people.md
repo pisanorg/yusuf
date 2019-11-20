@@ -8,7 +8,7 @@
 - 2019 Autumn
   - Rithik Bansal
   - Leighlyn Ha
-  - Samreen Fatima Mohammed: [Performance Testing of Amazon Simple Storage Service](./people/samreenmohmmed)
+  - Samreen Fatima Mohammed: [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
   - Nathan Phan
   - Pratit Vithalani
   
