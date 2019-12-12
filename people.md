@@ -4,11 +4,11 @@
 - 2020 Winter
   - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
   - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
-  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- 
-  - [John Xie](https://www.linkedin.com/in/jxie29/) --- 
-  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- 
-  - David Liu
-  - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- 
+  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- [xxx](./people/taylorcumings)
+  - [John Xie](https://www.linkedin.com/in/jxie29/) --- [xxx](./people/johnxie)
+  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- [xxx](./people/victorsucio)
+  - David Liu --- [xxx](./people/davidliu)
+  - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- [xxx](./people/isabelgang)
 
 
 - 2019 Autumn
