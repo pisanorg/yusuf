@@ -1,9 +1,14 @@
 
-# Capstone Students
+# Capstone & Research Students
 
 - 2020 Winter
   - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
   - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
+  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- 
+  - [John Xie](https://www.linkedin.com/in/jxie29/) --- 
+  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- 
+  - David Liu
+  - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- 
 
 
 - 2019 Autumn
@@ -12,6 +17,8 @@
   - [Samreen Fatima Mohammed](https://www.linkedin.com/in/samreen-mohammed-6b3492192/) --- [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
   - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [xxx](./people/nathanphan)
   - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
+  - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- LeetCode Problems
+  - [Yunjae Choe](https://www.linkedin.com/in/yunjae-cho/) --- LeetCode Problems
   
 - 2019 Summer
   - [Conrad Dudziak](https://www.linkedin.com/in/conrad-dudziak-1a4b1716b/) --- [Genetic Algorithm Applications in Artificial Creativity](./people/conraddudziak)
