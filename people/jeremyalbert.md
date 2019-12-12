@@ -7,3 +7,7 @@ The recent introduction of consumer grade virtual reality (VR) systems caused a 
 This thesis proposes the User-Centric Classification (UCC) framework for discussing, comparing, and identifying characteristics of VRL methods. The UCC framework classifies VRL methods according to three metrics, sickness, presence, and fatigue, where each metric is determined by how well a VRL method addresses the corresponding challenge. Results from previous VRL research, were analyzed in the UCC framework. Analysis indicated current methods were designed to deliver performance in one of the challenges by sacrificing performance in the other two.
 
 To test the validity and strengths of the UCC framework, we implemented the VRL methods of controller, teleport, and walking in a common testbed. We designed the testbed to expose the user to the three VRL challenges and developed a set of questionnaires to capture the user experience. Test results from 30 users showed that the three VRL methods produce different UCC metrics and that we can capture these differences. Contrasting the three methods with respect to the three VRL challenges allows us to discuss and compare methods in a meaningful way and to examine UCC metric trade-offs while searching for an ideal VRL method.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
