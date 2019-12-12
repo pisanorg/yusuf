@@ -29,3 +29,7 @@ As a result, mutation dependence produced a 16% more best-fit individual than pa
 approximately 49000 less iterations when at least 33% of the target image consisted of a single solid color.
 In conclusion, object-oriented genetic algorithms dependent on random mutative breeding are a strong option
 for the implementation of an image creating program.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
