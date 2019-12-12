@@ -12,3 +12,7 @@ The first step was to validate the consumer through the JWT (JSON Web Token) whi
 The cases where the consumer calls the API with “illegal” data and values, the API would then return a meaningful message to the user which would guide them to rectify the error in their request. The message would be returned in conjunction with its respective Http status code where 200 being for successful requests and 400 status codes being for client-side error.
 
 Testing was performed using the Junit testing library for unit testing and integration testing. As a developer, we aim for our unit testing to have 95% code coverage. We also incorporated the use of logging libraries to help pinpoint the error if it occurs and be used to monitor application health. The API was successfully built over the internship duration with above par performance and efficiency.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
