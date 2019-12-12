@@ -37,19 +37,19 @@
 # Masters Students
 
 - 2020
-  - Yingming Dang (Kelvin Sung, Chair)
-  - Kaihua Hu (Kelvin Sung, Chair)
+  - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair)
+  - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/) (Kelvin Sung, Chair)
   - Greg Smith (Kelvin Sung, Chair)
   
 - 2019
-   - Ashish Goel (Kelvin Sung, Chair)
-   - Joshua Lanman:  (Kelvin Sung, Chair) [Volumetric Fog](./people/joshualanman)
+   - [Ashish Goel](https://www.linkedin.com/in/goel-ashish/) (Kelvin Sung, Chair)
+   - [Joshua Lanman](https://www.linkedin.com/in/joshlanman/):  (Kelvin Sung, Chair) [Volumetric Fog](./people/joshualanman)
    
 - 2018
-   - Jeremy Albert:  (Kelvin Sung, Chair) [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
-   - Robert Bezirganyan  (Kelvin Sung, Chair)
+   - [Jeremy Albert](https://www.linkedin.com/in/jeremy3681/):  (Kelvin Sung, Chair) [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
+   - [Robert Bezirganyan](https://www.linkedin.com/in/robert-bezirganyan-095a9b4b/)  (Kelvin Sung, Chair)
    - Thomas M. Brown:  (Kelvin Sung, Chair) [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
-   - Aaron C. Hitchcock:  (Kelvin Sung, Chair) [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
+   - [Aaron C. Hitchcock](https://www.linkedin.com/in/aaron-hitchcock/):  (Kelvin Sung, Chair) [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
 
   
 
