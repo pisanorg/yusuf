@@ -8,7 +8,7 @@
 
 - 2019 Autumn
   - [Rithik Bansal](https://www.linkedin.com/in/rithikbansal05/) --- [GET Partners RESTful API for the Partner Integration Platform](./people/rithikbansal)
-  - [Leighlyn Ha](xxx) --- [xxx](./people/leighlynha)
+  - [Leighlyn Ha](.) --- [xxx](./people/leighlynha)
   - [Samreen Fatima Mohammed](https://www.linkedin.com/in/samreen-mohammed-6b3492192/) --- [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
   - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [xxx](./people/nathanphan)
   - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
