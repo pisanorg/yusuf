@@ -29,3 +29,7 @@ but was out of my depth on what the administration wanted specifically
 due to limited opportunities to update as well as their lack of
 experience in this field and their needs. Overall, I should have been
 more structured and prepared for an independent project.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
