@@ -2,7 +2,8 @@
 # Capstone Students
 
 - 2020 Winter
-  - Thong Le: Software Development in Remote Online Laboratory
+  - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
+  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
 
 
 - 2019 Autumn
@@ -10,7 +11,6 @@
   - [Leighlyn Ha](xxx) --- [xxx](./people/leighlynha)
   - [Samreen Fatima Mohammed](https://www.linkedin.com/in/samreen-mohammed-6b3492192/) --- [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
   - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [xxx](./people/nathanphan)
-  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
   - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
   
 - 2019 Summer
