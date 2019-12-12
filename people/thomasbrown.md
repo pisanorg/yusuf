@@ -21,3 +21,7 @@ are briefly described to elucidate their functionality and contribution. General
 CRCF signature designations will follow application interaction review to close the paper
 and highlight noted areas of improvement for CRCF as a result of the suggestions made in
 this work.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
