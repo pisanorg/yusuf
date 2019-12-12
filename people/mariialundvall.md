@@ -31,3 +31,7 @@ configuration of selected network devices in the specified cell site.
 Working on these projects allowed me to learn how to design and develop RESTful APIs,
 develop and deploy single-page web-based applications using MEAN stack, and how to develop
 unit tests for web applications using Mocha, Chai, and Istanbul test frameworks.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
