@@ -17,3 +17,7 @@ sing version control software (particularly Git and Sourcetree), and using the U
 lated to be demoed at Seattle Indies Expo at PAX on the 1 st of September, and a completely finalized build will be
 e/eased online on the 13th. My time at the lab has taught me valuable lessons not only in my field, but in ways of diversity,
 quity, and inclusion, values which the lab holds as its core philosophy.
+
+***
+
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
