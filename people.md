@@ -15,7 +15,7 @@
   - [Rithik Bansal](https://www.linkedin.com/in/rithikbansal05/) --- [GET Partners RESTful API for the Partner Integration Platform](./people/rithikbansal)
   - [Leighlyn Ha](.) --- [xxx](./people/leighlynha)
   - [Samreen Fatima Mohammed](https://www.linkedin.com/in/samreen-mohammed-6b3492192/) --- [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
-  - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [xxx](./people/nathanphan)
+  - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [Project Tablet-based Remote Control of Ultrasound Device](./people/nathanphan)
   - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
   - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- LeetCode Problems
   - [Yunjae Choe](https://www.linkedin.com/in/yunjae-cho/) --- LeetCode Problems
