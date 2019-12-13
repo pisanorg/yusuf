@@ -2,23 +2,24 @@
 # Capstone & Research Students
 
 - 2020 Winter
-  - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
-  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
   - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- [xxx](./people/taylorcumings)
-  - [John Xie](https://www.linkedin.com/in/jxie29/) --- [xxx](./people/johnxie)
-  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- [xxx](./people/victorsucio)
-  - David Liu --- [xxx](./people/davidliu)
   - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- [xxx](./people/isabelgang)
-
+  - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
+  - [Alan Luu](https://www.linkedin.com/in/alan-luu-579837107/) --- [NoteHub: Android app development](./people/alanluu)
+  - David Liu --- [xxx](./people/davidliu)
+  - [JD Mauthe](https://www.linkedin.com/in/jdmauthe/) --- [NoteHub: Android app development](./people/jdmauthe)
+  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- [xxx](./people/victorsucio)
+  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
+  - [John Xie](https://www.linkedin.com/in/jxie29/) --- [xxx](./people/johnxie)
 
 - 2019 Autumn
   - [Rithik Bansal](https://www.linkedin.com/in/rithikbansal05/) --- [GET Partners RESTful API for the Partner Integration Platform](./people/rithikbansal)
+  - [Yunjae Choe](https://www.linkedin.com/in/yunjae-cho/) --- LeetCode Problems
+  - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- LeetCode Problems
   - Leighlyn Ha --- [Enhancing Seattle's SCADA System](./people/leighlynha)
+  - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
   - [Samreen Fatima Mohammed](https://www.linkedin.com/in/samreen-mohammed-6b3492192/) --- [Performance Testing of Amazon Simple Storage Service](./people/samreenmohammed)
   - [Nathan Phan](https://www.linkedin.com/in/nathan-p-033a06112/) --- [Project Tablet-based Remote Control of Ultrasound Device](./people/nathanphan)
-  - [Will Hwang](https://www.linkedin.com/in/will-hwang/) --- [Software Development Internship at Agilysys](./people/willhwang)
-  - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- LeetCode Problems
-  - [Yunjae Choe](https://www.linkedin.com/in/yunjae-cho/) --- LeetCode Problems
   
 - 2019 Summer
   - [Conrad Dudziak](https://www.linkedin.com/in/conrad-dudziak-1a4b1716b/) --- [Genetic Algorithm Applications in Artificial Creativity](./people/conraddudziak)
