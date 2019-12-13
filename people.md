@@ -1,16 +1,20 @@
 
 # Capstone & Research Students
 
+- 2020 Spring
+  - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
+  - [Jenna Martin](https://www.linkedin.com/in/jennamartin90/) --- [QA Automation Framework and Development](./people/jennamartin)
+
 - 2020 Winter
-  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- [xxx](./people/taylorcumings)
-  - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- [xxx](./people/isabelgang)
+  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- [tbd](./people/taylorcumings)
+  - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- [tbd](./people/isabelgang)
   - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
   - [Alan Luu](https://www.linkedin.com/in/alan-luu-579837107/) --- [NoteHub: Android app development](./people/alanluu)
-  - David Liu --- [xxx](./people/davidliu)
+  - David Liu --- [tbd](./people/davidliu)
   - [JD Mauthe](https://www.linkedin.com/in/jdmauthe/) --- [NoteHub: Android app development](./people/jdmauthe)
-  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- [xxx](./people/victorsucio)
-  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [xxx](./people/pratitvithalani)
-  - [John Xie](https://www.linkedin.com/in/jxie29/) --- [xxx](./people/johnxie)
+  - [Victor Suciu](https://www.linkedin.com/in/victorsuciu/) --- [tbd](./people/victorsucio)
+  - [Pratit Vithalani](https://www.linkedin.com/in/pratit-vithalani/) --- [tbd](./people/pratitvithalani)
+  - [John Xie](https://www.linkedin.com/in/jxie29/) --- [tbd](./people/johnxie)
 
 - 2019 Autumn
   - [Rithik Bansal](https://www.linkedin.com/in/rithikbansal05/) --- [GET Partners RESTful API for the Partner Integration Platform](./people/rithikbansal)
