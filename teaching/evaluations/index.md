@@ -13,6 +13,10 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Teaching Evaluations
 
+- 2019 Autumn
+   - [CSS 343A: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
+   - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf)
+   - [CSS 342D: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf)
 - 2019 Spring
    - [Operating Systems](Pisan-SP19-CSS430A.pdf)
    - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf)
