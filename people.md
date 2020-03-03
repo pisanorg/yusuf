@@ -8,7 +8,6 @@
 - 2020 Winter
   - [Taylor Cumings](https://www.linkedin.com/in/tcumings/) --- [tbd](./people/taylorcumings)
   - [Isabel Giang](https://www.linkedin.com/in/isabel-giang/) --- [tbd](./people/isabelgang)
-  - [Thong Le](https://www.linkedin.com/in/thong-le-37a060151/) --- Software Development in Remote Online Laboratory
   - [Alan Luu](https://www.linkedin.com/in/alan-luu-579837107/) --- [NoteHub: Android app development](./people/alanluu)
   - David Liu --- [tbd](./people/davidliu)
   - [JD Mauthe](https://www.linkedin.com/in/jdmauthe/) --- [NoteHub: Android app development](./people/jdmauthe)
@@ -43,7 +42,7 @@
 
 - 2020
   - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair)
-  - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/) (Kelvin Sung, Chair)
+  - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/): (Kelvin Sung, Chair) [Real-time Ray Tracing in Unity](./people/kaihuaha)
   - Greg Smith (Kelvin Sung, Chair)
   
 - 2019
