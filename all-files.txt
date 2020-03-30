@@ -1,11 +1,11 @@
-Mon Dec 23 11:03:05 PST 2019
+Mon Mar 30 07:34:28 PDT 2020
 total 440
 -rw-r--r--   1 pisan  1816340015  166084 Dec 23 11:03 PisanYusuf-CV.pdf
 -rw-r--r--   1 pisan  1816340015     160 Dec 23 11:03 README.md
 -rw-r--r--   1 pisan  1816340015      28 Jun 14  2019 _config.yml
 drwxr-xr-x   3 pisan  1816340015     102 Dec 23 11:03 _layouts
 -rwxr-xr-x   1 pisan  1816340015     218 Dec 23 11:02 add-new-file.COMMAND
--rw-r--r--   1 pisan  1816340015      29 Dec 23 11:03 all-files.txt
+-rw-r--r--   1 pisan  1816340015      29 Mar 30 07:34 all-files.txt
 drwxr-xr-x   4 pisan  1816340015     136 Jun 15  2019 assets
 -rw-r--r--   1 pisan  1816340015    3287 Dec 23 11:03 capstone-ideas.md
 -rw-r--r--   1 pisan  1816340015    5882 Dec 23 11:03 capstone.md
@@ -13,8 +13,8 @@ drwxr-xr-x   3 pisan  1816340015     102 Dec 23 11:03 cpp
 drwxr-xr-x   5 pisan  1816340015     170 Jun 15  2019 images
 -rw-r--r--   1 pisan  1816340015    2823 Dec 23 11:03 index.md
 -rw-r--r--   1 pisan  1816340015     299 Dec 23 11:03 links.md
-drwxr-xr-x  26 pisan  1816340015     884 Dec 23 11:03 people
--rw-r--r--   1 pisan  1816340015    4303 Dec 23 11:03 people.md
+drwxr-xr-x  27 pisan  1816340015     918 Mar 30 07:34 people
+-rw-r--r--   1 pisan  1816340015    4239 Mar 30 07:34 people.md
 -rw-r--r--   1 pisan  1816340015    2043 Dec 23 11:03 research.md
 -rw-r--r--   1 pisan  1816340015     203 Dec 23 11:03 taylorcumings.md
 drwxr-xr-x   4 pisan  1816340015     136 Jun 14  2019 teaching
@@ -48,7 +48,7 @@ total 56
 -rw-r--r--  1 pisan  1816340015   5398 Jun 15  2019 pisan54.jpg
 
 ./people:
-total 192
+total 200
 -rw-r--r--  1 pisan  1816340015  1547 Dec 23 11:03 aaronhitchcock.md
 -rw-r--r--  1 pisan  1816340015     7 Dec 23 11:03 anyabiryukova.md
 -rw-r--r--  1 pisan  1816340015  1929 Dec 23 11:03 christinetran.md
@@ -59,6 +59,7 @@ total 192
 -rw-r--r--  1 pisan  1816340015  2105 Dec 23 11:03 jeremyalbert.md
 -rw-r--r--  1 pisan  1816340015   203 Dec 23 11:03 johnxie.md
 -rw-r--r--  1 pisan  1816340015  3362 Dec 23 11:03 joshualanman.md
+-rw-r--r--  1 pisan  1816340015  2552 Mar 30 07:34 kaihuahu.md
 -rw-r--r--  1 pisan  1816340015  2913 Dec 23 11:03 leighlynha.md
 -rw-r--r--  1 pisan  1816340015  1515 Dec 23 11:03 lukesmiley.md
 -rw-r--r--  1 pisan  1816340015  2369 Dec 23 11:03 mariialundvall.md
@@ -76,10 +77,10 @@ total 192
 
 ./teaching:
 total 0
-drwxr-xr-x  29 pisan  1816340015  986 Dec 23 11:03 evaluations
+drwxr-xr-x  35 pisan  1816340015  1190 Mar 30 07:32 evaluations
 
 ./teaching/evaluations:
-total 2248
+total 3080
 drwxr-xr-x  11 pisan  1816340015    374 Feb 14  2019 2008andearlier
 drwxr-xr-x   6 pisan  1816340015    204 Feb 14  2019 2009Autumn
 drwxr-xr-x   4 pisan  1816340015    136 Feb 14  2019 2009Spring
@@ -93,6 +94,9 @@ drwxr-xr-x   3 pisan  1816340015    102 Feb 14  2019 GameProgramming
 -rw-------   1 pisan  1816340015  61251 Dec 31  2018 Pisan-AU18-CSS132A.pdf
 -rw-------   1 pisan  1816340015  73925 Dec 31  2018 Pisan-AU18-CSS343A.pdf
 -rw-------   1 pisan  1816340015  70286 Dec 31  2018 Pisan-AU18-CSS390C.pdf
+-rw-r--r--@  1 pisan  1816340015  66005 Dec 23 10:59 Pisan-AU19-CSS132A.pdf
+-rw-r--r--@  1 pisan  1816340015  75609 Dec 23 10:59 Pisan-AU19-CSS342D.pdf
+-rw-r--r--@  1 pisan  1816340015  67294 Dec 23 10:59 Pisan-AU19-CSS343A.pdf
 -rw-------   1 pisan  1816340015  78387 Sep 10  2018 Pisan-SP18-CSS342A.pdf
 -rw-------   1 pisan  1816340015  75726 Sep 10  2018 Pisan-SP18-CSS385A.pdf
 -rw-r--r--   1 pisan  1816340015  69479 Dec 23 11:03 Pisan-SP19-B-IMD363A.pdf
@@ -103,9 +107,12 @@ drwxr-xr-x   3 pisan  1816340015    102 Feb 14  2019 GameProgramming
 -rw-------   1 pisan  1816340015  82521 Apr  4  2018 Pisan-WI18-CSS343C.pdf
 -rw-r--r--@  1 pisan  1816340015  67968 Apr  1  2019 Pisan-WI19-CSS133A.pdf
 -rw-r--r--@  1 pisan  1816340015  74313 Apr  1  2019 Pisan-WI19-CSS343B.pdf
+-rw-r--r--@  1 pisan  1816340015  64141 Mar 30 07:32 Pisan-WI20-CSS133A.pdf
+-rw-r--r--@  1 pisan  1816340015  70918 Mar 30 07:32 Pisan-WI20-CSS343B.pdf
+-rw-r--r--@  1 pisan  1816340015  67598 Mar 30 07:32 Pisan-WI20-CSS390A.pdf
 drwxr-xr-x   7 pisan  1816340015    238 Feb 14  2019 animation
 drwxr-xr-x   8 pisan  1816340015    272 Feb 14  2019 gamedesign
--rw-r--r--   1 pisan  1816340015   8258 Dec 23 11:03 index.md
+-rw-r--r--   1 pisan  1816340015   8498 Dec 23 11:07 index.md
 -rw-r--r--   1 pisan  1816340015  15320 Jun 15  2019 indexold.html
 
 ./teaching/evaluations/2008andearlier:

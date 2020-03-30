@@ -13,6 +13,10 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Teaching Evaluations
 
+- 2020 Winter
+   - [CSS 343B: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf)
+   - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf)
+   - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-WI20-CSS390A.pdf)
 - 2019 Autumn
    - [CSS 343A: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
    - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf)
