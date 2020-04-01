@@ -2,7 +2,7 @@
 # Capstone & Research Students
 
 - 2021 Winter
-- [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
+  - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
 
 - 2020 Spring
   - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
