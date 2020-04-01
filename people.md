@@ -1,8 +1,12 @@
 
 # Capstone & Research Students
 
+- 2021 Winter
+- [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
+
 - 2020 Spring
   - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
+  - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- [Front-end Development for eCommerce Clients](./people/marcelagomez)
   - [Jenna Martin](https://www.linkedin.com/in/jennamartin90/) --- [QA Automation Framework and Development](./people/jennamartin)
 
 - 2020 Winter
