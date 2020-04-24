@@ -16,29 +16,29 @@ also is an interesting and fun historical record! Happy spelunking!
 
 - 2020 Spring (COVID-19 Zoom Quarter)
    - Mid-Quarter Evaluations
-      - [Operating Systems](Pisan-S120-CSS430A.pdf)
+      - [CSS 430: Operating Systems](Pisan-S120-CSS430A.pdf)
       - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
 - 2020 Winter
-   - [CSS 343B: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf)
+   - [CSS 343: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf)
    - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf)
    - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-WI20-CSS390A.pdf)
 - 2019 Autumn
-   - [CSS 343A: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
+   - [CSS 343: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
    - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf)
-   - [CSS 342D: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf)
+   - [CSS 342: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf)
 - 2019 Spring
    - [Operating Systems](Pisan-SP19-CSS430A.pdf)
    - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf)
    - [IMD 363: Studio Elements III: Practicum](Pisan-SP19-B-IMD363A.pdf)
 - 2019 Winter
-    - [CSS 343B: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf)
+    - [CSS 343: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf)
     - [CSS 133: Computer Programming for Engineers I](Pisan-WI19-CSS133A.pdf)
 - 2018 Autumn
-   - [CSS 343A: Data Structures and Algorithms II](Pisan-AU18-CSS343A.pdf)
+   - [CSS 343: Data Structures and Algorithms II](Pisan-AU18-CSS343A.pdf)
    - [CSS 132: Computer Programming for Engineers I](Pisan-AU18-CSS132A.pdf)
-   - [CSS 390C: Special Topics: Game Development](Pisan-AU18-CSS390C.pdf)
+   - [CSS 390: Special Topics: Game Development](Pisan-AU18-CSS390C.pdf)
  - 2018 Spring
-   - [CSS 342A: Data Structures and Algorithms I](Pisan-SP18-CSS342A.pdf)
+   - [CSS 342: Data Structures and Algorithms I](Pisan-SP18-CSS342A.pdf)
    - [CSS 385: Introduction to Game Development](Pisan-SP18-CSS385A.pdf)
  - 2018 Winter
    - [CSS 343A: Data Structures and Algorithms II](Pisan-WI18-CSS343A.pdf)
