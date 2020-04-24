@@ -13,6 +13,11 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Teaching Evaluations
 
+
+- 2020 Spring (COVID-19 Zoom Quarter)
+   - Mid-Quarter Evaluations
+      - [Operating Systems](Pisan-S120-CSS430A.pdf)
+      - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
 - 2020 Winter
    - [CSS 343B: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf)
    - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf)
