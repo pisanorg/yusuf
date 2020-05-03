@@ -4,6 +4,9 @@
 - 2021 Winter
   - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
 
+- 2020 Autumn
+  - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) -- at Liberty Mutual Insurance
+  
 - 2020 Spring
   - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
   - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- [Front-end Development for eCommerce Clients](./people/marcelagomez)
@@ -36,30 +39,27 @@
   - [Christine Tran](https://www.linkedin.com/in/christine-tran-a0831014a/) --- [SEED: Software Development at DFL](./people/christinetran)
   - [Zihan Sun](https://www.linkedin.com/in/zihan-sun/) --- [XML & XDT Manipulation Desktop Application](./people/zihansun)
 
-  
 - 2019 Spring
   - [Mohamed Abdi](https://www.linkedin.com/in/moabdi21/) --- [React Native Mobile App Development](./people/mohamedabdi)
 
-
-
 # Masters Students
 
+- 2021
+  - Joe Leung (Kelvin Sung, Chair) A User-Programmable Ray-Tracing Framework
 - 2020
   - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair)
   - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/): (Kelvin Sung, Chair) [Real-time Ray Tracing in Unity](./people/kaihuaha)
   - Greg Smith (Kelvin Sung, Chair)
   
 - 2019
-   - [Ashish Goel](https://www.linkedin.com/in/goel-ashish/) (Kelvin Sung, Chair)
-   - [Joshua Lanman](https://www.linkedin.com/in/joshlanman/):  (Kelvin Sung, Chair) [Volumetric Fog](./people/joshualanman)
-   
-- 2018
-   - [Jeremy Albert](https://www.linkedin.com/in/jeremy3681/):  (Kelvin Sung, Chair) [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
-   - [Robert Bezirganyan](https://www.linkedin.com/in/robert-bezirganyan-095a9b4b/)  (Kelvin Sung, Chair)
-   - Thomas M. Brown:  (Kelvin Sung, Chair) [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
-   - [Aaron C. Hitchcock](https://www.linkedin.com/in/aaron-hitchcock/):  (Kelvin Sung, Chair) [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
-
+  - [Ashish Goel](https://www.linkedin.com/in/goel-ashish/) (Kelvin Sung, Chair)
+  - [Joshua Lanman](https://www.linkedin.com/in/joshlanman/):  (Kelvin Sung, Chair) [Volumetric Fog](./people/joshualanman)
   
+- 2018
+  - [Jeremy Albert](https://www.linkedin.com/in/jeremy3681/):  (Kelvin Sung, Chair) [User-Centric Classification of Virtual Reality Locomotion Methods](./people/jeremyalbert)
+  - [Robert Bezirganyan](https://www.linkedin.com/in/robert-bezirganyan-095a9b4b/)  (Kelvin Sung, Chair)
+  - Thomas M. Brown:  (Kelvin Sung, Chair) [Suggestions for an Improved Approach to the Cross Reality Collaborative Framework](./people/thomasbrown)
+  - [Aaron C. Hitchcock](https://www.linkedin.com/in/aaron-hitchcock/):  (Kelvin Sung, Chair) [Cross Reality Views Via an Unmanned Aerial Vehicle](./people/aaronhitchcock)
 
 ***
 
