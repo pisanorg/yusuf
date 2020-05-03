@@ -2,6 +2,8 @@
 
 This document is located at <https://pisanorg.github.io/yusuf/capstone-ideas.html>
 
+To apply for a capstone project, see my [CSSE Capstone Guidelines](./capstone.html)
+
 Below are some potential capstone and project ideas.
 I am open to supervising a much broader range of capstone topics. I prefer students who have already
 taken some of my courses, and have done well in them, but even if you did not shine in the classroom,

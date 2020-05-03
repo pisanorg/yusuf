@@ -1,32 +1,30 @@
 # CSS 497: CSSE Capstone
 
 Visit the following pages for requirements, details, contract and important dates
+
 - Student Guide [https://www.uwb.edu/css/capstone/student-guide](https://www.uwb.edu/css/capstone/student-guide)
 - Specific Guidelines [http://courses.washington.edu/css497](http://courses.washington.edu/css497)
 - Forms [https://www.uwb.edu/css/forms](https://www.uwb.edu/css/forms)
-- Colloquim Schedule [https://www.uwb.edu/bscsse/capstone/colloq-schedule](https://www.uwb.edu/bscsse/capstone/colloq-schedule)
+- Colloquium Schedule [https://www.uwb.edu/bscsse/capstone/colloq-schedule](https://www.uwb.edu/bscsse/capstone/colloq-schedule)
 - Resources and advice for presenting at a symposium [http://www.washington.edu/undergradresearch/symposium/participant-info/](http://www.washington.edu/undergradresearch/symposium/participant-info/)
+
+If you are looking for capstone ideas, see [my capstone and project Ideas](./capstone-ideas.html)
 
 ## Process
 
-1. Check your eligibility for CSS 497. Check whether I am a good fit to supervise your capstone (completed a course with me, topic in my research area, etc). Have a look at the abstracts from [students](./people)whom I have supervised.
+1. Check your eligibility for CSS 497. Check whether I am a good fit to supervise your capstone (completed a course with me, topic in my research area, etc). Have a look at the abstracts from [students](./people) whom I have supervised.
 
 2. Explore capstone project options and talk to CSS 497 coordinator if necessary
 
-3. If you are doing a faculty research, we need to discuss the project in detail before the
-contract. For all other types of capstone, skip the next couple of steps and send me the
+3. If you are doing a faculty research, you will need to pick one of the projects from [my capstone projects](./capstone-ideas.html) or one of the projects that the [Tech for Good](https://t4guw.github.io/www/) research group is already working on. For internship based capstones, skip the next couple of steps and send me the
 CSS 497 contract.
 
-4. Send me an email with a 1-3 paragraph description of your project OR if you do not have
-a project idea a list of areas you are interested in and description of what areas you are
-good at. Describe the benefits of the proposed project (e.g., ‘What is this project going to
-accomplish?’) and the academic merit of proposed project (e.g. 'How will the project help
-you develop your core and advanced technical competencies). Specify at least 3
-dates/times you can meet
+4. Send me an email with a 1-3 paragraph description of your project OR your thoughts on how you can contribute to one of the existing projects OR if you do not have a project idea a list of areas you are interested in and description of what areas you are good at. Describe the benefits of the proposed project (e.g., ‘What is this project going to accomplish?’) and the academic merit of proposed project (e.g. 'How will the project help you develop your core and advanced technical competencies). Specify at least 3 dates/times you can meet. Include a copy of your unofficial transcript.
 
 5. Have a meeting to discuss the project
 
 6. Download "CSS 497 Contract", fill it and sent it to me via email.
+
 - Choose CR/NC as the grade
 - Project plan must include a schedule with deliverables. It is not mandatory that
 you meet the schedule precisely, but you should have a plan before you start.
@@ -35,7 +33,7 @@ Your plan should encompass 400 hours of work.
 any), Regular reports, Colloquium slides + poster, Colloquium Abstract and
 Successful completion of the CSS colloquium.
 
-7. If necessary, revise the contract based on my feedback and resubmit.
+1. If necessary, revise the contract based on my feedback and resubmit.
 
 ## Reports
 
@@ -50,9 +48,10 @@ other capstones. All reports should be submitted via Canvas when possible and ha
 5. Plans - what you plan to do next, max 5 bullet points
 6. Problems - any problems encountered, can be N/A
 7. Self Evaluation - towards capstone goals, max 1 paragraph
-2. Final Report is due at the end of week 11. The report should be 5-10 pages.
+8. Final Report is due at the end of week 11. The report should be 5-10 pages.
 
 A research based report will have:
+
 1. Introduction
 2. Method/Progress
 3. Result
@@ -66,6 +65,7 @@ plans, testing results, diagrams, discussion, web site or something else that is
 for your capstone)
 
 2. Reflection
+
 - What did you learn? What do you wish you would have learned?
 - How did you enjoy what you're doing?
 - Things that went well? Things that didn't go well? Things you would
@@ -88,7 +88,7 @@ be allowed to present.
 
 ## Colloquium
 
-The typical schedule for colloquiuim is 11:30-12:30 poster presentations followed by 1:00-4:00 for oral presentations. This can change, so make sure you watch for emails from capstone coordinator.
+The typical schedule for colloquium is 11:30-12:30 poster presentations followed by 1:00-4:00 for oral presentations. This can change, so make sure you watch for emails from capstone coordinator.
 
 1) Schedule will be posted at: [https://www.uwb.edu/bscsse/capstone/colloq-schedule](https://www.uwb.edu/bscsse/capstone/colloq-schedule)
 
@@ -99,7 +99,6 @@ The typical schedule for colloquiuim is 11:30-12:30 poster presentations followe
 4) Presentation slides: Make ~ 10 slides that include background (introduction), related works, methods, experiments/results, and conclusion etc.
 
 Refer [http://courses.washington.edu/css497](http://courses.washington.edu/css497) to see how to create a quality poster and presentation slides
-
 
 ***
 

@@ -2,7 +2,7 @@
 
 ## Bio
 
-Yusuf Pisan is a Senior Lecturer in the (Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
+Yusuf Pisan is a Senior Lecturer in the [Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
 
 His research interests include enabling technologies for computer games, the design of virtual environments that support collaborative work, and computer science education. He founded the [Australasian Conference on Interactive Entertainment](http://ieconference.org/) conference series and helped foster the Australian games community. His list of publications can be found at [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
 
@@ -18,13 +18,11 @@ Happy to accept connection requests on [LinkedIn](https://www.linkedin.com/in/pi
 
 [CSS 497 Capstone](capstone.html) guidelines, advice and [project ideas](capstone-ideas.html). Past [students](./people) I have supervised.
 
-
 ## Teaching
 
 I have taught small classes, large (700-person) classes, first-year classes, graduate level classes, supervised masters and PhD students, experimented with hybrid and online classes, used traditional lecturing, active learning, flipped classrooms, collaborative meaning making and gamified classrooms. I received the [UTS Teaching Award](https://www.uts.edu.au/research-and-teaching/learning-and-teaching/awards-and-citations/past-award-and-citation-0) in 2006.
 
 I have decided to make all my evaluations public to help future students make more informed choices, or at least know what they are getting into when they decide to take a course from me. It also is an interesting and fun historical record! Happy spelunking into my [teaching evaluations](teaching/evaluations/) going back for many many years.
-
 
 ## Resources
 
@@ -32,12 +30,9 @@ Visit [my resources wiki](https://github.com/pisanorg/w/wiki) for all sorts of i
 
 ## Contact
 
-**Email:** pisan@uw.edu <br>
-**Phone:** 425.352.3741 (email is better)<br>
+**Email:** pisan@uw.edu  
+**Phone:** 425.352.3741 (email is better)  
 
 ***
 
 [Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
-
-
-
