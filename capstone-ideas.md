@@ -1,9 +1,13 @@
 # Capstone and Project Ideas
 
+This document is located at <https://pisanorg.github.io/yusuf/capstone-ideas.html>
+
 Below are some potential capstone and project ideas.
 I am open to supervising a much broader range of capstone topics. I prefer students who have already
 taken some of my courses, and have done well in them, but even if you did not shine in the classroom,
 you can still pitch your project. See [past capstone projects](https://pisanorg.github.io/yusuf/people)
+
+For Summer 2020 and 2021, I am especially looking for students for 1000 Problems with Automated Feedback, Games for Change, 100 Unity Mechanics for Programmers, and Building a Mind: Everyday Reasoning to Expert Reasoning.
 
 ## Computer Science Education
 
@@ -33,12 +37,12 @@ Feedback tools. Checking that a program compiles and the input-output matches fo
 - Novice programmers have lots of misconceptions on how the program works.
 Until those misconceptions are identified and corrected, these students will continue to
 struggle.
-  - Create a large catalog of misconceptions.
 
-  [[1](https://dl.acm.org/citation.cfm?id=1734299),
+  - Create a large catalog of misconceptions. [[1](https://dl.acm.org/citation.cfm?id=1734299),
   [2](http://csteachingtips.org/),
   [3](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C48&q=cs1+student+misconceptions&btnG=)
   ]
+
   - Take 3-5 misconceptions and create diagnostic tools for identifying
   if a student has those misconceptyions or not. The diagnostic tool can be a web based survey,
   an interview or in some other format.
@@ -60,6 +64,8 @@ and middle school levels as well as societal perceptions. [Research](https://www
 
 ## Artificial Intelligence
 
+AI is much more than machine learning. I am intyerested in symbolic artificial intelligence and explainable artificial intelligence.
+
 ### Building a Mind: Everyday Reasoning to Expert Reasoning
 
 There are lots of way to get computer to process facts and reach conclusions: case-based reasoning, analogical reasoning, qualitative reasoning, theorem provers, rule engines, classifiers, machine learning systems, etc. Some of these reasoning systems also allow the programs to explain "how" they reached their conclusion and "why" the conclusion is valid.
@@ -75,6 +81,7 @@ A more ambitious goal and an extension of this project will be to use NextKB <ht
 http://www.gamesforchange.org/ aims to drive real-world impact through games and immersive media. Pick a goal that you care about, gather some background information on the topic, find an angle to turn it into a game. 50% of this project is the research on the goal topic and 50% on implementation. Topics such as "climate change" or "recycling is important" are too broad to address in a single game. Have a look at some of Ian Bogost's games at http://bogost.com/games/persuasive_games_1/ ; understand why Airport Security game is a satire. Examine games from http://blog.h1n1.influenza.bvsalud.org/en/2009/10/07/find-out-more-about-influenza-by-playing-games/ helps people understand influenza a bit better. Your idea needs to be sophisticated enough and you need to be able to express why the opposite sides/perspectives have their own valid structured reasons for their position. The final deliverable for this project will be a position document and a simple, tested working game.
 
 ### 100 Unity Mechanics for Programmers
+
 Even for experienced programmers, Unity provides a challenge. There are lots of different ways of doing things and finding the correct tutorial and extracting the right Unity function can be very difficult especially for newcomers who are not familiar with vocabulary. This project will produce 100 sample programs where each program demonstrates a different mechanic.
 
 For example, WASD for movement will be a Unity program that shows how an object would move using WASD keys. Nothing more. Jumper might be a program that shows how to execute a jump like action with different parameters. We can use <https://inventwithpython.com/blog/2012/07/30/need-a-game-idea-a-list-of-game-mechanics-and-a-random-mechanic-mixer/> for different mechanics as well as Physics for Game Developers <http://shop.oreilly.com/product/0636920012221.do> to implement each mechanic. Each mechanics will be demonstrated as simply as possibly and have a corresponding web page that explains it.
