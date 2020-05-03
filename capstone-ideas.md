@@ -88,7 +88,7 @@ For example, WASD for movement will be a Unity program that shows how an object 
 
 ## Something Different
 
-If you have an idea that does not fit into the above categories, you are still welcome to pitch it. Follow the advice from <https://csedresearch.org/conducting-research/> and include the following four headings in your proposal.
+If you have an idea that does not fit into the above categories, you are still welcome to pitch it. Follow the advice from <https://csedresearch.org/conducting-research/> and include the following three headings in your proposal.
 
 Research question - what will be the new knowledge
 
