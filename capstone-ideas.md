@@ -44,7 +44,7 @@ struggle.
   ]
 
   - Take 3-5 misconceptions and create diagnostic tools for identifying
-  if a student has those misconceptyions or not. The diagnostic tool can be a web based survey,
+  if a student has those misconceptions or not. The diagnostic tool can be a web based survey,
   an interview or in some other format.
   - Create a set of web-based, self-guided exercises where
   students can examine their own misconceptions and correct them.
@@ -64,7 +64,7 @@ and middle school levels as well as societal perceptions. [Research](https://www
 
 ## Artificial Intelligence
 
-AI is much more than machine learning. I am intyerested in symbolic artificial intelligence and explainable artificial intelligence.
+AI is much more than machine learning. I am interested in symbolic artificial intelligence and explainable artificial intelligence.
 
 ### Building a Mind: Everyday Reasoning to Expert Reasoning
 
