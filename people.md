@@ -3,7 +3,7 @@
 
 - 2021 Winter
   - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
-  - Ed Abshire
+  - [Ed Abshire](https://www.linkedin.com/in/eabshire/)
 
 - 2020 Autumn
   - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) -- at Liberty Mutual Insurance
