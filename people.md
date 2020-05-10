@@ -3,9 +3,18 @@
 
 - 2021 Winter
   - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
+  - Ed Abshire
 
 - 2020 Autumn
   - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) -- at Liberty Mutual Insurance
+  - [Sam Wolf](https://www.linkedin.com/in/sam-f-wolf/)
+  - [Keziah May](https://www.linkedin.com/in/keziahmay/)
+  - [Nicholas Young](https://www.linkedin.com/in/nicholas-young-00262a153/)
+  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/)
+  - [Garima Maheshwari](https://www.linkedin.com/in/garima-maheshwari-802511179/)
+
+- 2020 Summer
+  - [Tabitha Roemish](https://www.linkedin.com/in/tabitha-roemish-589b5956/)
   
 - 2020 Spring
   - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
