@@ -82,6 +82,26 @@ A more ambitious goal and an extension of this project will be to use NextKB <ht
 
 <http://www.gamesforchange.org/> aims to drive real-world impact through games and immersive media. Pick a goal that you care about, gather some background information on the topic, find an angle to turn it into a game. 50% of this project is the research on the goal topic and 50% on implementation. Topics such as "climate change" or "recycling is important" are too broad to address in a single game. Have a look at some of Ian Bogost's games at <http://bogost.com/games/persuasive_games_1/>; understand why Airport Security game is a satire. Examine games from <http://blog.h1n1.influenza.bvsalud.org/en/2009/10/07/find-out-more-about-influenza-by-playing-games/> helps people understand influenza a bit better. Your idea needs to be sophisticated enough and you need to be able to express why the opposite sides/perspectives have their own valid structured reasons for their position. The final deliverable for this project will be a position document and a simple, tested working game.
 
+### Digital Toys for Learning
+
+Aimed at elementary and middle school age students. Would be appropriate for a student interested in the integration of physical and digital toys. For example, create physical puzzle pieces that when completed create a QR code which can be upload into a website allowing them to learn more about a particular concept (e.g., astronomy, physics, etc.).
+
+Another toy/game idea is building items in Roblox or Minecraft expanding on the educational initiatives of both companies.
+
+Students could also create physical/digital game to teach programming to kids. I was thinking that students could first research what is out there and come up with a prototype.
+
+### VR/Games and Health
+
+Building off research done involving VR and pain management. Focus on the use of games and VR to create meditative states which could be monitored via wearable devices. Could also expand to look at the use of wearables to influence and monitor emotional states.
+
+### Heath Game -- Parkinson's Disease
+
+Building on Wanda Gregory's earlier research on this concept. Exploring ways for individuals with young persons Parkinson's to deal with the "demons" that they might encounter in their daily lives. I've been thinking about quests and "demons" based on such things as fatigue, depression, mind fog, etc. that they might encounter and find ways to deal with.
+
+### VR and Learning
+
+How might VR be used to teach math? chemistry or physics in either a classroom or multiplayer setting? Students could explore VR and game design, via Rec Room which is a Seattle based company (they also are looking for interns summer 2020) to build such experiences.
+
 ### 100 Unity Mechanics for Programmers
 
 Even for experienced programmers, Unity provides a challenge. There are lots of different ways of doing things and finding the correct tutorial and extracting the right Unity function can be very difficult especially for newcomers who are not familiar with vocabulary. This project will produce 100 sample programs where each program demonstrates a different mechanic.
