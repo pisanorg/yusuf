@@ -65,15 +65,14 @@ plans, testing results, diagrams, discussion, web site or something else that is
 for your capstone)
 
 2. Reflection
-
-- What did you learn? What do you wish you would have learned?
-- How did you enjoy what you're doing?
-- Things that went well? Things that didn't go well? Things you would
-change if you did it over?
-- Was the mentoring handled well? Why or why not?
-- What were the challenges in your project? Did you have to communicate with non-technical people? If so, how did it go?
-- Problems? Cool things?
-- Would you like to continue working at your internship company? Why or why not?
+   - What did you learn? What do you wish you would have learned?
+   - How did you enjoy what you're doing?
+   - Things that went well? Things that didn't go well? Things you would
+   change if you did it over?
+   - Was the mentoring handled well? Why or why not?
+   - What were the challenges in your project? Did you have to communicate with non-technical people? If so, how did it go?
+   - Problems? Cool things?
+   - Would you like to continue working at your internship company? Why or why not?
 
 3. As long as you are working as a researcher, intern or on your project, you need to keep
 submitting reports. Once you are done working, and only have the colloquium, then you do

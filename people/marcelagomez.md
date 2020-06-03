@@ -1,8 +1,6 @@
 # Front-end Development for eCommerce Clients
 
-
 ## Marcela Gomez
-
 
 ***
 

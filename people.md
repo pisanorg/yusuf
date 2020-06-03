@@ -17,7 +17,7 @@
   - [Tabitha Roemish](https://www.linkedin.com/in/tabitha-roemish-589b5956/)
   
 - 2020 Spring
-  - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Software Developer at Airship VMS](./people/anyabiryukova)
+  - [Anya Biryukova](https://www.linkedin.com/in/anyabiryukova/) --- [Airship Industries Internship](./people/anyabiryukova)
   - [Marcela Gomez](https://www.linkedin.com/in/mgomezuwb/) --- [Front-end Development for eCommerce Clients](./people/marcelagomez)
   - [Jenna Martin](https://www.linkedin.com/in/jennamartin90/) --- [QA Automation Framework and Development](./people/jennamartin)
 
@@ -56,9 +56,9 @@
 - 2021
   - Joe Leung (Kelvin Sung, Chair) A User-Programmable Ray-Tracing Framework
 - 2020
-  - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair)
+  - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair) [Photorealistic and Toon Shading](./people/yingmingdang)
   - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/): (Kelvin Sung, Chair) [Real-time Ray Tracing in Unity](./people/kaihuaha)
-  - Greg Smith (Kelvin Sung, Chair)
+  - Greg Smith (Kelvin Sung, Chair) [Augmented Space Library 2: A Network Infrastructure for Collaborative Cross Reality Applications](./people/gregorysmith)
   
 - 2019
   - [Ashish Goel](https://www.linkedin.com/in/goel-ashish/) (Kelvin Sung, Chair)
