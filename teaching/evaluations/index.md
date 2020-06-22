@@ -10,30 +10,39 @@ help future students make more informed choices, or at least know what
 they are getting into when they decide to take a course from me. It
 also is an interesting and fun historical record! Happy spelunking!
 
-
 ### Teaching Evaluations
 
+* 2020 Spring (COVID-19 Zoom Quarter)
 
-- 2020 Spring (COVID-19 Zoom Quarter)
-   - Mid-Quarter Evaluations
+  + Mid-Quarter Evaluations
       - [CSS 430: Operating Systems](Pisan-S120-CSS430A.pdf)
       - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
-- 2020 Winter
+  + End-of-Quarter Evaluations
+      - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf)
+      - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf)
+* 2020 Winter
+
    - [CSS 343: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf) Video Reviews: [<a href="https://youtu.be/IWgwe0BpugQ">1</a>]
    - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf)
    - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-WI20-CSS390A.pdf)
-- 2019 Autumn
+
+* 2019 Autumn
+
    - [CSS 343: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
    - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf)
    - [CSS 342: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf)
-- 2019 Spring
+
+* 2019 Spring
+
    - [Operating Systems](Pisan-SP19-CSS430A.pdf)
    - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf)
    - [IMD 363: Studio Elements III: Practicum](Pisan-SP19-B-IMD363A.pdf)
-- 2019 Winter
+
+* 2019 Winter
     - [CSS 343: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf)
     - [CSS 133: Computer Programming for Engineers I](Pisan-WI19-CSS133A.pdf)
-- 2018 Autumn
+* 2018 Autumn
+
    - [CSS 343: Data Structures and Algorithms II](Pisan-AU18-CSS343A.pdf)
    - [CSS 132: Computer Programming for Engineers I](Pisan-AU18-CSS132A.pdf)
    - [CSS 390: Special Topics: Game Development](Pisan-AU18-CSS390C.pdf)
@@ -129,7 +138,6 @@ also is an interesting and fun historical record! Happy spelunking!
  - 2000 Spring (Macquarie)
  - 2000 Autumn (Macquarie)
  - 1999 Spring (UNSW)
-
 
 ***
 
