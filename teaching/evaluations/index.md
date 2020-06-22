@@ -15,7 +15,7 @@ also is an interesting and fun historical record! Happy spelunking!
 - 2020 Spring (COVID-19 Zoom Quarter)
   - Mid-Quarter Evaluations
     - [CSS 430: Operating Systems](Pisan-S120-CSS430A.pdf)
-    - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf
+    - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
   - End-of-Quarter Evaluations
     - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf)
     - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf)
