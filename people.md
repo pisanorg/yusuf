@@ -54,7 +54,8 @@
 # Masters Students
 
 - 2021
-  - Joe Leung (Kelvin Sung, Chair) A User-Programmable Ray-Tracing Framework
+  - Joe Leung (Kelvin Sung, Chair) [A User-Programmable Ray-Tracing Framework](./people/joeleung)
+  - [Sukriti Tiwari](https://www.linkedin.com/in/tiwarisukriti/) (David Socha, Chair) [Wide Field Ethnographic Navigator](./people/sukrititiwari)
 - 2020
   - [Yingming Dang](https://www.linkedin.com/in/yingming-dang-05a05b141/) (Kelvin Sung, Chair) [Photorealistic and Toon Shading](./people/yingmingdang)
   - [Kaihua Hu](https://www.linkedin.com/in/kaihuahu/): (Kelvin Sung, Chair) [Real-time Ray Tracing in Unity](./people/kaihuaha)
