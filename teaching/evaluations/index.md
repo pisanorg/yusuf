@@ -19,8 +19,8 @@ also is an interesting and fun historical record! Happy spelunking!
     - [CSS 430: Operating Systems](Pisan-S120-CSS430A.pdf)
     - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
   - End-of-Quarter Evaluations
-    - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf) [[Canvas](https://canvas.uw.edu/course/1387441/)]
-    - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf) [[Canvas](https://canvas.uw.edu/course/1387426/)]
+    - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf) [[Canvas](https://canvas.uw.edu/courses/1387441/)]
+    - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf) [[Canvas](https://canvas.uw.edu/courses/1387426/)]
 - 2020 Winter
   - [CSS 343: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf) [[Canvas](https://canvas.uw.edu/courses/1368325/)]
   - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf) [[Canvas](https://canvas.uw.edu/courses/1364348/)]
