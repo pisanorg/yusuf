@@ -12,6 +12,17 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Teaching Evaluations
 
+- 2021 Spring
+  - CSS 430 Operating Systems
+  - CSS 385: Introduction to Game Development
+  - CSS 382: Introduction to Artificial Intelligence
+- 2021 Winter
+  - CSS 343: Data Structures and Algorithms II
+  - CSS 133: Computer Programming for Engineers II
+  - CSS 382: Introduction to Artificial Intelligence
+- 2020 Autumn
+  - CSS 132: Computer Programming for Engineers I [[Canvas](https://canvas.uw.edu/courses/1408509/)]
+  - CSS 342: Data Structures and Algorithms [[Canvas](https://canvas.uw.edu/courses/1437399/)]
 - 2020 Summer
   - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-SU20-CSS390A.pdf) [[Canvas](https://canvas.uw.edu/courses/1421045/)]
 - 2020 Spring (COVID-19 Zoom Quarter)
