@@ -1,15 +1,21 @@
 
 # Capstone & Research Students
 
+- 2021 Spring
+  - [Sonlam Nguyen](https://www.linkedin.com/in/sonlamnguyen/)
+  - [Jacob Pierce](https://www.linkedin.com/in/jpierce2626/)
+
 - 2021 Winter
-  - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
   - [Ed Abshire](https://www.linkedin.com/in/eabshire/)
+  - [Joy Yehuda Lodra](https://www.linkedin.com/in/joy-lodra-888b9615a/)
+  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/)
+
 
 - 2020 Autumn
   - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) -- at Liberty Mutual Insurance
-  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/)
   - [Estefano Felipa](https://www.linkedin.com/in/estefanofelipa/)
-  - [Joy Yehuda Lodra](https://www.linkedin.com/in/joy-lodra-888b9615a/)
+  - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
+  - [Kemba Koteh](https://www.linkedin.com/in/kemba-konteh/)
   - [Garima Maheshwari](https://www.linkedin.com/in/garima-maheshwari-802511179/)
   - [Keziah May](https://www.linkedin.com/in/keziahmay/)
   - [Sam Wolf](https://www.linkedin.com/in/sam-f-wolf/)
