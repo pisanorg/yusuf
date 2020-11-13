@@ -19,7 +19,7 @@
   - [Garima Maheshwari](https://www.linkedin.com/in/garima-maheshwari-802511179/)
   - [Keziah May](https://www.linkedin.com/in/keziahmay/)
   - [Sam Wolf](https://www.linkedin.com/in/sam-f-wolf/)
-  - [Nicholas Young](https://www.linkedin.com/in/nicholas-young-00262a153/)
+  - [Nicholas Young](https://www.linkedin.com/in/nhyoung/)
   - [Bill Zhao](https://www.linkedin.com/in/iambillzhao/)
 
 - 2020 Summer
