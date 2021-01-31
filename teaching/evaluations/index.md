@@ -21,8 +21,8 @@ also is an interesting and fun historical record! Happy spelunking!
   - CSS 343: Data Structures and Algorithms II
   - CSS 382: Introduction to Artificial Intelligence
 - 2020 Autumn
-  - CSS 132: Computer Programming for Engineers I](Pisan-AU20-CSS132A.pdf)
-  - CSS 342: Data Structures and Algorithms](Pisan-AU20-CSS342C.pdf)
+  - [CSS 132: Computer Programming for Engineers I](Pisan-AU20-CSS132A.pdf)
+  - [CSS 342: Data Structures and Algorithms](Pisan-AU20-CSS342C.pdf)
 - 2020 Summer
   - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-SU20-CSS390A.pdf)
 - 2020 Spring (COVID-19 Zoom Quarter)
