@@ -4,23 +4,28 @@
 - 2021 Spring
   - [Sonlam Nguyen](https://www.linkedin.com/in/sonlamnguyen/)
   - [Jacob Pierce](https://www.linkedin.com/in/jpierce2626/)
+  - [Scott Shirley](https://www.linkedin.com/in/scottin3d/)
 
 - 2021 Winter
   - [Ed Abshire](https://www.linkedin.com/in/eabshire/)
-  - [Joy Yehuda Lodra](https://www.linkedin.com/in/joy-lodra-888b9615a/)
   - [Taylor Cumings](https://www.linkedin.com/in/tcumings/)
+  - [Mitchell Dang](https://www.linkedin.com/in/mlcdang/)
+  - [Jordan Lawson](https://www.linkedin.com/in/jordanlawsoncss/)
+  - [Joy Yehuda Lodra](https://www.linkedin.com/in/joy-lodra-888b9615a/)
+  - [Samuel Munford](https://www.linkedin.com/in/samuel-munford-465ab6172/)
+  
 
 
 - 2020 Autumn
-  - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) -- at Liberty Mutual Insurance
-  - [Estefano Felipa](https://www.linkedin.com/in/estefanofelipa/)
-  - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Software Development Internship](./people/boyanhristomirov)
-  - [Kemba Koteh](https://www.linkedin.com/in/kemba-konteh/)
-  - [Garima Maheshwari](https://www.linkedin.com/in/garima-maheshwari-802511179/)
-  - [Keziah May](https://www.linkedin.com/in/keziahmay/)
+  - [Angela Ferro Capera](https://www.linkedin.com/in/angela-ferro-capera/) --- [Liberty Mutual Tech Start Internship](./people/angelacapera)
+  - [Estefano Felipa](https://www.linkedin.com/in/estefanofelipa/) --- [Kyflex Backend Development Internship](./people/estefanofelipa)
+  - [Boyan Hristomirov](https://www.linkedin.com/in/bhristov96/) --- [Internship with Synergistics Inc.](./people/boyanhristomirov)
+  - [Kemba Konteh](https://www.linkedin.com/in/kemba-konteh/) --- [Software Engineering at CodeDay](./people/kembakonteh)
+  - [Garima Maheshwari](https://www.linkedin.com/in/garima-maheshwari-802511179/) --- [Improving Health Care Amidst a Pandemic](./people/garimamaheshwari)
+  - [Keziah May](https://www.linkedin.com/in/keziahmay/) --- [Introducing Students to Structured Problem-Solving](./people/kezmay)
   - [Sam Wolf](https://www.linkedin.com/in/sam-f-wolf/)
-  - [Nicholas Young](https://www.linkedin.com/in/nhyoung/)
-  - [Bill Zhao](https://www.linkedin.com/in/iambillzhao/)
+  - [Nicholas Young](https://www.linkedin.com/in/nhyoung/)  --- [100 Unity Mechanics for Programmers](./people/nicholasyoung)
+  - [Bill Zhao](https://www.linkedin.com/in/iambillzhao/) --- [Bridge the Gap: An Online Technical Problem Solving Course](./people/billzhao)
 
 - 2020 Summer
   - [Tabitha Roemish](https://www.linkedin.com/in/tabitha-roemish-589b5956/)

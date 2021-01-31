@@ -17,50 +17,50 @@ also is an interesting and fun historical record! Happy spelunking!
   - CSS 385: Introduction to Game Development
   - CSS 430 Operating Systems
 - 2021 Winter
-  - CSS 133: Computer Programming for Engineers II [[Canvas](https://canvas.uw.edu/courses/1444250/)]
-  - CSS 343: Data Structures and Algorithms II [[Canvas](https://canvas.uw.edu/courses/1444468/)]
-  - CSS 382: Introduction to Artificial Intelligence [[Canvas](https://canvas.uw.edu/courses/1444271/)]
+  - CSS 133: Computer Programming for Engineers II
+  - CSS 343: Data Structures and Algorithms II
+  - CSS 382: Introduction to Artificial Intelligence
 - 2020 Autumn
-  - CSS 132: Computer Programming for Engineers I](Pisan-AU20-CSS132A.pdf) [[Canvas](https://canvas.uw.edu/courses/1408509/)]
-  - CSS 342: Data Structures and Algorithms](Pisan-AU20-CSS342C.pdf) [[Canvas](https://canvas.uw.edu/courses/1437399/)]
+  - CSS 132: Computer Programming for Engineers I](Pisan-AU20-CSS132A.pdf)
+  - CSS 342: Data Structures and Algorithms](Pisan-AU20-CSS342C.pdf)
 - 2020 Summer
-  - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-SU20-CSS390A.pdf) [[Canvas](https://canvas.uw.edu/courses/1421045/)]
+  - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-SU20-CSS390A.pdf)
 - 2020 Spring (COVID-19 Zoom Quarter)
   - Mid-Quarter Evaluations
     - [CSS 430: Operating Systems](Pisan-S120-CSS430A.pdf)
     - [CSS 385: Introduction to Game Development](Pisan-S120-CSS385A.pdf)
   - End-of-Quarter Evaluations
-    - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf) [[Canvas](https://canvas.uw.edu/courses/1387441/)]
-    - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf) [[Canvas](https://canvas.uw.edu/courses/1387426/)]
+    - [CSS 430: Operating Systems](Pisan-SP20-CSS430A.pdf)
+    - [CSS 385: Introduction to Game Development](Pisan-SP20-CSS385A.pdf)
 - 2020 Winter
-  - [CSS 343: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf) [[Canvas](https://canvas.uw.edu/courses/1368325/)]
-  - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf) [[Canvas](https://canvas.uw.edu/courses/1364348/)]
-  - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-WI20-CSS390A.pdf) [[Canvas](https://canvas.uw.edu/courses/1369529/)]
+  - [CSS 343: Data Structures and Algorithms II](Pisan-WI20-CSS343B.pdf)
+  - [CSS 133: Computer Programming for Engineers II](Pisan-WI20-CSS133A.pdf)
+  - [CSS 390/382: Introduction to Artificial Intelligence](Pisan-WI20-CSS390A.pdf)
 - 2019 Autumn
-  - [CSS 343: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf) [[Canvas](https://canvas.uw.edu/courses/1331916/)]
-  - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf) [[Canvas](https://canvas.uw.edu/courses/1331917/)]
-  - [CSS 342: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf) [[Canvas](https://canvas.uw.edu/courses/1331914/)]
+  - [CSS 343: Data Structures and Algorithms II](Pisan-AU19-CSS343A.pdf)
+  - [CSS 132: Computer Programming for Engineers I](Pisan-AU19-CSS132A.pdf)
+  - [CSS 342: Data Structures and Algorithms I](Pisan-AU19-CSS342D.pdf)
 - 2019 Spring
-  - [CSS 430 Operating Systems](Pisan-SP19-CSS430A.pdf) [[Canvas](https://canvas.uw.edu/courses/1309374/)]
-  - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf) [[Canvas](https://canvas.uw.edu/courses/1309344/)]
-  - [IMD 363: Studio Elements III: Practicum](Pisan-SP19-B-IMD363A.pdf) [[Canvas](https://canvas.uw.edu/courses/1308937/)]
+  - [CSS 430 Operating Systems](Pisan-SP19-CSS430A.pdf)
+  - [CSS 385: Introduction to Game Development](Pisan-SP19-CSS385A.pdf)
+  - [IMD 363: Studio Elements III: Practicum](Pisan-SP19-B-IMD363A.pdf)
 - 2019 Winter
-  - [CSS 343: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf) [[Canvas](https://canvas.uw.edu/courses/1269425/)]
-  - [CSS 133: Computer Programming for Engineers I](Pisan-WI19-CSS133A.pdf) [[Canvas](https://canvas.uw.edu/courses/1264983/)]
+  - [CSS 343: Data Structures and Algorithms II](Pisan-WI19-CSS343B.pdf)
+  - [CSS 133: Computer Programming for Engineers I](Pisan-WI19-CSS133A.pdf)
 - 2018 Autumn
-  - [CSS 343: Data Structures and Algorithms II](Pisan-AU18-CSS343A.pdf) [[Canvas](https://canvas.uw.edu/courses/1232825/)]
-  - [CSS 132: Computer Programming for Engineers I](Pisan-AU18-CSS132A.pdf) [[Canvas](https://canvas.uw.edu/courses/1232772/)]
-  - [CSS 390: Special Topics: Game Development](Pisan-AU18-CSS390C.pdf) [[Canvas](https://canvas.uw.edu/courses/1243762/)]
+  - [CSS 343: Data Structures and Algorithms II](Pisan-AU18-CSS343A.pdf)
+  - [CSS 132: Computer Programming for Engineers I](Pisan-AU18-CSS132A.pdf)
+  - [CSS 390: Special Topics: Game Development](Pisan-AU18-CSS390C.pdf)
 - 2018 Spring
-  - [CSS 342: Data Structures and Algorithms I](Pisan-SP18-CSS342A.pdf) [[Canvas](https://canvas.uw.edu/courses/1130860/)]
-  - [CSS 385: Introduction to Game Development](Pisan-SP18-CSS385A.pdf) [[Canvas](https://canvas.uw.edu/courses/1130862/)]
+  - [CSS 342: Data Structures and Algorithms I](Pisan-SP18-CSS342A.pdf)
+  - [CSS 385: Introduction to Game Development](Pisan-SP18-CSS385A.pdf)
 - 2018 Winter
-  - [CSS 343A: Data Structures and Algorithms II](Pisan-WI18-CSS343A.pdf) [[Canvas](https://canvas.uw.edu/courses/1124270/)]
-  - [CSS 343C: Data Structures and Algorithms II](Pisan-WI18-CSS343C.pdf) [[Canvas](https://canvas.uw.edu/courses/1124270/)]
-  - [CSS 133: Computer Programming for Engineers II](Pisan-WI18-CSS133A.pdf) [[Canvas](https://canvas.uw.edu/courses/1193468/)]
+  - [CSS 343A: Data Structures and Algorithms II](Pisan-WI18-CSS343A.pdf)
+  - [CSS 343C: Data Structures and Algorithms II](Pisan-WI18-CSS343C.pdf)
+  - [CSS 133: Computer Programming for Engineers II](Pisan-WI18-CSS133A.pdf)
 - 2017 Autumn
-  - [CSS 132: Computer Programming for Engineers I](Pisan-AU17-CSS132A.pdf) [[Canvas](https://canvas.uw.edu/courses/1175454/)]
-  - [CSS 142: Computer Programming I](Pisan-AU17-CSS142B.pdf) [[Canvas](https://canvas.uw.edu/courses/1174186/)]
+  - [CSS 132: Computer Programming for Engineers I](Pisan-AU17-CSS132A.pdf)
+  - [CSS 142: Computer Programming I](Pisan-AU17-CSS142B.pdf)
 - 2016 Autumn (UTS)
   - [31241: 3D Computer Animation](animation/2015/Individual_Report_31241-AUT-U-S-CMP1-01_114210.pdf)
   - [31241: 3D Computer Animation](animation/2015/Individual_Report_31241-AUT-U-S-CMP1-01_118069.pdf)

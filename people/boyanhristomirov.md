@@ -1,8 +1,9 @@
-# Software Development Internship
+# Internship with Synergistics Inc.
 
 
 ## Boyan Hristomirov
 
+Windows restrict the length of the path within which you can access files. If the path is larger than 216/260 characters, the files become inaccessible, yet the longest possible path in Windows is 32767 characters. I was assigned to create a GUI with a Windows Form App in C# which uses Windows API through marshalling, to enumerate the files in a path. I had to implement functions for copy, search, delete, and view. In order to solve this problem, I researched the Windows API. I used DFS-style traversal for removal and BFS-style traversal for all other operations. The head developer, also my mentor, brought to my attention that the GUI would freeze whenever a longer operation was running. This was due to the main thread being the executing thread. I solved this problem by researching multithreading in C# and writing asynchronous code. This allows for tasks that do not involve directly updating the GUI to be run on a separate thread which allows the main thread to continue waiting for events from the user. In the case in which the GUI update is happening within a function run by a thread other than the main thread, the main thread has to be invoked to perform the GUI update or the update of the resource which doesn't belong to the current thread. I also included a cancellation option in case the user decides to interrupt the operation if it is taking too long or the user changes their mind. I accomplished this through a Cancellation Token which can be used to send a signal that would throw an Exception that will interrupt the execution of the currently running task. I chose to write asynchronous code because it accomplishes larger tasks more quickly and it maintains the responsiveness of the GUI. Working on this project, I learned about C#, Windows Forms, Windows API, multithreading, events, marshalling, data binding, reference and value types, code reusability, code maintenance, and generics.
 
 ***
 
