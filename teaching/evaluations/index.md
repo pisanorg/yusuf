@@ -10,6 +10,17 @@ help future students make more informed choices, or at least know what
 they are getting into when they decide to take a course from me. It
 also is an interesting and fun historical record! Happy spelunking!
 
+### Course Syllabi
+
+  - [CSS 132](../syllabi/CSS132-AUT2020-pisan.pdf)
+  - [CSS 133](../syllabi/CSS133-WIN2021-pisan.pdf)
+  - [CSS 142](../syllabi/CSS142-AUT2017-pisan.pdf)
+  - [CSS 342](../syllabi/CSS342-AUT2020-pisan.pdf)
+  - [CSS 343](../syllabi/CSS343-WIN2021-pisan.pdf)
+  - [CSS 382](../syllabi/CSS382-WIN2021-pisan.pdf)
+  - [CSS 385](../syllabi/CSS385-SPR2020-pisan.pdf)
+  - [CSS 430](../syllabi/CSS430-SPR2020-pisan.pdf)
+
 ### Teaching Evaluations
 
 - 2021 Spring

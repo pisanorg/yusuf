@@ -8,7 +8,7 @@
 
 - 2021 Winter
   - [Ed Abshire](https://www.linkedin.com/in/eabshire/)
-  - [Taylor Cumings](https://www.linkedin.com/in/tcumings/)
+  - [Taylor Eyler](https://www.linkedin.com/in/tleyler/)
   - [Mitchell Dang](https://www.linkedin.com/in/mlcdang/)
   - [Jordan Lawson](https://www.linkedin.com/in/jordanlawsoncss/)
   - [Joy Yehuda Lodra](https://www.linkedin.com/in/joy-lodra-888b9615a/)
