@@ -21,9 +21,9 @@ also is an interesting and fun historical record! Happy spelunking!
   - CSS 385: Introduction to Game Development
   - CSS 430 Operating Systems
 - 2021 Winter
-  - CSS 133: Computer Programming for Engineers II
-  - CSS 343: Data Structures and Algorithms II
-  - CSS 382: Introduction to Artificial Intelligence
+  - [CSS 133: Computer Programming for Engineers II](Pisan-WI21-CSS133A.pdf)
+  - [CSS 343: Data Structures and Algorithms II](Pisan-WI21-CSS343A.pdf)
+  - [CSS 382: Introduction to Artificial Intelligence](Pisan-WI21-CSS382A.pdf)
 - 2020 Autumn
   - [CSS 132: Computer Programming for Engineers I](Pisan-AU20-CSS132A.pdf)
   - [CSS 342: Data Structures and Algorithms](Pisan-AU20-CSS342C.pdf)
