@@ -22,9 +22,9 @@ Course Syllabi from past years can be found at the public site for the CSS Under
     - [CSS 385: Introduction to Game Development](Pisan-S121-CSS385A.pdf)
     - [CSS 430: Operating Systems](Pisan-S121-CSS430A.pdf)
   - End-of-Quarter Evaluations
-    - CSS 382: Introduction to Artificial Intelligence
-    - CSS 385: Introduction to Game Development
-    - CSS 430 Operating Systems
+    - [CSS 382: Introduction to Artificial Intelligence](Pisan-SP21-CSS382A.pdf)
+    - [CSS 385: Introduction to Game Development](Pisan-SP21-CSS385A.pdf)
+    - [CSS 430: Operating Systems](Pisan-SP21-CSS430A.pdf)
 - 2021 Winter
   - [CSS 133: Computer Programming for Engineers II](Pisan-WI21-CSS133A.pdf)
   - [CSS 343: Data Structures and Algorithms II](Pisan-WI21-CSS343B.pdf)
