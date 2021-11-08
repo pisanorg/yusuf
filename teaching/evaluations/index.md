@@ -12,9 +12,16 @@ also is an interesting and fun historical record! Happy spelunking!
 
 ### Course Syllabi
 
-Course Syllabi from past years can be found at the public site for the CSS Undergratuate Curriculum Committee [http://bit.ly/CSS-UGCC](http://bit.ly/CSS-UGCC)
+Course Syllabi from past years can be found at the public site for the [CSS Undergratuate Curriculum Committee](https://drive.google.com/drive/folders/1AWpjm34camsQKjgP2JgK0TjRNqJlk6D3)
 
 ### Teaching Evaluations
+
+- 2021 Autumn
+  - Mid-Quarter Evaluations
+    - [CSS 132: Computer Programming for Engineers I](Pisan-AU21-CSS132A.pdf)
+    - [CSS 142: Computer Programming I](Pisan-AU21-CSS142D.pdf)
+    - [CSS 342: Data Structures and Algorithms I](Pisan-AU21-CSS342D.pdf)
+  - End-of-Quarter Evaluations
 
 - 2021 Spring (Last COVID-19 Zoom Quarter)
   - Mid-Quarter Evaluations
