@@ -22,6 +22,9 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
     - [CSS 142: Computer Programming I](Pisan-AU21-CSS142D.pdf)
     - [CSS 342: Data Structures and Algorithms I](Pisan-AU21-CSS342D.pdf)
   - End-of-Quarter Evaluations
+    - [CSS 132: Computer Programming for Engineers I](Pisan-AU21-CSS132A-end.pdf)
+    - [CSS 142: Computer Programming I](Pisan-AU21-CSS142D-end.pdf)
+    - [CSS 342: Data Structures and Algorithms I](Pisan-AU21-CSS342D-end.pdf)
 
 - 2021 Spring (Last COVID-19 Zoom Quarter)
   - Mid-Quarter Evaluations
