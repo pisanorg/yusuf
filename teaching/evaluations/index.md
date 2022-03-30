@@ -16,6 +16,11 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 ### Teaching Evaluations
 
+- 2022 Winter
+  - [CSS 133: Computer Programming for Engineers II](Pisan-WI22-CSS133A.pdf)
+  - [CSS 343: Data Structures and Algorithms II](Pisan-WI22-CSS343D.pdf)
+  - [CSS 382: Introduction to Artificial Intelligence](Pisan-WI22-CSS382A.pdf)
+
 - 2021 Autumn
   - Mid-Quarter Evaluations
     - [CSS 132: Computer Programming for Engineers I](Pisan-AU21-CSS132A.pdf)
