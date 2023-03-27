@@ -24,8 +24,8 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
   - CSS 385: Introduction to Game Development
 
 - 2023 Winter
-  - CSS 342: Data Structures and Algorithms I
-  - CSS 430: Operating Systems
+  - [CSS 342: Data Structures and Algorithms I](Pisan-WI23-CSS342B.pdf)
+  - [CSS 430: Operating Systems](Pisan-WI23-CSS430A.pdf)
 
 - 2022 Autumn
   - [CSS 342: Data Structures and Algorithms I](Pisan-AU22-CSS342F.pdf)
