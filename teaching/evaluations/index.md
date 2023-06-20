@@ -16,6 +16,19 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 ### Teaching Evaluations
 
+- 2024 Spring
+  - CSS 385: Introduction to Game Development
+  - CSS 422: Hardware and Computer Organization
+
+- 2024 Winter
+  - CSS 342: Data Structures and Algorithms I
+  - CSS 430: Operating Systems
+  - CSS 599 Faculty Research Seminar
+
+- 2023 Autumn
+  - CSS 342: Data Structures and Algorithms I
+  - CSS 343: Data Structures and Algorithms II
+  - CSS 422: Hardware and Computer Organization
 
 - 2023 Spring
   - [CSS 342: Data Structures and Algorithms I](Pisan-SP23-CSS342A.pdf)
