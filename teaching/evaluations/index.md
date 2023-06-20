@@ -18,10 +18,10 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 
 - 2023 Spring
-  - CSS 342: Data Structures and Algorithms I
-  - CSS 343: Data Structures and Algorithms II
-  - CSS 382: Introduction to Artificial Intelligence
-  - CSS 385: Introduction to Game Development
+  - [CSS 342: Data Structures and Algorithms I](Pisan-SP23-CSS342A.pdf)
+  - [CSS 343: Data Structures and Algorithms II](Pisan-SP23-CSS343B.pdf)
+  - [CSS 382: Introduction to Artificial Intelligence](Pisan-SP23-CSS382A.pdf)
+  - [CSS 385: Introduction to Game Development](Pisan-SP23-CSS385A.pdf)
 
 - 2023 Winter
   - [CSS 342: Data Structures and Algorithms I](Pisan-WI23-CSS342B.pdf)
