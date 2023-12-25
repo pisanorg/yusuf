@@ -26,9 +26,9 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
   - CSS 599 Faculty Research Seminar
 
 - 2023 Autumn
-  - CSS 342: Data Structures and Algorithms I
-  - CSS 343: Data Structures and Algorithms II
-  - CSS 422: Hardware and Computer Organization
+  - [CSS 342: Data Structures and Algorithms I](Pisan-AU23-CSS342A.pdf)
+  - [CSS 343: Data Structures and Algorithms II](Pisan-AU23-CSS343A.pdf)
+  - [CSS 422: Hardware and Computer Organization](Pisan-AU23-CSS422B.pdf)
 
 - 2023 Spring
   - [CSS 342: Data Structures and Algorithms I](Pisan-SP23-CSS342A.pdf)
