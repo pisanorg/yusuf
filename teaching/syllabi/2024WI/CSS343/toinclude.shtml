@@ -13,3 +13,5 @@ Who does not like pizza?
 {% include sometext.html %}
 
 Will it get processed?
+
+{% include_relative ./another.html %}
