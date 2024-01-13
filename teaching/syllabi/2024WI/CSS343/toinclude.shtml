@@ -9,3 +9,5 @@ title: Blogging Like a Hacker
 <h3>H3</h3>
 
 {% include sometext.html %}
+
+Will it get processed?
