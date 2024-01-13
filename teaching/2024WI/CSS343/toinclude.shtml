@@ -1,0 +1,18 @@
+---
+food: Pizza
+---
+
+<h1>{{ page.food }}</h1>
+Who does not like pizza?
+
+<h2> This is a test</h2>
+
+<h3>H3</h3>
+
+This will be from the _includes folder
+
+{% include sometext.html %}
+
+Will it get processed?
+
+{% include_relative another.html %}
