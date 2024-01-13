@@ -14,4 +14,4 @@ Who does not like pizza?
 
 Will it get processed?
 
-{% include_relative ./another.html %}
+{% include_relative another.html %}
