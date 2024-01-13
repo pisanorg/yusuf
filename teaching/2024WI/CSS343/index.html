@@ -4,17 +4,8 @@ food: Pizza
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>BES 301</title>
-	<meta name="description" content="">
+{% include_relative head.html %}
 
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/global2.css" />
-	<!--<link rel="stylesheet" href="http://basehold.it/18">-->
-</head>
 
 <body>
 	<!--<syntax for comment>-->
@@ -23,14 +14,7 @@ food: Pizza
 
 	<header>
 		<div class="page">
-			<div class="masthead">
-				<h1>BES 301A</h1>
-				<p>&tilde;</p>
-				<h2>Science Methods and Practice</h2>
-				<h3>Interdisciplinary Arts and Sciences</h3>
-				<h3>UW Bothell Au 2023 <br><a href="mailto:beccap@uw.edu">Dr. Becca Price</a>, UW2-220</h3>
-				<h3>This is a hybrid course. We meet Mondays at 1:15 in UW1-031.</h3>
-			</div>
+			{% include_relative masthead.html %}
 			<div class="shell-images">
 				<img class="shell one" src="../img/header-bes301-a.jpg" />
 				<img class="shell two" src="../img/header-bes301-b.jpg" />
@@ -117,16 +101,9 @@ food: Pizza
 
 
 
-	<footer>
-		<div class="page">
-			<img src="../img/shoes.jpg" alt="pink all stars" /> <!--<is this for screen readers?>-->
-			<p> Dr. Price acknowledges that we live and work on the unceded, ancestral lands of indigenous people. For
-				example, the UWB campus sits on the original territory belonging to the Willow (Sammamish) People. Let
-				us thank them for the stewardship of this land. Let us pay our respects to elders past and present.</p>
-		</div>
-	</footer>
 
 
+	{% include_relative footer.html %}
 
 </body>
 
