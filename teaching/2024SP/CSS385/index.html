@@ -1,0 +1,110 @@
+---
+food: Pizza
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include_relative head.html %}
+
+
+<body>
+	<!--<syntax for comment>-->
+	<!--<need to set up all these URLs-->
+	{% include_relative navigation.html %}
+
+	<header>
+		<div class="page">
+			{% include_relative masthead.html %}
+			<div class="shell-images">
+				<img class="shell one" src="../img/header-bes301-a.jpg" />
+				<img class="shell two" src="../img/header-bes301-b.jpg" />
+				<img class="shell three" src="../img/header-bes301-c.jpg" />
+				<img class="shell four" src="../img/header-bes301-d.jpg" />
+			</div>
+			<!--<insert graduation image>-->
+	</header>
+
+	<div class="page main-text">
+
+		<div class="link-box">
+			<h3>Overview</h3>
+
+			<iframe width="448" height="240" src="https://youtube.com/embed/5fPIHdBdu3E" title="BES 301 B Au 23"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+
+		</div>
+		<p>This class is a general introduction to the practice of science, intended as an overview of the scientific
+			process. You’ll learn by doing, working with real datasets to research the questions that you generate.
+			Since I am a paleobiologist, we will use a database about fossils as our jumping-off point for immersing
+			ourselves in the scientific process.</p>
+		<p>This course is required for science students in IAS and is also open to others who are interested in
+			scientific inquiry. You’ll learn approaches to communicating science, analyzing and presenting data, and
+			reviewing literature.</p>
+		<img src="../img/howscienceworks.png"
+			alt="The How Sciences Works Flowchart has Testing Ideas in the center, with arrows connecting to and from Exploration and Discovery, Community Analysis and Feedback, and Benefits and Outcomes." />
+		<p>How Science Works. © University of California Museum of Paleontology.</p>
+
+		<h3>Learning Objectives</h3>
+		<p> You can expect to learn approaches to data analysis, data presentation, literature searching and science
+			writing that will be applicable to advanced science courses at UWB and to doing science in general. By the
+			end of this course, you will demonstrate the ability to</p>
+		<ol type="1">
+			<li>conduct scientific research and assume a scientific identity. </li>
+			<li>use statistics to analyze quantitative data, and present the results of your analyses in graphs and in
+				words.</li>
+			<li>located read, and understand primary literature about your research topic.</li>
+			<li>adopt a collaborative approach to doing science, including conducting peer review by working with your
+				classmates to exchange ideas, share resources, and review each other’s work.</li>
+			<li>write a scientific paper that presents the results of your original, scientific research and that places
+				your work in the context of primary literature from that discipline.</li>
+		</ol>
+		<h3>Is This Course for Me?</h3>
+		<h4>Your background</h4>
+		<p>This course is designed to provide an overview of how science works and emphasizes aspects of the scientific
+			process that will serve science students in advanced courses. To benefit from this course:</p>
+		<ol type=square>
+			<li>You should have prior exposure to science courses, and thus a basic familiarity with scientific
+				information, its presentation, and the process of scientific investigations.</li>
+			<li>You should be comfortable with algebra, probability, and presentation of quantitative information in
+				graphs and tables (and be able to interpret data presented in such forms).</li>
+			<li>A prior course in statistics might be helpful, but it is not required.</li>
+		</ol>
+		<h4>Access to technology</h4>
+		<p>Half of this course is online and therefore requires a reliable fast-speed Internet connection. The <a
+				href="https://www.uwb.edu/it/training-and-support/teaching-learning/open-learning-lab">Open Learning
+				Lab</a> and the <a href="https://library.uwb.edu/">library</a> can provide access on-campus if you need
+			it. You also need to make sure that you know how to access the course using Canvas. If you are not familiar
+			with Canvas, please visit the <a href="https://canvas.uw.edu/courses/875034">UWB Learning Technologies
+				student tutorial page</a> (or just search: UWB Canvas students). We’ll be using Microsoft Excel to
+			complete the statistical analyses for your research projects.</p>
+		<h3>Context for this course in IAS</h3>
+		<p>The <a href="https://www.uwb.edu/ias">School of Interdisciplinary Arts and Sciences</a> focuses all students’
+			experiences around <a href="https://www.uwb.edu/ias/undergraduate/learning-objectives">five core learning
+				objectives:</a></p>
+		<ul type=square>
+			<li>Collaboration and shared leadership</li>
+			<li>Critical thinking</li>
+			<li>Diversity and equity</li>
+			<li>Interdisciplinary research and inquiry</li>
+			<li>Writing and presentation</li>
+		</ul>
+		<p>These objectives apply across all areas of study and your experiences in every IAS course should allow you to
+			develop your abilities and understanding in most, if not all, of the four objectives. This material and
+			assignments in this course will help you in these topics.</p>
+
+	</div>
+
+
+	</div>
+
+
+
+
+
+	{% include_relative footer.html %}
+
+</body>
+
+</html>
