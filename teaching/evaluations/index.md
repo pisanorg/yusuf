@@ -36,7 +36,7 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 - 2024 Winter
   - [CSS 343: Data Structures and Algorithms II](Pisan-WI24-CSS343B.pdf)
-  - [CSS 430: Operating Systems](Pisan-WI24-CSS430A.pdf)
+  - [CSS 430: Operating Systems](Pisan-WI24-CSS430B.pdf)
   - CSS 599 Faculty Research Seminar
 
 - 2023 Autumn
