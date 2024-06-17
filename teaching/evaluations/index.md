@@ -31,8 +31,8 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
   - BCORE 104: Games for Good
 
 - 2024 Spring
-  - CSS 385: Introduction to Game Development
-  - CSS 422: Hardware and Computer Organization
+  - [CSS 385: Introduction to Game Development](Pisan-SP24-CSS385A.pdf)
+  - [CSS 422: Hardware and Computer Organization](Pisan-SP24-CSS422A.pdf)
 
 - 2024 Winter
   - [CSS 343: Data Structures and Algorithms II](Pisan-WI24-CSS343B.pdf)
