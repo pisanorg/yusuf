@@ -18,11 +18,11 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 - 2025 Spring
   - CSS 343: Data Structures and Algorithms II
-  - CSS 382: Introduction to Artificial Intelligence
   - CSS 385: Introduction to Game Development
 
 - 2025 Winter
   - CSS 143: Computer Programming II
+  - CSS 343: Data Structures and Algorithms II
   - CSS 430: Operating Systems
 
 - 2024 Autumn
