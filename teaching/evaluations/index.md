@@ -26,9 +26,9 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
   - CSS 430: Operating Systems
 
 - 2024 Autumn
-  - CSS 143: Computer Programming II
-  - CSS 422: Hardware and Computer Organization
-  - BCORE 104: Games for Good
+  - [CSS 143: Computer Programming II](Pisan-AU24-CSS143A.pdf)
+  - [CSS 422: Hardware and Computer Organization](Pisan-AU24-CSS422B.pdf)
+  - [BCORE 104: Games for Good](Pisan-AU24-B CORE104H.pdf)
 
 - 2024 Spring
   - [CSS 385: Introduction to Game Development](Pisan-SP24-CSS385A.pdf)
