@@ -21,15 +21,17 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 - 2026 Winter
   - CSS 343: Data Structures and Algorithms II
-  - CSS 430: Operating Systems
+  - CSS 430A: Operating Systems
+  - CSS 430B: Operating Systems
 
 - 2025 Autumn
-  - CSS 343: Data Structures and Algorithms II
+  - CSS 343A: Data Structures and Algorithms II
+  - CSS 343B: Data Structures and Algorithms II
   - CSS 430: Operating Systems
 
 - 2025 Spring
-  - CSS 343: Data Structures and Algorithms II
-  - CSS 385: Introduction to Game Development
+  - [CSS 343: Data Structures and Algorithms II](Pisan-SP25-CSS343B.pdf)
+  - [CSS 385: Introduction to Game Development](Pisan-SP25-CSS385A.pdf)
 
 - 2025 Winter
   - [CSS 143: Computer Programming II](Pisan-WI25-CSS143B.pdf)
