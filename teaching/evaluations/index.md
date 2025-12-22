@@ -25,9 +25,9 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
   - CSS 430B: Operating Systems
 
 - 2025 Autumn
-  - CSS 343A: Data Structures and Algorithms II
-  - CSS 343B: Data Structures and Algorithms II
-  - CSS 430: Operating Systems
+  - [CSS 343A: Data Structures and Algorithms II](Pisan-AU25-CSS343A.pdf)
+  - [CSS 343B: Data Structures and Algorithms II](Pisan-AU25-CSS343B.pdf)
+  - [CSS 430: Operating Systems](Pisan-AU25-CSS430A.pdf)
 
 - 2025 Spring
   - [CSS 343: Data Structures and Algorithms II](Pisan-SP25-CSS343B.pdf)
