@@ -1,2 +1,4 @@
 
 .DS_Store
+code/venv/*
+code/debug_pdf_output.txt
