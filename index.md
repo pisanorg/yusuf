@@ -2,7 +2,7 @@
 
 ## Bio
 
-Yusuf Pisan is an Associate Teaching Professor in the [Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
+Yusuf Pisan is a Teaching Professor in the [Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
 
 His research interests include enabling technologies for computer games, the design of virtual environments that support collaborative work, and computer science education. He founded the [Australasian Conference on Interactive Entertainment](http://ieconference.org/) conference series and helped foster the Australian games community. His list of publications can be found at [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
 
@@ -11,6 +11,10 @@ Yusuf has a Ph.D. in Artificial Intelligence from Northwestern University. Befor
 My [somewhat outdated CV](PisanYusuf-CV.pdf) has additional details.
 
 Happy to accept connection requests on [LinkedIn](https://www.linkedin.com/in/pisan/) as long as we have met in-person. I sporadically use [Twitter](https://twitter.com/yusufpisan).
+
+## Adventures in AI
+
+[Adventures in AI](aiprojects.html) outlines some of the AI projects I have built for fun.
 
 ## Research
 
@@ -30,8 +34,8 @@ Visit [my resources wiki](https://github.com/pisanorg/w/wiki) for all sorts of i
 
 ## Contact
 
-**Email:** pisan@uw.edu  
-**Phone:** 425.352.3741 (email is better)  
+**Email:** pisan@uw.edu
+**Phone:** 425.352.3741 (email is better)
 
 ***
 
