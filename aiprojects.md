@@ -42,7 +42,7 @@ To be completed at a later date!
 
 (Last update April 2026)
 
-### Grade Statistics
+### [Grade Statistics](https://github.com/pisanuw/gradeplotter/blob/main/README.md)
 
 An internal project to generate graphs based on grades for each professor, for each course as well as historical data.
 
@@ -66,11 +66,13 @@ See [README](https://github.com/pisanuw/tictactoe/blob/main/README.md) for more 
 
 (Last update April 2026)
 
-### Choose Your Own Adventure (Last update April 2026)
+### [Choose Your Own Adventure](https://github.com/pisan382/choose-your-own-adventure/blob/main/README.md)
 
 Starter code for student projects. Students extended this project to create Choose Your Own Adventure authoring tools as well as Choose Your Own Adventure reading platforms.
 
 See [README](https://github.com/pisan382/choose-your-own-adventure/blob/main/README.md) for more details on the code.
+
+(Last update April 2026)
 
 ### [StockReptile](https://stockreptile.netlify.app/) - A Chess Playing Web App and Learning Tool
 
@@ -102,7 +104,7 @@ See [README](https://github.com/pisanuw/01shortAIproject/blob/main/README.md) fo
 
 (Last update April 2026)
 
-## The Algorithmic Professor? AI Ethics in the Classroom
+### [The Algorithmic Professor? AI Ethics in the Classroom](https://docs.google.com/document/d/18IZ7V11PKwUP_kISJSU_7FRxD3sl8xbM8YOyZXdDB20/edit?tab=t.0)
 
 A classroom exercise on what students think of the professors' use of AI in their teaching from generating slides to grading assignments with AI.
 
@@ -110,13 +112,13 @@ The assignment description and the summary report can be found [here](https://do
 
 (Completed in April 2026)
 
-## CS Prof vs Gemini Prompts
+### [CS Prof vs Gemini Prompts](https://docs.google.com/document/d/13HNdkUNjgwac0Uwg4OpIAtMr449614Y_x_z3ufXBTzc/edit?tab=t.0)
 
 Previously I had used Gemini to create slides. This time it claimed it cannot create slides. This is a summary of my "discussion" with Gemini trying to understand why it is refusing and trying to figure out a better prompt to get it to do what it had done before. You can read my "discussion" [here](https://docs.google.com/document/d/13HNdkUNjgwac0Uwg4OpIAtMr449614Y_x_z3ufXBTzc/edit?tab=t.0)
 
 (Completed in March 2026)
 
-## History of AI slides by Gemini Pro
+### [History of AI slides by Gemini Pro](https://drive.google.com/drive/u/3/folders/1prcrEZ3l9a3mb6PLQlIgOamQffSaJZ32)
 
 I asked (guided?) Gemini Pro to create a set of slides on the History of Artificial Intelligence that I plan to use in my CSS 382 Introduction to Artificial Intelligence course in Spring at University of Washington Bothell.
 
