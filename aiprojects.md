@@ -88,7 +88,7 @@ See [README](https://github.com/pisanorg/yusuf/blob/master/code/README.md) for m
 
 (Last update April 2026)
 
-### [UW Course & Professor Finder](https://uwbcssprofs.netlify.app/)
+### [UW Course & Professor Finder](https://uwcourses.netlify.app/)
 
 A web app from UW time schedule data so users can quickly answer:
 
@@ -98,9 +98,31 @@ A web app from UW time schedule data so users can quickly answer:
 
 The app supports all three UW campuses — Bothell, Tacoma, and Seattle — with a drill-down UI: select campus → select department → filter by course, professor, quarter, year.
 
-See [README](https://github.com/pisanuw/01shortAIproject/blob/main/README.md) for more details on the code or use it at https://uwbcssprofs.netlify.app/
+See [README](https://github.com/pisanuw/01shortAIproject/blob/main/README.md) for more details on the code or use it at https://uwcourses.netlify.app/
 
 (Last update April 2026)
+
+## The Algorithmic Professor? AI Ethics in the Classroom
+
+A classroom exercise on what students think of the professors' use of AI in their teaching from generating slides to grading assignments with AI.
+
+The assignment description and the summary report can be found [here](https://docs.google.com/document/d/18IZ7V11PKwUP_kISJSU_7FRxD3sl8xbM8YOyZXdDB20/edit?tab=t.0).
+
+(Completed in April 2026)
+
+## CS Prof vs Gemini Prompts
+
+Previously I had used Gemini to create slides. This time it claimed it cannot create slides. This is a summary of my "discussion" with Gemini trying to understand why it is refusing and trying to figure out a better prompt to get it to do what it had done before. You can read my "discussion" [here](https://docs.google.com/document/d/13HNdkUNjgwac0Uwg4OpIAtMr449614Y_x_z3ufXBTzc/edit?tab=t.0)
+
+(Completed in March 2026)
+
+## History of AI slides by Gemini Pro
+
+I asked (guided?) Gemini Pro to create a set of slides on the History of Artificial Intelligence that I plan to use in my CSS 382 Introduction to Artificial Intelligence course in Spring at University of Washington Bothell.
+
+I provided [History of Artificial Intelligence](https://en.wikipedia.org/wiki/History_of_artificial_intelligence) page from Wikipedia as a source. The slides produced by Gemini are [here](https://drive.google.com/drive/u/3/folders/1prcrEZ3l9a3mb6PLQlIgOamQffSaJZ32). I think it did a good job.
+
+(Completed in March 2026)
 
 ***
 
