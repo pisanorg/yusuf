@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [40 Greatest Innovations – Ordering Game](https://order-cards.netlify.app/)
+
+A web-based card-ordering game where players arrange the 40 greatest innovations of all time in chronological order. Players drag or click cards across a deck, board, and "later" holding area, then press **Check Answers** to receive a final score (no hints during play). Supports drag-and-drop and touch.
+
+See [README](https://github.com/pisanuw/Greatest-innovations/blob/main/README.md) for more details on the code or use it at <https://order-cards.netlify.app/>
+
+(Last update April 2026)
+
 ### [ClaudeBot](https://discord.com/oauth2/authorize?client_id=1493464177875091596)
 
 Allows users to ask Claude questions, get Claude to review code, suggest patches via Discord. Users need to use their own Anthropic API key (so I do not have to pay for my students' explorations!)
@@ -18,9 +26,9 @@ See [README](https://github.com/pisanuw/claude-discordbot/blob/main/README.md) f
 
 ### [MeetMe](https://meetme.pisan.me/) — Joint Meeting Finder
 
-Allows gathering information from multiple people on their availability, so you can find a common meeting time. You can also set it up to let users "book" you based on your availability. Combination of https://www.when2meet.com/ https://calendly.com/ and https://doodle.com/
+Allows gathering information from multiple people on their availability, so you can find a common meeting time. You can also set it up to let users "book" you based on your availability. Combination of <https://www.when2meet.com/> <https://calendly.com/> and <https://doodle.com/>
 
-See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more details on the code or use it at https://meetme.pisan.me/
+See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more details on the code or use it at <https://meetme.pisan.me/>
 
 (Last update April 2026)
 
@@ -28,7 +36,7 @@ See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more det
 
 Improves the accessibility score for Canvas pages automatically. Needs a canvas token to access Canvas pages.
 
-See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md) for more details on the code or use it at https://canvas-accessibility.onrender.com/
+See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md) for more details on the code or use it at <https://canvas-accessibility.onrender.com/>
 
 (Last update April 2026)
 
@@ -36,7 +44,7 @@ See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md
 
 Based on my PhD thesis, starting to recreate the project from scratch.
 
-See [README](https://github.com/pisanuw/tps/blob/main/README.md) for more details on the code or use it at https://tps-thesis-recreation.onrender.com/
+See [README](https://github.com/pisanuw/tps/blob/main/README.md) for more details on the code or use it at <https://tps-thesis-recreation.onrender.com/>
 
 To be completed at a later date!
 
@@ -54,7 +62,7 @@ See [README](https://github.com/pisanuw/gradeplotter/blob/main/README.md) for mo
 
 A toy project on whether sensors could be used to determine where a bullet has hit on the target.
 
-See [README](https://github.com/pisanuw/bullet/blob/main/README.md) for more details on the code or use it at https://targetbullet.netlify.app/
+See [README](https://github.com/pisanuw/bullet/blob/main/README.md) for more details on the code or use it at <https://targetbullet.netlify.app/>
 
 (Last update April 2026)
 
@@ -62,7 +70,7 @@ See [README](https://github.com/pisanuw/bullet/blob/main/README.md) for more det
 
 Started with a simple version of Tic-Tac-Toe and ended up adding backgammon and chess as well. Nothing fancy, but was good for learning.
 
-See [README](https://github.com/pisanuw/tictactoe/blob/main/README.md) for more details on the code or use it at https://tic-tac-toe-app-857412880660.us-west1.run.app/
+See [README](https://github.com/pisanuw/tictactoe/blob/main/README.md) for more details on the code or use it at <https://tic-tac-toe-app-857412880660.us-west1.run.app/>
 
 (Last update April 2026)
 
@@ -78,7 +86,7 @@ See [README](https://github.com/pisan382/choose-your-own-adventure/blob/main/REA
 
 StockFish is the best chess engine out there. StockReptile is my inferior version but much more suited as a learning tool
 
-See [README](https://github.com/pisanuw/notstockfish/blob/main/README.md) for more details on the code or use it at https://stockreptile.netlify.app/
+See [README](https://github.com/pisanuw/notstockfish/blob/main/README.md) for more details on the code or use it at <https://stockreptile.netlify.app/>
 
 (Last update April 2026)
 
@@ -86,7 +94,7 @@ See [README](https://github.com/pisanuw/notstockfish/blob/main/README.md) for mo
 
 This tool automates the extraction of teaching evaluation metrics from historical course evaluation PDFs and visualizes them over time using line graphs.
 
-See [README](https://github.com/pisanorg/yusuf/blob/master/code/README.md) for more details on the code or see my teaching evaluation dashboard at https://pisanorg.github.io/yusuf/graphs/
+See [README](https://github.com/pisanorg/yusuf/blob/master/code/README.md) for more details on the code or see my teaching evaluation dashboard at <https://pisanorg.github.io/yusuf/graphs/>
 
 (Last update April 2026)
 
@@ -94,13 +102,13 @@ See [README](https://github.com/pisanorg/yusuf/blob/master/code/README.md) for m
 
 A web app from UW time schedule data so users can quickly answer:
 
-- Which professor taught a specific course?
-- Which courses did a specific professor teach?
-- When (quarter and year) was the course offered?
+* Which professor taught a specific course?
+* Which courses did a specific professor teach?
+* When (quarter and year) was the course offered?
 
 The app supports all three UW campuses — Bothell, Tacoma, and Seattle — with a drill-down UI: select campus → select department → filter by course, professor, quarter, year.
 
-See [README](https://github.com/pisanuw/01shortAIproject/blob/main/README.md) for more details on the code or use it at https://uwcourses.netlify.app/
+See [README](https://github.com/pisanuw/01shortAIproject/blob/main/README.md) for more details on the code or use it at <https://uwcourses.netlify.app/>
 
 (Last update April 2026)
 
@@ -126,6 +134,6 @@ I provided [History of Artificial Intelligence](https://en.wikipedia.org/wiki/Hi
 
 (Completed in March 2026)
 
-***
+---
 
 [Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
