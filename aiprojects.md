@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [RankMe](https://rankme-1ttb.onrender.com/)
+
+A head-to-head voting app that ranks anything using the ELO rating system. Anyone can create a topic (movies, foods, photos, etc.), add items with optional images, and vote by repeatedly choosing between two randomly matched items. Rankings update in real time after each vote using a variable K-factor ELO algorithm (K=40 for new items, tapering to K=10 for established ones). Sessions are tracked via cookies to prevent repeat matchups in the same browser session. An admin panel at a secret URL allows deletion of topics and items.
+
+See [README](https://github.com/pisanuw/rankme/blob/main/README.md) for more details on the code or use it at <https://rankme-1ttb.onrender.com/>
+
+(Last update April 2026)
+
 ### [The AI Grading Paradox](https://docs.google.com/document/d/1NeDP4ELrnfuB2tjqXvEow_BTOVvblJLPH0gmuBuYstQ/edit?usp=drivesdk)
 
 A classroom exercise for CSS 382 Introduction to Artificial Intelligence on how professors should grade homework in an era where AI can complete almost any assignment with near-perfect results. Groups of 5–6 students stress-tested four grading models (VIVA oral defense, GitHub audit, AI-hybrid rubric, and mastery/pass-fail), then designed their own "Ideal Grading Policy." The assignment and a synthesis report of student submissions (created with Gemini) can be found [here](https://docs.google.com/document/d/1NeDP4ELrnfuB2tjqXvEow_BTOVvblJLPH0gmuBuYstQ/edit?usp=drivesdk).
