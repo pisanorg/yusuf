@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Ranked Voting](https://ranked-voting.netlify.app/login)
+
+A full-stack ranked-choice voting web app. Admins create contests with multiple candidates, set a number of winners, control voter access via allowed email lists, and optionally randomize option order per voter. Voters submit drag-and-drop ballots. Results are computed using step-by-step Instant Runoff Voting (IRV), showing each elimination round until winner(s) are determined. Built with React + Vite, Tailwind CSS, Supabase (PostgreSQL + Auth), and Netlify serverless functions.
+
+See [README](https://github.com/pisanuw/ranked-voting/blob/main/README.md) for more details on the code or use it at <https://ranked-voting.netlify.app/login>
+
+(Last update April 2026)
+
 ### [40 Greatest Innovations – Ordering Game](https://order-cards.netlify.app/)
 
 A web-based card-ordering game where players arrange the 40 greatest innovations of all time in chronological order. Players drag or click cards across a deck, board, and "later" holding area, then press **Check Answers** to receive a final score (no hints during play). Supports drag-and-drop and touch.
