@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [UpvoteMe](https://upvoteme.netlify.app/)
+
+A private, unlisted comment-and-voting app. Anyone can create a topic and instantly get two short URLs — one to share with participants, one private admin URL for moderation. Participants post comments (with optional file attachments, up to 5 files × 2 MB each) and upvote or downvote others. No public topic listing exists by design; topics are only reachable via shared URLs. Admins can lock or delete topics. Voting can be restricted to authenticated users (Google OAuth or magic link), in which case the admin can see who voted on each comment. Topics auto-delete after 30 days of inactivity.
+
+See [README](https://github.com/pisanuw/upvote/blob/main/README.md) for more details on the code or use it at <https://upvoteme.netlify.app/>
+
+(Last update April 2026)
+
 ### [RankMe](https://rankme-1ttb.onrender.com/)
 
 A head-to-head voting app that ranks anything using the ELO rating system. Anyone can create a topic (movies, foods, photos, etc.), add items with optional images, and vote by repeatedly choosing between two randomly matched items. Rankings update in real time after each vote using a variable K-factor ELO algorithm (K=40 for new items, tapering to K=10 for established ones). Sessions are tracked via cookies to prevent repeat matchups in the same browser session. An admin panel at a secret URL allows deletion of topics and items.
