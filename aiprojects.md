@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Grade Histogram Plotter](https://grade-histogram-plotter.onrender.com/)
+
+A lightweight Flask web app for visualizing grade distributions. Paste scores one per line (or upload a file), optionally customize the grade-bucket cutoffs, and get an instant histogram with summary statistics — mean, median, standard deviation, min, max, and per-bucket counts and percentages. Non-numeric entries are tallied in a separate NaN bucket. Includes CSRF protection and rate limiting. Deployed on both Render and PythonAnywhere.
+
+See [README](https://github.com/pisanuw/grade-histogram-plotter/blob/main/README.md) for more details on the code or use it at <https://grade-histogram-plotter.onrender.com/> or <https://pisan.pythonanywhere.com/>
+
+(Last update April 2026)
+
 ### [UpvoteMe](https://upvoteme.netlify.app/)
 
 A private, unlisted comment-and-voting app. Anyone can create a topic and instantly get two short URLs — one to share with participants, one private admin URL for moderation. Participants post comments (with optional file attachments, up to 5 files × 2 MB each) and upvote or downvote others. No public topic listing exists by design; topics are only reachable via shared URLs. Admins can lock or delete topics. Voting can be restricted to authenticated users (Google OAuth or magic link), in which case the admin can see who voted on each comment. Topics auto-delete after 30 days of inactivity.
