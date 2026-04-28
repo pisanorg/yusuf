@@ -2,23 +2,69 @@
 <html>
 <head>
 <title>Teaching Evaluation Dashboard</title>
-<style>body { font-family: sans-serif; margin: 40px; } a { color: #0066cc; text-decoration: none; } a:hover { text-decoration: underline; } img { max-width: 100%; height: auto; margin-bottom: 20px; } .graph-container { margin-bottom: 40px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }</style>
+<style>
+body { font-family: sans-serif; margin: 40px; max-width: 1200px; margin: 40px auto; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
+h2 { margin-top: 40px; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ol.course-index { padding-left: 30px; line-height: 2; }
+.thumbnail-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.thumbnail { width: calc(20% - 12px); min-width: 160px; text-align: center; }
+.thumbnail img { width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px; }
+.thumbnail p { margin: 4px 0 0; font-size: 0.85em; font-weight: bold; }
+.graph-container { margin-bottom: 60px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; scroll-margin-top: 20px; }
+.graph-container img { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
 <h1>Teaching Evaluation Dashboard</h1>
+<h2>Courses Taught (67)</h2>
+<ol class='course-index'>
+<li><a href='#BCORE104'>BCORE 104</a> (2024AU)</li>
+<li><a href='#BIMD363'>BIMD 363</a> (2019SP)</li>
+<li><a href='#CSS132'>CSS 132</a> (2017AU, 2018AU, 2019AU, 2020AU, 2021AU)</li>
+<li><a href='#CSS133'>CSS 133</a> (2018WI, 2019WI, 2020WI, 2021WI, 2022WI)</li>
+<li><a href='#CSS142'>CSS 142</a> (2017AU, 2021AU)</li>
+<li><a href='#CSS143'>CSS 143</a> (2024AU, 2025WI)</li>
+<li><a href='#CSS342'>CSS 342</a> (2018SP, 2019AU, 2020AU, 2021AU, 2022AU, 2023WI, 2023SP, 2023AU)</li>
+<li><a href='#CSS343'>CSS 343</a> (2018WIx2, 2018AU, 2019WI, 2019AU, 2020WI, 2021WI, 2022WI, 2023SP, 2023AU, 2024WI, 2025WI, 2025SP, 2025AUx2, 2026WI)</li>
+<li><a href='#CSS382'>CSS 382</a> (2021WI, 2021SP, 2022WI, 2023SP)</li>
+<li><a href='#CSS385'>CSS 385</a> (2018SP, 2019SP, 2020SP, 2021SP, 2022AU, 2023SP, 2024SP, 2025SP)</li>
+<li><a href='#CSS390'>CSS 390</a> (2018AU, 2020WI, 2020SU)</li>
+<li><a href='#CSS422'>CSS 422</a> (2023AU, 2024SP, 2024AU)</li>
+<li><a href='#CSS430'>CSS 430</a> (2019SP, 2020SP, 2021SP, 2023WI, 2024WI, 2025WI, 2025AU, 2026WIx2)</li>
+</ol>
+<h2>Overview</h2>
+<div class='thumbnail-grid'>
+<div class='thumbnail'><a href='#BCORE104'><img src='BCORE104_evaluations.png' alt='BCORE 104'></a><p>BCORE 104</p></div>
+<div class='thumbnail'><a href='#BIMD363'><img src='BIMD363_evaluations.png' alt='BIMD 363'></a><p>BIMD 363</p></div>
+<div class='thumbnail'><a href='#CSS132'><img src='CSS132_evaluations.png' alt='CSS 132'></a><p>CSS 132</p></div>
+<div class='thumbnail'><a href='#CSS133'><img src='CSS133_evaluations.png' alt='CSS 133'></a><p>CSS 133</p></div>
+<div class='thumbnail'><a href='#CSS142'><img src='CSS142_evaluations.png' alt='CSS 142'></a><p>CSS 142</p></div>
+<div class='thumbnail'><a href='#CSS143'><img src='CSS143_evaluations.png' alt='CSS 143'></a><p>CSS 143</p></div>
+<div class='thumbnail'><a href='#CSS342'><img src='CSS342_evaluations.png' alt='CSS 342'></a><p>CSS 342</p></div>
+<div class='thumbnail'><a href='#CSS343'><img src='CSS343_evaluations.png' alt='CSS 343'></a><p>CSS 343</p></div>
+<div class='thumbnail'><a href='#CSS382'><img src='CSS382_evaluations.png' alt='CSS 382'></a><p>CSS 382</p></div>
+<div class='thumbnail'><a href='#CSS385'><img src='CSS385_evaluations.png' alt='CSS 385'></a><p>CSS 385</p></div>
+<div class='thumbnail'><a href='#CSS390'><img src='CSS390_evaluations.png' alt='CSS 390'></a><p>CSS 390</p></div>
+<div class='thumbnail'><a href='#CSS422'><img src='CSS422_evaluations.png' alt='CSS 422'></a><p>CSS 422</p></div>
+<div class='thumbnail'><a href='#CSS430'><img src='CSS430_evaluations.png' alt='CSS 430'></a><p>CSS 430</p></div>
+</div>
+<h2>Detailed Graphs</h2>
+<div class='graph-container' id='BCORE104'><h3>BCORE 104</h3><img src='BCORE104_evaluations.png' alt='Evaluation graph for BCORE 104'></div>
+<div class='graph-container' id='BIMD363'><h3>BIMD 363</h3><img src='BIMD363_evaluations.png' alt='Evaluation graph for BIMD 363'></div>
+<div class='graph-container' id='CSS132'><h3>CSS 132</h3><img src='CSS132_evaluations.png' alt='Evaluation graph for CSS 132'></div>
+<div class='graph-container' id='CSS133'><h3>CSS 133</h3><img src='CSS133_evaluations.png' alt='Evaluation graph for CSS 133'></div>
+<div class='graph-container' id='CSS142'><h3>CSS 142</h3><img src='CSS142_evaluations.png' alt='Evaluation graph for CSS 142'></div>
+<div class='graph-container' id='CSS143'><h3>CSS 143</h3><img src='CSS143_evaluations.png' alt='Evaluation graph for CSS 143'></div>
+<div class='graph-container' id='CSS342'><h3>CSS 342</h3><img src='CSS342_evaluations.png' alt='Evaluation graph for CSS 342'></div>
+<div class='graph-container' id='CSS343'><h3>CSS 343</h3><img src='CSS343_evaluations.png' alt='Evaluation graph for CSS 343'></div>
+<div class='graph-container' id='CSS382'><h3>CSS 382</h3><img src='CSS382_evaluations.png' alt='Evaluation graph for CSS 382'></div>
+<div class='graph-container' id='CSS385'><h3>CSS 385</h3><img src='CSS385_evaluations.png' alt='Evaluation graph for CSS 385'></div>
+<div class='graph-container' id='CSS390'><h3>CSS 390</h3><img src='CSS390_evaluations.png' alt='Evaluation graph for CSS 390'></div>
+<div class='graph-container' id='CSS422'><h3>CSS 422</h3><img src='CSS422_evaluations.png' alt='Evaluation graph for CSS 422'></div>
+<div class='graph-container' id='CSS430'><h3>CSS 430</h3><img src='CSS430_evaluations.png' alt='Evaluation graph for CSS 430'></div>
 <p><a href='evaluations_summary.csv'>Download Raw Data (CSV)</a></p>
-<div class='graph-container'><h2>BCORE104</h2><img src='BCORE104_evaluations.png' alt='Evaluation graph for BCORE104'></div>
-<div class='graph-container'><h2>BIMD363</h2><img src='BIMD363_evaluations.png' alt='Evaluation graph for BIMD363'></div>
-<div class='graph-container'><h2>CSS132</h2><img src='CSS132_evaluations.png' alt='Evaluation graph for CSS132'></div>
-<div class='graph-container'><h2>CSS133</h2><img src='CSS133_evaluations.png' alt='Evaluation graph for CSS133'></div>
-<div class='graph-container'><h2>CSS142</h2><img src='CSS142_evaluations.png' alt='Evaluation graph for CSS142'></div>
-<div class='graph-container'><h2>CSS143</h2><img src='CSS143_evaluations.png' alt='Evaluation graph for CSS143'></div>
-<div class='graph-container'><h2>CSS342</h2><img src='CSS342_evaluations.png' alt='Evaluation graph for CSS342'></div>
-<div class='graph-container'><h2>CSS343</h2><img src='CSS343_evaluations.png' alt='Evaluation graph for CSS343'></div>
-<div class='graph-container'><h2>CSS382</h2><img src='CSS382_evaluations.png' alt='Evaluation graph for CSS382'></div>
-<div class='graph-container'><h2>CSS385</h2><img src='CSS385_evaluations.png' alt='Evaluation graph for CSS385'></div>
-<div class='graph-container'><h2>CSS390</h2><img src='CSS390_evaluations.png' alt='Evaluation graph for CSS390'></div>
-<div class='graph-container'><h2>CSS422</h2><img src='CSS422_evaluations.png' alt='Evaluation graph for CSS422'></div>
-<div class='graph-container'><h2>CSS430</h2><img src='CSS430_evaluations.png' alt='Evaluation graph for CSS430'></div>
 </body>
 </html>

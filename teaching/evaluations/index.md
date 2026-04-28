@@ -16,6 +16,8 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 ### Teaching Evaluations
 
+[Teaching Evaluation Dashboard](../../graphs/) with pretty graphs!
+
 - 2026 Spring
   - CSS 382: Introduction to Artificial Intelligence
 
