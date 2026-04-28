@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [PasteMD](https://paste-md.netlify.app/)
+
+A Markdown publishing tool with passwordless authentication. Users sign in via magic link (email), write or paste Markdown, and publish it as a rendered page with a short shareable URL. Posts are stored in Netlify Blobs (no external database required). Authors can manage and delete their own posts from a personal dashboard; admins get a separate panel to view and delete any post across all users. Admins are notified by email whenever a new post is published. Built as a pure static frontend with Netlify serverless functions handling auth (JWT-based), post CRUD, and email delivery.
+
+See [README](https://github.com/pisanuw/pastemd/blob/main/README.md) for more details on the code or use it at <https://paste-md.netlify.app/>
+
+(Last update April 2026)
+
 ### [Grade Histogram Plotter](https://grade-histogram-plotter.onrender.com/)
 
 A lightweight Flask web app for visualizing grade distributions. Paste scores one per line (or upload a file), optionally customize the grade-bucket cutoffs, and get an instant histogram with summary statistics — mean, median, standard deviation, min, max, and per-bucket counts and percentages. Non-numeric entries are tallied in a separate NaN bucket. Includes CSRF protection and rate limiting. Deployed on both Render and PythonAnywhere.
