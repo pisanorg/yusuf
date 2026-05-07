@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Letter Game](https://letter-category.netlify.app/)
+
+A casual browser word game where you and the computer alternate naming things in a chosen category, one letter at a time from A to Z. Choose from 20 categories (Animals, World Cities, Movies, Mythological Deities, Dinosaurs, and more) or let the game pick at random. You type a word, it's validated against the built-in word list, and the computer picks its own entry (with a Wikipedia image). You get 3 skips per game for tough letters. Built as a pure static site — plain HTML, CSS, and JavaScript with no framework or backend — using the Wikipedia REST API for images and Netlify Forms for word suggestions.
+
+See [README](https://github.com/pisanuw/lettergame/blob/main/README.md) for more details on the code or use it at <https://letter-category.netlify.app/>
+
+(Last update May 2026)
+
 ### [PasteMD](https://paste-md.netlify.app/)
 
 A Markdown publishing tool with passwordless authentication. Users sign in via magic link (email), write or paste Markdown, and publish it as a rendered page with a short shareable URL. Posts are stored in Netlify Blobs (no external database required). Authors can manage and delete their own posts from a personal dashboard; admins get a separate panel to view and delete any post across all users. Admins are notified by email whenever a new post is published. Built as a pure static frontend with Netlify serverless functions handling auth (JWT-based), post CRUD, and email delivery.
