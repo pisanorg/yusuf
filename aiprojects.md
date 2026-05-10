@@ -8,6 +8,12 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Playful Interactions with AI](https://docs.google.com/presentation/d/e/2PACX-1vR5w8OC78eblbD9sOh3fNz5iK1Zgug63C4458P1lWfRAo_iolN09cCmLTA1Jgvn0WUy-QSmoivTUZmZ/pub?start=false&loop=false&delayms=5000&slide=id.p1)
+
+An opening keynote on how faculty can keep themselves up to date with AI tools and support their students. Covers hands-on examples of using LLMs for teaching, grading, and course content — with a warm, collegial tone aimed at fellow academics. Available in [English](https://docs.google.com/presentation/d/e/2PACX-1vR5w8OC78eblbD9sOh3fNz5iK1Zgug63C4458P1lWfRAo_iolN09cCmLTA1Jgvn0WUy-QSmoivTUZmZ/pub?start=false&loop=false&delayms=5000&slide=id.p1) and [Turkish](https://docs.google.com/presentation/d/e/2PACX-1vQIyaIT3pzrBcvJ0ftY0pKvW5icMDLeuiM21FiVnF-faLxm-Z5w43kvRCdOFm8sfYY8hPu8nnRgSAUi/pub?start=false&loop=false&delayms=3000).
+
+(May 2026)
+
 ### [Letter Game](https://letter-category.netlify.app/)
 
 A casual browser word game where you and the computer alternate naming things in a chosen category, one letter at a time from A to Z. Choose from 20 categories (Animals, World Cities, Movies, Mythological Deities, Dinosaurs, and more) or let the game pick at random. You type a word, it's validated against the built-in word list, and the computer picks its own entry (with a Wikipedia image). You get 3 skips per game for tough letters. Built as a pure static site — plain HTML, CSS, and JavaScript with no framework or backend — using the Wikipedia REST API for images and Netlify Forms for word suggestions.
