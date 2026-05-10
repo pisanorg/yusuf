@@ -54,6 +54,12 @@ A classroom exercise for CSS 382 Introduction to Artificial Intelligence on how 
 
 (Completed in April 2026)
 
+### [The AI Learner's Dilemma](https://docs.google.com/document/d/1lJfZw5Zx3tpTuj8mr0k8rhk0bq9OSQmgh9o89tVJy8U/mobilebasic)
+
+A classroom exercise for CSS 382 Introduction to Artificial Intelligence on the ethical dilemma students face when using AI for homework: prioritize learning and risk a lower grade, or prioritize grades and miss the learning opportunity. Groups of 5–6 students analyzed three personas (The Accelerator, The Proxy, The Traditionalist), assessed long-term consequences through the lenses of technical interviews, employer expectations, and academic integrity, then drafted a 5-rule "Personal AI Ethics Protocol." Near-unanimous consensus: The Accelerator is most sustainable, The Proxy is unethical, and a CS degree's value shifts from code-writing to engineering judgment in a world of capable AI. The assignment and a synthesis report of student submissions (created with Gemini) can be found [here](https://docs.google.com/document/d/1lJfZw5Zx3tpTuj8mr0k8rhk0bq9OSQmgh9o89tVJy8U/mobilebasic).
+
+(Completed in April 2026)
+
 ### [Ranked Voting](https://ranked-voting.netlify.app/login)
 
 A full-stack ranked-choice voting web app. Admins create contests with multiple candidates, set a number of winners, control voter access via allowed email lists, and optionally randomize option order per voter. Voters submit drag-and-drop ballots. Results are computed using step-by-step Instant Runoff Voting (IRV), showing each elimination round until winner(s) are determined. Built with React + Vite, Tailwind CSS, Supabase (PostgreSQL + Auth), and Netlify serverless functions.
