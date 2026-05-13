@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Daily Project Ideas](https://github.com/pisanuw/daily-project-ideas)
+
+Every morning at 5am, a Claude Code Remote Trigger wakes up, reads five subreddits (r/SideProject, r/sideprojects, r/ProductHunters, r/coolgithubprojects, r/AI_Agents), surfs the web, and commits three new project ideas to a public GitHub repo — prioritizing side projects, teaching tools, classroom assignments, and anything useful for students. By the time I sit down with coffee there is a fresh `YYYY-MM-DD.md` waiting. The repo also stores the full briefing, AI log, and change history so the prompt is version-controlled alongside the output. Read the Substack article [My Cron Job Reads Reddit. The Prompts Are in Git.](https://education2ai.substack.com/p/my-cron-job-reads-reddit-the-prompts) for the thinking behind it.
+
+See [README](https://github.com/pisanuw/daily-project-ideas/blob/main/README.md) for more details on the code or browse the ideas at <https://github.com/pisanuw/daily-project-ideas>
+
+(Last update May 2026)
+
 ### [Playful Interactions with AI](https://docs.google.com/presentation/d/e/2PACX-1vR5w8OC78eblbD9sOh3fNz5iK1Zgug63C4458P1lWfRAo_iolN09cCmLTA1Jgvn0WUy-QSmoivTUZmZ/pub?start=false&loop=false&delayms=5000&slide=id.p1)
 
 An opening keynote on how faculty can keep themselves up to date with AI tools and support their students. Covers hands-on examples of using LLMs for teaching, grading, and course content — with a warm, collegial tone aimed at fellow academics. Available in [English](https://docs.google.com/presentation/d/e/2PACX-1vR5w8OC78eblbD9sOh3fNz5iK1Zgug63C4458P1lWfRAo_iolN09cCmLTA1Jgvn0WUy-QSmoivTUZmZ/pub?start=false&loop=false&delayms=5000&slide=id.p1) and [Turkish](https://docs.google.com/presentation/d/e/2PACX-1vQIyaIT3pzrBcvJ0ftY0pKvW5icMDLeuiM21FiVnF-faLxm-Z5w43kvRCdOFm8sfYY8hPu8nnRgSAUi/pub?start=false&loop=false&delayms=3000).
