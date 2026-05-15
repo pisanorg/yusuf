@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Digital Yusuf](https://chatwithdigitalme.netlify.app/)
+
+A web app that lets you chat with a digital version of Yusuf Pisan. Built on a knowledge base of 10 structured persona files (~155K characters) covering bio, teaching philosophy, research, communication style, opinions, quirks, and full Substack articles — assembled from 30+ public sources including faculty pages, teaching evaluations, 63+ GitHub repos, Google Scholar, and promotion documents. The entire persona is loaded into the system prompt (no RAG needed at this scale). The digital Yusuf speaks in first person, matching his voice, humor, and opinions. Features streaming responses via SSE, optional Google Sign-In, BYOK (users can supply their own Anthropic API key), an admin dashboard with usage analytics and cost controls, and auto-email of finished conversations. Frontend is React + Vite on Netlify; backend is FastAPI on Render (Docker).
+
+See [README](https://github.com/pisanuw/digitalme/blob/main/README.md) for more details on the code or chat with it at <https://chatwithdigitalme.netlify.app/>
+
+(Last update May 2026)
+
 ### [Daily Project Ideas](https://github.com/pisanuw/daily-project-ideas)
 
 Every morning at 5am, a Claude Code Remote Trigger wakes up, reads five subreddits (r/SideProject, r/sideprojects, r/ProductHunters, r/coolgithubprojects, r/AI_Agents), surfs the web, and commits three new project ideas to a public GitHub repo — prioritizing side projects, teaching tools, classroom assignments, and anything useful for students. By the time I sit down with coffee there is a fresh `YYYY-MM-DD.md` waiting. The repo also stores the full briefing, AI log, and change history so the prompt is version-controlled alongside the output. Read the Substack article [My Cron Job Reads Reddit. The Prompts Are in Git.](https://education2ai.substack.com/p/my-cron-job-reads-reddit-the-prompts) for the thinking behind it.
