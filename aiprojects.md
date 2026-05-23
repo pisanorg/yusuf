@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Accessibility Lens](https://accessibility-lens.onrender.com/)
+
+Paste any public URL and see it through four sets of eyes: low vision, color blindness, keyboard-only navigation, and screen reader. The app fetches the raw HTML, runs 11 WCAG 2.1 rules (missing alt text, broken heading structure, low color contrast, zoom disabled, duplicate IDs, unlabelled form controls, and more), and gives a concrete fix for each failure. The signature feature is a screen-reader view that strips all layout and shows the page as the linear stream of roles and text a blind user actually hears — making failures visceral rather than abstract. With an Anthropic API key, Claude rewrites each offending snippet into a corrected one; without it, rule-based fixes still cover every issue. Built as a TypeScript monorepo (React + Vite client, Express server), deployed on Render. 102 tests passing, ~96% server coverage. Built from the `daily-project-ideas` prompt for 2026-05-12.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/accessibility-lens/README.md) for more details on the code or use it at <https://accessibility-lens.onrender.com/>
+
+(Last update May 2026)
+
 ### [HTML Editor](https://github.com/pisanuw/html-editor)
 
 A lightweight native macOS HTML editor built with SwiftUI, AppKit, and WebKit. Features a split-pane layout with a syntax-highlighted editor on the left and a live `WKWebView` preview on the right that updates automatically as you type. Includes a toolbar with one-click insertion of common tags (headings, bold, italic, links, lists), full file operations (New, Open, Save, Save As), and a status bar showing file path and cursor position. No web deployment — build and run from Xcode.
