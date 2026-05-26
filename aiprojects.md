@@ -8,6 +8,14 @@ LLMs are going to change the world as we know it. AI systems can already impleme
 
 I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
 
+### [Canvas Group Evaluate](https://github.com/pisanuw/canvas-group-evaluate)
+
+A command-line tool that generates a ready-to-deploy Google Form for peer and self evaluations from a Canvas group set. Two Python scripts do all the work: `fetch_roster.py` pulls groups and students from the Canvas API (or reads a CSV/TXT file you supply) and writes `roster.json`; `generate_apps_script.py` turns that into a self-contained Apps Script file you paste into script.google.com and run once. The resulting form uses section navigation to route each student to their own group's rubric, with a configurable Likert block (Technical Contribution, Reliability, Communication, Problem Solving) plus two open-text questions per member. The form is locked to your Google Workspace domain (e.g. `@uw.edu`) so only signed-in students can respond. No web deployment — runs locally each quarter.
+
+See [README](https://github.com/pisanuw/canvas-group-evaluate/blob/main/README.md) for more details on the code.
+
+(Last update May 2026)
+
 ### [Accessibility Lens](https://accessibility-lens.onrender.com/)
 
 Paste any public URL and see it through four sets of eyes: low vision, color blindness, keyboard-only navigation, and screen reader. The app fetches the raw HTML, runs 11 WCAG 2.1 rules (missing alt text, broken heading structure, low color contrast, zoom disabled, duplicate IDs, unlabelled form controls, and more), and gives a concrete fix for each failure. The signature feature is a screen-reader view that strips all layout and shows the page as the linear stream of roles and text a blind user actually hears — making failures visceral rather than abstract. With an Anthropic API key, Claude rewrites each offending snippet into a corrected one; without it, rule-based fixes still cover every issue. Built as a TypeScript monorepo (React + Vite client, Express server), deployed on Render. 102 tests passing, ~96% server coverage. Built from the `daily-project-ideas` prompt for 2026-05-12.
