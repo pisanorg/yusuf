@@ -1,1 +1,6 @@
+title: Yusuf Pisan
+description: Teaching Professor, Computing & Software Systems, University of Washington Bothell
 theme: jekyll-theme-leap-day
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata

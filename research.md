@@ -1,39 +1,37 @@
+---
+layout: default
+title: Research
+page_class: page-research
+---
 
-# Research
-
-My research group T4G (Tech for Good) now has its own web page at [https://t4guw.github.io/www/](https://t4guw.github.io/www/)
+My research group **T4G (Tech for Good)** works at the intersection of computing, education, and human experience. Find us at [t4guw.github.io](https://t4guw.github.io/www/). Publications are indexed on [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
 
 ## Research Areas
 
-- Computer Science Education: How can we teach better, provide better feedback to learners, scaffold independent learning, understand common mental bugs, build automated and semi-automated systems to improve productivity
+**Computer Science Education** &mdash; How do we teach programming more effectively? How do we scaffold independent learning, give richer feedback, identify common misconceptions, and build tools that improve both teaching and learning outcomes?
 
-- Video Games: Building more realistic and engaging non-player characters, providing novel user experiences, better graphics, better scalability, better interaction
+**Artificial Intelligence** &mdash; Systems that can explain their reasoning, learn from limited examples, and act as collaborative partners. My PhD (Northwestern, 1998) was in qualitative reasoning and diagrammatic problem-solving &mdash; what is now called Good Old-Fashioned AI (GOFAI). My current focus is on LLM-assisted tools for education and everyday use.
 
-- Artificial Intelligence: Systems that can explain their reasoning, answer what-if questions, learn from a few examples, be collaborators rather than blunt tools.
+**Video Games** &mdash; Enabling technologies for games: more realistic non-player characters, novel user experiences, better scalability, and richer interactivity. I founded the [UTS Games Studio](http://www.gamesstudio.org/) and the [Australasian Conference on Interactive Entertainment](http://ieconference.org/).
 
+## Advising
 
-## Past Projects
+I supervise CSS 497 Capstone projects at UW Bothell. See [capstone ideas and guidelines](https://t4guw.github.io/capstone.html) and [past students I have supervised](people.html).
 
-(TODO: Abstract for each project and publications)
+## Selected Past Projects
 
-- Researching the development and use of student-designed authorware for e-mediated science and technology learning in primary and middle school. 
-- Virtual Communities 
-- Creative Communities 
-- SimEnv: Understanding and Supporting the Creation of Outcome Driven Simulations 
-- Creative Collaboration 
-- GONDOLA: An intelligent and interactive software-based learning environment 
-- 3D Browsing and Collaborative Design 
-- Hardware for Graphics and Virtual Reality Applications 
-- Using Computer Graphics in Learning Japanese Prepositions 
-- Reasoning with Action Diagrams and Diagram Sequences 19,500
-Automated Program Critiquer: Submit! 
-- Using Multi-Agent Environments Based on Real World Models 
-- Multimodal Reasoning with Diagram Sequences 
-- Evaluation and Adaptation of Software Tools 
+- Researching student-designed authorware for e-mediated science learning in primary and middle school
+- Virtual Communities and Creative Communities
+- SimEnv: Understanding and Supporting the Creation of Outcome-Driven Simulations
+- GONDOLA: An intelligent and interactive software-based learning environment
+- 3D Browsing and Collaborative Design
+- Hardware for Graphics and Virtual Reality Applications
+- Using Computer Graphics in Learning Japanese Prepositions
+- Reasoning with Action Diagrams and Diagram Sequences
+- Automated Program Critiquer (Submit!)
+- Multi-Agent Environments Based on Real World Models
+- Multimodal Reasoning with Diagram Sequences
 
-  
-***
+---
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
-
-<a target="_blank" href="mailto:pisan@uw.edu"><i class="fa fa-envelope-o"></i> | <a href="https://www.linkedin.com/in/pisan/"><i class="fa fa-linkedin"></i></a> | <a href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar"></i></a>
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/css) | [UW Bothell](https://www.uwb.edu/)

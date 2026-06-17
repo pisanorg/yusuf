@@ -1,42 +1,80 @@
-# Yusuf Pisan
+---
+layout: default
+---
 
-## Bio
+<div class="bio-text">
+PhD in Artificial Intelligence from Northwestern University (1998). Teaching Professor at the <a href="https://www.uwb.edu/css">Computing &amp; Software Systems</a> division of <a href="https://www.uwb.edu">University of Washington Bothell</a>, where I have taught since 2017. Before Seattle: 20 years in Sydney at UTS, and visiting appointments at Harvey Mudd, USC, WPI, and ITU Copenhagen.
+</div>
+<div class="bio-text">
+My research group <a href="https://t4guw.github.io/www/">T4G (Tech for Good)</a> works on CS education, AI systems, and video games. I founded the <a href="http://www.gamesstudio.org/">UTS Games Studio</a> and the <a href="http://ieconference.org/">Australasian Conference on Interactive Entertainment</a>. I received the <strong>UWB Distinguished Teaching Award in 2023</strong>.
+</div>
+<div class="bio-links">
+  <a href="pisan-cv-202601.pdf">CV (PDF)</a>
+  <a href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ" target="_blank">Google Scholar</a>
+  <a href="teaching/evaluations/">Teaching Evaluations</a>
+  <a href="graphs/">Evaluation Graphs</a>
+</div>
 
-Yusuf Pisan is a Teaching Professor in the [Computing & Software Systems Division](https://www.uwb.edu/css) at the [University of Washington Bothell](https://www.uwb.edu/). Previously he was an Associate Professor at the University of Technology, Sydney where he formed and led the [UTS Games Studio](http://www.gamesstudio.org/). He was a visiting professor at Harvey Mudd College, University of Southern California, Worcester Polytechnic Institute (WPI) and IT University of Copenhagen (ITU).
+<div class="substack-cta">
+  <div class="substack-cta-text">
+    <h2>Education2AI on Substack</h2>
+    <p>I write about AI in education, classroom experiments, and building with LLMs &mdash; from a CS professor who has been doing it hands-on since March 2026.</p>
+  </div>
+  <div class="substack-cta-actions">
+    <a class="btn btn-gold" href="https://education2ai.substack.com" target="_blank" rel="noopener">Read Latest Posts</a>
+    <a class="btn btn-outline" href="https://education2ai.substack.com/subscribe" target="_blank" rel="noopener">Subscribe Free</a>
+  </div>
+</div>
 
-His research interests include enabling technologies for computer games, the design of virtual environments that support collaborative work, and computer science education. He founded the [Australasian Conference on Interactive Entertainment](http://ieconference.org/) conference series and helped foster the Australian games community. His list of publications can be found at [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
+## Recent AI Projects
 
-Yusuf has a Ph.D. in Artificial Intelligence from Northwestern University. Before moving to Seattle in 2017, Yusuf lived in Chicago area for 10 years and in Sydney for 20 years.
+I have been building AI-assisted applications since March 2026 &mdash; games, voting tools, classroom experiments, automation, and more. A few highlights:
 
-My [somewhat outdated CV](PisanYusuf-CV.pdf) has additional details.
-
-Happy to accept connection requests on [LinkedIn](https://www.linkedin.com/in/pisan/) as long as we have met in-person. I sporadically use [Twitter](https://twitter.com/yusufpisan).
-
-## Adventures in AI
-
-[Adventures in AI](aiprojects.html) outlines some of the AI projects I have built for fun.
-
-## Research
-
-[Research](research.html)
-
-CSS 497 Capstone guidelines, advice and [project ideas](https://t4guw.github.io/capstone.html). Past [students](https://t4guw.github.io/students.html) I have supervised.
+<div class="project-grid">
+  <div class="project-card">
+    <h3><a href="https://chatwithdigitalme.netlify.app/">Digital Yusuf</a></h3>
+    <p>Chat with an AI version of me, built on 155&thinsp;K characters of persona data from 30+ public sources. No RAG &mdash; the entire persona lives in the system prompt.</p>
+  </div>
+  <div class="project-card">
+    <h3><a href="https://accessibility-lens.onrender.com/">Accessibility Lens</a></h3>
+    <p>See any web page through four sets of eyes: low vision, color blindness, keyboard-only, and screen reader. 11 WCAG 2.1 rules checked, with Claude-generated fixes.</p>
+  </div>
+  <div class="project-card">
+    <h3><a href="https://ranked-voting.netlify.app/login">Ranked Voting</a></h3>
+    <p>Full-stack ranked-choice voting app using Instant Runoff Voting. Drag-and-drop ballots, Supabase auth, step-by-step round display.</p>
+  </div>
+  <div class="project-card">
+    <h3><a href="https://github.com/pisanuw/daily-project-ideas">Daily Project Ideas</a></h3>
+    <p>Every morning at 5&thinsp;am a cron job reads five subreddits, surfs the web, and commits three new project ideas to GitHub. The prompt is in version control.</p>
+  </div>
+</div>
+<div class="section-action">
+  <a href="aiprojects.html">See all 20+ AI projects &rarr;</a>
+</div>
 
 ## Teaching
 
-I have taught small classes, large (700-person) classes, first-year classes, graduate level classes, supervised masters and PhD students, experimented with hybrid and online classes, used traditional lecturing, active learning, flipped classrooms, collaborative meaning making and gamified classrooms. I received the [UTS Teaching Award](https://www.uts.edu.au/research-and-teaching/learning-and-teaching/awards-and-citations/past-award-and-citation-0) in 2006. I was awarded the [UWB Distinguished Teaching Award](https://www.uwb.edu/academic-affairs/awards/dta) in 2023.
+<div class="summary-block">
+25+ years of teaching across three continents, from 8-student seminars to 700-student lectures. Current courses at UW Bothell include CSS 343 (Data Structures), CSS 382 (AI), CSS 385 (Game Dev), and CSS 430 (Operating Systems). <strong>UWB Distinguished Teaching Award, 2023.</strong>
+</div>
+<div class="summary-links">
+  <a href="teaching.html">Teaching page</a>
+  <a href="teaching/evaluations/">All evaluations (2004&ndash;present)</a>
+  <a href="graphs/">Evaluation graphs</a>
+</div>
 
-I have decided to make all my evaluations public to help future students make more informed choices, or at least know what they are getting into when they decide to take a course from me. It also is an interesting and fun historical record! Happy spelunking into my [teaching evaluations](teaching/evaluations/) going back for many many years.
+## Research
 
-## Resources
+<div class="summary-block">
+T4G (Tech for Good) works at the intersection of CS education, artificial intelligence, and video games. My PhD in AI (Northwestern, 1998) focused on qualitative reasoning and diagrammatic problem-solving.
+</div>
+<div class="summary-links">
+  <a href="research.html">Research page</a>
+  <a href="https://t4guw.github.io/www/" target="_blank">T4G Research Group</a>
+  <a href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ" target="_blank">Google Scholar</a>
+  <a href="https://t4guw.github.io/capstone.html" target="_blank">Capstone Ideas</a>
+</div>
 
-Visit [my resources wiki](https://github.com/pisanorg/w/wiki) for all sorts of information from C++ style to UWB Resources
+## Connect
 
-## Contact
-
-**Email:** pisan@uw.edu
-**Phone:** 425.352.3741 (email is better)
-
-***
-
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+I write regularly on [Substack](https://education2ai.substack.com) and welcome LinkedIn connections from people I have met. Email: [pisan@uw.edu](mailto:pisan@uw.edu)

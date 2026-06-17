@@ -1,12 +1,14 @@
-# Adventures in AI
+---
+layout: default
+title: Adventures in AI
+page_class: page-aiprojects
+---
 
-I got my PhD in 1998 from Northwestern University. My PhD was in AI, specifically in qualitative reasoning, diagrammatic reasoning and problem solving. My PhD was in what would be considered in GOFAI (Good Old Fashioned AI). It relied on hand built models and ontologies. It used a truth-maintenance system and with hand-built pattern-matching rules to maintain its knowledge base. The system I built could solve 150 problems from a university level thermodynamics textbook. It was a big achievement for its time.
+<div class="intro-text">
+My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagrammatic problem-solving, what is now called GOFAI. I built a system that solved 150 problems from a university-level thermodynamics textbook.
 
-Today's AI is much different. Lots of statistical models, lots of data, automated systems that take millions of dollars to train and have billions of parameters.
-
-LLMs are going to change the world as we know it. AI systems can already implement software projects that used to take teams weeks to complete. They can already hold conversations, provide advice, assist in brainstorming and make suggestions.
-
-I started playing with these new systems (Claude, Gemini, ChatGPT, Microsoft CoPilot, GitHub CoPilot, etc) in March 2026. Below are some of the projects I have built in reverse chronological order.
+Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
+</div>
 
 ### [Canvas Group Evaluate](https://github.com/pisanuw/canvas-group-evaluate)
 

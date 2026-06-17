@@ -1,80 +1,95 @@
-<!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <script src="https://use.fontawesome.com/83b4c75282.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} &middot; {% endif %}Yusuf Pisan</title>
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="{{ page.page_class }}">
 
-{% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-
-      <header>
-        <h1><a href="https://pisanorg.github.io/yusuf">Yusuf Pisan</a></h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-      </header>
-
-      <div id="banner">
-        <span><img src="/yusuf/images/pisan54.jpg" align="right"></span>
-        
-        <!--  IGNORING BANNER
-
-       <span id="logo"></span>
-
-        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
-        {% if site.show_downloads %}
-          <div class="downloads">
-            <span>Downloads:</span>
-            <ul>
-              <li><a href="{{ site.github.zip_url }}" class="button">ZIP</a></li>
-              <li><a href="{{ site.github.tar_url }}" class="button">TAR</a></li>
-            </ul>
-          </div>
-        {% endif %}
-
-         -->
-      </div> 
-      <!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        {{ content }}
-
-      </section>
-      <footer>
-        {% if site.github.is_project_page %}
-          <p>Web site by pisan@uw.edu
-        <!--     <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>  -->
-        </p>
-        {% endif %}
-        <p>
-          <!-- <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small> -->
-        </p>
-      </footer>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="{{ '/' | relative_url }}">Yusuf Pisan</a>
+      <ul class="nav-links">
+        <li><a href="{{ '/aiprojects' | relative_url }}" {% if page.url contains 'aiprojects' %}class="active"{% endif %}>AI Projects</a></li>
+        <li><a href="{{ '/teaching' | relative_url }}" {% if page.url contains 'teaching' %}class="active"{% endif %}>Teaching</a></li>
+        <li><a href="{{ '/research' | relative_url }}" {% if page.url contains 'research' %}class="active"{% endif %}>Research</a></li>
+        <li><a href="{{ '/people' | relative_url }}" {% if page.url contains 'people' %}class="active"{% endif %}>Students</a></li>
+        <li><a class="nav-substack" href="https://education2ai.substack.com" target="_blank" rel="noopener">Substack&nbsp;&nearr;</a></li>
+      </ul>
     </div>
+  </nav>
 
-    {% if site.google_analytics %}
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-      </script>
-    {% endif %}
-  </body>
+  {% if page.url == "/" or page.url == "/index.html" %}
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-body">
+        <p class="hero-eyebrow">Teaching Professor &middot; University of Washington Bothell</p>
+        <h1 class="hero-name">Yusuf Pisan</h1>
+        <p class="hero-tagline">Computer scientist. Educator. Builder of AI-assisted tools since March&nbsp;2026.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://education2ai.substack.com" target="_blank" rel="noopener">Read Education2AI</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/pisan/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="{{ '/images/pisan140.jpg' | relative_url }}" alt="Yusuf Pisan">
+      </div>
+    </div>
+  </section>
+  {% else %}
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header>
+  {% endif %}
+
+  <main class="site-main">
+    <div class="content-wrap">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <strong>Yusuf Pisan</strong>
+          <p>Teaching Professor<br>Computing &amp; Software Systems<br>University of Washington Bothell</p>
+          <p><a href="mailto:pisan@uw.edu">pisan@uw.edu</a></p>
+        </div>
+        <div class="footer-col">
+          <strong>Writing &amp; Social</strong>
+          <ul>
+            <li><a href="https://education2ai.substack.com" target="_blank">Substack &mdash; Education2AI</a></li>
+            <li><a href="https://www.linkedin.com/in/pisan/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ" target="_blank">Google Scholar</a></li>
+            <li><a href="{{ '/pisan-cv-202601.pdf' | relative_url }}">Curriculum Vitae (PDF)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong>Site</strong>
+          <ul>
+            <li><a href="{{ '/aiprojects' | relative_url }}">AI Projects</a></li>
+            <li><a href="{{ '/teaching' | relative_url }}">Teaching</a></li>
+            <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+            <li><a href="{{ '/people' | relative_url }}">Students</a></li>
+            <li><a href="https://github.com/pisanorg/w/wiki" target="_blank">Resources Wiki</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; Yusuf Pisan &middot; <a href="https://www.uwb.edu/css">Computing &amp; Software Systems</a> &middot; <a href="https://www.uwb.edu">University of Washington Bothell</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
