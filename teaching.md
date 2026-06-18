@@ -39,8 +39,8 @@ I make all my teaching evaluations publicly available because transparency build
 
 All my evaluations are public, going back to 2004 across UWB, UTS, and visiting appointments.
 
-[Browse teaching evaluations (PDFs)](evaluations/) &middot; [Evaluation dashboard (graphs)](../graphs/)
+[Browse teaching evaluations (PDFs)](teaching/evaluations/) &middot; [Evaluation dashboard (graphs)](graphs/)
 
 ---
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/css) | [UW Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/stem/about/divisions/css) | [UW Bothell](https://www.uwb.edu/)

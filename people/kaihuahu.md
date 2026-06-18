@@ -10,4 +10,4 @@ We have carefully examined the performance of our real-time ray tracing system a
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

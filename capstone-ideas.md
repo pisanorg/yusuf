@@ -119,4 +119,4 @@ If you have an idea that does not fit into the above categories, you are still w
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

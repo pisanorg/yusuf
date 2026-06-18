@@ -1,6 +1,15 @@
 # AI Log
 # IMPORTANT: Record all user instructions verbatim, EXACTLY as typed, before doing any other work.
 
+## 2026-06-18T22:19
+Does this GitHub token have write access to [PAT REDACTED] and push the changes to main branch https://github.com/pisanorg/yusuf
+
+How about this Pat [PAT REDACTED] https://pisanorg.github.io/yusuf/teaching Has a link to evaluations but it is broken so I want it fixed
+
+Several web pages have broken links [link-checker report: 275 URLs checked, 9 failed] All of these need to be fixed
+
+(Note: two live GitHub PAT values pasted in the original messages were REDACTED before logging, never commit tokens. Repo default branch is master, not main; fixes pushed to master.)
+
 ## 2026-04-28T06:57
 Download Raw Data (CSV) should be at the very end of the file
 

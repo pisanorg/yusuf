@@ -10,4 +10,4 @@ On the second application I worked on, it is mainly focus on making changes to t
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

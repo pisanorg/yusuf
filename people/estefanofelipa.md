@@ -26,4 +26,4 @@ At the end of my capstone, I received an offer to continue working at KyFlex dur
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

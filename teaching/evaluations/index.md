@@ -200,7 +200,7 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
  - 2008 Spring (UTS)
    - [31004: Game Programming](2008andearlier/evaluation-gamep-Spring2008.pdf)
  - 2007 Spring / 2007 Autumn (UTS)
-   - Sabbatical at [WPI](https://www.wpi.edu/">WPI)
+   - Sabbatical at [WPI](https://www.wpi.edu/)
  - 2006 Spring (UTS)
    - [31004: Game Programming](2008andearlier/evaluation-gamep-Spring2006.pdf)
    - [31140: Introduction to Computer Graphics](2008andearlier/evaluation-graphics-Spring2006.pdf)
@@ -227,4 +227,4 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

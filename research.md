@@ -4,7 +4,7 @@ title: Research
 page_class: page-research
 ---
 
-My research group **T4G (Tech for Good)** works at the intersection of computing, education, and human experience. Find us at [t4guw.github.io](https://t4guw.github.io/www/). Publications are indexed on [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
+My research group **T4G (Tech for Good)** works at the intersection of computing, education, and human experience. Find us at [t4guw.github.io](https://t4guw.github.io/). Publications are indexed on [Google Scholar](https://scholar.google.com/citations?user=eCpI_aUAAAAJ&hl=en&oi=ao).
 
 ## Research Areas
 
@@ -34,4 +34,4 @@ I supervise CSS 497 Capstone projects at UW Bothell. See [capstone ideas and gui
 
 ---
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/css) | [UW Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/stem/about/divisions/css) | [UW Bothell](https://www.uwb.edu/)

@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="bio-text">
-PhD in Artificial Intelligence from Northwestern University (1998). Teaching Professor at the <a href="https://www.uwb.edu/css">Computing &amp; Software Systems</a> division of <a href="https://www.uwb.edu">University of Washington Bothell</a>, where I have taught since 2017. Before Seattle: 20 years in Sydney at UTS, and visiting appointments at Harvey Mudd, USC, WPI, and ITU Copenhagen.
+PhD in Artificial Intelligence from Northwestern University (1998). Teaching Professor at the <a href="https://www.uwb.edu/stem/about/divisions/css">Computing &amp; Software Systems</a> division of <a href="https://www.uwb.edu">University of Washington Bothell</a>, where I have taught since 2017. Before Seattle: 20 years in Sydney at UTS, and visiting appointments at Harvey Mudd, USC, WPI, and ITU Copenhagen.
 </div>
 <div class="bio-text">
-My research group <a href="https://t4guw.github.io/www/">T4G (Tech for Good)</a> works on CS education, AI systems, and video games. I founded the <a href="http://www.gamesstudio.org/">UTS Games Studio</a> and the <a href="http://ieconference.org/">Australasian Conference on Interactive Entertainment</a>. I received the <strong>UWB Distinguished Teaching Award in 2023</strong>.
+My research group <a href="https://t4guw.github.io/">T4G (Tech for Good)</a> works on CS education, AI systems, and video games. I founded the <a href="http://www.gamesstudio.org/">UTS Games Studio</a> and the <a href="http://ieconference.org/">Australasian Conference on Interactive Entertainment</a>. I received the <strong>UWB Distinguished Teaching Award in 2023</strong>.
 </div>
 <div class="bio-links">
   <a href="pisan-cv-202601.pdf">CV (PDF)</a>
@@ -70,7 +70,7 @@ T4G (Tech for Good) works at the intersection of CS education, artificial intell
 </div>
 <div class="summary-links">
   <a href="research.html">Research page</a>
-  <a href="https://t4guw.github.io/www/" target="_blank">T4G Research Group</a>
+  <a href="https://t4guw.github.io/" target="_blank">T4G Research Group</a>
   <a href="https://scholar.google.com/citations?user=eCpI_aUAAAAJ" target="_blank">Google Scholar</a>
   <a href="https://t4guw.github.io/capstone.html" target="_blank">Capstone Ideas</a>
 </div>

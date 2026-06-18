@@ -124,4 +124,4 @@ See also: [Capstone guidelines and project ideas](https://t4guw.github.io/capsto
 
 ---
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/css) | [UW Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [CSS](https://www.uwb.edu/stem/about/divisions/css) | [UW Bothell](https://www.uwb.edu/)

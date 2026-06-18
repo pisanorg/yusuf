@@ -16,7 +16,7 @@ If you are looking for capstone ideas, see [my capstone and project Ideas](./cap
 
 2. Explore capstone project options and talk to CSS 497 coordinator if necessary
 
-3. If you are doing a faculty research, you will need to pick one of the projects from [my capstone projects](./capstone-ideas.html) or one of the projects that the [Tech for Good](https://t4guw.github.io/www/) research group is already working on. For internship based capstones, skip the next couple of steps and send me the
+3. If you are doing a faculty research, you will need to pick one of the projects from [my capstone projects](./capstone-ideas.html) or one of the projects that the [Tech for Good](https://t4guw.github.io/) research group is already working on. For internship based capstones, skip the next couple of steps and send me the
 CSS 497 contract.
 
 4. Send me an email with a 1-3 paragraph description of your project OR your thoughts on how you can contribute to one of the existing projects OR if you do not have a project idea a list of areas you are interested in and description of what areas you are good at. Describe the benefits of the proposed project (e.g., ‘What is this project going to accomplish?’) and the academic merit of proposed project (e.g. 'How will the project help you develop your core and advanced technical competencies). Specify at least 3 dates/times you can meet. Include a copy of your unofficial transcript.
@@ -101,4 +101,4 @@ Refer [http://courses.washington.edu/css497](http://courses.washington.edu/css49
 
 ***
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)

@@ -74,9 +74,9 @@ See [README](https://github.com/pisanuw/pastemd/blob/main/README.md) for more de
 
 ### [Grade Histogram Plotter](https://grade-histogram-plotter.onrender.com/)
 
-A lightweight Flask web app for visualizing grade distributions. Paste scores one per line (or upload a file), optionally customize the grade-bucket cutoffs, and get an instant histogram with summary statistics — mean, median, standard deviation, min, max, and per-bucket counts and percentages. Non-numeric entries are tallied in a separate NaN bucket. Includes CSRF protection and rate limiting. Deployed on both Render and PythonAnywhere.
+A lightweight Flask web app for visualizing grade distributions. Paste scores one per line (or upload a file), optionally customize the grade-bucket cutoffs, and get an instant histogram with summary statistics — mean, median, standard deviation, min, max, and per-bucket counts and percentages. Non-numeric entries are tallied in a separate NaN bucket. Includes CSRF protection and rate limiting. Deployed on Render.
 
-See [README](https://github.com/pisanuw/grade-histogram-plotter/blob/main/README.md) for more details on the code or use it at <https://grade-histogram-plotter.onrender.com/> or <https://pisan.pythonanywhere.com/>
+See [README](https://github.com/pisanuw/grade-histogram-plotter/blob/main/README.md) for more details on the code or use it at <https://grade-histogram-plotter.onrender.com/>
 
 (Last update April 2026)
 
@@ -152,7 +152,7 @@ See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md
 
 Based on my PhD thesis, starting to recreate the project from scratch.
 
-See [README](https://github.com/pisanuw/tps/blob/main/README.md) for more details on the code or use it at <https://tps-thesis-recreation.onrender.com/>
+Use it at <https://tps-thesis-recreation.onrender.com/>
 
 To be completed at a later date!
 
@@ -244,4 +244,4 @@ I provided [History of Artificial Intelligence](https://en.wikipedia.org/wiki/Hi
 
 ---
 
-[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/css) | [University of Washington Bothell](https://www.uwb.edu/)
+[Yusuf Pisan](https://pisanorg.github.io/yusuf/) | [Computing & Software Systems (CSS)](https://www.uwb.edu/stem/about/divisions/css) | [University of Washington Bothell](https://www.uwb.edu/)
