@@ -19,7 +19,7 @@ Course Syllabi from past years can be found at the public site for the [CSS Unde
 [Teaching Evaluation Dashboard](../../graphs/) with pretty graphs!
 
 - 2026 Spring
-  - CSS 382: Introduction to Artificial Intelligence
+  - [CSS 382: Introduction to Artificial Intelligence] (Pisan-SP26-CSS382A.pdf)
 
 - 2026 Winter
   - [CSS 343D: Data Structures and Algorithms II](Pisan-WI26-CSS343D.pdf)
