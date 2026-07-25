@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Computing Power and Political Power](https://pisanuw.github.io/turkey-study-abroad/)
+
+A UW faculty-led study abroad program in development for Winter 2028, co-directed with Asli Cansunar (Political Science, UW Seattle). Around twenty students spend the quarter in Istanbul taking three co-taught courses that pair a technical skill with a political-economic question: The Technology of Resistance (censorship, throttling, VPNs and Tor, measured with OONI, against the political science of networked collective action), Computational Political Economy of Turkey (OCR, geocoding, and choropleth mapping applied to Ottoman and Republican-era registers to see where public goods actually went), and a Fieldwork Practicum where mixed teams carry one applied project from question to public presentation. Computing students get the political economy, political science students get the command line, and every student does both. The site is four static pages on GitHub Pages with the three draft syllabi, the ten-week arcs, and a shared excursion week in Izmir and Ephesus.
+
+The program is not an AI project, but it is an AI artifact: the site and the draft syllabi were written with Claude. The program still has to be reviewed by both instructors and confirmed by UW Study Abroad, so everything on the site is labeled a working draft and nothing is open for applications yet.
+
+Read the drafts at <https://pisanuw.github.io/turkey-study-abroad/>
+
+(Last update July 2026)
+
 ### [Emoji Lingua](https://emoji-lingua-pisan.netlify.app)
 
 Translate English into emoji, and emoji back into English. `I love pizza on a rainy night` becomes 👤 ❤️ 🍕 🔛 🌧️ 🌙; unknown words stay in place rather than disappearing, and a hint under the result tells you how many there were. The dictionary has 18,474 word-to-emoji entries (1,535 of them multi-word phrases) and 4,218 emoji-to-word glosses, generated from the Unicode CLDR annotations and then layered with hand-authored vocabulary: composed entries for abstractions (`democracy` → 🗳️, `justice` → ⚖️), function words that get dropped so the output reads cleanly, and curated overrides so the obvious choice wins (`cat` → 🐱, not 🐈). Phrases match greedily longest-first, so `good morning` → 🌅 rather than 👍 🌅, and a suffix-rule fallback catches forms the generator never materialized. The engine is hybrid: the dictionary is deterministic and always available, while Claude (when an API key is configured) handles context and can read an emoji sequence as a sentence instead of a word list. The AI path always degrades to the dictionary on any error, and the UI labels which engine produced each result, so a model outage cannot break the app. Express server wrapped as a Netlify serverless function, static page on the CDN, 44 tests at ~94% statement coverage. Honest limitation: emoji to English is a gloss, not grammar, so 🐱🍕 gives you `cat pizza`, not `the cat ate pizza`.
