@@ -10,6 +10,20 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [LTMS: A Truth Maintenance System in Python](https://github.com/pisanuw/ltms)
+
+A logic-based Truth Maintenance System and pattern-directed reasoning engine in pure Python, following Forbus and de Kleer's *Building Problem Solvers* (MIT Press, 1993). The system maintains belief across a set of propositional clauses using Boolean Constraint Propagation, records well-founded support for every derived value, backtracks in a dependency-directed way when it hits a contradiction, and can explain why it believes anything it believes. Assert `p or q`, then assert `not p`, and it concludes `q`. Assume it is raining and it will conclude the ground is wet; retract the assumption and the wet ground goes back to unknown rather than lingering as an orphaned conclusion. That retraction behavior is the entire point of a TMS, and it is what separates it from a rule engine that only ever adds.
+
+The reason to build it: JTMS and ATMS have a few toy ports, but the clausal-BCP LTMS with dependency-directed backtracking is close to unported outside Lisp and Racket. This is a clean, typed, tested version, roughly 6,300 lines across 16 modules, 143 tests, published on PyPI as `ltms` 0.1.0 under MIT. It goes past the base implementation into indirect proof, closed-world assumptions, dependency-directed search, prime implicates for logical completeness, and a SAT-style two-watched-literals BCP engine, with differential tests against PySAT. World models can live in `.kb` data files instead of Python, and those files carry `expect` lines that self-check when the file runs.
+
+Alongside the code is a [documentation site](https://pisanuw.github.io/ltms/) with a 17-chapter study companion walking through the concepts, the runnable examples, and worked solutions to the book's exercises. The book itself comes from the Qualitative Reasoning Group at Northwestern, which is where my own qualitative-reasoning PhD came from, so this is partly a thirty-year round trip: the algorithms I learned in Lisp, rebuilt in Python with a language model as the pair programmer.
+
+Still missing: a deployed site where you can type in rules and facts and watch belief change, retract an assumption, and ask the system why. That is the next piece.
+
+See [README](https://github.com/pisanuw/ltms/blob/main/README.md) for more details on the code, or read the [study companion](https://pisanuw.github.io/ltms/)
+
+(Last update July 2026)
+
 ### [Ladder Games](https://word-path.netlify.app/)
 
 Two puzzle games in one app, sharing a structure and a stubborn design principle. **Word Ladder** asks you to change one letter at a time to climb from a start word to a target, scored on how close your path came to the shortest one. **Number Ladder** gives you a set of numbers and the operators `+ − × ÷ ^` and asks you to hit a target, Countdown-style, using each number at most once. Both offer Free Play and a Climb Mode that keeps raising the difficulty until you decide to stop.
