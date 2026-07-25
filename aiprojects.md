@@ -10,6 +10,18 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Ladder Games](https://word-path.netlify.app/)
+
+Two puzzle games in one app, sharing a structure and a stubborn design principle. **Word Ladder** asks you to change one letter at a time to climb from a start word to a target, scored on how close your path came to the shortest one. **Number Ladder** gives you a set of numbers and the operators `+ − × ÷ ^` and asks you to hit a target, Countdown-style, using each number at most once. Both offer Free Play and a Climb Mode that keeps raising the difficulty until you decide to stop.
+
+The dictionaries are the interesting part of the word game: 26,419 entries across English words, Turkish words, English names, and Turkish names, at lengths 3 through 7. Each file holds only the largest connected component of the one-letter-change graph for that category and length, so puzzle generation is structurally incapable of handing out an unsolvable pair. The math side has the mirror-image guarantee: a memoized solver searches every reachable set of remaining numbers, both to verify a generated puzzle has a good solution and to show you the best possible result next to your own afterwards. The operator rules are deliberately unambiguous (subtraction is always `|a − b|`, division is always larger over smaller and only when it divides evenly) so a correct idea never fails on move order. UI is bilingual, English and Turkish.
+
+The Hint button is the Socratic guardrail in miniature. Word Ladder tells you which letter position to change, never what to change it to. Number Ladder highlights which two numbers to combine, never the operator or the result. Each hint costs a flat 10 points off the round, so hint use limits itself without needing a cap. React + Vite, no backend required to play; an optional Supabase table adds a public leaderboard that records hints used alongside the score.
+
+See [README](https://github.com/pisanuw/word-path/blob/main/README.md) for more details on the code or play it at <https://word-path.netlify.app/>
+
+(Last update July 2026)
+
 ### [Computing Power and Political Power](https://pisanuw.github.io/turkey-study-abroad/)
 
 A UW faculty-led study abroad program in development for Winter 2028, co-directed with Asli Cansunar (Political Science, UW Seattle). Around twenty students spend the quarter in Istanbul taking three co-taught courses that pair a technical skill with a political-economic question: The Technology of Resistance (censorship, throttling, VPNs and Tor, measured with OONI, against the political science of networked collective action), Computational Political Economy of Turkey (OCR, geocoding, and choropleth mapping applied to Ottoman and Republican-era registers to see where public goods actually went), and a Fieldwork Practicum where mixed teams carry one applied project from question to public presentation. Computing students get the political economy, political science students get the command line, and every student does both. The site is four static pages on GitHub Pages with the three draft syllabi, the ten-week arcs, and a shared excursion week in Izmir and Ephesus.
