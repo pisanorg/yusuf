@@ -10,6 +10,60 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Google Flights MCP Server](https://github.com/pisanuw/claude-google-flights-mcp)
+
+An MCP server that hands Claude nine tools for searching flights and watching fares. Google has no official flights API, so this calls SerpAPI's `google_flights` engine, which runs the search server-side and returns structured JSON. You can search one-way, round-trip, or multi-city, filter on cabin class, passengers, stops, and price, follow a `departure_token` to advance leg by leg through an itinerary, and follow a `booking_token` to see which providers sell the fare and at what price. "Nonstop round-trip SEA to NRT, Oct 3 back Oct 17, under $1200" is the whole interface.
+
+The part I actually use is the price watching. Save a search as a watch with an optional target, and `check_prices` re-runs every watch, records what it finds, and reports drops and target hits, with a full price history per watch. A standalone checker script can be put on a schedule for hands-off alerts that fire a native macOS notification. Around 900 lines of Python, no build step, registers with Claude Code in a single command.
+
+Honest limitation: this is scraping as a service, so it inherits SerpAPI's rate limits (the free tier is 100 searches a month) and whatever Google changes about its result pages.
+
+See [README](https://github.com/pisanuw/claude-google-flights-mcp/blob/main/README.md) for setup
+
+(Last update August 2026)
+
+### [Teaching an LLM Tutor to Withhold the Answer](https://arxiv.org/abs/2608.12292)
+
+A paper on the engineering problem behind the Socratic guardrail: a capable model asked nicely, or asked angrily, will not reliably refuse to give an answer it could easily produce. A prompt is not enough. So the tutor enforces answer-withholding as a per-turn, machine-checkable contract instead. A non-LLM policy core reads only trusted learner state and sets a ceiling on an eight-rung help ladder, a deterministic detector strips solution code, and a separate LLM judge checks each risky reply against the contract before it is sent.
+
+The tuning method may be the more portable contribution. Scripted student personas are driven through the live pipeline and re-scored by a stronger model, with every rejection's stated reason recorded, so failures get fixed by cause rather than by vibes and no human subjects are needed to iterate. That surfaced an "over-help ladder" that I did not expect to be so orderly: fix the blatant solution leaks and the tutor starts naming the exact bug; fix that and it starts over-citing general facts. Each fix exposes the next rung. The measure, diagnose, and fix loop generalizes to any agent that has to refuse a capability it has.
+
+Claude was a heavy collaborator on this one, which is a slightly recursive situation: a language model helping write up how to stop a language model from being too helpful.
+
+Read it at <https://arxiv.org/abs/2608.12292>
+
+(Last update August 2026)
+
+### [Teaching Intro AI When the Tools Can Do the Homework](https://arxiv.org/abs/2608.05175)
+
+An experience report on redesigning CSS 382, our intro AI course, once it became clear that a language model could complete most of the assignments in it. The response was not to freeze the curriculum. The classical core stayed (search, adversarial search, MDPs, reinforcement learning) and a strand was added in which students build a language model from scratch, so that a tool they are required to use is also one they are required to understand. Assessment moved to work that resists unattributed automation: in-class exercises, reflective writing, and a defended team project. Examinations were removed entirely. The AI policy went from unmentioned in 2023 to required in 2026.
+
+The center of the paper is the part I did not plan for. The cohort deliberated on and ratified a Student Bill of AI Rights governing *my* use of AI, including a provision that I personally complete any AI-generated assignment before issuing it. The prompt that scaffolded their deliberation was itself AI-generated, and the paper treats that provenance as part of the story rather than a footnote. It also reports the tensions, including students objecting to AI-generated course materials, and is explicit about how little a single-cohort design narrative can actually claim.
+
+Read it at <https://arxiv.org/abs/2608.05175>
+
+(Last update August 2026)
+
+### [How of Happiness Quizzes](https://github.com/pisanuw/quiz)
+
+Ten chapter quizzes, twenty questions each, with Google sign-in and a leaderboard. React and Vite on the front, Supabase (Postgres, Auth, row-level security) on the back, Netlify for hosting.
+
+Two design decisions carry the whole thing. First, your chapter score is the average of every attempt, not your best, which makes retakes free to take but not free to fail: open with 15 out of 20 and you are capped at 18.3 after three attempts and 19.5 after ten, approaching a perfect score without ever arriving. One bad attempt is permanent. Only a perfect first attempt scores perfectly. The global board sums your chapter averages, so breadth pays and every chapter you play can only add to your total. Second, players show as initials with no photo by default, because signing in with Google should not publish your full name and face to a public page. That default is enforced in the database rather than the interface: the leaderboard view returns a photo only when the player opted in, the profiles table is readable only by its owner, and players hold update rights on exactly two columns, so nobody can point their avatar at an arbitrary image.
+
+Questions live in JSON, one file per chapter, with a seed script that validates before it writes.
+
+(Last update August 2026)
+
+### [Building with AI: a mini workshop](https://mini-ai-app-workshop.netlify.app)
+
+A one-hour hands-on session that takes complete beginners from "AI is a mystery" to a working web app they built by describing it. Not a lecture about AI, and no code shown: the participants each end the hour with something on a screen that they made.
+
+The repo is the whole kit rather than just the slides. A self-contained HTML deck, a participant handout with the prompt recipe, an easy/medium/hard menu of app ideas and ready-to-paste starter prompts, a list of a hundred small app ideas, and a facilitator guide with minute-by-minute timing, the live-demo script, rescue prompts for when someone is stuck, and troubleshooting. The handout is also translated into Turkish. Anyone can pick this up and run the session; that was the point of writing the facilitator guide rather than keeping the timing in my head.
+
+Run it yourself from <https://mini-ai-app-workshop.netlify.app>
+
+(Last update July 2026)
+
 ### [LTMS: A Truth Maintenance System in Python](https://github.com/pisanuw/ltms)
 
 A logic-based Truth Maintenance System and pattern-directed reasoning engine in pure Python, following Forbus and de Kleer's *Building Problem Solvers* (MIT Press, 1993). The system maintains belief across a set of propositional clauses using Boolean Constraint Propagation, records well-founded support for every derived value, backtracks in a dependency-directed way when it hits a contradiction, and can explain why it believes anything it believes. Assert `p or q`, then assert `not p`, and it concludes `q`. Assume it is raining and it will conclude the ground is wet; retract the assumption and the wet ground goes back to unknown rather than lingering as an orphaned conclusion. That retraction behavior is the entire point of a TMS, and it is what separates it from a rule engine that only ever adds.
@@ -22,7 +76,7 @@ Still missing: a deployed site where you can type in rules and facts and watch b
 
 See [README](https://github.com/pisanuw/ltms/blob/main/README.md) for more details on the code, or read the [study companion](https://pisanuw.github.io/ltms/)
 
-(Last update July 2026)
+(Last update August 2026)
 
 ### [Ladder Games](https://word-path.netlify.app/)
 
@@ -34,7 +88,7 @@ The Hint button is the Socratic guardrail in miniature. Word Ladder tells you wh
 
 See [README](https://github.com/pisanuw/word-path/blob/main/README.md) for more details on the code or play it at <https://word-path.netlify.app/>
 
-(Last update July 2026)
+(Last update August 2026)
 
 ### [Computing Power and Political Power](https://pisanuw.github.io/turkey-study-abroad/)
 
@@ -44,7 +98,7 @@ The program is not an AI project, but it is an AI artifact: the site and the dra
 
 Read the drafts at <https://pisanuw.github.io/turkey-study-abroad/>
 
-(Last update July 2026)
+(Last update August 2026)
 
 ### [Emoji Lingua](https://emoji-lingua-pisan.netlify.app)
 
@@ -52,7 +106,7 @@ Translate English into emoji, and emoji back into English. `I love pizza on a ra
 
 See [README](https://github.com/pisanuw/Claude-capstone/blob/main/emoji-lingua/README.md) for more details on the code or use it at <https://emoji-lingua-pisan.netlify.app>
 
-(Last update July 2026)
+(Last update August 2026)
 
 ### [Canvas Group Evaluate](https://github.com/pisanuw/canvas-group-evaluate)
 
