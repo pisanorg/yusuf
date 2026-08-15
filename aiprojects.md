@@ -44,13 +44,15 @@ Read it at <https://arxiv.org/abs/2608.05175>
 
 (Last update August 2026)
 
-### [How of Happiness Quizzes](https://github.com/pisanuw/quiz)
+### [How of Happiness Quizzes](https://how-of-happiness.netlify.app/)
 
 Ten chapter quizzes, twenty questions each, with Google sign-in and a leaderboard. React and Vite on the front, Supabase (Postgres, Auth, row-level security) on the back, Netlify for hosting.
 
 Two design decisions carry the whole thing. First, your chapter score is the average of every attempt, not your best, which makes retakes free to take but not free to fail: open with 15 out of 20 and you are capped at 18.3 after three attempts and 19.5 after ten, approaching a perfect score without ever arriving. One bad attempt is permanent. Only a perfect first attempt scores perfectly. The global board sums your chapter averages, so breadth pays and every chapter you play can only add to your total. Second, players show as initials with no photo by default, because signing in with Google should not publish your full name and face to a public page. That default is enforced in the database rather than the interface: the leaderboard view returns a photo only when the player opted in, the profiles table is readable only by its owner, and players hold update rights on exactly two columns, so nobody can point their avatar at an arbitrary image.
 
 Questions live in JSON, one file per chapter, with a seed script that validates before it writes.
+
+See [README](https://github.com/pisanuw/quiz/blob/main/README.md) for more details on the code or play it at <https://how-of-happiness.netlify.app/>
 
 (Last update August 2026)
 
