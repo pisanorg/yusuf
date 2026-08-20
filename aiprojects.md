@@ -10,6 +10,26 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Migration Diff Narrator](https://migration-diff-narrator.netlify.app)
+
+Paste two versions of a database schema, or two versions of your TypeScript interfaces, and get every change named and judged: safe, caution, or breaking, each with a one-sentence migration note ("Existing NULLs make this fail; backfill the column before adding the constraint"). Renames are inferred instead of being reported as a drop plus an add, so `user_name` becoming `username` shows up as a rename warning rather than a data-losing delete. One button copies the whole thing as a Markdown checklist ready for a PR description. Schema changes are the most dangerous part of a deploy, and the diff between two migration files is usually raw SQL a reviewer has to simulate in their head. This turns that into a ten-second scan.
+
+The project idea called for the Claude API to classify each change. I skipped it. The taxonomy of schema changes is small and enumerable, so a fixed rule set does the job: same diff, same verdict, every time, offline, nothing you paste leaves the page. The honest limitation is parser coverage: it reads the common subset of SQL DDL (CREATE TABLE, ALTER, indexes, enums) and object-shape TypeScript interfaces, not every dialect corner, and it warns you when it skips something it does not understand. 74 vitest tests, no backend, no API key.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/migration-diff-narrator/README.md) for more details on the code or try it at <https://migration-diff-narrator.netlify.app>
+
+(Last update August 2026)
+
+### [Schema Storyteller](https://schema-storyteller.netlify.app)
+
+Point it at a schema (SQL DDL, Prisma, or JSON Schema) and it tells you the story: which entities exist, how they relate, which tables are just join tables, and what `usr_actv_flg` was probably meant to say. A rule-based reviewer then lists what is likely missing: primary keys, indexes on foreign keys, uniqueness constraints. Export the whole narrative as Markdown and paste it into the design doc that should have existed in the first place.
+
+No LLM here either, on purpose. A hand-written parser and a fixed rule set replace the suggested Claude API calls, so the narrative is free, offline, and reproducible, which also means it is templated: the prose will not win any literary awards, and the reviewer only knows the rules I taught it. 71 vitest tests, 88% coverage, fully client-side.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/schema-storyteller/README.md) for more details on the code or try it at <https://schema-storyteller.netlify.app>
+
+(Last update August 2026)
+
 ### [Pathfinding Playground](https://pathfinding-playground-pisanuw.netlify.app)
 
 Draw a grid map, drop in walls and mud (mud costs 5 to enter), then watch A*, Dijkstra, BFS, DFS, and greedy best-first think one expansion at a time, each step narrated from the live algorithm state: which cell got picked, why, and what the g, h, and f values were. The project idea suggested Claude API calls for the narration. I skipped that. Every line is a template filled with the numbers the algorithm just computed, so narration is free, instant, works offline, and always matches what the search actually did, which an LLM cannot promise.
