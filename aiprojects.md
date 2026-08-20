@@ -10,6 +10,26 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Pathfinding Playground](https://pathfinding-playground-pisanuw.netlify.app)
+
+Draw a grid map, drop in walls and mud (mud costs 5 to enter), then watch A*, Dijkstra, BFS, DFS, and greedy best-first think one expansion at a time, each step narrated from the live algorithm state: which cell got picked, why, and what the g, h, and f values were. The project idea suggested Claude API calls for the narration. I skipped that. Every line is a template filled with the numbers the algorithm just computed, so narration is free, instant, works offline, and always matches what the search actually did, which an LLM cannot promise.
+
+Each algorithm is a generator emitting a uniform event trace, and the canvas renderer and the narrator both consume the same events, so what you see and what you read cannot drift apart. Neighbor order and tie-breaking are fixed, so the same map always produces the identical trace; there is a test for that. The classroom payoff is compare mode plus share links: sprinkle mud, run BFS against Dijkstra side by side, watch BFS march straight through the expensive terrain while Dijkstra detours around it, then hand the exact puzzle to a class as a plain link, because the whole map, start, goal, and algorithm picks are run-length encoded into the URL hash. React + Vite, no backend, 20 vitest cases covering optimality, path validity, maze solvability, and trace determinism.
+
+See [README](https://github.com/pisanuw/pathfinding-playground/blob/main/README.md) for more details on the code or play it at <https://pathfinding-playground-pisanuw.netlify.app>
+
+(Last update August 2026)
+
+### [Game Palette Inspector](https://game-palette-inspector.netlify.app)
+
+Check a game palette against WCAG contrast and eight kinds of color vision deficiency, then get replacement colors that keep the art style. Roughly 8% of male players see color differently, and most game color tooling ignores them. Build a palette by hand, load a preset, or drop a screenshot and have its eight dominant colors pulled out; the vision lab then shows the palette, and the full frame, through protanopia, deuteranopia, tritanopia, their milder forms, and full and partial achromatopsia.
+
+Two parts I like. The confusion report measures color pairs perceptually in OKLab and flags the ones that are clearly distinct with typical vision but collapse under a specific deficiency, naming the worst-case vision type. And the fix studio repairs a failing color by binary-searching OKLCH lightness with hue pinned, so the contrast target is met without repainting the art direction. It is also honest about impossibility: 7:1 against a mid-tone background is sometimes unreachable, and the tool says so instead of inventing a color. The simulation is Machado, Oliveira and Fernandes (2009), applied in linear sRGB and verified against the colour-science reference data. Everything runs in the browser: no accounts, no uploads, no tracking, no runtime dependencies beyond React, all the color math hand-rolled and unit tested. The interface follows its own advice, too: the accent is a protan/deutan-safe cyan and no pass/fail state is carried by color alone. Simulations are good approximations, not ground truth; individual perception varies.
+
+See [README](https://github.com/pisanuw/c1/blob/main/README.md) for more details on the code or use it at <https://game-palette-inspector.netlify.app>
+
+(Last update August 2026)
+
 ### [Google Flights MCP Server](https://github.com/pisanuw/claude-google-flights-mcp)
 
 An MCP server that hands Claude nine tools for searching flights and watching fares. Google has no official flights API, so this calls SerpAPI's `google_flights` engine, which runs the search server-side and returns structured JSON. You can search one-way, round-trip, or multi-city, filter on cabin class, passengers, stops, and price, follow a `departure_token` to advance leg by leg through an itinerary, and follow a `booking_token` to see which providers sell the fare and at what price. "Nonstop round-trip SEA to NRT, Oct 3 back Oct 17, under $1200" is the whole interface.
