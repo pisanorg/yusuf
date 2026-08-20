@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Shortcut Sprint](https://shortcut-sprint.netlify.app)
+
+A flashcard app for your fingers. It shows a task ("Go to definition", "delete the current line"), you press the shortcut, and SM-2 spaced repetition (the SuperMemo algorithm from 1990, same family as Anki) decides when you see that card again: instant recall pushes it out days, then weeks; fumbling brings it back tomorrow. VS Code, Chrome DevTools, Figma, and Vim come bundled, including multi-chord sequences like Ctrl+K Ctrl+S and Vim's ciw, and instructors can upload a JSON set for whatever tool their course uses. A per-tool mastery radar and a daily streak provide just enough guilt to keep the habit going.
+
+The idea called for Supabase to hold progress. I skipped it: localStorage does the job, so there are no accounts and nothing leaves the browser. The matching layer turned out to be the interesting part, because a keypress has two readings (the physical key and the character it produced) and Vim's $ needs one while Ctrl+Shift+[ needs the other, so every press is matched both ways. The limitation is baked into the platform: a web page cannot capture browser-reserved shortcuts, Ctrl+W closes the tab no matter how much preventDefault you throw at it, so the one shortcut everyone knows is the one this app cannot teach. 78 vitest tests, 98% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/shortcut-sprint/README.md) for more details on the code or try it at <https://shortcut-sprint.netlify.app>
+
+(Last update August 2026)
+
 ### [Migration Diff Narrator](https://migration-diff-narrator.netlify.app)
 
 Paste two versions of a database schema, or two versions of your TypeScript interfaces, and get every change named and judged: safe, caution, or breaking, each with a one-sentence migration note ("Existing NULLs make this fail; backfill the column before adding the constraint"). Renames are inferred instead of being reported as a drop plus an add, so `user_name` becoming `username` shows up as a rename warning rather than a data-losing delete. One button copies the whole thing as a Markdown checklist ready for a PR description. Schema changes are the most dangerous part of a deploy, and the diff between two migration files is usually raw SQL a reviewer has to simulate in their head. This turns that into a ten-second scan.
