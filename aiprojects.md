@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [SQL Replay](https://sql-replay.netlify.app)
+
+Type a SELECT, paste some CSV (or use the bundled customers/orders tables), and watch the query execute one stage at a time: FROM, JOIN, WHERE, GROUP BY, HAVING, SELECT, DISTINCT, ORDER BY, LIMIT. Every stage shows the actual rows: joined rows merge with their partners, LEFT JOIN survivors get NULL padding, rows that fail WHERE are struck through with the evaluated condition sitting next to them, groups collapse with their member lists. A narrator explains each stage from the real execution counts ("3 rows pass, while 2 rows fail and are removed"). Students pick up SQL syntax in a week and then spend a quarter with no mental model of what the database does with it. Watching the rows move is the model. The whole workspace, query plus data, is encoded into the URL hash, so a puzzle query goes to a class as a plain link.
+
+The idea suggested an optional Claude API narrator. I made it the mandatory non-Claude narrator instead: every sentence is a template filled with numbers the executor just computed, so the explanation cannot drift from the screen, and the semantics underneath are the real thing (three-valued logic, Kleene AND/OR, COUNT(x) skipping NULLs, inclusive BETWEEN). The limitation is the point: it replays the logical clause order on tables capped at 200 rows, with no planner, no indexes, and no subqueries. A real engine would almost never execute a query this literally, so this teaches what a query means, not how a database makes it fast. 86 vitest tests, 99.7% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/sql-replay/README.md) for more details on the code or try it at <https://sql-replay.netlify.app>
+
+(Last update August 2026)
+
 ### [Sound Sketchpad](https://sound-sketchpad.netlify.app)
 
 Type "muffled explosion heard from underground" and it plays one. The description runs through a word-to-DSP recipe book: 20 base sounds (explosion, coin, laser, rain, bell, heartbeat) and 18 modifiers (muffled, tiny, metallic, underwater, retro), each modifier rewriting the recipe by re-filtering, re-pitching, or bolting on ringing partials. The app shows exactly which words matched, draws the waveform, lists every layer's signal chain (oscillator to filter to envelope to gain), and gives you sliders for pitch, length, brightness, echo, and volume. One button exports a WAV at 16 or 24 bit. Same words, same sound, every time; a Variation button re-rolls only the noise seed.
