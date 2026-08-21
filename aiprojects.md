@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Claude for STEM Professors](https://github.com/pisanuw/claude-for-stem-professors)
+
+A guide for faculty who have seen the demos and want to ship something: from zero to a deployed course app, no programming background required. The bet behind it is that the hard part for professors is not prompting, it is plumbing. So the first half is accounts, tokens, and connectors (GitHub, Netlify, Render, Canvas), and only then come three destination projects with paste-ready starter prompts: a course website live on Netlify in under an hour, an auto-graded practice-problem app students use before exams, and a Canvas assistant on Render that drafts announcements from live roster and assignment data.
+
+Two things I insisted on. The guide is dated, not evergreen: everything was verified against vendor documentation in August 2026, the version sits at the top, and when a button wanders, the linked docs win. And token hygiene is a full section rather than a footnote, written from experience: tokens are passwords, a Canvas token carries FERPA-protected student data, and every paste-a-token session ends with rotate or delete. Every starter prompt closes with "Ask me any questions before you start", the guide's single highest-value habit, because Claude's guesses are plausible and wrong in exactly the ways that waste your afternoon. Ships as one README plus a printable PDF (pandoc and weasyprint) with the URLs spelled out for reading away from a screen.
+
+See [README](https://github.com/pisanuw/claude-for-stem-professors/blob/main/README.md) to get started; the printable PDF is in the repo.
+
+(Last update August 2026)
+
 ### [SQL Replay](https://sql-replay.netlify.app)
 
 Type a SELECT, paste some CSV (or use the bundled customers/orders tables), and watch the query execute one stage at a time: FROM, JOIN, WHERE, GROUP BY, HAVING, SELECT, DISTINCT, ORDER BY, LIMIT. Every stage shows the actual rows: joined rows merge with their partners, LEFT JOIN survivors get NULL padding, rows that fail WHERE are struck through with the evaluated condition sitting next to them, groups collapse with their member lists. A narrator explains each stage from the real execution counts ("3 rows pass, while 2 rows fail and are removed"). Students pick up SQL syntax in a week and then spend a quarter with no mental model of what the database does with it. Watching the rows move is the model. The whole workspace, query plus data, is encoded into the URL hash, so a puzzle query goes to a class as a plain link.
