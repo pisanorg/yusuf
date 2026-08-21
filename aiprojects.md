@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [UI Diff Lens](https://ui-diff-lens.netlify.app)
+
+Drop in before and after screenshots of a UI and every changed region gets boxed and named: layout shift, spacing nudge, color restyle, text edit, visibility fade, added, or removed. Each box carries a confidence and the actual evidence ("the same content reappears 8px right, match 100%"). Pixel-diff tools already tell you where pixels differ; the useful part is naming the kind of change, so a reviewer can wave through nine color tweaks and stare hard at the one layout shift. Filter the overlay by type, then export an annotated PNG or a standalone HTML report for the PR.
+
+The idea called for Claude Vision to do the classifying. It turned out to be classical image processing all the way down: a perceptual pixel diff with anti-aliasing detection finds the changes, clustering groups them into regions, and each region runs a gauntlet of checks (is one side just background, does the content reappear at an offset within 48px, is one side an alpha-blend of the other, do the edges correlate while the palette moved). Deterministic, offline, and screenshots never leave the browser. Heuristics have edges, though: a wide element nudged a few pixels produces two thin changed strips, and if they land far enough apart the tool reports an add plus a remove instead of one spacing change. 56 vitest tests, 96% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/ui-diff-lens/README.md) for more details on the code or try it at <https://ui-diff-lens.netlify.app>
+
+(Last update August 2026)
+
 ### [Shortcut Sprint](https://shortcut-sprint.netlify.app)
 
 A flashcard app for your fingers. It shows a task ("Go to definition", "delete the current line"), you press the shortcut, and SM-2 spaced repetition (the SuperMemo algorithm from 1990, same family as Anki) decides when you see that card again: instant recall pushes it out days, then weeks; fumbling brings it back tomorrow. VS Code, Chrome DevTools, Figma, and Vim come bundled, including multi-chord sequences like Ctrl+K Ctrl+S and Vim's ciw, and instructors can upload a JSON set for whatever tool their course uses. A per-tool mastery radar and a daily streak provide just enough guilt to keep the habit going.
