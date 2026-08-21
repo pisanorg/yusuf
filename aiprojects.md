@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Code Review Gauntlet](https://code-review-gauntlet.netlify.app)
+
+A code snippet appears with one to three planted defects and a countdown. Click the lines you would flag in review, submit, and everything is revealed: the off-by-one you caught, the SQL injection you sailed past, each with its root cause and fix. Scoring punishes spraying: 100 points per defect found, minus 25 for every clean line flagged, and the time bonus only pays out when you found them all. A radar chart tracks accuracy across logic, null-safety, security, performance, and style, so after a dozen rounds you can see which category you keep missing. There is also a daily challenge: the date is hashed into the puzzle seed, so everyone gets the same round with no server behind it.
+
+The idea called for Claude to generate endless fresh puzzles and Supabase for a leaderboard. I skipped both. Puzzles come from a seeded mutation engine: 11 hand-written clean snippets (JavaScript, Python, SQL) and a catalogue of 51 single-line defects, from inverted guards to timing-unsafe hash comparisons, each rewriting exactly one line so the generated code always parses. Same seed, same puzzle, offline, free. The honest limitation is the flip side: 51 defects is not an infinite supply, and a regular player will start recognizing templates within a week or two. The original pitch really did need an LLM for that part. 46 vitest tests, 99.8% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/code-review-gauntlet/README.md) for more details on the code or play it at <https://code-review-gauntlet.netlify.app>
+
+(Last update August 2026)
+
 ### [UI Diff Lens](https://ui-diff-lens.netlify.app)
 
 Drop in before and after screenshots of a UI and every changed region gets boxed and named: layout shift, spacing nudge, color restyle, text edit, visibility fade, added, or removed. Each box carries a confidence and the actual evidence ("the same content reappears 8px right, match 100%"). Pixel-diff tools already tell you where pixels differ; the useful part is naming the kind of change, so a reviewer can wave through nine color tweaks and stare hard at the one layout shift. Filter the overlay by type, then export an annotated PNG or a standalone HTML report for the PR.
