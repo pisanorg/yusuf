@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Sound Sketchpad](https://sound-sketchpad.netlify.app)
+
+Type "muffled explosion heard from underground" and it plays one. The description runs through a word-to-DSP recipe book: 20 base sounds (explosion, coin, laser, rain, bell, heartbeat) and 18 modifiers (muffled, tiny, metallic, underwater, retro), each modifier rewriting the recipe by re-filtering, re-pitching, or bolting on ringing partials. The app shows exactly which words matched, draws the waveform, lists every layer's signal chain (oscillator to filter to envelope to gain), and gives you sliders for pitch, length, brightness, echo, and volume. One button exports a WAV at 16 or 24 bit. Same words, same sound, every time; a Variation button re-rolls only the noise seed.
+
+The idea called for Claude to turn the description into Web Audio code. I replaced it with the recipe book, and skipped Web Audio for synthesis too: a pure sample-by-sample DSP engine (swept oscillators, seeded noise, ADSR envelopes, biquad filters, echo, bit crush) renders the exact buffer the browser plays, which means the tests assert on the actual samples you hear and the WAV export is a byte-for-byte re-render. The limitation is the vocabulary: 20 bases and 18 modifiers cover the game-jam staples, but describe anything outside them and you get a generic whoosh and a hint about words that work. The open-ended tail really did need the LLM. 59 vitest tests, 100% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/sound-sketchpad/README.md) for more details on the code or try it at <https://sound-sketchpad.netlify.app>
+
+(Last update August 2026)
+
 ### [Code Review Gauntlet](https://code-review-gauntlet.netlify.app)
 
 A code snippet appears with one to three planted defects and a countdown. Click the lines you would flag in review, submit, and everything is revealed: the off-by-one you caught, the SQL injection you sailed past, each with its root cause and fix. Scoring punishes spraying: 100 points per defect found, minus 25 for every clean line flagged, and the time bonus only pays out when you found them all. A radar chart tracks accuracy across logic, null-safety, security, performance, and style, so after a dozen rounds you can see which category you keep missing. There is also a daily challenge: the date is hashed into the puzzle seed, so everyone gets the same round with no server behind it.
