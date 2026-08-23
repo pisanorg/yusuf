@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [HAR Detective](https://har-detective.netlify.app)
+
+Export a HAR file from the DevTools Network panel (right-click, "Save all as HAR"), drop it on the page, and get the analysis you normally do by squinting at a wall of requests: an interactive waterfall plus a ranked list of what is actually wrong. Ten detectors cover the classics: N+1 loops (/api/products/1 through /8 becomes one finding with the batch-endpoint fix attached), static assets served without cache headers, hundreds of KB of JSON that never met gzip, redirect chains, API calls running single-file when they could run together, duplicate fetches, failing requests, slow server think-time, oversized payloads, and HTTP/1.1 origins paying DNS and TLS over and over. Each finding shows the guilty requests, the wasted bytes or milliseconds, and a copy-paste fix; click one and the rows light up in the waterfall. The whole report exports as Markdown for a PR.
+
+The idea called for Claude to read the request data and write the report. HTTP performance problems are a small, well-known catalogue, so hand-written rules do the job: same HAR, same report, offline, and the file never leaves the browser (HAR exports are stuffed with cookies and session tokens, so this matters more than usual). The limitation is that rules judge shape, not intent: a detector can see that three API calls ran strictly one after another, but not that your app needed the first response to build the second request, so some findings are the app working as designed. It flags; you decide. 56 vitest tests, 100% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/har-detective/README.md) for more details on the code or try it at <https://har-detective.netlify.app>
+
+(Last update August 2026)
+
 ### [Claude for STEM Professors](https://github.com/pisanuw/claude-for-stem-professors)
 
 A guide for faculty who have seen the demos and want to ship something: from zero to a deployed course app, no programming background required. The bet behind it is that the hard part for professors is not prompting, it is plumbing. So the first half is accounts, tokens, and connectors (GitHub, Netlify, Render, Canvas), and only then come three destination projects with paste-ready starter prompts: a course website live on Netlify in under an hour, an auto-graded practice-problem app students use before exams, and a Canvas assistant on Render that drafts announcements from live roster and assignment data.
