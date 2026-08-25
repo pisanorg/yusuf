@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Code Analogy Forge](https://code-analogy-forge.netlify.app)
+
+Paste a code snippet or just type "recursion", pick your audience (curious child, high school student, CS undergrad, non-technical adult), and get three analogies from three different everyday domains, each with a small table mapping code terms to the analogy. Switching the audience swaps the entire text, not just the vocabulary: the child hears about a present that is a box inside a box inside a box, the undergrad gets the same imagery tied to base cases, unwinding, and stack frames. A detector works out what your paste shows from keyword mentions and code shapes (lo/hi/mid bounds for binary search, .push() plus .pop() for a stack), and for recursion it extracts the actual function body, by brace matching or Python indentation, to check the function really calls itself. Save the good ones to a library with tags and search, copy any card as Markdown for slides, or send a read-only share link that needs no server: the link encodes ids into the URL hash and resolves against the corpus shipped with the app.
+
+The idea called for Claude to write the analogies and Supabase to store them. I wrote the analogies up front instead: 14 concepts times 3 domains times 4 audiences is 168 short texts, every mapping checked by a person, same input same output, offline, free. localStorage replaces Supabase. The limitation is the flip side of the corpus: the forge knows exactly 14 concepts (variables through async and OOP), and anything outside them gets an honest "no known concept detected" rather than a fresh analogy. The original pitch wanted the open-ended tail, and that part really did need the LLM. 61 vitest tests, 99.8% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/code-analogy-forge/README.md) for more details on the code or try it at <https://code-analogy-forge.netlify.app>
+
+(Last update August 2026)
+
 ### [HAR Detective](https://har-detective.netlify.app)
 
 Export a HAR file from the DevTools Network panel (right-click, "Save all as HAR"), drop it on the page, and get the analysis you normally do by squinting at a wall of requests: an interactive waterfall plus a ranked list of what is actually wrong. Ten detectors cover the classics: N+1 loops (/api/products/1 through /8 becomes one finding with the batch-endpoint fix attached), static assets served without cache headers, hundreds of KB of JSON that never met gzip, redirect chains, API calls running single-file when they could run together, duplicate fetches, failing requests, slow server think-time, oversized payloads, and HTTP/1.1 origins paying DNS and TLS over and over. Each finding shows the guilty requests, the wasted bytes or milliseconds, and a copy-paste fix; click one and the rows light up in the waterfall. The whole report exports as Markdown for a PR.
