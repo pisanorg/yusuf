@@ -126,7 +126,7 @@ Check a game palette against WCAG contrast and eight kinds of color vision defic
 
 Two parts I like. The confusion report measures color pairs perceptually in OKLab and flags the ones that are clearly distinct with typical vision but collapse under a specific deficiency, naming the worst-case vision type. And the fix studio repairs a failing color by binary-searching OKLCH lightness with hue pinned, so the contrast target is met without repainting the art direction. It is also honest about impossibility: 7:1 against a mid-tone background is sometimes unreachable, and the tool says so instead of inventing a color. The simulation is Machado, Oliveira and Fernandes (2009), applied in linear sRGB and verified against the colour-science reference data. Everything runs in the browser: no accounts, no uploads, no tracking, no runtime dependencies beyond React, all the color math hand-rolled and unit tested. The interface follows its own advice, too: the accent is a protan/deutan-safe cyan and no pass/fail state is carried by color alone. Simulations are good approximations, not ground truth; individual perception varies.
 
-See [README](https://github.com/pisanuw/c1/blob/main/README.md) for more details on the code or use it at <https://game-palette-inspector.netlify.app>
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/game-palette-inspector/README.md) for more details on the code or use it at <https://game-palette-inspector.netlify.app>
 
 (Last update August 2026)
 
