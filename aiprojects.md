@@ -116,7 +116,7 @@ Draw a grid map, drop in walls and mud (mud costs 5 to enter), then watch A*, Di
 
 Each algorithm is a generator emitting a uniform event trace, and the canvas renderer and the narrator both consume the same events, so what you see and what you read cannot drift apart. Neighbor order and tie-breaking are fixed, so the same map always produces the identical trace; there is a test for that. The classroom payoff is compare mode plus share links: sprinkle mud, run BFS against Dijkstra side by side, watch BFS march straight through the expensive terrain while Dijkstra detours around it, then hand the exact puzzle to a class as a plain link, because the whole map, start, goal, and algorithm picks are run-length encoded into the URL hash. React + Vite, no backend, 20 vitest cases covering optimality, path validity, maze solvability, and trace determinism.
 
-See [README](https://github.com/pisanuw/pathfinding-playground/blob/main/README.md) for more details on the code or play it at <https://pathfinding-playground-pisanuw.netlify.app>
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/pathfinding-playground/README.md) for more details on the code or play it at <https://pathfinding-playground-pisanuw.netlify.app>
 
 (Last update August 2026)
 
