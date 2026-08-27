@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Prompt Genome](https://prompt-genome.netlify.app)
+
+Paste a prompt and it comes back as a strand of typed genes: role, persona, context, task, constraint, format, example, each color-coded and each showing why it got its label ("forbids something", "imperative verb"). A lint pass scores the genome 0 to 100 and points at the weak spots: no task, "various things, etc.", asking for brief and comprehensive in the same breath, constraints that only say what to avoid. Every gene offers three canned rewrites (Harden it, Soften it, Make it checkable), previewed with the changed words highlighted, and a side-by-side diff shows the prompt as pasted against the prompt as edited. Good genes go into a library with tags and search, and a share link carries the whole genome inside the URL hash, so there is no server to keep alive.
+
+The idea wanted Claude to do the parsing and write the alternatives. I used rules instead: cue patterns for segmentation, hand-written templates for the mutations, an LCS diff for the comparison. Same paste, same genome, offline, free. The limitation follows directly: the classifier only knows the cues it ships with, so an unusual sentence lands in "context" with an honest "no strong signal" note, and the mutations are mechanical rephrasings, not fresh ideas. The idea also wanted to diff model responses, and without API calls there are no responses to diff; the prompt diff and the lint score stand in for that. 87 vitest tests, 99% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/prompt-genome/README.md) for more details on the code or try it at <https://prompt-genome.netlify.app>
+
+(Last update August 2026)
+
 ### [Code Analogy Forge](https://code-analogy-forge.netlify.app)
 
 Paste a code snippet or just type "recursion", pick your audience (curious child, high school student, CS undergrad, non-technical adult), and get three analogies from three different everyday domains, each with a small table mapping code terms to the analogy. Switching the audience swaps the entire text, not just the vocabulary: the child hears about a present that is a box inside a box inside a box, the undergrad gets the same imagery tied to base cases, unwinding, and stack frames. A detector works out what your paste shows from keyword mentions and code shapes (lo/hi/mid bounds for binary search, .push() plus .pop() for a stack), and for recursion it extracts the actual function body, by brace matching or Python indentation, to check the function really calls itself. Save the good ones to a library with tags and search, copy any card as Markdown for slides, or send a read-only share link that needs no server: the link encodes ids into the URL hash and resolves against the corpus shipped with the app.
