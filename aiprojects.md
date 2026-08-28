@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Type Witness](https://type-witness.netlify.app)
+
+Paste a TypeScript snippet and the compiler's reasoning plays back as a story, one narrated step per expression. `const x = 42` keeps the literal type 42 while `let y = 42` widens to number, and the step says why. A call to a generic function shows the declared signature, the binding the compiler picked (T = string), and the resolved signature side by side. The unannotated `word` in `["a"].map(word => word.length)` explains that its type flowed in from the array, and inside `if (typeof v === "string")` the same v that was declared `string | number` shows up narrowed, with the declared and narrowed types both on the card. Compiler errors are threaded into the story right after the step where inference went astray, so you can rewind to the exact moment the code and the compiler stopped agreeing. Hover any expression for its type, click it to jump to its step, or hit play and watch the whole thing unfold. Students see the type system think; I have watched plenty of them treat it as a wall that says no.
+
+For once the idea had nothing for me to replace: no LLM, no backend, just the real TypeScript compiler (pinned at 5.6.3) running in a Web Worker with all 57 ES2022 lib files bundled in, so analysis is exact, offline, and nothing you paste leaves the browser. Every sentence of narration is filled in from what the checker actually computed, so the explanation cannot drift from the code. Two honest caveats: recovering the T = string bindings reads internal compiler state that the public API does not expose (it degrades gracefully if that ever changes shape), and shipping a compiler to the browser costs about 1 MB gzipped on first load. 62 vitest tests, 97.6% coverage, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/type-witness/README.md) for more details on the code or try it at <https://type-witness.netlify.app>
+
+(Last update August 2026)
+
 ### [Prompt Genome](https://prompt-genome.netlify.app)
 
 Paste a prompt and it comes back as a strand of typed genes: role, persona, context, task, constraint, format, example, each color-coded and each showing why it got its label ("forbids something", "imperative verb"). A lint pass scores the genome 0 to 100 and points at the weak spots: no task, "various things, etc.", asking for brief and comprehensive in the same breath, constraints that only say what to avoid. Every gene offers three canned rewrites (Harden it, Soften it, Make it checkable), previewed with the changed words highlighted, and a side-by-side diff shows the prompt as pasted against the prompt as edited. Good genes go into a library with tags and search, and a share link carries the whole genome inside the URL hash, so there is no server to keep alive.
