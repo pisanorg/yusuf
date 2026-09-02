@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Cron Cartographer](https://cron-cartographer.netlify.app)
+
+`15 4 * * 1-5` tells you nothing at a glance. Paste it here and it comes back as "At 04:15 on Monday through Friday" plus a calendar heatmap of the next 30, 90, or 365 days with every firing marked; hover a day for the exact times. It reads five-field cron (names, steps, wrap-around ranges like `FRI-MON`, the `@daily` shortcuts), a working subset of RRULE, a pasted GitHub Actions `schedule:` snippet, or plain English: type "every weekday at 4:15am" and get the cron expression back, with a note for every assumption it made. Two timezone pickers, one for where the job runs and one for where you are, and the daylight-saving edges are handled the way cron actually behaves: the 2:30am job in Los Angeles simply does not fire on March 8, and the page tells you so, while the ambiguous 1:30am in November fires once, not twice. Even the odd corner where `0 0 13 * 5` means the 13th OR any Friday is honored. A share link carries the whole thing in the URL.
+
+The idea wanted the Claude API for the English-to-cron part and npm packages for the parsing. Hand-written rules do both: same phrase, same cron, offline, free, zero runtime dependencies, and the timezone math builds exact offset tables from the browser's own IANA data instead of trusting a library. The limitation is the usual one for rules: the English parser knows a fixed set of phrasings, and anything past them gets "could not understand" rather than a guess. Ask for "every 2 weeks" and it tells you plain cron cannot say that, which no cron string ever warned anyone about. 74 vitest tests, 92% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/cron-cartographer/README.md) for more details on the code or try it at <https://cron-cartographer.netlify.app>
+
+(Last update September 2026)
+
 ### [Type Witness](https://type-witness.netlify.app)
 
 Paste a TypeScript snippet and the compiler's reasoning plays back as a story, one narrated step per expression. `const x = 42` keeps the literal type 42 while `let y = 42` widens to number, and the step says why. A call to a generic function shows the declared signature, the binding the compiler picked (T = string), and the resolved signature side by side. The unannotated `word` in `["a"].map(word => word.length)` explains that its type flowed in from the array, and inside `if (typeof v === "string")` the same v that was declared `string | number` shows up narrowed, with the declared and narrowed types both on the card. Compiler errors are threaded into the story right after the step where inference went astray, so you can rewind to the exact moment the code and the compiler stopped agreeing. Hover any expression for its type, click it to jump to its step, or hit play and watch the whole thing unfold. Students see the type system think; I have watched plenty of them treat it as a wall that says no.
