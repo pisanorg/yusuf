@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Summit Navigator](https://summit-navigator.netlify.app)
+
+Conference programs are laid out for desktop monitors and read in hotel hallways on phones. Summit Navigator takes the inaugural ACM AI Leadership Summit (Hyatt Regency Atlanta, Aug 30 to Sep 2, 2026) and turns the program into something you can drive with a thumb: day tabs pinned to the top, sessions grouped by start time, eleven color-coded track chips, search that matches titles, speakers, rooms, and descriptions, and a star on every session that builds a "my agenda" view saved in the browser. A now/next banner works off the conference clock in Atlanta no matter where you are, and one toggle flips every listed time into your own timezone with exact IANA math. The whole conference lives in one JSON file the app validates loudly on startup, so pointing it at a different conference is a data edit, not a rewrite.
+
+The honest limitation is the data itself: the build machine could not reach aisummit.acm.org (network egress policy), so the bundled schedule is reconstructed from ACM's public announcements. Real venue, real dates, real tracks and keynote speakers (LeCun, Barto, Brooks), illustrative session times and rooms, and the footer admits as much. Also, the summit ended the day before this was built. Oh well: the app is the reusable part. 42 vitest tests, 100% coverage on the core logic, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/summit-navigator/README.md) for more details on the code or try it at <https://summit-navigator.netlify.app>
+
+(Last update September 2026)
+
 ### [Cron Cartographer](https://cron-cartographer.netlify.app)
 
 `15 4 * * 1-5` tells you nothing at a glance. Paste it here and it comes back as "At 04:15 on Monday through Friday" plus a calendar heatmap of the next 30, 90, or 365 days with every firing marked; hover a day for the exact times. It reads five-field cron (names, steps, wrap-around ranges like `FRI-MON`, the `@daily` shortcuts), a working subset of RRULE, a pasted GitHub Actions `schedule:` snippet, or plain English: type "every weekday at 4:15am" and get the cron expression back, with a note for every assumption it made. Two timezone pickers, one for where the job runs and one for where you are, and the daylight-saving edges are handled the way cron actually behaves: the 2:30am job in Los Angeles simply does not fire on March 8, and the page tells you so, while the ambiguous 1:30am in November fires once, not twice. Even the odd corner where `0 0 13 * 5` means the 13th OR any Friday is honored. A share link carries the whole thing in the URL.
