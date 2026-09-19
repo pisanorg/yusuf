@@ -10,6 +10,18 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [YPDSA](https://ypdsa.pisan.me/)
+
+A tutor that hands a data structures student working code is worse than no tutor at all. YPDSA is the digital teaching assistant for my CSS 342/343 courses, and the interesting part is what it refuses to do. Answer-withholding is enforced as a per-turn, machine-checkable contract rather than a line in a system prompt: a non-LLM policy core reads trusted learner state and sets a ceiling on an eight-rung help ladder, a deterministic detector strips solution code out of replies, and a separate judge checks each risky reply against the contract before it is sent. The design, and the method used to tune it against scripted student personas, are written up in [Teaching an LLM Tutor to Withhold the Answer](https://arxiv.org/abs/2608.12292).
+
+What it does say comes from my own course rather than the internet. An offline pipeline ingests the real materials (existing PowerPoint lectures, Whisper transcripts of my own recordings, the textbook, assignment specs, Canvas PDFs, the course GitHub repos, even the course Discord) into roughly 12,000 indexed documents across nine collections, extracts a voice profile from them, and generated all 40 lecture decks plus a 40-chapter textbook the app serves next to the chat. Progress is gated by mastery: 136 learning goals, each with a pool of eight questions, where failing to show a prerequisite blocks a code attempt but never a conceptual question, and a deferred exam snoozes for a day instead of following the student around. Every reply carries a thumbs up and down, a thumbs down asks what was wrong, and anything flagged reaches me by email the next morning with a deep link straight to that message in the transcript.
+
+Two honest notes. This is the one project I run on a real Anthropic API key rather than the claude CLI, so every student turn costs money and clearing that key is the kill switch. The infrastructure is otherwise deliberately cheap: Render plus a free-tier Supabase Postgres that pauses itself after a week of no traffic, which took the login page down once before a keep-alive job and a database health indicator went in. The pilot numbers are modest and stated as such, 100 of 100 prompts answered without errors and 31 of them citing a specific slide, with correctness spot-checked on a sample rather than verified across the whole run. Login is whitelisted, so this is available to UW students at this point and not to the public.
+
+Source is not public for this one. Try it at <https://ypdsa.pisan.me/> (login required).
+
+(Last update September 2026)
+
 ### [MyChessMaster](https://mychessmaster.net/)
 
 Stockfish already knows which of your moves were bad. What it cannot tell you is why you played them, and that is the part a club player actually needs. MyChessMaster splits the job. The engine evaluates every position (MultiPV 3) and flags the moves that lost real win probability; the coach model is handed only those moments, with the FEN, the move played, the engine's top lines, the phase and the clock, and is told to reason from those lines and invent nothing. It returns a reusable pattern name, an error category, one paragraph of explanation, and the question you should have asked before moving. Even time pressure is stamped from the `%clk` comments rather than asked of the model. That division is the whole design: the engine owns the truth, the model owns the language.
@@ -201,6 +213,8 @@ A paper on the engineering problem behind the Socratic guardrail: a capable mode
 The tuning method may be the more portable contribution. Scripted student personas are driven through the live pipeline and re-scored by a stronger model, with every rejection's stated reason recorded, so failures get fixed by cause rather than by vibes and no human subjects are needed to iterate. That surfaced an "over-help ladder" that I did not expect to be so orderly: fix the blatant solution leaks and the tutor starts naming the exact bug; fix that and it starts over-citing general facts. Each fix exposes the next rung. The measure, diagnose, and fix loop generalizes to any agent that has to refuse a capability it has.
 
 Claude was a heavy collaborator on this one, which is a slightly recursive situation: a language model helping write up how to stop a language model from being too helpful.
+
+The tutor it describes is [YPDSA](https://ypdsa.pisan.me/), deployed for CSS 342/343 and listed above.
 
 Read it at <https://arxiv.org/abs/2608.12292>
 
