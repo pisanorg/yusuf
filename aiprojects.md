@@ -34,6 +34,16 @@ Source is not public for this one. Try it at <https://mychessmaster.net/>
 
 (Last update September 2026)
 
+### [Prompt Shrink Ray](https://prompt-shrink-ray.netlify.app)
+
+Every production prompt accumulates cruft: "please," "in order to," the same instruction restated in three sections because nobody remembers writing it the first time. Prompt Shrink Ray takes the whole thing apart into labeled sections (system, context, examples, task) by explicit label or by shape (a `You are...` opener, matched `Input:`/`Output:` pairs), then compresses each one at a level you pick: strip filler words, simplify verbose phrasing (`in order to` becomes `to`), drop a sentence that already appeared earlier in the prompt, or trim a long run of few-shot examples down to two with a note of how many got cut. Fenced code is hidden behind a placeholder before any of that runs, so a rule never touches the code you actually pasted. What comes back is a live token-and-cost estimate, a word-level diff of exactly what moved, and a retention score that names every number, quoted string, or proper noun the compression dropped, so "it looks shorter" comes with a receipt.
+
+The idea wanted two Claude calls: one to compress, one to judge whether the compressed version still meant the same thing. Both are rule tables instead, so the same prompt always compresses the same way, offline and free, and "did it still mean the same thing" becomes a narrower but checkable question: did it keep every number and code fragment, not a fuzzy judgment call from a second model. Token counts use the characters-over-4 rule of thumb providers themselves quote for English text, not a real tokenizer, so they are for comparing before and after, not for an actual invoice. 76 vitest tests, 100% statement coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/prompt-shrink-ray/README.md) for more details on the code or try it at <https://prompt-shrink-ray.netlify.app>
+
+(Last update September 2026)
+
 ### [Summit Navigator](https://summit-navigator.netlify.app)
 
 Conference programs are laid out for desktop monitors and read in hotel hallways on phones. Summit Navigator takes the inaugural ACM AI Leadership Summit (Hyatt Regency Atlanta, Aug 30 to Sep 2, 2026) and turns the program into something you can drive with a thumb: day tabs pinned to the top, sessions grouped by start time, eleven color-coded track chips, search that matches titles, speakers, rooms, and descriptions, and a star on every session that builds a "my agenda" view saved in the browser. A now/next banner works off the conference clock in Atlanta no matter where you are, and one toggle flips every listed time into your own timezone with exact IANA math. The whole conference lives in one JSON file the app validates loudly on startup, so pointing it at a different conference is a data edit, not a rewrite.
