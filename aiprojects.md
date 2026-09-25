@@ -10,6 +10,16 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+### [Agent Blast Radius](https://agent-blast-radius.netlify.app)
+
+Every MCP server, browser AI sidebar, and coding-agent allow rule was a reasonable yes on the day you clicked it. Added up, most of us have no idea what our AI tools can now reach. Agent Blast Radius reads the configs you already have (Claude Desktop, Cursor, VS Code and Claude Code MCP files, Claude Code permission settings, Chrome extension manifests, VS Code extension `package.json`s) and scores every tool from 0 to 100 across five dimensions: filesystem, shell, network, credentials, and browser data. A filesystem server pointed at your home directory is not the same as one pointed at a project folder. A Docker server with the Docker socket mounted is root on your machine. A `Bash(curl:*)` allow rule is broader than it looks. Each capability comes with one plain sentence on what could go wrong and the exact bit of config that triggered it. Along the way it catches plaintext API keys, database passwords sitting in command-line arguments, unpinned `npx` packages that fetch whatever was published last night, and tools set to auto-approve. You drop the files into the page, nothing gets uploaded, and you can download the report as a single HTML file.
+
+The idea asked for a local CLI that finds the files by itself. I built a static web page instead, so there is nothing to install, but the price is that you have to go find the files yourself (the page lists where each tool keeps them). The honest limitation is that it only scores what a config declares. It never reads a server's code, so it recognizes known servers by name and treats anything it does not recognize as a program running with your full privileges. That is the right default, but a scary fork with a friendly name will look friendly. 95 vitest tests, over 99% coverage, no backend, no API keys.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/agent-blast-radius/README.md) for more details on the code or try it at <https://agent-blast-radius.netlify.app>
+
+(Last update September 2026)
+
 ### [YPDSA](https://ypdsa.pisan.me/)
 
 A tutor that hands a data structures student working code is worse than no tutor at all. YPDSA is the digital teaching assistant for my CSS 342/343 courses, and the interesting part is what it refuses to do. Answer-withholding is enforced as a per-turn, machine-checkable contract rather than a line in a system prompt: a non-LLM policy core reads trusted learner state and sets a ceiling on an eight-rung help ladder, a deterministic detector strips solution code out of replies, and a separate judge checks each risky reply against the contract before it is sent. The design, and the method used to tune it against scripted student personas, are written up in [Teaching an LLM Tutor to Withhold the Answer](https://arxiv.org/abs/2608.12292).
