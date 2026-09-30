@@ -6,3 +6,4 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-08-27 [doc] aiprojects: repointed Game Palette Inspector README link from pisanuw/c1 to Claude-capstone/game-palette-inspector after the monorepo move. Live URL unchanged.
 2026-08-27 [doc] aiprojects: repointed Pathfinding Playground README link from pisanuw/pathfinding-playground to Claude-capstone/pathfinding-playground after the monorepo move. Live URL unchanged.
 2026-09-25 [doc] aiprojects: added CSS Scheduler (pisanuw/css-scheduler, uwb-css-scheduler.netlify.app) at the top.
+2026-09-30 [doc] aiprojects: added Where Does It Say (Claude-capstone/where-does-it-say, where-does-it-say.netlify.app) at the top.
