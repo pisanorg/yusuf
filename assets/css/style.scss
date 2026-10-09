@@ -367,6 +367,43 @@ a:hover { text-decoration: underline; color: var(--purple-dark); }
 }
 .person-card p { margin: 0; color: var(--gray-700); font-size: .82rem; }
 
+/* ----- TALKS PAGES ----- */
+.page-talks h2 { color: var(--purple); }
+.talk-card .talk-venue {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .35rem;
+}
+.talk-card .talk-links { margin-top: .75rem; }
+.talk-card .talk-links a {
+  font-weight: 600;
+  font-size: .85rem;
+  color: var(--purple);
+  margin-right: 1rem;
+}
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.6rem;
+  margin: 0 0 1.4rem;
+  font-size: .92rem;
+  color: var(--gray-500);
+}
+.talk-meta strong { color: var(--gray-700); }
+.talk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-bottom: 1.8rem;
+}
+.talk-outline { margin: 1rem 0 1.75rem 1.3rem; }
+.talk-outline li { margin-bottom: .5rem; font-size: .93rem; color: var(--gray-700); }
+.talk-outline strong { color: var(--ink); }
+
 /* ----- FOOTER ----- */
 .site-footer {
   background: var(--ink);

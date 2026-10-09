@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} &middot; {% endif %}Yusuf Pisan</title>
   {% seo %}
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -19,6 +20,7 @@
         <li><a href="{{ '/aiprojects' | relative_url }}" {% if page.url contains 'aiprojects' %}class="active"{% endif %}>AI Projects</a></li>
         <li><a href="{{ '/teaching' | relative_url }}" {% if page.url contains 'teaching' %}class="active"{% endif %}>Teaching</a></li>
         <li><a href="{{ '/research' | relative_url }}" {% if page.url contains 'research' %}class="active"{% endif %}>Research</a></li>
+        <li><a href="{{ '/talks/' | relative_url }}" {% if page.url contains '/talks' %}class="active"{% endif %}>Talks</a></li>
         <li><a href="{{ '/people' | relative_url }}" {% if page.url contains 'people' %}class="active"{% endif %}>Students</a></li>
         <li><a class="nav-substack" href="https://education2ai.substack.com" target="_blank" rel="noopener">Substack&nbsp;&nearr;</a></li>
       </ul>
@@ -80,6 +82,7 @@
             <li><a href="{{ '/aiprojects' | relative_url }}">AI Projects</a></li>
             <li><a href="{{ '/teaching' | relative_url }}">Teaching</a></li>
             <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+            <li><a href="{{ '/talks/' | relative_url }}">Talks</a></li>
             <li><a href="{{ '/people' | relative_url }}">Students</a></li>
             <li><a href="https://github.com/pisanorg/w/wiki" target="_blank">Resources Wiki</a></li>
           </ul>

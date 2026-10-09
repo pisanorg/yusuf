@@ -4,3 +4,15 @@ theme: jekyll-theme-leap-day
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
+
+# Reveal.js lives beside the deck in talks/*/vendor/. Listed here so no
+# future Jekyll default exclude can strip it from the built site.
+include:
+  - talks/202610Northwestern/vendor
+
+# Speaker-private files that live beside the deck but must never be published.
+# Belt and braces: these are gitignored too, so GitHub Pages never sees them.
+exclude:
+  - talks/202610Northwestern/SCRIPT.md
+  - talks/202610Northwestern/CLAIMS-REVIEW.md
+  - talks/202610Northwestern/combined-talk-presenter.pdf
