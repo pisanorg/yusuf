@@ -16,7 +16,7 @@ sitemap: false
 <div class="bio-text">
 Every work cited in the deck (slides 61 to 63), newest first. The number in bold
 is how many times Google Scholar had the work cited on 9 October 2026;
-26 of 67 resolved. The deck itself is
+62 of 67 resolved. The deck itself is
 <a href="../slides.html">here</a>.
 </div>
 
@@ -25,120 +25,115 @@ is how many times Google Scholar had the work cited on 9 October 2026;
 
 ## 2026
 
-- Ahtisham, Vanacore, Napoli, Arens, Ionova, Cohn, Salehi and Kizilcec (2026). How guided AI tutors resolve student impasses. Preprint. **(\*n/a)**  
+- Ahtisham, Vanacore, Napoli, Arens, Ionova, Cohn, Salehi and Kizilcec (2026). How guided AI tutors resolve student impasses. Preprint. **(\*0)**  
   *Full title:* Examining variation in how guided AI tutors resolve student impasses  
   [arxiv.org/abs/2609.38346](https://arxiv.org/abs/2609.38346)  
   *Deck section:* How they fail, and how they are evaluated
-- Contractor and Reyes (2026). Experimental evidence on the learning impact of generative AI. Working paper. **(\*n/a)**  
+- Contractor and Reyes (2026). Experimental evidence on the learning impact of generative AI. Working paper. **(\*4)**  
   [arxiv.org/abs/2607.08849](https://arxiv.org/abs/2607.08849)  
   *Deck section:* Does it help students learn?
-- IRRODL (2026). irrodl.org/index.php/irrodl/article/view/8775 **(\*n/a)**  
+- IRRODL (2026). irrodl.org/index.php/irrodl/article/view/8775. **(\*12)**  
   *Full title:* A Meta-Analysis of ChatGPT's Influence on Learning Achievement  
   [irrodl.org/index.php/irrodl/article/view/8775](https://irrodl.org/index.php/irrodl/article/view/8775)  
   *Deck section:* Does it help students learn?
-- LearnLM Team, Google DeepMind and Fab AI (2026). Guided Learning in Sierra Leone. Developer report. **(\*n/a)**  
+- LearnLM Team, Google DeepMind and Fab AI (2026). Guided Learning in Sierra Leone. Developer report. **(\*2)**  
   *Full title:* Teaching with Gemini: Measuring the Impact of Guided Learning on Student Mathematics Progress in Sierra Leone  
   *Deck section:* Does it help students learn?
-- Macina, Kapur and Sachan (2026). The assistance dilemma: learning to teach via multi-turn RL. Preprint. **(\*n/a)**  
+- Macina, Kapur and Sachan (2026). The assistance dilemma: learning to teach via multi-turn RL. Preprint. **(\*0)**  
   *Full title:* The assistance dilemma: learning to teach via multi-turn reinforcement learning  
   [arxiv.org/abs/2610.06446](https://arxiv.org/abs/2610.06446)  
   *Deck section:* How LLM tutors are built
-- Oreopoulos and Low (2026). One click away. NBER WP 35620. **(\*n/a)**  
+- Oreopoulos and Low (2026). One click away. NBER WP 35620. **(\*7)**  
   *Full title:* One click away: AI tutoring with Khanmigo in a two-year school experiment  
-  [nber.org/papers/w35620](https://nber.org/papers/w35620)  
-  *Deck section:* Does it help students learn?
-- Scarlatos et al. (2026). Simulated students in tutoring dialogues: substance or illusion? ACL 2026. **(\*n/a)**  
+  [nber.org/papers/w35620](https://nber.org/papers/w35620)
+- Scarlatos et al. (2026). Simulated students in tutoring dialogues: substance or illusion? ACL 2026. **(\*20)**  
   *Deck section:* How they fail, and how they are evaluated
-- Strohmaier, Bödefeld, Straser and Reinhold (2026). LLAMA LIMA: a living meta-analysis. **(\*n/a)**  
+- Strohmaier, Bödefeld, Straser and Reinhold (2026). LLAMA LIMA: a living meta-analysis. **(\*3)**  
   *Full title:* LLAMA LIMA: a living meta-analysis on the effects of generative AI on learning mathematics  
   [arxiv.org/abs/2601.18685](https://arxiv.org/abs/2601.18685)  
   *Deck section:* Does it help students learn?
-- Zhao, Knežević and Käser (2026). Evaluating answer leakage robustness of LLM tutors. ACL 2026. **(\*n/a)**  
+- Zhao, Knežević and Käser (2026). Evaluating answer leakage robustness of LLM tutors. ACL 2026. **(\*5)**  
   *Full title:* Evaluating answer leakage robustness of LLM tutors against adversarial student attacks  
   [arxiv.org/html/2604.18660](https://arxiv.org/html/2604.18660)  
   *Deck section:* How they fail, and how they are evaluated
 
 ## 2025
 
-- Anthropic (2025). Education Report: how university students use Claude. **(\*n/a)**  
+- Anthropic (2025). Education Report: how university students use Claude. **(\*73)**  
   *Full title:* Education Report How University Students Use Claude  
   *Deck section:* Computing education
 - Anthropic (April 2025). Claude for Education, Learning mode. **(\*n/a)**  
   *Full title:* Claude for Education Learning mode  
   *Deck section:* What industry ships
-- Bastani, Bastani, Sungu, Ge, Kabakcı and Mariman (2025). Generative AI without guardrails can harm learning. PNAS 122(26). **(\*n/a)**  
+- Bastani, Bastani, Sungu, Ge, Kabakcı and Mariman (2025). Generative AI without guardrails can harm learning. PNAS 122(26). **(\*716)**  
   *Full title:* Generative AI without guardrails can harm learning: evidence from high school mathematics  
   *Deck section:* Does it help students learn?
-- Bouvier, Cipriano, Glassey et al. (2025). The rest of the robots. ITiCSE WG Reports 2025. **(\*n/a)**  
+- Bouvier, Cipriano, Glassey et al. (2025). The rest of the robots. ITiCSE WG Reports 2025. **(\*15)**  
   *Full title:* The rest of the robots: generative AI in post-introductory computing education  
   [doi.org/10.1145/3760545.3783970](https://doi.org/10.1145/3760545.3783970)  
   *Deck section:* Computing education
-- De Simone et al. (2025). From chalkboards to chatbots (Nigeria). World Bank PRWP 11125. **(\*n/a)**  
+- De Simone et al. (2025). From chalkboards to chatbots (Nigeria). World Bank PRWP 11125. **(\*77)**  
   *Full title:* From chalkboards to chatbots: evaluating the impact of generative AI on learning outcomes in Nigeria  
   *Deck section:* Does it help students learn?
-- Dinucu-Jianu, Macina, Daheim, Hakimi, Gurevych and Sachan (2025). TutorRL. EMNLP 2025. **(\*n/a)**  
+- Dinucu-Jianu, Macina, Daheim, Hakimi, Gurevych and Sachan (2025). TutorRL. EMNLP 2025. **(\*62)**  
   *Full title:* From Problem-Solving to Teaching Problem-Solving: Aligning LLMs with Pedagogy using Reinforcement Learning  
   [arxiv.org/abs/2505.15607](https://arxiv.org/abs/2505.15607)  
   *Deck section:* How LLM tutors are built
 - Google (August 2025). Gemini Guided Learning. **(\*n/a)**  
   [blog.google/outreach-initiatives/education/guided-learning/](https://blog.google/outreach-initiatives/education/guided-learning/)  
   *Deck section:* What industry ships
-- Kapoor, A. et al. (2025). Optional guardrails and student routing. **(\*n/a)**  
+- Kapoor, A. et al. (2025). Optional guardrails and student routing. **(\*13)**  
   *Full title:* Exploring Student Behaviors and Motivations using AI TAs with Optional Guardrails  
   [arxiv.org/abs/2504.11146](https://arxiv.org/abs/2504.11146)  
   *Deck section:* Does it help students learn?
-- Kestin et al. (2025). AI tutoring outperforms in-class active learning. Scientific Reports. **(\*n/a)**  
+- Kestin et al. (2025). AI tutoring outperforms in-class active learning. Scientific Reports. **(\*468)**  
   *Full title:* AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting  
   *Deck section:* Does it help students learn?
-- Kumar, Rothschild, Goldstein and Hofman (2025). Attempting a problem before an LLM explanation. AIED 2025. **(\*n/a)**  
+- Kumar, Rothschild, Goldstein and Hofman (2025). Attempting a problem before an LLM explanation. AIED 2025. **(\*71)**  
   *Full title:* Guiding Students in Using LLMs in Supported Learning Environments: Effects on Interaction Dynamics, Learner Performance, Confidence, and Trust  
   *Deck section:* Computing education
-- LearnLM Team, Google DeepMind (2025). LearnLM: improving Gemini for learning. **(\*n/a)**  
+- LearnLM Team, Google DeepMind (2025). LearnLM: improving Gemini for learning. **(\*82)**  
   *Deck section:* How LLM tutors are built
-- Liu et al. (2025). Improving AI in CS50. SIGCSE TS 2025. **(\*n/a)**  
+- Liu et al. (2025). Improving AI in CS50. SIGCSE TS 2025. **(\*48)**  
   *Full title:* Improving AI in CS50: leveraging human feedback for better learning  
-  [doi.org/10.1145/3641554.3701945](https://doi.org/10.1145/3641554.3701945)  
-  *Deck section:* Computing education
-- Macina et al. (2025). MathTutorBench. EMNLP 2025. **(\*n/a)**  
+  [doi.org/10.1145/3641554.3701945](https://doi.org/10.1145/3641554.3701945)
+- Macina et al. (2025). MathTutorBench. EMNLP 2025. **(\*87)**  
   *Full title:* MathTutorBench: a benchmark for measuring open-ended pedagogical capabilities of LLM tutors  
-  [arxiv.org/abs/2502.18940](https://arxiv.org/abs/2502.18940)  
-  *Deck section:* How they fail, and how they are evaluated
-- Maurya, Srivatsa, Petukhova and Kochmar (2025). MRBench. NAACL 2025. **(\*n/a)**  
+  [arxiv.org/abs/2502.18940](https://arxiv.org/abs/2502.18940)
+- Maurya, Srivatsa, Petukhova and Kochmar (2025). MRBench. NAACL 2025. **(\*131)**  
   *Full title:* Unifying AI tutor evaluation: an evaluation taxonomy for pedagogical ability assessment of LLM-powered AI tutors  
   [arxiv.org/abs/2412.09416](https://arxiv.org/abs/2412.09416)  
   *Deck section:* How they fail, and how they are evaluated
-- Nie, A. et al. (2025). Code in Place RCT. **(\*n/a)**  
+- Nie, A. et al. (2025). Code in Place RCT. **(\*49)**  
   *Full title:* The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances  
-  [arxiv.org/abs/2407.09975](https://arxiv.org/abs/2407.09975)  
-  *Deck section:* Does it help students learn?
+  [arxiv.org/abs/2407.09975](https://arxiv.org/abs/2407.09975)
 - OpenAI (July 2025). ChatGPT Study Mode. **(\*n/a)**  
   *Deck section:* What industry ships
-- Scarlatos, Liu, Lee, Baraniuk and Lan (2025). Training LLM-based tutors to improve student learning outcomes. AIED 2025. **(\*n/a)**  
+- Scarlatos, Liu, Lee, Baraniuk and Lan (2025). Training LLM-based tutors to improve student learning outcomes. AIED 2025. **(\*91)**  
   *Full title:* Training LLM-based tutors to improve student learning outcomes in dialogues  
   *Deck section:* How LLM tutors are built
-- SycEval (2025). AIES 2025. **(\*n/a)**  
+- SycEval (2025). AIES 2025. **(\*339)**  
   *Full title:* SycEval: evaluating LLM sycophancy  
-  [ojs.aaai.org/index.php/AIES/article/download/36598/38736/40673](https://ojs.aaai.org/index.php/AIES/article/download/36598/38736/40673)  
-  *Deck section:* How they fail, and how they are evaluated
-- Wang and Fan (2025). Humanities and Social Sciences Communications 12:621. Retracted 2026. **(\*n/a)**  
+  [ojs.aaai.org/index.php/AIES/article/download/36598/38736/40673](https://ojs.aaai.org/index.php/AIES/article/download/36598/38736/40673)
+- Wang and Fan (2025). Humanities and Social Sciences Communications 12:621. Retracted 2026. **(\*850)**  
   *Full title:* The effect of ChatGPT on students' learning performance, learning perception, and higher-order thinking  
   *Deck section:* Does it help students learn?
-- Weitekamp, Siddiqui and MacLellan (2025). TutorGym. AIED 2025. **(\*n/a)**  
+- Weitekamp, Siddiqui and MacLellan (2025). TutorGym. AIED 2025. **(\*17)**  
   *Full title:* TutorGym: a testbed for evaluating AI agents as tutors and students  
   [arxiv.org/abs/2505.01563](https://arxiv.org/abs/2505.01563)  
   *Deck section:* How they fail, and how they are evaluated
 
 ## 2024
 
-- Blasco and Charisi (2024). Socratic vs non-Socratic chatbots in K-12. SSRN 5040921. **(\*n/a)**  
+- Blasco and Charisi (2024). Socratic vs non-Socratic chatbots in K-12. SSRN 5040921. **(\*12)**  
   *Full title:* AI chatbots in K-12 education Socratic non-Socratic step-by-step reasoning  
   [ssrn.com/abstract=5040921](https://ssrn.com/abstract=5040921)  
   *Deck section:* Computing education
-- Daheim, Macina, Kapur, Gurevych and Sachan (2024). Stepwise verification and remediation. EMNLP 2024. **(\*n/a)**  
+- Daheim, Macina, Kapur, Gurevych and Sachan (2024). Stepwise verification and remediation. EMNLP 2024. **(\*60)**  
   *Full title:* Stepwise verification and remediation of student reasoning errors with large language model tutors  
   [aclanthology.org/2024.emnlp-main.478](https://aclanthology.org/2024.emnlp-main.478)  
   *Deck section:* How they fail, and how they are evaluated
-- Kazemitabaar, Ye, Wang, Henley, Denny, Craig and Grossman (2024). CodeAid. CHI 2024. **(\*n/a)**  
+- Kazemitabaar, Ye, Wang, Henley, Denny, Craig and Grossman (2024). CodeAid. CHI 2024. **(\*528)**  
   *Full title:* CodeAid: evaluating a classroom deployment of an LLM-based programming assistant that balances student and educator needs  
   [arxiv.org/abs/2401.11314](https://arxiv.org/abs/2401.11314)  
   *Deck section:* Computing education
@@ -149,13 +144,13 @@ is how many times Google Scholar had the work cited on 9 October 2026;
   *Full title:* Improving socratic question generation using data augmentation and preference optimization  
   [arxiv.org/abs/2403.00199](https://arxiv.org/abs/2403.00199)  
   *Deck section:* How LLM tutors are built
-- Lehmann, Cornelius and Sting (2024). AI meets the classroom. Preprint. **(\*n/a)**  
+- Lehmann, Cornelius and Sting (2024). AI meets the classroom. Preprint. **(\*53)**  
   *Full title:* AI Meets the Classroom: When Do Large Language Models Harm Learning?  
   *Deck section:* Does it help students learn?
-- Liu, Zenke, Liu, Holmes, Thornton and Malan (2024). Teaching CS50 with AI. SIGCSE TS 2024. **(\*n/a)**  
+- Liu, Zenke, Liu, Holmes, Thornton and Malan (2024). Teaching CS50 with AI. SIGCSE TS 2024. **(\*445)**  
   *Full title:* Teaching CS50 with AI: leveraging generative artificial intelligence in computer science education  
   *Deck section:* Computing education
-- Prather, Reeves, Leinonen, MacNeil et al. (2024). The widening gap. ICER 2024. **(\*n/a)**  
+- Prather, Reeves, Leinonen, MacNeil et al. (2024). The widening gap. ICER 2024. **(\*424)**  
   *Full title:* The widening gap: the benefits and harms of generative AI for novice programmers  
   [arxiv.org/abs/2405.17739](https://arxiv.org/abs/2405.17739)  
   *Deck section:* Computing education
@@ -165,18 +160,18 @@ is how many times Google Scholar had the work cited on 9 October 2026;
 - von Hippel (2024). Two-sigma tutoring: separating science fiction from science fact. Education Next 24(2). **(\*15)**  
   [educationnext.org/wp-content/uploads/2024/03/ednext_XIV_2_von_hippel.pdf](https://educationnext.org/wp-content/uploads/2024/03/ednext_XIV_2_von_hippel.pdf)  
   *Deck section:* What tutoring delivers
-- Wang, Ribeiro, Robinson, Loeb and Demszky (2024). Tutor CoPilot. **(\*n/a)**  
+- Wang, Ribeiro, Robinson, Loeb and Demszky (2024). Tutor CoPilot. **(\*178)**  
   *Full title:* Tutor CoPilot: a human-AI approach for scaling real-time expertise  
   [arxiv.org/abs/2410.03017](https://arxiv.org/abs/2410.03017)  
   *Deck section:* Does it help students learn?
-- Wang, Zhang, Robinson, Loeb and Demszky (2024). Bridging the novice-expert gap. NAACL 2024. **(\*n/a)**  
+- Wang, Zhang, Robinson, Loeb and Demszky (2024). Bridging the novice-expert gap. NAACL 2024. **(\*104)**  
   *Full title:* Bridging the novice-expert gap via models of decision-making: a case study on remediating math mistakes  
   [aclanthology.org/2024.naacl-long.120](https://aclanthology.org/2024.naacl-long.120)  
   *Deck section:* How they fail, and how they are evaluated
 
 ## 2023
 
-- Greshake, Abdelnabi, Mishra, Endres, Holz and Fritz (2023). Indirect prompt injection. ACM AISec 2023. **(\*n/a)**  
+- Greshake, Abdelnabi, Mishra, Endres, Holz and Fritz (2023). Indirect prompt injection. ACM AISec 2023. **(\*2,972)**  
   *Full title:* Not what you've signed up for: compromising real-world LLM-integrated applications with indirect prompt injection  
   [doi.org/10.1145/3605764.3623985](https://doi.org/10.1145/3605764.3623985)  
   *Deck section:* How they fail, and how they are evaluated
@@ -184,11 +179,10 @@ is how many times Google Scholar had the work cited on 9 October 2026;
   *Full title:* MathDial: a dialogue tutoring dataset with rich pedagogical properties grounded in math reasoning problems  
   [aclanthology.org/2023.findings-emnlp.372](https://aclanthology.org/2023.findings-emnlp.372)  
   *Deck section:* How LLM tutors are built
-- Willison (2023). The dual LLM pattern. **(\*n/a)**  
+- Willison (2023). The dual LLM pattern. **(\*61)**  
   *Full title:* The dual LLM pattern for building AI assistants that can resist prompt injection  
-  [simonwillison.net/2023/Apr/25/dual-llm-pattern/](https://simonwillison.net/2023/Apr/25/dual-llm-pattern/)  
-  *Deck section:* How they fail, and how they are evaluated
-- Zheng, Chiang, Sheng et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. NeurIPS 2023 D&B. **(\*n/a)**  
+  [simonwillison.net/2023/Apr/25/dual-llm-pattern/](https://simonwillison.net/2023/Apr/25/dual-llm-pattern/)
+- Zheng, Chiang, Sheng et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. NeurIPS 2023 D&B. **(\*13,893)**  
   [arxiv.org/abs/2306.05685](https://arxiv.org/abs/2306.05685)  
   *Deck section:* How they fail, and how they are evaluated
 
@@ -257,7 +251,7 @@ is how many times Google Scholar had the work cited on 9 October 2026;
   *Full title:* AutoTutor: an intelligent tutoring system with mixed-initiative dialogue  
   [doi.org/10.1109/TE.2005.856149](https://doi.org/10.1109/TE.2005.856149)  
   *Deck section:* Tutoring and learning science
-- VanLehn et al. (2005). The "do you understand?" finding. CogSci. **(\*188)**  
+- VanLehn et al. (2005). The "do you understand?" finding. CogSci. **(\*n/a)**  
   *Full title:* do you understand self-explanation tutorial dialogue  
   [escholarship.org/uc/item/6v58z8nc](https://escholarship.org/uc/item/6v58z8nc)  
   *Deck section:* Tutoring and learning science
