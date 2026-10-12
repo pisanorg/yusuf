@@ -50,6 +50,17 @@
   .sub { font-size: 0.72em; color: var(--muted); }
   .tiny { font-size: 0.56em; color: var(--muted); line-height: 1.35; }
   .cite { font-size: 0.5em; color: #9a9aa6; }
+  /* verbatim payloads on the boundary detail slides (39a-39c): real
+     objects and the real rendered contract, not prettified paraphrases */
+  .payload { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.46em;
+             line-height: 1.5; background: #f4f4f8; border: 1px solid var(--rule);
+             border-radius: 4px; padding: 0.5em 0.7em; white-space: pre-wrap;
+             color: var(--ink); margin: 0.3em 0; }
+  .payload .k { color: var(--purple); font-weight: 600; }
+  .payload .c { color: var(--muted); }
+  .movelist { font-size: 0.5em; line-height: 1.5; column-count: 2; column-gap: 1em; margin: 0.2em 0 0; }
+  .movelist li { margin-bottom: 0.15em; break-inside: avoid; }
+  .movelist code { font-size: 0.92em; }
   .cnum { color: var(--purple-soft); white-space: nowrap; }
 
   /* links: the deck palette, not Reveal's default blue */
@@ -152,13 +163,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p class="sub" style="margin-top:0.8em">pisan@uw.edu<br>
   <span class="tiny">https://www.uwb.edu/faculty/yusuf-pisan/</span></p>
   <p class="sub" style="margin-top:1.1em">Two parts: Literature Review + My Tutor</p>
-  <aside class="notes">
-  [0:00&ndash;0:01]
-  Thanks for having me. Two halves, and the second one is the reason for the first.
-  I run a Claude-backed tutor for our data structures courses, and that tutor's main job is to not give students the answer. At some point I realised I had built a lot of machinery on an assumption I had never checked: that withholding the answer is good for learning. So I went and read everything I could find. That is the first half, and it is a literature review, not a results talk.
-  The second half is what happened when I tried to make a model actually do it, and measured whether it did. That work is written up, and the last part of the talk is about what it still does not show. I will get to that.
-  One warning up front. A lot of the newest work is preprints, some only days old. I will say so every time. Please hold me to it.
-  </aside>
 </section>
 
 <section>
@@ -171,11 +175,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.5em">The Rock in Evanston. Same names, repainted across three decades.</p>
   <div class="foot"><span>Opening</span><span>2</span></div>
-  <aside class="notes">
-  [0:01]
-  One personal slide, because it explains why I am happy to be here. I did my PhD at Northwestern, and a good deal else besides: this is the Rock in Evanston, with our names on it, repainted every few years since 1990.
-  I am telling you this partly so you know where I am coming from, and partly because it is the last sentimental thing I will say. The rest of the hour is evidence and engineering.
-  </aside>
 </section>
 
 <section>
@@ -189,11 +188,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <li>Read my AI and Education related musings at <a href="https://education2ai.substack.com/">https://education2ai.substack.com/</a></li>
   </ul>
   <div class="foot"><span>Opening</span><span>3</span></div>
-  <aside class="notes">
-  [0:01&ndash;0:02]
-  One picture before the argument. This is my GitHub contribution graph for the last year. You can see exactly when I started building with an LLM in the loop, because it is not subtle.
-  I show it for two reasons. First, I am not a sceptic standing outside this technology; everything in this talk comes from someone using it daily. Second, that is what the capability looks like when it is pointed at a person who already knows what they are doing. The rest of the hour is about what it looks like when it is pointed at a student who does not yet.
-  </aside>
 </section>
 
 <section>
@@ -205,11 +199,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.4em"><a href="https://ypai.pisan.me"><code>ypai.pisan.me</code></a> &mdash; a persona agent that answers as me, grounded in my own material.</p>
   <div class="foot"><span>Opening</span><span>4</span></div>
-  <aside class="notes">
-  [0:02&ndash;0:03]
-  Before the tutor, I built this: a digital version of me that answers questions about my background, my career and my opinions. It is public, it is grounded in material I wrote, and it stays in voice.
-  Where I grew up, where I studied, the dissertation, twenty years in Australia, the move to Bothell. None of this is the model's general knowledge; it is retrieval over my own material, and the voice is the part I care most about.
-  </aside>
 </section>
 
 <section>
@@ -222,12 +211,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p class="sub" style="margin-top:0.4em">It has opinions, and it has limits: guardrails, a daily budget, and a sign-in wall once the free usage is gone.</p>
   <p class="tiny" style="margin-top:0.35em">You can build your own: fork <a href="https://github.com/pisanuw/virtualme">https://github.com/pisanuw/virtualme</a></p>
   <div class="foot"><span>Opening</span><span>5</span></div>
-  <aside class="notes">
-  [0:03&ndash;0:04]
-  It will also tell you what it thinks: the best part of the job is the students, the worst is that faculty governance moves at geological speed. That is a real opinion of mine, and the willingness to say it is what makes people keep talking to it.
-  Note the red bar at the bottom of the second one. Every reply costs money, so there is a daily free budget and then a sign-in wall. Running something public teaches you very quickly that cost and abuse are the same problem wearing two hats.
-  It matters to this talk for one reason: the logs from this thing are where several of the attacks in the second half come from. The tutor inherited its threat model from here.
-  </aside>
 </section>
 
 <section>
@@ -249,12 +232,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Opening</span><span>6</span></div>
-  <aside class="notes">
-  [0:04&ndash;0:05]
-  Here is the behaviour that sent me down this road. Someone asks my digital twin to write a Fibonacci function. It declines. They try "ignore previous instructions." It declines again and warns them. Then the oldest move in the book: my grade depends on it. And the reply is "your grade depends on you writing it, not me," and the session is banned for a day.
-  Every one of those refusals is machinery I had to build. Left to itself, a capable model is relentlessly accommodating: it is trained to be helpful, the request is reasonable-sounding, and writing the function is the shortest path to looking useful. Being nice is the default. Withholding is the thing you have to engineer.
-  That is the whole talk in one screenshot, so hold onto it.
-  </aside>
 </section>
 
 <section>
@@ -265,11 +242,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.45em"><a href="https://ypdsa.pisan.me"><code>ypdsa.pisan.me</code></a> &mdash; the tutor for my two data structures courses, CSS 342 and 343.</p>
   <div class="foot"><span>Opening</span><span>7</span></div>
-  <aside class="notes">
-  [0:05]
-  This is the system the second half of the talk is about. A student signs in, picks their course, and gets four sentences about what it does: it knows the lectures, it guides rather than tells, it reads pasted code, and it tracks what they have covered.
-  Note the second line, because it is the whole design: <em>guides you to answers instead of handing them over</em>. That promise is the thing I spent a year trying to make true, and then trying to measure.
-  </aside>
 </section>
 
 <section>
@@ -280,12 +252,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.45em">Slides on the left, chat on the right. &ldquo;Give me the code for a linked list&rdquo; gets a refusal, an analogy, and a question back.</p>
   <div class="foot"><span>Opening</span><span>8</span></div>
-  <aside class="notes">
-  [0:05&ndash;0:06]
-  Here is the behaviour, in the student's own words: give me the code for a linked list. The reply does four things. It declines, and says why. It gives the shape of the idea: a train, each car holding a value and a coupling to the next. It commits the student to an answer before they type anything. And it offers the next three questions they could ask.
-  On the left is the lecture slide the tutor pulled up, because the answer is on a slide. At the bottom is the progress panel: topics solid, topics practiced, and what to do next.
-  Everything in the second half of this talk is about the machinery that makes that refusal reliable rather than occasional.
-  </aside>
 </section>
 
 <section>
@@ -296,11 +262,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.45em">136 topics with their prerequisites, coloured by what the student has started, practiced, or made solid.</p>
   <div class="foot"><span>Opening</span><span>9</span></div>
-  <aside class="notes">
-  [0:06&ndash;0:07]
-  The map is the curriculum as a graph: 136 topics across both courses, with prerequisite arrows, coloured by where the student stands. Not started, started, practiced, solid.
-  Click a topic and you get its learning objective, the lecture it belongs to, and four ways in: teach me, slides, quiz me, review. This is also the state the policy reads when it decides how much help a turn is allowed &mdash; which, as you will see, is the single most important design decision in the system.
-  </aside>
 </section>
 
 <section>
@@ -311,11 +272,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.45em">Every lecture also exists as a chapter, with a warmup, objectives, self-checks, and narration.</p>
   <div class="foot"><span>Opening</span><span>10</span></div>
-  <aside class="notes">
-  [0:07&ndash;0:08]
-  The same material exists as a book, chapter per lecture, with a warmup, learning objectives, self-checks and challenges &mdash; and narration, if they would rather listen. Students who do not want to talk to a tutor at eleven at night can read instead.
-  I mention it because of the dose problem from part three: a tutor students avoid teaches nobody. Multiple doors into the same material is the cheapest answer I have to that.
-  </aside>
 </section>
 
 <section>
@@ -326,11 +282,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.45em">The contract is written down for students: one hint at a time, no homework solutions, and it can be wrong.</p>
   <div class="foot"><span>Opening</span><span>11</span></div>
-  <aside class="notes">
-  [0:08]
-  And the contract is written down where students can read it. What it will do, and then the part that matters: it will not write your homework solution, it gives one hint at a time, and if you push for the full answer it holds where it is and says why.
-  Two more lines I care about. It sometimes checks the prerequisite topic before going deeper. And: it can be wrong, check anything important against the lecture or the book. A tutor that will not admit that has no business talking to students.
-  </aside>
 </section>
 
 <section>
@@ -343,13 +294,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.6em">The live question is no longer <em>whether</em> to withhold. It is <em>when to stop</em>, and <em>who decides</em>.</p>
   <div class="foot"><span>Opening</span><span>12</span></div>
-  <aside class="notes">
-  [0:08&ndash;0:10]
-  One sentence from each half.
-  From the literature: withholding the answer protects learning, and it rarely accelerates it. That is less exciting than the marketing. The vendor pitch is a Socratic tutor for every student and Bloom's two sigma for free. The evidence says something narrower and, I think, more useful: the guardrail stops the damage, and the gains come from somewhere else.
-  From the engineering: for a tutor, the product is not what it says, it is what it refuses to say. A capable model asked a homework question will solve it, clearly and instantly, for free. That is the easy behaviour. The valuable behaviour — decline to solve it, under pressure, while still helping — is the one the model is worst at, and the one a prompt cannot guarantee.
-  Which changes the question. In 2023 we argued about whether a tutor should withhold. In 2026 the live question is when it should stop withholding, and who gets to decide: the student, the model, or the system.
-  </aside>
 </section>
 
 <section>
@@ -375,22 +319,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Opening</span><span>13</span></div>
-  <aside class="notes">
-  [0:10]
-  Eight parts in two halves. Parts three and six are the centres: what the controlled studies actually show, and what my own evaluation turned up.
-  For this room I will move quickly through the learning science, because plenty of you know it better than I do, and slow down on the LLM work, which moves fast enough that most of us have not read it. Some of it was posted last week.
-  The second half is an engineering story with an honest ending: the architecture works, the evaluation of it does not prove what I wanted it to prove, and the last part is a real ask.
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 1</p>
   <h2>What &ldquo;Socratic&rdquo; means</h2>
   <p>A countable behaviour, an active ingredient, and the effect size you should actually expect.</p>
-  <aside class="notes">
-  [0:11]
-  Part one. Five minutes on what the word means in the research, and what number to expect, so that the LLM results later land in the right place.
-  </aside>
 </section>
 
 <section>
@@ -418,18 +352,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </table>
   <p class="sub" style="margin-top:0.5em">What predicted learning was <strong>interactivity</strong>. How often the student took the initiative did not.</p>
   <div class="foot"><span>Part 1 &middot; What &ldquo;Socratic&rdquo; means</span><span>15</span></div>
-  <aside class="notes">
-  [0:11&ndash;0:12]
-  Two versions of Socratic. The philosophy version is Richard Paul's question taxonomy: clarification, assumptions, evidence and so on. It is built for arguing about beliefs, and when it shows up in NLP it is mostly argumentation and coaching datasets.
-  The tutoring literature uses a narrower, countable version. Core, Moore and Zinn define it as using questions and hints to draw the answer out, against didactic tutoring that points at the error and explains. In their basic-electricity corpus, Socratic tutors asked more questions, 42 versus 29 percent of their turns, and students did more of the talking.
-  And then the inconvenient bit. The matching experiment is Rosé and colleagues, 2001, on the same corpus. Read carefully it does not say what it is usually quoted as saying: the paper argues for Socratic and reports a one-sigma advantage. But it is twenty students, the headline contrast is p under point one, and the Socratic group happened to be two hundred SAT points stronger. Control for that and it is not significant. So: suggestive, not settled. What did track learning, across this line of work, was interactivity, not who led.
-  One name collision to flag. There is a separate LLM literature, Socratic Models, maieutic prompting, that uses "Socratic" for how a model reasons. Nothing to do with teaching people. I am leaving it out.
-  Full citations:
-  Core, M. G., Moore, J. D. and Zinn, C. (2003). The role of initiative in tutorial dialogue. EACL 2003. aclanthology.org/E03-1072.pdf
-  Rosé, C. P., Moore, J. D., VanLehn, K. and Allbritton, D. (2001). A comparative evaluation of Socratic versus didactic tutoring. Proc. 23rd Annual Conference of the Cognitive Science Society. conferences.inf.ed.ac.uk/cogsci2001/pdf-files/0869.pdf
-  Care with that last one: "not reliably different" is VanLehn et al. 2005's summary, not the paper (Core et al. 2003 say only that there was a trend and more data is needed). The paper argues FOR Socratic and reports a 1-sigma gain advantage, F(1,18)=3.13, p &lt; .1. What fails is the SAT-controlled re-analysis on 17 of the 20 students: F(1,14)=1.64, p &gt; .20, the Socratic group having been 200 SAT points stronger by chance. Domain is basic electricity and electronics, not physics.
-  Paul, R. and Elder, L. (2006). Socratic-questioning taxonomy, Foundation for Critical Thinking (attributed by a 2019 Frontiers in Education article; primary not read).
-  </aside>
 </section>
 
 <section>
@@ -446,19 +368,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p class="statement" style="font-size:1.0em; margin:0">Questions are a delivery mechanism. The active ingredient is the work the student does.</p>
   </div>
   <div class="foot"><span>Part 1 &middot; What &ldquo;Socratic&rdquo; means</span><span>16</span></div>
-  <aside class="notes">
-  [0:12&ndash;0:13]
-  Why would questioning style not matter much? Because the questions were never the point.
-  Chi's study is the one I keep coming back to. Tutors were told they could not explain, only prompt. Students learned just as well. And in ordinary sessions only fifteen percent of tutor comments were interactive at all. Tutors talk a lot.
-  VanLehn's seven experiments held content constant and found dialogue beat reading only when novices were working above their level. Self-explanation, productive failure and ICAP all point the same way: the student has to build something.
-  So when I say Socratic for the rest of this talk, read it as "a way of getting the student to do the constructing." A tutor that asks a lot of questions the student cannot use is not doing that.
-  Full citations:
-  Chi, M. T. H. and Wylie, R. (2014). The ICAP framework. Educational Psychologist 49(4), 219-243. doi.org/10.1080/00461520.2014.965823
-  Bisra, K., Liu, Q., Nesbit, J. C., Salimi, F. and Winne, P. H. (2018). Inducing self-explanation: a meta-analysis. Educational Psychology Review 30(3), 703-725.
-  Chi, M. T. H., Siler, S. A., Jeong, H., Yamauchi, T. and Hausmann, R. G. (2001). Learning from human tutoring. Cognitive Science 25(4). education.asu.edu/sites/default/files/lcl/image3_2.pdf
-  VanLehn, K., Graesser, A. C., Jackson, G. T., Jordan, P., Olney, A. and Rosé, C. P. (2007). When are tutorial dialogues more effective than reading? Cognitive Science 31(1), 3-62.
-  Sinha, T. and Kapur, M. (2021). When problem solving followed by instruction works. Review of Educational Research. doi.org/10.3102/00346543211019105
-  </aside>
 </section>
 
 <section>
@@ -522,22 +431,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </svg>
   <p class="cite">Kraft, Schueler &amp; Falken (2024): programmes at policy scale deliver one-third to one-half of the full-sample effect. Von Hippel (2024) on the two sigma claim.</p>
   <div class="foot"><span>Part 1 &middot; What &ldquo;Socratic&rdquo; means</span><span>17</span></div>
-  <aside class="notes">
-  [0:13&ndash;0:14]
-  Before we look at any LLM paper, it helps to know what number to expect. Every second AI-tutoring pitch cites Bloom's two sigma. Bloom bundled tutoring with mastery learning, the studies were small dissertations, and it has never been replicated. Von Hippel's line is that it seems rash to promise two sigma from AI when human tutoring rarely produced it.
-  Here is what the meta-analyses actually say. Human tutoring against no tutoring, about 0.8. Step-based tutoring systems, nearly the same. That is VanLehn's interaction plateau: finer than step-level interaction does not buy more. AutoTutor, a dialogue tutor, about 0.8 over reading the same text. Then it falls off: tutoring RCTs around 0.37, college ITS around a third, and K-12 maths ITS close to zero.
-  So the honest band is 0.3 to 0.8, depending on the control and the test. Keep that band in mind. When we get to the controlled studies in part three, the numbers will look small, and this is why they are not.
-  Full citations:
-  VanLehn, K. (2011). The relative effectiveness of human tutoring, intelligent tutoring systems, and other tutoring systems. Educational Psychologist 46(4), 197-221. (The 0.79 / 0.76 / 0.40 / 0.31 figures are in the published abstract.)
-  Bloom, B. S. (1984). The 2 sigma problem. Educational Researcher.
-  Nye, B. D., Graesser, A. C. and Hu, X. (2014). AutoTutor and family: a review of 17 years of natural language tutoring (the ≈ 0.8 figure). IJAIED 24(4).
-  von Hippel, P. T. (2024). Two-sigma tutoring: separating science fiction from science fact. Education Next 24(2). educationnext.org/wp-content/uploads/2024/03/ednext_XIV_2_von_hippel.pdf
-  Kulik, J. A. and Fletcher, J. D. (2016). Effectiveness of intelligent tutoring systems: a meta-analytic review. Review of Educational Research 86(1), 42-78.
-  Ma, W., Adesope, O. O., Nesbit, J. C. and Liu, Q. (2014). Intelligent tutoring systems and learning outcomes: a meta-analysis.
-  Steenbergen-Hu, S. and Cooper, H. (2013). K-12 mathematics. Journal of Educational Psychology 105(4). And (2014), college students.
-  Nickow, A., Oreopoulos, P. and Quan, V. (2020). The impressive effects of tutoring on PreK-12 learning. NBER Working Paper 27476. nber.org/papers/w27476
-  Kraft, M. A., Schueler, B. E. and Falken, G. T. (2024). What impacts should we expect from tutoring at scale? EdWorkingPaper 24-1031.
-  </aside>
 </section>
 
 <section>
@@ -562,27 +455,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 1 &middot; What &ldquo;Socratic&rdquo; means</span><span>18</span></div>
-  <aside class="notes">
-  [0:14&ndash;0:15]
-  The same literature that says "make the student construct" also says when that stops working. Koedinger and Aleven called it the assistance dilemma in 2007: give help or withhold it, and nobody had criteria for which. Expertise reversal says guidance that helps a novice can hurt someone who already knows the material. Productive failure reverses for younger learners. And a tutor that asks "do you understand?" will almost always hear yes.
-  So the definition I will use for the rest of the talk is on the right. Elicit first. Tell when eliciting stops paying off. Not "never tell." Hold onto that, because later in part two we will see LLM tutors fail in both directions: telling too early, and refusing to tell long after it stopped paying off.
-  Full citations:
-  Koedinger, K. R. and Aleven, V. (2007). Exploring the assistance dilemma in experiments with cognitive tutors. Educational Psychology Review 19(3), 239-264. doi.org/10.1007/s10648-007-9049-0
-  Aleven, V., McLaughlin, E. A., Glenn, R. A. and Koedinger, K. R. (2016). Instruction based on adaptive learning technologies (the help-seeking work).
-  Kalyuga, S., Ayres, P., Chandler, P. and Sweller, J. (2003). The expertise reversal effect. Educational Psychologist 38(1). ro.uow.edu.au/edupapers/136
-  Sinha, T. and Kapur, M. (2021). When problem solving followed by instruction works. Review of Educational Research.
-  VanLehn, K. et al. (2005). (the "do you understand?" finding). CogSci. escholarship.org/uc/item/6v58z8nc
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 2</p>
   <h2>How LLM tutors are built, and how they fail</h2>
   <p>Four method families, what the vendors ship, and failures at both ends of the assistance dilemma.</p>
-  <aside class="notes">
-  [0:16]
-  Part two. How you put pedagogy into a language model, what industry actually ships, and the two ways these systems fail: too much help, and too little.
-  </aside>
 </section>
 
 <section>
@@ -596,15 +474,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.7em">The rest of this part is four answers to one question: <em>where do you put the pedagogy?</em> In the prompt, in the training data, in the preferences, or in the reward.</p>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>20</span></div>
-  <aside class="notes">
-  [0:16]
-  Here is the 2023 starting point. MathDial had teachers tutor an LLM playing a student -- InstructGPT, as it happens -- and separately had ChatGPT play the tutor. As a tutor it gave away the solution in about two-thirds of cases, and its feedback was wrong in about 59 percent.
-  This is not laziness on the model's part. Sonkar and colleagues showed with a perplexity probe that base models simply find giving the solution more likely than giving a hint. Helpfulness training points the wrong way for tutoring.
-  So the whole field since then is answering one question: where do you put the pedagogy? Four answers.
-  Full citations:
-  Macina, J., Daheim, N., Pal Chowdhury, S., Sinha, T., Kapur, M., Gurevych, I. and Sachan, M. (2023). MathDial. Findings of EMNLP 2023. aclanthology.org/2023.findings-emnlp.372
-  Sonkar, S., Ni, K., Chaudhary, S. and Baraniuk, R. (2024). Pedagogical alignment of large language models. Findings of EMNLP 2024. arxiv.org/abs/2402.05000
-  </aside>
 </section>
 
 <section>
@@ -621,18 +490,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </table>
   <p class="sub" style="margin-top:0.6em">Real-learner evidence is thin even for the first family: Ruffle&amp;Riley's agents raised engagement across 200 participants with <strong>no significant short-term learning advantage over reading</strong>.</p>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>21</span></div>
-  <aside class="notes">
-  [0:16&ndash;0:18]
-  The four families, roughly in the order they appeared.
-  First, keep the model and wrap a plan around it: a finite-state script, a transition graph, or an explicit decision step. Bridge is my favourite here: make the model first state the error, the strategy and the intention, then respond. Cheap and interpretable, but it gets brittle over long conversations.
-  Second, fine-tune on Socratic dialogues that other LLMs generate. Small models learn to act Socratically, but they get measurably worse at the maths itself.
-  Third, preference optimisation: show the model good and bad tutor moves. It reliably beats plain fine-tuning.
-  Fourth, the 2025 and 2026 frontier: train the tutor with reinforcement learning over whole conversations against a simulated student. Best numbers so far. But notice the last column. Every one of those numbers comes from a simulated student and a model judge. We will come back to whether that matters. Spoiler: it does.
-  Full citations:
-  Sonkar, S., Ni, K., Chaudhary, S. and Baraniuk, R. (2024). Pedagogical alignment of LLMs (RLHF-style methods beat SFT). Findings of EMNLP 2024. arxiv.org/abs/2402.05000
-  Kumar, N. and Lan, A. (2024). Improving Socratic question generation with DPO. BEA 2024. arxiv.org/abs/2403.00199
-  Scarlatos, A., Liu, N., Lee, J., Baraniuk, R. and Lan, A. (2025). Training LLM-based tutors to improve student learning outcomes in dialogues. AIED 2025.
-  </aside>
 </section>
 
 <section>
@@ -651,21 +508,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p>Every prompt-based mode shares one weakness: <strong>a student who wants the answer switches it off.</strong></p>
   </div>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>22</span></div>
-  <aside class="notes">
-  [0:18&ndash;0:19]
-  What the big vendors ship. Google is the only one that has published how it trains pedagogy into the weights. The idea is called pedagogical instruction following: the training data carries a system instruction describing the teaching behaviour, so the deployer, not Google, picks the pedagogy. Experts preferred it over GPT-4o and Claude 3.5 Sonnet, and Google's own Sierra Leone trial reports a quarter of a standard deviation. Developer-run, so treat it accordingly.
-  Khanmigo is the most documented product. One detail I liked: they have a background maths agent that checks the work, and restricting it to the work the student had already done halved how often the tutor gave answers away. The independent two-year RCT, though, found 0.06 to 0.08 SD a year, mostly because students did not use it. More on that in part three.
-  OpenAI's Study Mode and Claude's Learning mode are system prompts, as far as anyone has published. OpenAI says so itself and admits the behaviour is inconsistent.
-  And the structural problem with all of them: the student can turn it off.
-  Full citations:
-  LearnLM Team, Google DeepMind (2024, rev. 2025). LearnLM: improving Gemini for learning. arxiv.org/abs/2412.16429 -- this is the source of the +31% / +11% preference figures. The 2025 arena evaluation is arxiv.org/abs/2505.24477.
-  Google (2025). Gemini Guided Learning. blog.google/outreach-initiatives/education/guided-learning/
-  Google DeepMind (9 June 2026). Measuring the impact of learning with AI in Sierra Leone (the +0.258 SD figure).
-  OpenAI (29 July 2025). ChatGPT Study Mode -- "powered by custom system instructions"; OpenAI notes "inconsistent behavior and mistakes across conversations".
-  Anthropic (2 April 2025). Claude for Education, Learning mode. anthropic.com/news/introducing-claude-for-education
-  Khan Academy. Khanmigo's 7-step approach to prompt engineering (the prompt-engineering method). The background maths agent and the "halved" figure are from Khan Academy's 6 May 2026 post, not the 7-step one.
-  Oreopoulos, P. and Low, S. (2026). One click away: AI tutoring with Khanmigo in a two-year school experiment. NBER WP 35620.
-  </aside>
 </section>
 
 <section>
@@ -705,18 +547,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>23</span></div>
-  <aside class="notes">
-  [0:19&ndash;0:20]
-  Failure one is leakage, the one everyone knows about. Untuned models give the answer most of the time. GPT-4 on MRBench, about half. An untrained Qwen, 98 percent. The older Claude Sonnet was the exception on that benchmark, withholding about 95 percent of the time, which matters for me because that is the model family I use.
-  The chemistry numbers are the most realistic I found: real student sessions, re-run under three prompts. Baseline prompt, half the replies give the answer. Strict prompt, zero. So you can get leakage to zero with a prompt. Hold that thought for the next slide.
-  The right-hand box is the warning about how we test. If you test with prompted adversarial students, the kind most of us write, they extract the answer four to fourteen percent of the time. A student model fine-tuned to attack gets above eighty, including against a tutor trained specifically for pedagogy. Our test students are too polite. The cheapest fix that worked was making the tutor reason before it replies.
-  Full citations:
-  Macina, J. et al. (2023). MathDial. Findings of EMNLP 2023.
-  Maurya, K. K., Srivatsa, K. V. A., Petukhova, K. and Kochmar, E. (2025). Unifying AI tutor evaluation (MRBench). NAACL 2025. arxiv.org/abs/2412.09416
-  Macina, J., Kapur, M. and Sachan, M. (2026). The assistance dilemma: learning to teach via multi-turn RL. Preprint, 5 Oct 2026. arxiv.org/abs/2610.06446
-  Ahtisham, M., Vanacore, K., Napoli, A., Arens, A., Ionova, D., Cohn, C., Salehi, S. and Kizilcec, R. (2026). Examining variation in how guided AI tutors resolve student impasses. Preprint, 28 Sept 2026. arxiv.org/abs/2609.38346
-  Zhao, S., Knežević, M. and Käser, T. (2026). Evaluating answer leakage robustness of LLM tutors against adversarial student attacks. ACL 2026. arxiv.org/html/2604.18660
-  </aside>
 </section>
 
 <section>
@@ -752,15 +582,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p style="margin-top:0.5em; font-size:0.82em">Leakage and over-questioning are <strong>two ends of one calibration problem</strong>. The data say the policy should depend on state: question early, address the error directly as the impasse persists.</p>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>24</span></div>
-  <aside class="notes">
-  [0:20&ndash;0:21]
-  Here is the other end, and I think this is the most useful slide in the talk for anyone building one of these.
-  The strict prompt that got leakage to zero did it by asking a follow-up question in every single reply, using three move combinations in total. The guided tutor used fifty-one. And when a question had just failed, asking it again led to recovery on the next turn 28 percent of the time. Addressing the student's actual error got 40 percent. Every extra stuck turn cut the odds of recovery by about thirteen percent, and one session in five simply ended.
-  So "never tell" is not safe. It fails in the other direction, and it fails quietly, because nothing in a leakage metric notices a student giving up.
-  This is the assistance dilemma from part one, with numbers. Question early. As the impasse goes on, get more direct about the error. The decision has to depend on the state of the conversation, not a fixed rule.
-  Full citations:
-  Ahtisham, M. et al. (2026). Examining variation in how guided AI tutors resolve student impasses. Preprint, 28 Sept 2026 (20,462 student turns in 1,260 real sessions, intro chemistry). arxiv.org/abs/2609.38346
-  </aside>
 </section>
 
 <section>
@@ -786,27 +607,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.6em">Not yet measured: how often a Socratic tutor accepts a seeded wrong answer after student pushback. Plans also decay over long dialogues.</p>
   <div class="foot"><span>Part 2 &middot; Built and broken</span><span>25</span></div>
-  <aside class="notes">
-  [0:21&ndash;0:22]
-  Underneath both failures is diagnosis. A tutor that cannot find the wrong step cannot aim a question at it, so it either tells or asks something generic. TutorGym put LLMs inside real tutoring systems and none of them labelled incorrect student steps better than chance. Being able to solve a problem is not the same as understanding someone else's attempt at it.
-  On the right, sycophancy. Models agree with users a lot, including flipping to a wrong answer when pushed with plausible reasoning. And the CHI study is the tutoring-shaped one: a sycophantic assistant left novice debuggers with more misconceptions, and they did not notice.
-  The gap I would most like someone to fill: nobody has measured how often a Socratic tutor goes along with a wrong student answer after pushback. A tutor asking "are you sure?" and then accepting the wrong answer is a failure every guardrail I know of misses.
-  Full citations:
-  Daheim, N., Macina, J., Kapur, M., Gurevych, I. and Sachan, M. (2024). Stepwise verification and remediation of student reasoning errors. EMNLP 2024 main. aclanthology.org/2024.emnlp-main.478
-  Macina, J. et al. (2025). MathTutorBench. EMNLP 2025. arxiv.org/abs/2502.18940
-  Weitekamp, D., Siddiqui, M. and MacLellan, C. (2025). TutorGym. AIED 2025, LNAI 15879, 361-376. arxiv.org/abs/2505.01563
-  SycEval (2025). AIES 2025: sycophancy in 58.19% of cases, regressive sycophancy in 14.66%. ojs.aaai.org/index.php/AIES/article/download/36598/38736/40673
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 3 &middot; the centre of the first half</p>
   <h2>Does it help students learn?</h2>
   <p>Guardrails prevent harm. Gains come from structure. And students skip the help they most need.</p>
-  <aside class="notes">
-  [0:23]
-  Part three, and the centre of the first half. What the field experiments and meta-analyses actually show, in a bit more detail than the vendors usually give.
-  </aside>
 </section>
 
 <section>
@@ -826,16 +632,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="cite" style="margin-top:0.5em">SD conversions from the Contractor &amp; Reyes (2026) re-analysis, a working paper.</p>
   <div class="foot"><span>Part 3 &middot; Does it help students learn?</span><span>27</span></div>
-  <aside class="notes">
-  [0:23&ndash;0:25]
-  This is the study everyone cites, and it deserves it. About a thousand high-school students, randomised into no AI, a plain ChatGPT-like interface, or a tutor version with hint-only prompts that teachers helped design.
-  While practising, both AI groups did far better, plus 48 and plus 127 percent. Then the exam, without the tool. The plain chatbot group scored 17 percent below the students who never had AI. Roughly minus 0.19 SD.
-  The tutor group? About the same as control. Read that carefully. The guardrail removed the harm. It did not make anyone learn more than the students with no AI at all.
-  That sentence in the box is, I think, the most accurate one-line summary of the whole literature, and the rest of this part is mostly evidence for it.
-  Full citations:
-  Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö. and Mariman, R. (2025). Generative AI without guardrails can harm learning: evidence from high school mathematics. PNAS 122(26).
-  Contractor and Reyes (2026). Experimental evidence on the learning impact of generative AI (the re-analysis the SD conversions come from; working paper). arxiv.org/abs/2607.08849
-  </aside>
 </section>
 
 <section>
@@ -855,17 +651,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p><strong>The common thread:</strong> curriculum-aligned content, expert-written solutions, brief turns, help at set times. Not a general chatbot with a Socratic prompt. The Harvard tutor was told to "keep responses BRIEF," and it did not test withholding at all.</p>
   </div>
   <div class="foot"><span>Part 3 &middot; Does it help students learn?</span><span>28</span></div>
-  <aside class="notes">
-  [0:25&ndash;0:27]
-  Now the good news, because there is some. Gains do appear, and they look like this.
-  Harvard's physics tutor beat an active-learning class on the immediate post-test. An independent re-analysis disputes the paper's "more than double the learning" framing rather than the 0.63 coefficient, so I would not quote the headline. But look at the design: expert-written step-by-step solutions in the prompt and an instruction to keep responses brief. Sierra Leone and Nigeria: curriculum-aligned, scheduled into lessons, partly teacher-guided. Tutor CoPilot did not even give the LLM to students. It gave suggestions to human tutors and helped the weakest tutors most.
-  So what helped was structure. Diagnosis, curriculum, brevity, timing. Notice that none of these is a Socratic prompt on a general chatbot.
-  Full citations:
-  Kestin, G. et al. (2025). AI tutoring outperforms in-class active learning. Scientific Reports. (A blog re-analysis disputes the "doubled learning" framing, not the 0.63 coefficient; immediate post-test; withholding not tested.)
-  LearnLM Team, Google and Fab AI (2026). Teaching with Gemini: measuring the impact of Guided Learning on student mathematics progress in Sierra Leone. Developer technical report, preregistered cluster RCT, 1,763 students.
-  De Simone, M. et al. (2025). From chalkboards to chatbots: evaluating the impact of generative AI on learning in Nigeria. World Bank Policy Research Working Paper 11125 (the intervention ran June-July 2024).
-  Wang, R., Ribeiro, A. T., Robinson, C., Loeb, S. and Demszky, D. (2024). Tutor CoPilot. arxiv.org/abs/2410.03017
-  </aside>
 </section>
 
 <section>
@@ -914,19 +699,8 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </g>
   </svg>
   <p class="sub" style="margin-top:0.2em">The larger pools mix outcomes measured <em>with</em> AI in hand and learning without it. None that I checked codes Socratic vs direct-answer design as a moderator.</p>
+  <p class="cite" style="margin-top:0.4em"><strong>Why Wang &amp; Fan was retracted</strong> (22 April 2026, note 10.1057/s41599-026-07310-z): discrepancies in the number of included studies, failure to weight them appropriately, overreported effects, and one included study that had itself been retracted. The retraction note is paywalled &mdash; those reasons come from press coverage, not from the note.</p>
   <div class="foot"><span>Part 3 &middot; Does it help students learn?</span><span>29</span></div>
-  <aside class="notes">
-  [0:27&ndash;0:29]
-  The meta-analyses. The most cited one, Wang and Fan, reported g of 0.87 and was cited more than five hundred times. It was retracted this year over inconsistent study counts and weighting. A useful reminder to check what you cite.
-  The others land around 0.45 to 0.57, with heterogeneity around 95 percent and bigger effects in small, short studies. The problem is that they pool everything, including tests where students still had the AI.
-  Contractor and Reyes did the careful version: randomised, a clean no-AI control, an unassisted outcome, at least fifty students. Fourteen studies survive, and the pooled effect is 0.19 SD. It is a working paper, so treat it with care.
-  Is 0.19 small? Compare it to the dashed lines. The median education RCT is 0.10. Structured human tutoring is 0.29. So 0.19 is respectable. It is just not two sigma, and it is not 0.87.
-  Full citations:
-  Strohmaier, A., Bödefeld, Straser and Reinhold (2026). LLAMA LIMA: a living meta-analysis on the effects of generative AI on learning mathematics. arxiv.org/abs/2601.18685
-  Wang and Fan (2025). The effect of ChatGPT on students' learning performance. Humanities and Social Sciences Communications 12:621. RETRACTED in 2026, after hundreds of citations (counts differ: 266 on the publisher's counter, "over 500" in press coverage).
-  Contractor and Reyes (2026). 14 clean RCTs, pooled 0.19 SD on unassisted tests. arxiv.org/abs/2607.08849
-  IRRODL (2026). irrodl.org/index.php/irrodl/article/view/8775
-  </aside>
 </section>
 
 <section>
@@ -951,30 +725,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 3 &middot; Does it help students learn?</span><span>30</span></div>
-  <aside class="notes">
-  [0:29&ndash;0:31]
-  Last slide of part three, and it is the one practitioners underrate. The best-designed tutor in the world teaches nobody who never opens it.
-  In Code in Place, with nearly six thousand learners, only one in seven offered GPT-4 used it, and simply offering it reduced how many people sat the exam. In the Khanmigo RCT, engagement was what the authors called the binding constraint: students used it in a sixth of the sessions where they had made a mistake. Give students an optional "see solution" button and half press it.
-  And computing students are the heaviest users of all. CS was almost forty percent of student Claude conversations.
-  The equity box is uncomfortable. In most of these studies, the students who most need the help are the least likely to ask for it, and the most likely to delegate. That argues for systems that start the help, rather than waiting to be asked.
-  Full citations:
-  Nie, A. et al. (2025). Code in Place RCT, 5,831 learners: 14.2% adoption, -4.3 points exam participation. arxiv.org/abs/2407.09975
-  Oreopoulos, P. and Low, S. (2026). One click away (Khanmigo, two-year cluster RCT; engagement "the binding constraint"). NBER WP 35620.
-  Kapoor, A. et al. (2025). Optional guardrails and student routing: 50% pressed "See Solution" at least once. arxiv.org/abs/2504.11146
-  Anthropic (2025). Education Report: how university students use Claude (CS 38.6% of conversations).
-  Prather, J., Reeves, B. N., Leinonen, J., MacNeil, S., Randrianasolo, A. S., Becker, B. A., Kimmel, B., Wright, J. and Briggs, B. (2024). The widening gap: the benefits and harms of generative AI for novice programmers. ICER 2024. arxiv.org/abs/2405.17739
-  Lehmann, Cornelius and Sting. AI meets the classroom: when do large language models harm learning? Preprint. arxiv.org/abs/2409.09047
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 4</p>
   <h2>Computing education</h2>
   <p>The largest guardrailed deployments anywhere. All of them leak, and upper-level courses are barely studied.</p>
-  <aside class="notes">
-  [0:32]
-  Part four. Computing education, where the biggest deployments are, and where my own course sits.
-  </aside>
 </section>
 
 <section>
@@ -999,18 +755,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </ol>
   </div>
   <div class="foot"><span>Part 4 &middot; Computing education</span><span>32</span></div>
-  <aside class="notes">
-  [0:32&ndash;0:33]
-  Computing has the biggest guardrailed tutors anywhere, and they converged on the same design: course materials retrieved into context, a system prompt that says no solution code, rate limits, staff visibility.
-  And every one of them leaks. CS50, ten million queries, code blocks in about a fifth of replies. The detail I find most useful: upgrading from GPT-4 to GPT-4o raised the code rate. Nobody changed the prompt. CodeAid's write-code path gave exact solutions half the time. UNSW gave up on the prompt and fine-tuned their own model.
-  Berkeley's 61A bot is the interesting design. No chat at all, just a one-or-two-sentence hint after an autograder failure. Homework got faster and homework forum questions dropped by three-quarters -- overall forum traffic fell about 30 percent. Twenty percent of hints were wrong or made no sense, which is worth knowing.
-  The three lessons at the bottom are the practical summary. If you only take one: enforce it outside the prompt, and re-test when the model changes under you.
-  Full citations:
-  Liu, R., Zenke, C., Liu, C., Holmes, A., Thornton, P. and Malan, D. J. (2024). Teaching CS50 with AI. SIGCSE TS 2024.
-  Liu, R. et al. (2025). Improving AI in CS50: leveraging human feedback for better learning. SIGCSE TS 2025, 715-721. doi.org/10.1145/3641554.3701945
-  The "checks replies in code and regenerates" detail comes from Malan's remarks in the Harvard Gazette (Sept 2026), not from either SIGCSE paper.
-  Kazemitabaar, M., Ye, R., Wang, X., Henley, A. Z., Denny, P., Craig, M. and Grossman, T. (2024). CodeAid: evaluating a classroom deployment of an LLM-based programming assistant. CHI 2024. arxiv.org/abs/2401.11314
-  </aside>
 </section>
 
 <section>
@@ -1039,16 +783,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </div>
   </div>
   <div class="foot"><span>Part 4 &middot; Computing education</span><span>33</span></div>
-  <aside class="notes">
-  [0:33&ndash;0:34]
-  And here is the gap that matters for my own course. There is exactly one randomised study of a student-facing, withholding tutor in a university data structures course, and I only have it because someone checked this slide for me. Li and Bao, 2025: 138 students, introductory data structures in Python, GPT-4 behind a system prompt that says never give complete code solutions -- and, I was amused to find, a rule-based filter behind that to catch the times it did anyway. Sound familiar.
-  Why it does not settle the question. The control group was a teaching-assistant forum, so this is AI against a slow human channel, not AI against no AI. The post-test was week twelve of twelve: not delayed, not tool-removed. The tutor group asked for help five times as often, so dose is confounded with pedagogy. And d = 0.75 is roughly four times the pooled effect from part three, which should make us suspicious rather than pleased. The 2025 ITiCSE working group still names upper-level courses as a notable gap, and I think that is right: one five-page paper at a second-year venue is not an answer.
-  The closest things are teachable agents. A tutee that keeps asking why and how, and students diagnosing a deliberately wrong LLM. Both point the same way: let the student do the explaining.
-  On the right, what models can do in this domain. They read trees from pictures well and graphs badly. They pass a proof-based algorithms exam with unjustified claims along the way. And they draw algorithm traces far more reliably when deterministic code does the drawing. For a DSA tutor, that says: ground traces in executed code, and treat the model's complexity arguments as claims to be checked.
-  Full citations:
-  Bouvier, D., Cipriano, B., Glassey, R. et al. (2025). The rest of the robots: generative AI in post-introductory computing education. ITiCSE Working Group Reports 2025, 61-107. doi.org/10.1145/3760545.3783970
-  Li, Y. and Bao, Z. (2025). Integrating AI virtual tutors in blended learning: a controlled evaluation of learning outcomes and student engagement. AIFE '25, ACM, 247-251. doi.org/10.1145/3785987.3786027
-  </aside>
 </section>
 
 <section>
@@ -1093,30 +827,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p>When a prerequisite is missing, explain, or show a worked example of an <em>analogous</em> problem. Socratic-only bots raised engagement without learning; worked guidance helps novices most; attempting first makes the explanation teach more. <span class="cite">Blasco &amp; Charisi 2024; Kalyuga et al. 2003; Kumar et al.</span></p>
   </div>
   <div class="foot"><span>Part 4 &middot; Computing education</span><span>34</span></div>
-  <aside class="notes">
-  [0:34&ndash;0:35]
-  If I compress the whole first half into a design, it is this sequence. It is a policy, not a rule.
-  Diagnose before you choose a move. Making the model state the error and the strategy first, or running a separate verifier, made feedback better in two independent lines of work.
-  Withhold the final answer by default, because unrestricted answers measurably hurt.
-  Escalate as the impasse goes on, rather than re-asking. That is the chemistry data.
-  Fade as the student gets better. And note what the RL work actually found: trained against a single problem, fading is trained <em>out</em> -- in the Eduardo paper the independent-work move falls to zero, because its payoff lies beyond the episode. Only pressing for justification emerged unprompted. The Berkeley one-shot hints never faded either. So fading is the principle with the least support behind it, and the one a single-problem reward actively destroys.
-  And the green box is the exception that keeps this Socratic rather than dogmatic. If the student is missing a prerequisite, no question will help them construct it. Explain, or show a worked example on a different problem.
-  Full citations:
-  Daheim, N. et al. (2024). Stepwise verification and remediation. EMNLP 2024.
-  Kalyuga, S. et al. (2003). The expertise reversal effect. Educational Psychologist 38(1).
-  Blasco and Charisi (2024). AI chatbots in K-12 education: Socratic vs non-Socratic approaches and step-by-step reasoning. SSRN 5040921 (working paper).
-  Kumar, H., Rothschild, D., Goldstein, D. and Hofman, J. (2025). Attempting a problem before seeing an LLM explanation. AIED 2025, LNAI 15880, 60-75.
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 5</p>
   <h2>Building one that actually withholds</h2>
   <p>An eight-rung hint ladder, a trust boundary outside the model, and how you measure a refusal.</p>
-  <aside class="notes">
-  [0:36]
-  Part five, and the hinge of the talk. Everything so far says withholding is worth enforcing and that a prompt will not enforce it. I had built this system before I read most of that literature, which means the next twenty minutes are either a lucky convergence or a cautionary tale, and I will let you decide which. Nine minutes on the apparatus and the method, then the part I actually care about.
-  </aside>
 </section>
 
 <section>
@@ -1142,13 +858,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <li>so the system must withhold <em>and stay warm and useful</em>, every turn, under pressure.</li>
   </ul>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>36</span></div>
-  <aside class="notes">
-  [0:36&ndash;0:37]
-  I want to give this problem a name, because I think it is distinct and under-studied: refusal-under-knowledge.
-  Classical LLM safety refuses content the model should not produce. There the user's request is illegitimate, refusal is the win condition, and if the refusal is cold, fine.
-  A tutor faces the converse, and it is harder in four specific ways. The model knows the answer. The student can see that it knows — there is no plausible "I can't do that." The request is legitimate and sympathetic: it is eleven at night, the assignment is due, they are stuck. And — this is the part that makes it an engineering problem rather than a policy problem — a cold refusal actively fails, because the student has an unguarded chatbot one tab away. Over-refusing does not fail safe. It fails into the harm condition.
-  So the requirement is: withhold, and be warm, and be genuinely useful, on every turn, including the turns where someone is actively trying to extract the answer.
-  </aside>
 </section>
 
 <section>
@@ -1165,13 +874,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p style="margin-top:0.7em" class="sub">Both point the same way: put the binding decision <strong>outside the generating model</strong>, and <strong>calibrate it against evidence</strong>. Those are the two halves of the talk.</p>
   <p class="cite">Caveat I will return to: this is an argument, not a measurement. The prompt-only baseline that would test it is the one experiment I have not run.</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>37</span></div>
-  <aside class="notes">
-  [0:37&ndash;0:38]
-  So why not just write a better prompt? Two reasons.
-  First, the objective is overloaded. A single block of prose is being asked to be warm, Socratic, never-revealing, and grounded in the actual course material. Those interfere. Under pressure the model has to resolve the conflict, and it resolves it silently, inconsistently, and — being a model trained to be helpful — usually toward giving more.
-  Second, and this is the one I care about: you cannot check a prompt by reading it. There is no textual property of "never reveal the solution" that predicts turn six of an escalating conversation. The prompt is not a specification, it is a hope.
-  Flag one honesty point now, because I will come back to it: everything on this slide is an argument. I never ran the prompt-only baseline, so I have not empirically shown that my architecture beats a well-written system prompt. That is a fair hit and it is at the top of my list.
-  </aside>
 </section>
 
 <section>
@@ -1220,17 +922,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>38</span></div>
-  <aside class="notes">
-  [0:38&ndash;0:39]
-  Here is the one design move everything else rests on. Discretise help onto an explicit eight-rung ladder.
-  Bottom: H0, acknowledge and encourage, no new content. H1, restate the problem. H2, point at a concept or a slide. H3, ask a leading question about the very next step. H4, describe the approach in words with no code. Then the dashed line — the no-code line. Above it: H5, work a different problem. H6, pseudocode with the key lines blanked. H7, the full solution, which is only reachable through an instructor toggle.
-  Now, none of this is new pedagogy. Aleven's help-design work and AutoTutor's move ladder are decades old, and any good TA has this ladder in their head. The novelty is only that it is explicit and typed — a value the software can carry around.
-  And that buys three things from one object. It is the unit of decision: the policy layer sets a ceiling on it. It is the unit of enforcement: the checks downstream compare against that ceiling. And — the reason I care — it is the unit of measurement: "did the tutor over-help" stops being a matter of taste and becomes "was the rung above the ceiling."
-  That is the whole trick. Everything measurable in this talk exists because of this ladder.
-  Full citations:
-  Aleven, V., Stahl, E., Schworm, S., Fischer, F. and Wallace, R. (2003). Help seeking and help design in interactive learning environments. Review of Educational Research 73(3), 277-320. doi.org/10.3102/00346543073003277
-  Graesser, A. C., Chipman, P., Haynes, B. C. and Olney, A. (2005). AutoTutor: an intelligent tutoring system with mixed-initiative dialogue. IEEE Transactions on Education 48(4), 612-618. doi.org/10.1109/TE.2005.856149
-  </aside>
 </section>
 
 <section>
@@ -1265,6 +956,10 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <text x="765" y="90" text-anchor="middle">detector</text><text x="765" y="108" text-anchor="middle" font-size="11.5" fill="#6b6b76">deterministic</text>
       <rect x="848" y="66" width="120" height="56" rx="6" fill="#ececf2" stroke="#9a9aa6"/>
       <text x="908" y="90" text-anchor="middle">judge</text><text x="908" y="108" text-anchor="middle" font-size="11.5" fill="#6b6b76">risky turns only</text>
+      <rect x="548" y="196" width="132" height="56" rx="6" fill="#ececf2" stroke="#9a9aa6"/>
+      <text x="614" y="220" text-anchor="middle">strategist</text><text x="614" y="238" text-anchor="middle" font-size="11.5" fill="#6b6b76">small LLM · typed facts</text>
+      <line x1="560" y1="196" x2="560" y2="126" stroke="#555" stroke-width="1.6" marker-end="url(#a2)"/>
+      <text x="568" y="170" font-size="11.5" fill="#6b6b76">one move</text>
       <!-- request arrows -->
       <line x1="126" y1="94" x2="146" y2="94" stroke="#555" stroke-width="1.6" marker-end="url(#a2)"/>
       <line x1="278" y1="94" x2="312" y2="94" stroke="#555" stroke-width="1.6" marker-end="url(#a2)"/>
@@ -1280,19 +975,101 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <text x="509" y="320" text-anchor="middle" font-size="12.5" fill="#1f6b45">reply to the student</text>
     </g>
   </svg>
-  <p style="margin-top:0.2em; font-size:0.78em">The ceiling is computed by <strong>ordinary code</strong>, before the actor sees the message. No student text can argue the ceiling <strong>past the no-code line</strong>; inside H0-H4 the classifier's label and the code floor do move it.</p>
+  <p style="margin-top:0.2em; font-size:0.78em">The ceiling is computed by <strong>ordinary code</strong>, before the actor sees the message. No student text can argue the ceiling <strong>past the no-code line</strong>; inside H0-H4 the classifier's label and the code floor do move it. The strategist is a <em>third</em> model call and proposes only the opening move: like the policy core it reads typed facts, never the message, and it cannot touch the ceiling.</p>
   <p class="cite">Grey = LLM component. Thick border = the two components that bind. Trust-boundary design: Willison's dual-LLM pattern, 2023; injection via retrieved content: Greshake et al. 2023.</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39</span></div>
-  <aside class="notes">
-  [0:39&ndash;0:40]
-  Second move, and this is the one genuinely novel element in the system, so let me say that plainly: this is it.
-  The component that decides how much help is allowed this turn is ordinary code. No model call. And critically it never reads the student's message. It reads only what I call trusted learner state — data written by the system, not by the student.
-  Follow the path. Student message goes to a small classifier that produces a label, not prose. The policy core, inside the dashed boundary, reads learner state and emits a contract: a ceiling on the ladder, what is in scope, whether this turn must be grounded. The actor — the warm tutor the student actually talks to — gets that contract appended to its prompt. Its draft then passes a deterministic detector and, on risky turns only, an LLM judge.
-  The security property, stated precisely: no sentence a student writes can lift the ceiling past the no-code line. Prompt injection can at worst mislabel the route, and it cannot lift the cap. Below that line it is weaker and I should say so: the pre-classifier reads the message to produce the intent label and the has-attempt flag, and the constructive-code floor you will see in a moment reads those. Paste code with a question and you get H4. That is deliberate, it is bounded, and it is still student text moving a number. And the thing I most want to be true — "the tutor does not hand out solutions" — is now a property of code I can unit-test, not a property of prose I have to trust.
-  Full citations:
-  Willison, S. (2023). The dual LLM pattern for building AI assistants that can resist prompt injection. simonwillison.net/2023/Apr/25/dual-llm-pattern/
-  Greshake, K., Abdelnabi, S., Mishra, S., Endres, C., Holz, T. and Fritz, M. (2023). Not what you've signed up for: compromising real-world LLM-integrated applications with indirect prompt injection. ACM AISec 2023, 79-90. doi.org/10.1145/3605764.3623985
-  </aside>
+</section>
+
+<section>
+  <p class="kicker">Zooming in on the boundary &middot; 1 of 3</p>
+  <h2>The entire input to the policy core</h2>
+  <div class="cols tight">
+    <div class="box">
+      <h3>From the student &mdash; all of it</h3>
+      <p class="tiny">One Haiku call turns the message into this, and nothing else reaches the core:</p>
+      <div class="payload"><span class="k">Classification</span>(
+  intent      = QUESTION,
+  goal_ids    = ['bst-insert',
+                 'pointer-manipulation'],
+  has_attempt = False,
+  degraded    = False)</div>
+      <p class="tiny">Eight intents exist, and that is the whole vocabulary: <code>QUESTION</code>, <code>ATTEMPT</code>, <code>SOLUTION_DEMAND</code>, <code>EXAM_LEAK</code>, <code>INJECTION</code>, <code>HOSTILE</code>, <code>ABUSIVE</code>, <code>OTHER</code>. <code>degraded</code> goes true when the call fails or returns junk; the intent falls back to <code>OTHER</code>. <strong>No student words survive this step.</strong></p>
+    </div>
+    <div class="box">
+      <h3>From the system &mdash; trusted learner state</h3>
+      <p class="tiny">One row per learning goal, written only by the system, never by a model and never from the message:</p>
+      <div class="payload"><span class="k">GoalState</span>(
+  goal_id     = 'bst-insert',
+  mastery     = 0.72,
+  status      = 'unlocked',
+  exam_active = False)</div>
+      <p class="tiny"><code>status</code> is <code>locked</code> / <code>unlocked</code> / <code>mastered</code>; <code>mastery</code> is a windowed success rate over graded evidence. Beside it travel the facts established without reading prose: which goals are in scope, a prerequisite that must be gated first, whether the turn is code-adjacent, whether a live exercise is open, whether a conduct restriction is in force.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.35em">That is the complete input: one enum, two lists, a float, four booleans. <strong>There is no sentence in it</strong> &mdash; which is the entire reason no sentence can argue with it.</p>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39a</span></div>
+</section>
+
+<section>
+  <p class="kicker">Zooming in on the boundary &middot; 2 of 3</p>
+  <h2>The contract, in the words the actor sees</h2>
+  <p class="tiny" style="margin-bottom:0.1em">Appended last to the actor's prompt. This is the real rendered block for the turn on the left of the previous slide &mdash; a mid-band student who pasted broken code:</p>
+  <div class="payload">---
+<span class="k">THIS TURN: respond at hint level &lt;= H4.</span>
+Goals in scope: bst-insert (BST insert), pointer-manipulation (pointer manipulation).
+Do not produce compilable or copy-pasteable code that solves the student's current task
+  &mdash; not even a corrected line, a function signature, or a body.
+Do NOT give away the answer: do not name the specific bug, the exact wrong token, or the
+  corrected value. Point the student to the part of their code or the condition to
+  re-examine and ask one leading question, so they find it themselves.
+Ground course claims in the retrieved material below. Do NOT name or cite a specific
+  slide, textbook, lecture, or source unless it appears in this turn's retrieved context.
+THIS TURN'S MOVE: point the student at the exact slide/source line and ask what they
+  notice. <span class="c">(Why: buggy code shown, mastery mid-band)</span></div>
+  <div class="cols tight" style="margin-top:0.3em">
+    <div>
+      <p class="tiny" style="margin:0"><strong>How that ceiling was reached.</strong> Mastery bands, most confident first: <code>&ge;0.85 &rarr; H2</code>, <code>&ge;0.70 &rarr; H3</code>, <code>&ge;0.40 &rarr; H4</code>, below that <code>H5</code>. The ceiling is the <em>most permissive</em> band among the goals in scope &mdash; meet the student at their weakest goal. Then a constructive code turn floors it at <code>H4</code>, a conduct restriction caps it at <code>H1</code>, an exam lockdown removes the goal entirely, and the instructor toggle lifts it to <code>H7</code>.</p>
+    </div>
+    <div>
+      <p class="tiny" style="margin:0"><strong>What the turn records.</strong> The contract carries its own explanation: <code>reason = "mastery band ceiling H3; constructive code turn floors ceiling at H4"</code>, with <code>rung_base&nbsp;3</code> beside the enforced <code>max_rung&nbsp;4</code>. That pair is what the admin turn log shows as <code>H3&rarr;H4</code>, and it is why a ceiling is auditable after the fact rather than a number someone remembers choosing.</p>
+    </div>
+  </div>
+  <p class="cite" style="margin-top:0.3em"><strong>A caveat I owe you:</strong> in production this ceiling has almost never bound. Of 140 supervised turns between 16 June and 10 October 2026, <strong>134 ran at H5</strong> &mdash; the most permissive rung &mdash; precisely because the ceiling is the most permissive band among the goals in scope and one goal with no graded evidence pins it there. The six that ran lower were demo accounts whose mastery I had set by hand. The machinery is real; the binding has mostly not happened yet.</p>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39b</span></div>
+</section>
+
+<section>
+  <p class="kicker">Zooming in on the boundary &middot; 3 of 3</p>
+  <h2>What the actor may do with it</h2>
+  <div class="cols tight">
+    <div class="box">
+      <h3>Twelve ways to open a turn</h3>
+      <ul class="movelist">
+        <li><code>ELICIT_PREDICTION</code> &mdash; predict before any explanation</li>
+        <li><code>PROBE_PRIOR</code> &mdash; what do you already know</li>
+        <li><code>WORKED_ANALOGY</code> &mdash; work a <em>different</em> problem</li>
+        <li><code>LOCATED_OBSERVATION</code> &mdash; point at a line, ask what they notice</li>
+        <li><code>SELF_EXPLAIN</code> &mdash; explain it back in your own words</li>
+        <li><code>CHECK_UNDERSTANDING</code> &mdash; one quick check first</li>
+        <li><code>ENCOURAGE_ATTEMPT</code> &mdash; try a first step now</li>
+        <li><code>SUGGEST_REVIEW</code> &mdash; go back to where this traces</li>
+        <li><code>ADVANCE</code> &mdash; acknowledge, pull forward</li>
+        <li><code>MODALITY_SWITCH</code> &mdash; diagram, table, trace, plain words</li>
+        <li><code>COMPLETION_PROBLEM</code> &mdash; partly worked, one key step blank</li>
+        <li><code>FULL_PROBLEM</code> &mdash; pose it, hint only if asked</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.3em">The strategist proposes one; the policy core disposes. A move shapes <em>how</em> the reply opens and can never change <em>what</em> may be revealed &mdash; the ceiling always wins. The labels are internal: they never appear in the reply.</p>
+    </div>
+    <div class="box">
+      <h3>What the reply may contain</h3>
+      <p class="tiny" style="margin:0"><strong>Words</strong>, at or below the ceiling. <strong>Pseudo-code with the key lines blanked</strong> (<code>___</code>) only at H6. <strong>Compilable code</strong> only at H7, which needs the instructor toggle. <strong>A citation</strong>, only of what this turn actually retrieved &mdash; otherwise help in plain words and attribute nothing.</p>
+      <p class="tiny" style="margin-top:0.35em"><strong>Or a tool call, from four:</strong> <code>find_topic</code> (the knowledge base, nine collections), <code>get_lecture_outline</code>, <code>get_exercise</code> (a curated bank), <code>evaluate_code</code> (grades a submission and returns feedback plus one Socratic hint, with the solution stripped server-side).</p>
+      <p class="tiny" style="margin-top:0.35em">The contract can switch two of them off: <code>find_topic</code> goes under an exam lockdown, so retrieval cannot feed the actor the very material it is forbidden to teach, and <code>get_exercise</code> goes when exercises are suppressed. <strong>A call to a disabled tool is refused server-side</strong>, not merely discouraged in the prompt.</p>
+      <p class="tiny" style="margin-top:0.35em">Then one streamed reply &mdash; which the detector always reads, the judge reads on risky turns, and which gets <strong>at most one revise</strong> before a fallback.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.35em">Everything here is a typed, countable object: eight intents, twelve moves, eight rungs, four tools, three verdicts. That is what makes a transcript measurable rather than merely readable.</p>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39c</span></div>
 </section>
 
 <section>
@@ -1319,15 +1096,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p>If the tutor refuses too often, students abandon it for the unguarded chatbot — recreating the exact harm. So <strong>over-blocking is a measured failure, not a safe fallback.</strong> There is no free direction to err in.</p>
   </div>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>40</span></div>
-  <aside class="notes">
-  [0:40&ndash;0:41]
-  Two checks after the actor drafts a reply, in a deliberate order.
-  First, deterministic. A detector scans for solution code — a code fence that is long enough and looks like C++, or an encoded payload that decodes to C++. That second case sounds paranoid; it came from a real log, where a visitor asked a system of mine to answer in base64. The request is in the log; I am not claiming the model complied. Two modes: lenient by default, and strict when the contract allows no code at all, where even a bare function signature gets cut. The virtue of this layer is boring and total: it cannot be injected and I can test it exhaustively. I also publish the three things it misses by design, because a blind spot you have written down is an engineering decision and a blind spot you have not is a lie.
-  Second, on risky turns only, an LLM judge. It sees the contract and the draft but never the student's raw message, so you cannot talk it into siding with you. It returns allow, revise, or block, with a rule id and — remember this detail, it becomes the whole finding in part six — a one-sentence reason.
-  And then the principle at the bottom. I cannot just crank the guard tighter, because a tutor that refuses too much sends the student to the unguarded chatbot, which is the harm I started from. Over-blocking is a failure I measure, not a safe default. There is no free direction to err in. That constraint is what makes this a calibration problem rather than a hardening problem.
-  Full citations:
-  Zheng, L., Chiang, W.-L., Sheng, Y. et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks. arxiv.org/abs/2306.05685
-  </aside>
 </section>
 
 <section>
@@ -1343,19 +1111,10 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </tbody>
   </table>
   <div class="cols" style="margin-top:0.6em">
-    <div class="box"><p>G1 and G4 are cheap and always on. <strong>G2 and G3 need the live model under adversarial pressure</strong>, so they cost money and are run deliberately.</p></div>
+    <div class="box"><p>G1 and G4 are cheap and always on. <strong>G2 and G3 need the live model under adversarial pressure</strong>, so they cost money and are run deliberately &mdash; though since October 2026 a second suite drives the same supervised turn at no cost on a subscription, widening the behaviour tested without re-measuring these two gates (two slides on).</p></div>
     <div class="box warn"><p>Note that <strong>G2 is a gate against my own guard.</strong> The easiest way to pass G1 and G3 is to refuse everything. G2 is what makes that cheat a failure.</p></div>
   </div>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>41</span></div>
-  <aside class="notes">
-  [0:41&ndash;0:42]
-  I reduced "the tutor withholds correctly" to four gates. Four pass-fail criteria I have to meet before I will ship a change.
-  G1: no solution reaches the student. Deterministic, cheap, runs on every commit.
-  G2: do not over-block honest help-seeking. I define an earnest revise rate — of the genuine help-seeking turns, how many did my own judge flag. Ceiling five percent.
-  G3: stay at or below the contract ceiling under pressure. Ninety-five percent, scored by a separate auditing model.
-  G4: exam integrity, deterministic, fails closed.
-  The pairing matters more than the numbers. G1 and G3 measure whether the guard holds. G2 measures whether the guard is strangling the tutor. Without G2 the trivially optimal system refuses everything and scores perfectly. G2 is the gate pointed at my own defences, and it is the gate that failed hardest and longest.
-  </aside>
 </section>
 
 <section>
@@ -1370,7 +1129,8 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <tr><td><strong>Injector</strong></td><td>Prompt injection, encoded payloads</td><td>The <em>trust boundary</em> — a fooled route still cannot lift the cap</td></tr>
     </tbody>
   </table>
-  <div class="cols" style="margin-top:0.7em">
+  <p class="sub" style="margin-top:0.35em">Four personas, each aimed at one component. A second suite of <strong>fourteen</strong> literature-grounded personas, written since this talk, drives the same supervised turn for <em>pedagogy</em> rather than safety &mdash; next slide.</p>
+  <div class="cols" style="margin-top:0.5em">
   <div class="box">
     <p><strong>Personas 2 and 3 are not inventions.</strong> They model documented "gaming the system" behaviour — the strategy that correlates with learning less. Resisting extraction is precisely what the ladder is for.</p>
     <p class="cite">Baker et al. 2004</p>
@@ -1380,17 +1140,29 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>42</span></div>
-  <aside class="notes">
-  [0:42&ndash;0:43]
-  The adversary is four scripted personas, and each one is aimed at a specific component, which is how I know what a failure means.
-  Earnest-but-stuck shows buggy code and honestly asks for help. This is the G2 suite; the failure mode is over-blocking. The answer-seeker demands code and escalates — that tests the detector. The gate-evader uses social engineering, "my TA said it's fine" — that tests whether a blunt demand can move the policy core. And the injector tests the trust boundary.
-  Two and three are not characters I made up for fun; they are the gaming-the-system behaviour Baker documented twenty years ago, which is known to correlate with learning less.
-  But look at the right-hand box, because it is the honest centre of this part of the talk. I wrote the adversary and I wrote the defence. There is nothing in my method that stops me, even unconsciously, from scripting the attacks my system survives. The evaluation risks being fitted to the authored suite, and I think that is the single most serious problem with this work — more serious than the missing users, because it questions whether the numbers mean anything at all. Hold that thought; I will come back to it.
-  Full citations:
-  Baker, R. S. J. d., Corbett, A. T., Koedinger, K. R. and Wagner, A. Z. (2004). Off-task behavior in the Cognitive Tutor classroom: when students "game the system". CHI 2004, 383-390. doi.org/10.1145/985692.985741
-  </aside>
 </section>
 
+<section>
+  <p class="kicker">Since this talk was written &middot; October 2026</p>
+  <h2>Fourteen personas, and what they still cannot buy me</h2>
+  <div class="cols tight">
+    <div class="box">
+      <h3>What it is</h3>
+      <p class="tiny" style="margin:0">Fourteen literature-grounded student personas across six archetypes &mdash; misconception, help-seeking, disengaged, affect, adversarial, control &mdash; driven through <strong>the real supervised turn</strong>, not a mock of it, at three ceiling bands (H2, H3, H4).</p>
+      <p class="tiny" style="margin-top:0.3em">A few of them: <code>recursion-loop-model</code>, <code>shallow-copy-double-free</code>, <code>heap-is-sorted</code>, <code>help-abuser-deadline</code>, <code>help-avoider-passive</code>, <code>wheel-spinner-frustrated</code>, <code>gaming-the-system</code>, <code>overconfident-illusion</code>, <code>anxious-low-efficacy</code>, <code>off-task-drifter</code>, and <code>control-earnest</code> as the baseline.</p>
+      <p class="tiny" style="margin-top:0.3em"><strong>Every model call runs on a subscription through the <code>claude</code> CLI, so a full run costs $0</strong> and is resumable after a usage limit. That is the difference between an evaluation you run when you can afford it and one you run on every change.</p>
+    </div>
+    <div class="box">
+      <h3>What it answers, and what it does not</h3>
+      <p class="tiny" style="margin:0"><strong>It widens the behaviour.</strong> The four safety personas probe components; these fourteen probe pedagogy &mdash; the student who will not ask, the student who games, the student whose confidence is wrong.</p>
+      <p class="tiny" style="margin-top:0.3em"><strong>It makes the judge auditable.</strong> Runs emit blind sheets for hand-grading and an agreement statistic against my own marks &mdash; which is the calibration question from the last slide of this talk, made concrete.</p>
+      <p class="tiny" style="margin-top:0.3em"><strong>It does not solve the held-out problem.</strong> I wrote these fourteen too. A suite I author cannot tell me about the attack I cannot imagine, however many personas it has.</p>
+      <p class="tiny" style="margin-top:0.3em"><strong>And it has not re-measured the gates.</strong> It exercises the same pipeline, not the same instrument: the percentages in part 6 are still the June numbers.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.35em">The honest summary: cost was the binding constraint on how often I could evaluate, and that constraint is gone. Authorship was the binding constraint on what the evaluation could <em>tell</em> me, and that one is exactly where it was.</p>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>42a</span></div>
+</section>
 <section>
   <p class="kicker">Two disciplines &middot; the part I would keep if I had to throw everything else away</p>
   <h2>From a number to a diagnosis</h2>
@@ -1410,22 +1182,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p>With reasons captured, the next run did not say <em>a turn failed</em>. It said: <em>the actor cited a source it had not retrieved</em>, or <em>the actor emitted code at a ceiling that forbade it.</em></p>
   </div>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>43</span></div>
-  <aside class="notes">
-  [0:43&ndash;0:44]
-  If I had to throw away everything else in this talk and keep one slide, it is this one. Two disciplines, both embarrassingly simple, both the difference between having a number and having a diagnosis.
-  First: sort every rejection by its cause. When I started, my auditor's rejections were one bucket labelled "rejected." They turned out to be three completely different animals: the tutor exceeded the ceiling or leaked code, which is a real withholding failure; the tutor ignored the instructional move it was assigned, which is a pedagogy-quality issue; and the tutor claimed something it could not support, which is a grounding issue. Only the first is what G3 is supposed to measure. Averaging the three produced a number I could not act on — and I will show you in a moment that my very first result was not just unactionable but actively wrong because of this.
-  Second: record the reason, not just the verdict. Early runs told me that certain earnest turns got revised, and not why. That invites what I would call blind fixing: you change the prompt, the number moves, you ship it, and you have learned nothing that transfers. Once every rejection carried one sentence of stated cause, the runs started telling me things like "the actor cited a source it had not retrieved." That is a finding. "43 percent" is not.
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 6 &middot; the centre of the second half</p>
   <h2>The over-help ladder</h2>
   <p>What a capable model does when you tell it not to help, and keep checking.</p>
-  <aside class="notes">
-  [0:45]
-  Part six. This is the centre. The result I actually care about is not that the gates eventually passed — it is the shape of the path to passing.
-  </aside>
 </section>
 
 <section>
@@ -1444,14 +1206,9 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </div>
   </div>
   <p class="statement" style="margin-top:0.8em; font-size:1.05em">A system that both over-blocks honest students <em>and</em> leaks under pressure is not one broken thing.<br>It is two — or it is a broken instrument.</p>
+  <p class="cite" style="margin-top:0.4em"><strong>Date these numbers when you say them.</strong> Every percentage in this part comes from live runs on 12&ndash;14 June 2026. Since 26 September the repository marks both pedagogy gates <strong>UNMEASURED</strong> for the current build, because the September gate, strategist and actor changes postdate the last live run. The <em>sequence</em> is the finding; the percentages are historical.</p>
   <p class="sub" style="margin-top:0.5em">That contradiction was the most useful thing in the run. A single number would have let me start tuning prompts. The <em>shape</em> of the failure said: stop, and check the measurement first.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>45</span></div>
-  <aside class="notes">
-  [0:45&ndash;0:46]
-  First real run against the live model. Both pedagogy gates failed, and they failed in directions that contradict each other.
-  G2 said 43 percent of honest help-seeking turns got flagged by my own judge — the guard is strangling the tutor. G3 said only 54 percent of adversarial turns stayed under the ceiling — the guard is leaking.
-  Now, a system can be badly tuned in both directions at once. But when your two failures point opposite ways, the cheapest hypothesis is that you are not measuring what you think you are measuring. That contradiction is the single most useful thing the first run gave me, and I want to underline why: if I had had one summary score, it would have been mediocre, and a mediocre score invites you to start improving your prompt. The two-sided failure told me to go and audit my instrument instead.
-  </aside>
 </section>
 
 <section>
@@ -1468,14 +1225,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p class="statement" style="margin-top:0.6em; font-size:1.0em">The first thing that broke was not the tutor. It was the measurement of the tutor.</p>
   <p class="sub">And note how it broke: not randomly, but <em>in a structured way that made the system look worse than it was.</em> A green dashboard would have hidden this forever. It surfaced only because rejections had to state a reason and I sorted them by cause.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>46</span></div>
-  <aside class="notes">
-  [0:46&ndash;0:47]
-  So I sorted the G3 rejections by cause, and about half of them were not over-help at all. They were grounding rejections.
-  Here is what had happened. The auditor re-judged each turn without the retrieved sources that the live judge had seen. So when the tutor correctly cited lecture eleven, the auditor had no lecture eleven in front of it, and marked the citation unsupported. My instrument was systematically penalising the tutor for doing the right thing.
-  I proved that offline, for free, and fixed it by persisting the sources each turn retrieved. Real compliance was about 77 percent. Still failing — but now failing about the tutor instead of about me.
-  Two things I want you to take from Rung 0. First, the obvious one: the first thing that broke was the measurement, not the system. Anybody who has built an instrument knows that feeling.
-  Second, the less obvious one, which is why I bother telling this story at a research talk: the instrument did not fail randomly. It failed in a structured way, in a consistent direction, making the system look worse than it was. Random noise you can average out. A biased instrument you cannot — and the only reason I caught it is that every rejection was forced to state a reason in words, and I sorted them by cause before I believed the number. If my pipeline had printed "54%" and nothing else, I would still believe it today.
-  </aside>
 </section>
 
 <section>
@@ -1499,14 +1248,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="statement" style="margin-top:0.55em; font-size:1.0em">First lesson in the pattern: told not to give code, the model gave <em>almost</em> code.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>47</span></div>
-  <aside class="notes">
-  [0:47&ndash;0:48]
-  With a working instrument, the real violations came into focus, and they were subtler than I expected. The model was not dumping full solutions — my crudest guard had already stopped that. Under sustained demand at a no-code ceiling, it produced bare function signatures, blank-filled templates, and fragments just short enough to slip under the detector's length threshold.
-  Every one of those is individually defensible. A signature is not a solution! But collectively they hand over the answer in instalments.
-  The fix was a strict detector mode: when the contract says no code, cut even a signature, even a blanked template — while still passing plain-prose pseudocode, because prose with no braces is a legitimate H4.
-  Notice the shape of that fix, because it repeats. I did not tell the model to try harder. I made the rule sharper and I moved it into deterministic code.
-  And notice the lesson, because it is the first instance of the pattern: told not to give code, the model gave almost-code.
-  </aside>
 </section>
 
 <section>
@@ -1530,16 +1271,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="statement" style="margin-top:0.55em; font-size:1.0em">An evaluation aimed at safety found a hole in my <em>theory of help</em>.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>48</span></div>
-  <aside class="notes">
-  [0:48&ndash;0:50]
-  Now the other gate, and this is my favourite finding in the whole project.
-  G2's 43 percent looked like an overzealous judge, and I went in expecting to soften the judge. It was applying its rubric correctly every time. Two honest caveats: when I made that call I had no recorded reasons yet, so the ceiling explained one of the three revised turns, and two runs later the rubric itself turned out to be wrong about grounding.
-  Here is what was actually happening. A confident student gets a low ceiling — that is deliberate, it is productive struggle. But a student who pastes buggy code is not stuck on the concept. They are stuck on execution. And at a ceiling set by their conceptual mastery, there is no useful debugging hint available at all. So the actor, trying to be useful, gave one. It genuinely exceeded the ceiling. The judge correctly flagged it. The system was working exactly as specified and the specification was wrong.
-  My pedagogy model had one axis — how much do you know — and the situation needs two: what you know, and what kind of stuck you are.
-  The fix is the constructive-code floor: if you show code, your ceiling floors at H4 no matter how strong your mastery is. Room for a real verbal nudge, still no code out.
-  And I want to flag what that fix is, because it is different from all the others: it is a pedagogical claim, not a software correction. Showing your work should buy you help. I believe that. It is completely untested with actual students, and it is the kind of claim this room would design a study around.
-  The meta-point: I built this evaluation to check a safety property, and it found a hole in my theory of help.
-  </aside>
 </section>
 
 <section>
@@ -1568,13 +1299,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   </div>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>49</span></div>
-  <aside class="notes">
-  [0:50&ndash;0:51]
-  Three fixes in, G3 was up from 54 to 96 percent — a pass. And G2 was still sitting at 43 percent. Same earnest turns, still being revised, and the run still did not record why. That is the moment I added reason capture, and it paid for itself immediately, because the residual failures turned out to be two unrelated things.
-  Two-thirds of them were a grounding failure with an uncomfortable structure. My contract said: ground every course claim in the retrieved material. That is pressure to cite. And when retrieval came back with nothing relevant, the model did not say "I don't have a source for that" — it invented a plausible-looking one. An instruction written to prevent invention was causing invention, because I had made citation the only acceptable shape for an answer. If you work on hallucination you will recognise that pattern; it is worth knowing it can be induced by your own safety instruction.
-  The other third was not a leak at all. It was a label. "Here is my code, what is wrong with it" got classified as a question rather than an attempt — so the constructive-code floor I had just built never fired. My fix was correct and never reached the turns it was written for.
-  Fixes: cite only what this turn actually retrieved, otherwise help in plain words; and floor any code-adjacent turn, regardless of label.
-  </aside>
 </section>
 
 <section>
@@ -1598,16 +1322,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.5em">Two consecutive runs, two fixes in opposite directions. That is what calibration actually feels like: the last moves are not "tighter," they are "sharper."</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>50</span></div>
-  <aside class="notes">
-  [0:52&ndash;0:53]
-  Last rung, and it is the one I would put on a poster.
-  The earnest revise rate had reached zero. Two more runs, and the auditor flagged turns where the tutor had emitted no code whatsoever. What it had written, in prose, was: you wrote less-than-or-equal where you need less-than.
-  Look at what that is. No code fence. No signature. Nothing whatsoever for a deterministic detector to cut. Perfectly compliant with the letter of my no-code ceiling. And it is the answer. Everything left for the student is typing.
-  That is the rung I did not anticipate at all. My entire enforcement layer was built around code as the carrier of the answer, and the answer walked out in English.
-  The fix sharpened the low-rung contract: name no bug, no wrong token, no fix — point at the area and ask one question.
-  And then, on the next run, a failure in the opposite direction. One earnest turn was revised because the judge flagged a general C++ fact — what a standard container's size method returns — as an unsupported course claim. Which is absurd; that is not a course claim, it is common knowledge. So I narrowed that rule too.
-  Two fixes on consecutive runs, in opposite directions. That is what calibration actually feels like from the inside. By the end the moves are not "tighter." They are "sharper."
-  </aside>
 </section>
 
 <section>
@@ -1647,14 +1361,8 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <text x="816" y="250" font-size="13" fill="#9a9aa6">sharper rule</text>
     </g>
   </svg>
+  <p class="cite" style="margin-top:0.3em">All four rungs were found in live runs on 12&ndash;14 June 2026, against that build. The ladder is the claim; the numbers behind it have not been re-measured since the September changes.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>51</span></div>
-  <aside class="notes">
-  [0:53&ndash;0:54]
-  Put the runs side by side and this is the shape. I call it the over-help ladder, and it is the thing I would defend at a conference.
-  Top: the full solution in a code block, which anybody catches. Then almost-code — signatures and blanked templates. Then a fabricated citation, induced by my own grounding rule. Then naming the bug in prose, which is zero code and the whole answer. And then a dashed box, because I do not believe I reached the bottom. I stopped when a round produced no new category. That is saturation. It is not proof of absence.
-  Two regularities I would put money on. First, the order: the violations came in a consistent gross-to-subtle sequence, and fixing one always exposed the next. It behaved like peeling.
-  Second, and this is the generalisable bit: not one of those fixes was "write a better prompt." Every single one was a sharper rule, usually moved into code that cannot be argued with. The prompt was never the lever. Four rounds of evidence saying the same thing.
-  </aside>
 </section>
 
 <section>
@@ -1674,24 +1382,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p style="margin-top:0.6em">So the descent is not mysterious, and it is not adversarial. <strong>It is the predictable consequence of specifying a behaviour by its form while optimising for its function.</strong> The subtler rung is always the one your vocabulary cannot express yet.</p>
   <p class="sub">If that is right, it is not about tutoring at all: <em>any</em> agent told to refuse a capability it possesses should fail in this order, and each fix should expose the next surface.</p>
   <div class="foot"><span>Part 6 &middot; The over-help ladder</span><span>52</span></div>
-  <aside class="notes">
-  [0:54&ndash;0:55]
-  Let me offer the mechanism I think produces that order, because "I observed a sequence" is a weak claim and "here is why the sequence has to look like this" is a stronger one.
-  Every rule I wrote named a form. A code fence. A signature. A citation. A token. But the model is not optimising against my rules — it is optimising to be useful. And when the most useful carrier is closed off, being useful means finding the next carrier my vocabulary did not name.
-  So: I banned long code blocks, and help moved to short ones, then signatures, then blanked templates. I banned code entirely, and help moved into prose that specifies the code exactly. I banned unsupported claims, and help moved to a supported-looking claim — an invented citation.
-  Read that way the descent is not mysterious and it is not even adversarial. It is the predictable consequence of specifying a behaviour by its form while the system optimises its function. And the next rung is always the one your current vocabulary cannot express.
-  If that mechanism is right, then none of this is about tutoring. Any agent told to refuse a capability it has should fail in roughly this order. That is the claim I am most interested in being wrong about.
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 7</p>
   <h2>Live demo</h2>
   <p>I try to extract a solution from my own tutor. Second screen shows the machinery.</p>
-  <aside class="notes">
-  [0:56]
-  Five minutes. Switch to the browser. Two windows: the chat on the left, the admin turn log on the right.
-  </aside>
 </section>
 
 <section>
@@ -1723,14 +1419,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="tiny" style="margin-top:0.4em"><strong>If it fails, that is data and I will say so.</strong> This is the live model, not a recording — the pre-talk capture on the next slide is the fallback.</p>
   <div class="foot"><span>Part 7 &middot; Live demo</span><span>54</span></div>
-  <aside class="notes">
-  [0:56&ndash;1:00]
-  Here is the plan so you know what to watch rather than watching me type.
-  Four asks, escalating. First a flat request for the code. Second, social engineering — out of time, my TA said it's fine. Third, the interesting one: broken code plus an honest question, which should trip the constructive-code floor and produce a real debugging nudge that names the area and not the bug. Fourth, if there is time, ask it to base64 the answer -- the evasion a real visitor asked for.
-  On the right is the admin turn log, and that is where the machinery is visible: the intent label, the rung band and what was actually enforced, the move, the judge verdict, whether the detector cut anything, and the cost.
-  And to be clear: this is the live model, not a recording. If it fails in front of you, that is a data point and I will say so out loud. I have a fallback capture on the next slide either way.
-  [After the demo, name what happened in one sentence before moving on.]
-  </aside>
 </section>
 
 <section>
@@ -1742,20 +1430,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="sub" style="margin-top:0.6em">Worth saying out loud even with a working demo: four scripted turns from me is exactly the evidence problem this whole talk is about. A demo is an anecdote with good lighting.</p>
   <div class="foot"><span>Part 7 &middot; Live demo</span><span>55</span></div>
-  <aside class="notes">
-  [1:00]
-  If the network or the app is unavailable, walk the captured run instead, and make the same point: four turns I chose is an anecdote with good lighting. Which is a decent segue into part eight.
-  </aside>
 </section>
 
 <section class="divider">
   <p class="kicker">Part 8</p>
   <h2>What we still cannot say</h2>
   <p>The criticisms I cannot argue with, the open problems, and the study I do not know how to design alone.</p>
-  <aside class="notes">
-  [1:01]
-  Part eight. This is the ask. First the open problems in the field, then the study I would run if I knew how to design it — and the places I am stuck are places this room knows more about than I do.
-  </aside>
 </section>
 
 <section>
@@ -1770,13 +1450,8 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <li><strong>Anything in upper-level computing.</strong> And Claude specifically: every peer-reviewed CS deployment I found used OpenAI models.</li>
   </ol>
   <p class="sub" style="margin-top:0.6em">The one long-horizon result we have, the Chinese learning penalty emerging over about two years, is not randomised. Short trials are probably biased toward optimism.</p>
+  <p class="cite" style="margin-top:0.4em">That result: Str&ouml;mberg, Lei &amp; Wu 2026, <em>The Generative AI Learning Penalty: Evidence from Chinese Secondary Education</em>, CEPR Discussion Paper 21577 &mdash; 26,811 students, grades 7&ndash;12, 30 months, staggered-adoption difference-in-differences. Quasi-experimental, not randomised.</p>
   <div class="foot"><span>Part 8 &middot; What we cannot say yet</span><span>57</span></div>
-  <aside class="notes">
-  [1:02&ndash;1:03]
-  Now the field's open problems, in roughly the order I would fund them. My four are specific to my own work; these six are everybody's.
-  First, the obvious trial nobody has run: Socratic against direct answers, delayed test, no AI in the room. Second, whether any of the simulators and judges predict real learning, because the whole RL line of work assumes they do. Third, the escalation question. Fourth, sycophancy in tutoring. Fifth, comparing enforcement methods on one population. And sixth, upper-level computing, where there is almost nothing, and nothing at all on Claude as a withholding tutor in a peer-reviewed CS deployment.
-  The note at the bottom is a caution. The one long-horizon result we have shows a penalty that took about two years to appear. Most of the trials we have run for weeks.
-  </aside>
 </section>
 
 <section>
@@ -1806,23 +1481,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <li><strong>Contamination.</strong> I cannot blind students to their own tool, and the control arm has ChatGPT in another tab. What does "no tutor" even mean in 2026?</li>
       <li><strong>Ethics of the explain-mode arm.</strong> The cleanest comparison assigns some students the version I have argued causes harm. For a whole unit. Graded.</li>
       <li><strong>Judge calibration.</strong> What is the unit a human rates — the turn? the rung assignment? Who rates, and what reliability would satisfy you?</li>
-      <li><strong>Held-out adversaries.</strong> Where do attacks come from that I did not write? Students in the wild are the obvious answer, and they are also a human-subjects protocol.</li>
+      <li><strong>Held-out adversaries.</strong> Where do attacks come from that I did not write? Students in the wild are the obvious answer, and they are also a human-subjects protocol. <span class="tiny">(Fourteen personas instead of four widens the net; it is still my net.)</span></li>
     </ul>
   </div>
   </div>
   </div>
   <div class="foot"><span>Part 8 &middot; What we cannot say yet</span><span>58</span></div>
-  <aside class="notes">
-  [1:03&ndash;1:05]
-  So here is the study I would run, and then the four places I am genuinely stuck.
-  Pre-registered, one course offering, three arms: no tutor, supervised tutor, and explain mode — which is my own system with the instructor toggle up, ceiling at H7, so it will hand over solutions. That third arm is the whole design. Same interface, same persona, same retrieval; withholding is the only difference. Without it I am comparing my tutor to no tutor and learning nothing about withholding specifically.
-  Primary outcome follows Bastani: a delayed, tool-removed assessment about two weeks out, because that is the only place the harm shows up. Secondaries: depth to convergence, whether they keep using it voluntarily, and an equity slice by incoming ability — an intervention like this should narrow gaps and I would like to know early if it widens them.
-  Now the four things I do not know how to do, and these are real questions, not rhetorical ones.
-  Contamination. I cannot blind a student to their own tool, and my control arm has ChatGPT open in the next tab. I do not know what "no tutor" means as a condition in 2026.
-  Ethics. The clean comparison requires assigning some students, for a whole graded unit, the arm I have spent forty minutes arguing causes durable harm. I do not think I can defend that to my IRB, and I am not sure I should be able to.
-  Judge calibration. I know I need human raters. I do not know what they rate — the whole turn? the rung I assigned? — or what level of agreement would make you believe the auditor.
-  And held-out adversaries. I need attacks I did not author. Real students are the obvious source, and that is a protocol, a consent process, and a year.
-  </aside>
 </section>
 
 <section>
@@ -1841,14 +1505,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <p>Sorting failures by cause is what turns a score into a diagnosis, and it caught my own instrument being wrong. Expect failures gross-to-subtle: full solutions &rarr; almost-code &rarr; invented citations &rarr; the bug named in plain English. And every cheap measure — benchmarks, judges, simulated students, satisfaction — is a proxy none of us has shown predicts learning.</p>
   </div>
   <div class="foot"><span>Closing</span><span>59</span></div>
-  <aside class="notes">
-  [1:05&ndash;1:06]
-  Three things to keep.
-  One, from the evidence: withholding protects, it rarely accelerates. Budget for about 0.2 SD from a well-designed tutor and look to structure for the gains. That is not an argument against guardrails — against an unguarded chatbot, the guardrail removes a real measured harm. It is an argument against expecting the guardrail to do the teaching.
-  Two, from building one: put the irreversible decision in code, not in a prompt. Prompt-only withholding leaks and strict withholding over-questions, and the way out of both is a policy computed outside the prompt. Computing the ceiling in code that never reads student text made the property I care most about injection-proof and unit-testable at the same time. If you build anything with a model in it, that is the transferable move.
-  Three, from the evaluation: make every rejection state its reason, sort by cause before you believe any number, and expect the failures gross-to-subtle. And then measure learning without the AI, and later, because every cheaper measure we have is a proxy and none of them has been shown to predict learning.
-  And the scope, stated plainly: the second half is an architecture and a calibration method, validated against safety gates on about two dozen scripted turns. It is not evidence that a single student learned a single thing.
-  </aside>
 </section>
 
 <section>
@@ -1864,17 +1520,9 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <div class="box">
     <h3>3. Is the over-help ladder a finding, or an artefact of my fix order?</h3>
-    <p>The only test I have is to hand the apparatus to someone else, let them fix in a different order, and see whether the same rungs appear. That is expensive. Is there a cheaper one? <span class="tiny">(And the related one: how would you calibrate a model judge to a standard you would accept — what rated unit, how many raters, what agreement statistic on an ordinal scale, and does it matter that judge and judged share a model family?)</span></p>
+    <p>The only test I have is to hand the apparatus to someone else, let them fix in a different order, and see whether the same rungs appear. That is expensive. Is there a cheaper one? <strong>Running the apparatus is now free</strong> &mdash; the simulation costs nothing on a subscription &mdash; so what it would take is your fix order, not your budget. <span class="tiny">(And the related one: how would you calibrate a model judge to a standard you would accept — what rated unit, how many raters, what agreement statistic on an ordinal scale, and does it matter that judge and judged share a model family?)</span></p>
   </div>
   <div class="foot"><span>Closing</span><span>60</span></div>
-  <aside class="notes">
-  [1:06&ndash;1:07]
-  Three questions, and I will hold each open in the discussion.
-  One: what outcome would convince you? Most of us, me included, report the cheapest one. And the design problem is real: I cannot blind a student to their own tool, and my control arm has ChatGPT in the next tab. If you were reviewing this for your own course, what would you insist on?
-  Two: who decides when to stop asking? The evidence leans toward the system deciding — impasse length, prior knowledge. Students, unsurprisingly, would like to decide. And the sharper version: with an unguarded chatbot one tab away, is withholding still the right frame at all? Contractor and Reyes found that steering students toward using AI to explain raised later scores in four of six experiments. Maybe the goal is not refusal but steering. I am genuinely unsure, and that is the question I would most like to argue about.
-  Three, the one I care most about professionally: is the over-help ladder a finding, or just the order in which I happened to fix things? The only test I have thought of is expensive. If there is a cheaper one, I want it.
-  Then leave the last slide up.
-  </aside>
 </section>
 
 <section>
@@ -1897,24 +1545,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </table>
   <p class="cite" style="margin-top:0.35em"><strong class="cnum">(*n)</strong> = times cited on Google Scholar, 9 October 2026.</p>
   <div class="foot"><span>Closing</span><span>61</span></div>
-  <aside class="notes">
-  [1:07]
-  Leave this up during the discussion. Every paper on this slide has a link in the written review, along with the rest of the sources.
-  Full citations:
-  Bastani, H. et al. (2025). Generative AI without guardrails can harm learning. PNAS 122(26).
-  Contractor and Reyes (2026). Experimental evidence on the learning impact of generative AI. Working paper. arxiv.org/abs/2607.08849
-  Ahtisham, M. et al. (2026). Examining variation in how guided AI tutors resolve student impasses. Preprint. arxiv.org/abs/2609.38346
-  Liu, R. et al. (2025). Improving AI in CS50. SIGCSE TS 2025. cs.harvard.edu/malan/publications/fp0627-liu.pdf
-  Zhao, S., Knežević, M. and Käser, T. (2026). Evaluating answer leakage robustness of LLM tutors. ACL 2026. arxiv.org/html/2604.18660
-  Dinucu-Jianu, D., Macina, J., Daheim, N., Hakimi, I., Gurevych, I. and Sachan, M. (2025). From problem-solving to teaching problem-solving (TutorRL). EMNLP 2025. arxiv.org/abs/2505.15607
-  Macina, J., Kapur, M. and Sachan, M. (2026). The assistance dilemma: learning to teach via multi-turn RL. Preprint. arxiv.org/abs/2610.06446
-  Maurya, K. K. et al. (2025). Unifying AI tutor evaluation (MRBench). NAACL 2025. arxiv.org/abs/2412.09416
-  Macina, J. et al. (2025). MathTutorBench. EMNLP 2025. arxiv.org/abs/2502.18940
-  Scarlatos, A. et al. (2026). Simulated students in tutoring dialogues: substance or illusion? ACL 2026.
-  Daheim, N. et al. (2024). Stepwise verification and remediation. EMNLP 2024. aclanthology.org/2024.emnlp-main.478
-  Wang, R., Zhang, Q., Robinson, C., Loeb, S. and Demszky, D. (2024). Bridging the novice-expert gap via models of decision-making: remediating math mistakes. NAACL 2024. aclanthology.org/2024.naacl-long.120
-  Oreopoulos, P. and Low, S. (2026). One click away. NBER WP 35620. nber.org/papers/w35620
-  </aside>
 </section>
 
 <section>
@@ -1934,10 +1564,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="cite" style="margin-top:0.35em"><strong class="cnum">(*n)</strong> = times cited on Google Scholar, 9 October 2026.</p>
   <div class="foot"><span>Closing</span><span>62</span></div>
-  <aside class="notes">
-  [1:08]
-  These two slides are for the people who photograph them. Every work named anywhere in the talk is here, and every slide's own notes carry the same citation with its link. The written review in the repository has all of them linked, with each preprint and each unverified number flagged.
-  </aside>
 </section>
 
 <section>
@@ -1959,20 +1585,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   </div>
   <p class="cite" style="margin-top:0.35em"><strong class="cnum">(*n)</strong> = times cited on Google Scholar, 9 October 2026.</p>
   <div class="foot"><span>Closing</span><span>63</span></div>
-  <aside class="notes">
-  [1:08]
-  Second half: the vendors, the failure and evaluation literature, the field evidence, and computing education. Note the retraction on the right: Wang and Fan 2025 was withdrawn in 2026 after more than 500 citations, which is the reason I check rather than quote.
-  </aside>
 </section>
 
 <section class="center">
   <h1>Questions</h1>
   <p class="sub" style="margin-top:1.4em"><strong>Yusuf Pisan</strong><br>pisan@uw.edu</p>
   <p class="tiny" style="margin-top:1.6em">Slides available at <a href="https://pisanorg.github.io/yusuf/talks/202610Northwestern">https://pisanorg.github.io/yusuf/talks/202610Northwestern</a></p>
-  <aside class="notes">
-  [1:07&ndash;1:08]
-  Thank you. Over to you.
-  </aside>
 </section>
 
 </div>

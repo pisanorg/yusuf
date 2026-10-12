@@ -1,0 +1,31 @@
+#!/bin/sh
+# This repo is public and serves pisanorg.github.io/yusuf. A published talk deck
+# must carry no speaker notes: the notes-bearing master lives in a private repo
+# and the published copy is generated from it with the notes stripped. A deck
+# with an <aside class="notes"> in it is almost always the master copied over the
+# published one by hand.
+#
+# This checks what the commit will *contain*, not what it changes. A deck whose
+# notes are already committed does not differ from HEAD when it is staged again,
+# so a --cached diff would wave it through.
+#
+# Inert until installed:  git config core.hooksPath .githooks
+
+leaky=
+for f in $(git ls-files --cached -- 'talks/*/slides.html' 'talks/*/index.html'); do
+    if git show ":$f" 2>/dev/null | grep -q 'class="notes"'; then
+        leaky="$leaky $f"
+    fi
+done
+
+if [ -n "$leaky" ]; then
+    echo "pre-commit: speaker notes in a deck this public repo would commit:" >&2
+    for f in $leaky; do
+        echo "  $f" >&2
+    done
+    echo >&2
+    echo "Publish the deck instead of copying it: in the private repo, run" >&2
+    echo "  python scripts/publish_talk.py research/<talk>" >&2
+    echo "which strips the notes. To commit anyway: git commit --no-verify" >&2
+    exit 1
+fi

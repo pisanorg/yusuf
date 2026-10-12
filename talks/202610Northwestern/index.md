@@ -7,7 +7,7 @@ page_class: page-talks
 <div class="talk-meta">
   <span><strong>Northwestern University</strong>, CS faculty colloquium</span>
   <span>October 2026</span>
-  <span>64 slides, 75 minutes</span>
+  <span>68 slides, 75 minutes</span>
 </div>
 
 <div class="talk-actions">
@@ -41,7 +41,7 @@ The scope, stated plainly: the second half is an architecture and a calibration 
 
 ## Presenting it yourself
 
-The slides are plain HTML with Reveal.js sitting next to them, so the folder works with no network. Arrow keys or space to advance, <code>S</code> for the speaker notes window, <code>F</code> for full screen, <code>O</code> for the slide overview, <code>B</code> to blank the screen, <code>?</code> for help. Every slide carries its notes. Feel free to borrow any of it.
+The slides are plain HTML with Reveal.js sitting next to them, so the folder works with no network. Arrow keys or space to advance, <code>S</code> for the speaker window (timer and next slide; the notes pane is empty in this copy), <code>F</code> for full screen, <code>O</code> for the slide overview, <code>B</code> to blank the screen, <code>?</code> for help. The published copy carries no speaker notes. Feel free to borrow any of it.
 
 <div class="summary-links">
   <a href="../">All talks</a>

@@ -5,6 +5,23 @@ Everything below was verified against production on 2026-10-09. Site:
 tab changes are deployed (commit `61e0bd80`, Render deploy `live`), and the
 three scripts are local tooling — `git pull`, no deploy needed.
 
+**2026-10-11 — what changed since this was written, and what it means here.**
+
+| Change | Effect on the demo |
+|---|---|
+| Deploying is now **manual** (`d9e6965b`): a push to `main` no longer ships | Good news. A `git push` cannot swap instances under you mid-talk. The 502 row in §4 now only applies if *you* trigger a deploy. |
+| A second admin account was added (`b6bd0145`, `yusuf.pisan@gmail.com`) | Either admin account works for the right-hand screen. Use whichever is already signed in. |
+| Sign-in problems no longer mis-report a whitelisted address as refused (`9d497919`) | Only matters if a magic link misbehaves during setup. |
+| The daily digest's sign-in section was restored (`df794d19`) | No effect on the demo. |
+| Weekly instructor report on demand (`ca4f1020`) | Adds `/instructor/report`. Nothing the demo touches — and do not open it on stage, it names real students. |
+
+**Still to re-verify before you present** (these were true on 2026-10-09 and are
+cheap to re-check): the per-account spend figures in §0, that `demo342b` is still
+at mastery 0.72 across the course (§1 step 4), and the quota state. Class-wide
+context as of 2026-10-11: 140 supervised turns since 16 June, 25 students who have
+asked something, $15.69 of model spend in total — so the $15/month per-student
+quota has never been the binding limit.
+
 ---
 
 ## 0. The accounts

@@ -52,6 +52,9 @@ is how many times Google Scholar had the work cited on 9 October 2026;
   *Full title:* LLAMA LIMA: a living meta-analysis on the effects of generative AI on learning mathematics  
   [arxiv.org/abs/2601.18685](https://arxiv.org/abs/2601.18685)  
   *Deck section:* Does it help students learn?
+- Strömberg, Lei and Wu (2026). The generative AI learning penalty. CEPR DP 21577; SSRN 6977138. **(\*n/a)**  
+  *Full title:* The Generative AI Learning Penalty: Evidence from Chinese Secondary Education  
+  [cepr.org/voxeu/columns/generative-ai-learning-penalty-secondary-school](https://cepr.org/voxeu/columns/generative-ai-learning-penalty-secondary-school)
 - Zhao, Knežević and Käser (2026). Evaluating answer leakage robustness of LLM tutors. ACL 2026. **(\*5)**  
   *Full title:* Evaluating answer leakage robustness of LLM tutors against adversarial student attacks  
   [arxiv.org/html/2604.18660](https://arxiv.org/html/2604.18660)  

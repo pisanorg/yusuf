@@ -11,7 +11,8 @@ Both source decks live in the private research repo, not here.
 interested in whether to use this in their own courses, not specialists in
 learning science or in LLM internals.
 **Shape:** about 68 minutes of talk (an eleven-minute opening, then a 5-minute
-live demo) + what is left of the 75 for discussion. 64 slides.
+live demo) + what is left of the 75 for discussion. 68 slides, four of which
+(`39a`-`39c` and `42a`) are additive detail the spine never references.
 **Spine:** evidence first, then the system. Parts 1–4 are the literature; the
 hinge is slide 35; parts 5–8 are one attempt to build what the literature asks
 for, and what broke.
@@ -23,18 +24,25 @@ carries its own copy of Reveal, so all three folders are independent.
 
 | File | What it is |
 |------|-----------|
-| `slides.html` | The deck. 64 slides (8 section dividers), speaker notes in `<aside class="notes">` on every slide. |
+| `slides.html` | The deck. 68 slides (8 section dividers). **No speaker notes** — this is the published copy, generated from a notes-bearing master kept in a private repo. Do not edit it here; the edit is lost the next time it is published. |
 | `img/` | The photographs and screenshots used by the opening slides (the Rock, the contribution graph, the digital twin, the banned session, and the five screens of YPDSA itself). |
-| `SCRIPT.md` | Timing spine, cut order, 45- and 30-minute versions, the demo runbook, numbers to say out loud, prepared answers. Gitignored: speaker-private. |
 | `slides.pdf` | Slides only, no notes. Published; linked from the landing page. Regenerate with `decktape reveal http://localhost:8731/slides.html slides.pdf --size 1280x720` while serving the folder. |
-| `combined-talk-presenter.pdf` | One page per slide: the slide above, its speaker notes below. Gitignored (14 MB, and the notes are not for publication) — regenerate with `python scripts/make_presenter_pdf.py` in the research repo, or `--scale 1` for a 5.9 MB copy. |
 | `index.md` | The published landing page at `pisanorg.github.io/yusuf/talks/202610Northwestern`: abstract, outline, links to the deck and the PDF. |
 | `vendor/reveal/` | Reveal.js 5.1.0 (core, white theme, notes plugin), vendored so the folder works with no network. |
 
+The speaker material — the notes-bearing deck, the timing script, the
+claim-by-claim review and the presenter PDF — is not in this repo. This one is
+public and serves `pisanorg.github.io/yusuf`, so it carries the deck as an
+audience sees it and nothing a presenter would rather keep. The references are
+the exception and stay public: `REFERENCES.md` and slides 61–63 carry every
+citation the notes used to.
+
 ## Running it
 
-Double-clicking `slides.html` works for presenting. For the **speaker-notes
-window** (`S`) Reveal needs http, so serve the folder:
+Double-clicking `slides.html` works for presenting. The notes plugin is still
+loaded, so `S` opens the speaker window with the timer and the next-slide
+preview, but the notes pane is empty in this copy. For that window Reveal needs
+http rather than `file://`, so serve the folder:
 
 ```bash
 cd talks/202610Northwestern && python3 -m http.server 8092
@@ -79,6 +87,15 @@ Cut, with the reason:
 | Reviewer scores (SIG 33), and the four criticisms (SIG 34) | Inside-baseball for a venue this room did not submit to. The deck does not mention the review at all; the limits it needs are carried by the study slide and the takeaways. |
 | Full reference list (SIG 38) | The reading list on slide 61 is the one to leave up (the full references follow on 62–63), and both repositories are named on it. |
 
+**Added 2026-10-11.** Four slides numbered off the end of their neighbours, so
+every existing slide number in the speaker material still points where it did:
+`39a` (what the pre-classifier emits, and the learner state the policy core may
+read), `39b` (the rendered contract the actor receives, verbatim, plus the
+mastery bands that produced its ceiling), `39c` (the twelve-move vocabulary and
+what the actor may emit), and `42a` (the fourteen-persona simulation added since
+the deck was assembled). All four are optional; they are the first cuts if the
+talk runs long.
+
 **Written for this deck:** the title, the personal opening (slides 2–6: the
 Rock, the contribution graph, the two digital-twin slides and the banned
 session), the five-screen tour of YPDSA (slides 7–11), the two-sentence thesis
@@ -87,6 +104,9 @@ session), the five-screen tour of YPDSA (slides 7–11), the two-sentence thesis
 (62–63) and the closing Questions slide (64).
 
 ## Before you present
+
+Steps 1, 2 and 4 refer to the private speaker material described above; work
+from the master folder rather than this one.
 
 1. **Fill in slide 55** (`Fallback — captured run`) with screenshots from a
    pre-talk demo run. The box on that slide lists which three captures to take.
@@ -97,7 +117,13 @@ session), the five-screen tour of YPDSA (slides 7–11), the two-sentence thesis
    student**, never production data. The four demo prompts are in `SCRIPT.md` §4.
 3. **Check the dates.** Several 2026 sources were preprints when the slides were
    written (October 2026). If you give this talk months later, check whether any
-   has been published, and update the label on the slide.
+   has been published, and update the label on the slide. **Last checked
+   2026-10-11, all four still unpublished preprints:** Ahtisham et al. 2026
+   (arXiv 2609.38346, v1), Macina, Kapur & Sachan 2026 (arXiv 2610.06446, v1),
+   Lehmann, Cornelius & Sting (arXiv 2409.09047, last revised March 2025), and
+   Strohmaier et al.'s living meta-analysis (arXiv 2601.18685), now at v5
+   (11 September 2026) and still reporting g = 0.57 across 34 studies, which is
+   what slide 29 shows.
 4. **Run the numbers past `SCRIPT.md` §3** so what you say matches the slides.
 5. **Rehearse the hinge** (slide 35). The honest version — "I built the system
    first and read the literature afterwards" — is the line that makes the two
