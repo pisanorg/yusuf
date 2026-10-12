@@ -4,7 +4,7 @@ title: Teaching
 page_class: page-teaching
 ---
 
-I have taught for 25+ years across three continents &mdash; Sydney (University of Technology Sydney, 2000&ndash;2016), the Chicago area, and Seattle (University of Washington Bothell, 2017&ndash;present). My classes have ranged from 8-student seminars to 700-student lectures, covering first-year programming, upper-division systems courses, and graduate-level AI.
+I have taught for 25+ years across three continents &mdash; Sydney (University of Technology Sydney, 2000&ndash;2017), the Chicago area, and Seattle (University of Washington Bothell, 2017&ndash;present). My classes have ranged from 8-student seminars to 700-student lectures, covering first-year programming, upper-division systems courses, and graduate-level AI.
 
 I received the **UWB Distinguished Teaching Award in 2023** and the **UTS Teaching Award in 2006**.
 
