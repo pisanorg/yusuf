@@ -983,7 +983,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
 </section>
 
 <section>
-  <p class="kicker">Zooming in on the boundary &middot; 1 of 3</p>
+  <p class="kicker">Zooming in on the boundary &middot; 1 of 4</p>
   <h2>The entire input to the policy core</h2>
   <div class="cols tight">
     <div class="box">
@@ -1028,11 +1028,12 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </div>
   </div>
   <p class="sub" style="margin-top:0.35em">That is the complete input: one enum, two lists, a float, four booleans. <strong>There is no sentence in it</strong> &mdash; which is the entire reason no sentence can argue with it.</p>
+  <p class="cite" style="margin-top:0.3em"><strong>Where the eight came from, honestly:</strong> a threat model in my own notes, not a paper &mdash; three circumvention routes, HOSTILE and ABUSIVE ported unchanged from an earlier system of mine, and one "OK" class later split in three. In 140 production turns <strong>HOSTILE and ABUSIVE have never fired</strong>, and OTHER absorbed 35%.</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39a</span></div>
 </section>
 
 <section>
-  <p class="kicker">Zooming in on the boundary &middot; 2 of 3</p>
+  <p class="kicker">Zooming in on the boundary &middot; 2 of 4</p>
   <h2>The contract, in the words the actor sees</h2>
   <p class="tiny" style="margin-bottom:0.1em">Appended last to the actor's prompt. This is the real rendered block for the turn on the left of the previous slide &mdash; a mid-band student who pasted broken code:</p>
   <div class="payload">---
@@ -1060,7 +1061,7 @@ THIS TURN'S MOVE: point the student at the exact slide/source line and ask what 
 </section>
 
 <section>
-  <p class="kicker">Zooming in on the boundary &middot; 3 of 3</p>
+  <p class="kicker">Zooming in on the boundary &middot; 3 of 4</p>
   <h2>What the actor may do with it</h2>
   <div class="cols tight">
     <div class="box">
@@ -1079,18 +1080,59 @@ THIS TURN'S MOVE: point the student at the exact slide/source line and ask what 
         <li><code>COMPLETION_PROBLEM</code> &mdash; partly worked, one key step blank</li>
         <li><code>FULL_PROBLEM</code> &mdash; pose it, hint only if asked</li>
       </ul>
-      <p class="tiny" style="margin-top:0.3em">The strategist proposes one; the policy core disposes. A move shapes <em>how</em> the reply opens and can never change <em>what</em> may be revealed &mdash; the ceiling always wins. The labels are internal: they never appear in the reply.</p>
+      <p class="tiny" style="margin-top:0.3em">The strategist proposes one; the policy core disposes. A move shapes <em>how</em> the reply opens, never <em>what</em> may be revealed. The labels are internal and never appear in the reply.</p>
     </div>
     <div class="box">
       <h3>What the reply may contain</h3>
       <p class="tiny" style="margin:0"><strong>Words</strong>, at or below the ceiling. <strong>Pseudo-code with the key lines blanked</strong> (<code>___</code>) only at H6. <strong>Compilable code</strong> only at H7, which needs the instructor toggle. <strong>A citation</strong>, only of what this turn actually retrieved &mdash; otherwise help in plain words and attribute nothing.</p>
-      <p class="tiny" style="margin-top:0.35em"><strong>Or a tool call, from four:</strong> <code>find_topic</code> (the knowledge base, nine collections), <code>get_lecture_outline</code>, <code>get_exercise</code> (a curated bank), <code>evaluate_code</code> (grades a submission and returns feedback plus one Socratic hint, with the solution stripped server-side).</p>
-      <p class="tiny" style="margin-top:0.35em">The contract can switch two of them off: <code>find_topic</code> goes under an exam lockdown, so retrieval cannot feed the actor the very material it is forbidden to teach, and <code>get_exercise</code> goes when exercises are suppressed. <strong>A call to a disabled tool is refused server-side</strong>, not merely discouraged in the prompt.</p>
-      <p class="tiny" style="margin-top:0.35em">Then one streamed reply &mdash; which the detector always reads, the judge reads on risky turns, and which gets <strong>at most one revise</strong> before a fallback.</p>
+      <p class="tiny" style="margin-top:0.35em"><strong>Or a tool call, from four:</strong> <code>find_topic</code> (the knowledge base, nine collections), <code>get_lecture_outline</code>, <code>get_exercise</code> (a curated bank), <code>evaluate_code</code> (feedback plus one Socratic hint, solution stripped server-side).</p>
+      <p class="tiny" style="margin-top:0.35em">The contract switches two off: <code>find_topic</code> under an exam lockdown, <code>get_exercise</code> when exercises are suppressed. <strong>A call to a disabled tool is refused server-side</strong>, not discouraged in the prompt.</p>
+      <p class="tiny" style="margin-top:0.35em">Then one streamed reply: the detector always reads it, the judge on risky turns, <strong>at most one revise</strong>.</p>
     </div>
   </div>
-  <p class="sub" style="margin-top:0.35em">Everything here is a typed, countable object: eight intents, twelve moves, eight rungs, four tools, three verdicts. That is what makes a transcript measurable rather than merely readable.</p>
+  <p class="sub" style="margin-top:0.3em">All of it typed and countable, which is what makes a transcript measurable. Said plainly, though: <strong>the intents are good guesses in a threat-model shape, and the moves are literature-inspired but still my vocabulary rather than a validated instrument.</strong></p>
+  <p class="cite" style="margin-top:0.25em">Ten follow an AutoTutor-style move ladder (Graesser et al. 2005); the last two come from a different literature, fading worked-out steps (Atkinson, Renkl &amp; Merrill 2003).</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39c</span></div>
+</section>
+
+<section>
+  <p class="kicker">Zooming in on the boundary &middot; 4 of 4</p>
+  <h2>What the strategist sees, and what it returns</h2>
+  <div class="cols tight">
+    <div class="box">
+      <h3>In: typed facts, no prose</h3>
+      <p class="tiny" style="margin:0 0 0.2em">Its entire input for the turn on 39a &mdash; counts and ids the system wrote, never the student's words:</p>
+      <div class="payload">intent: QUESTION
+help ceiling: H4
+goals in scope: bst-insert
+exercises allowed: True
+session: 5 turns (2 attempts, 3 questions, 0 passive)
+minutes since last attempt: 4
+goal bst-insert: 4 turns, rungs [3, 3, 4, 4],
+  moves 2a/2q/0p, <span class="k">stuck=True</span>, exams 0pass/1fail,
+  scores [0.4, 0.5], fading stage=worked
+
+--- navigator context (deterministic, DB-sourced) ---
+next recommended goal: 'BST insertion'</div>
+      <p class="tiny" style="margin-top:0.3em">So it can see that this student has circled one goal for four turns, failed an exam on it, and is scoring around 0.45 &mdash; without being told a single thing they wrote.</p>
+    </div>
+    <div class="box">
+      <h3>Out: one move and one sentence</h3>
+      <div class="payload"><span class="k">MoveChoice</span>(
+  move   = LOCATED_OBSERVATION,
+  reason = 'stuck on the same goal for
+            4 turns, code shown')</div>
+      <p class="tiny" style="margin-top:0.3em">One of the twelve, validated against the enum, plus a reason that exists so the ledger can say <em>why</em>. Anything else &mdash; unknown move, bad JSON, a timeout &mdash; returns <code>NO_MOVE</code> and the actor opens however it likes. <strong>The strategist can fail completely and the turn still runs.</strong></p>
+      <p class="tiny" style="margin-top:0.35em"><strong>Then the policy core disposes.</strong> A move is a suggestion about <em>how</em> to open, and the ceiling still wins:</p>
+      <div class="payload">LOCATED_OBSERVATION (needs H2) at H4
+  &rarr; <span class="k">kept</span>, ceiling still H4
+
+WORKED_ANALOGY (needs H5) at H4
+  &rarr; <span class="c">dropped</span>, move = None</div>
+      <p class="tiny" style="margin-top:0.3em">That second case is why the admin's Move column sometimes reads &ldquo;&mdash;&rdquo;. Nothing failed: a move that would have shown more than the ceiling allows was discarded rather than allowed to lift it. Under an exam lockdown no move is requested at all.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>39d</span></div>
 </section>
 
 <section>
@@ -1215,14 +1257,16 @@ THIS TURN'S MOVE: point the student at the exact slide/source line and ask what 
         <li><code>overconfident-illusion</code> &mdash; says "got it, makes sense!" and asks to move on; the gap shows only when asked to predict something concrete</li>
         <li><code>anxious-low-efficacy</code> &mdash; failed the midterm, thinks they are "not a CS person"; lost by the third step of any answer</li>
       </ul>
-      <h3 style="margin-top:0.5em">Pressure, and the baseline</h3>
+      <h3 style="margin-top:0.5em">Adversarial</h3>
       <ul class="factlist">
         <li><code>injector-social-engineer</code> &mdash; one escalating tactic per turn for the finished LCS code, hidden among normal-sounding questions</li>
+      </ul>
+      <h3 style="margin-top:0.5em">Control</h3>
+      <ul class="factlist">
         <li><code>control-earnest</code> &mdash; the control: clear questions, fixes the slip once a targeted hint lands, then asks one good follow-up</li>
       </ul>
     </div>
   </div>
-  <p class="sub" style="margin-top:0.35em">Spread across both courses and eleven different lectures, so a run exercises retrieval and the goal graph rather than one topic repeatedly.</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>42b</span></div>
 </section>
 

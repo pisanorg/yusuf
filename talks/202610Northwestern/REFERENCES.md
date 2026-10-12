@@ -271,6 +271,10 @@ is how many times Google Scholar had the work cited on 9 October 2026;
 - Aleven, Stahl, Schworm, Fischer and Wallace (2003). Help seeking and help design in interactive learning environments. Rev. Educational Research 73(3). **(\*1,029)**  
   [doi.org/10.3102/00346543073003277](https://doi.org/10.3102/00346543073003277)  
   *Deck section:* Tutoring and learning science
+- Atkinson, Renkl and Merrill (2003). Transitioning from studying examples to solving problems. J. Educational Psychology 95(4). **(\*n/a)**  
+  *Full title:* Transitioning from studying examples to solving problems: effects of self-explanation prompts and fading worked-out steps  
+  [doi.org/10.1037/0022-0663.95.4.774](https://doi.org/10.1037/0022-0663.95.4.774)  
+  *Deck section:* Building one that withholds
 - Core, Moore and Zinn (2003). The role of initiative in tutorial dialogue. EACL 2003. **(\*108)**  
   [aclanthology.org/E03-1072.pdf](https://aclanthology.org/E03-1072.pdf)  
   *Deck section:* Tutoring and learning science

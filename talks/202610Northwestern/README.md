@@ -11,8 +11,8 @@ Both source decks live in the private research repo, not here.
 interested in whether to use this in their own courses, not specialists in
 learning science or in LLM internals.
 **Shape:** about 68 minutes of talk (an eleven-minute opening, then a 5-minute
-live demo) + what is left of the 75 for discussion. 69 slides, five of which
-(`39a`-`39c`, `42a`, `42b`) are additive detail the spine never references.
+live demo) + what is left of the 75 for discussion. 70 slides, six of which
+(`39a`-`39d`, `42a`, `42b`) are additive detail the spine never references.
 **Spine:** evidence first, then the system. Parts 1–4 are the literature; the
 hinge is slide 35; parts 5–8 are one attempt to build what the literature asks
 for, and what broke.
@@ -24,7 +24,7 @@ carries its own copy of Reveal, so all three folders are independent.
 
 | File | What it is |
 |------|-----------|
-| `slides.html` | The deck. 69 slides (8 section dividers). **No speaker notes** — this is the published copy, generated from a notes-bearing master kept in a private repo. Do not edit it here; the edit is lost the next time it is published. |
+| `slides.html` | The deck. 70 slides (8 section dividers). **No speaker notes** — this is the published copy, generated from a notes-bearing master kept in a private repo. Do not edit it here; the edit is lost the next time it is published. |
 | `img/` | The photographs and screenshots used by the opening slides (the Rock, the contribution graph, the digital twin, the banned session, and the five screens of YPDSA itself). |
 | `slides.pdf` | Slides only, no notes. Published; linked from the landing page. Regenerate it in two steps while serving the folder (see below) — decktape on its own now emits about 12 MB, and the second step brings it back to the ~3 MB the published file has always been. |
 | `index.md` | The published landing page at `pisanorg.github.io/yusuf/talks/202610Northwestern`: abstract, outline, links to the deck and the PDF. |
@@ -109,9 +109,9 @@ every existing slide number in the speaker material still points where it did:
 `39a` (what the pre-classifier emits, and the learner state the policy core may
 read), `39b` (the rendered contract the actor receives, verbatim, plus the
 mastery bands that produced its ceiling), `39c` (the twelve-move vocabulary and
-what the actor may emit), `42a` (the fourteen-persona simulation added since the
-deck was assembled) and `42b` (the fourteen personas themselves, one line each).
-All five are optional; they are the first cuts if the
+what the actor may emit), `39d` (what the strategist is given and what it hands
+back), `42a` (the fourteen-persona simulation added since the deck was assembled)
+and `42b` (the fourteen personas themselves, one line each). All six are optional; they are the first cuts if the
 talk runs long.
 
 **Written for this deck:** the title, the personal opening (slides 2–6: the
