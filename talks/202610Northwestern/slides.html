@@ -58,6 +58,8 @@
              color: var(--ink); margin: 0.3em 0; }
   .payload .k { color: var(--purple); font-weight: 600; }
   .payload .c { color: var(--muted); }
+  .factlist { font-size: 0.5em; line-height: 1.5; margin: 0.2em 0 0; padding-left: 1.1em; }
+  .factlist li { margin-bottom: 0.12em; }
   .movelist { font-size: 0.5em; line-height: 1.5; column-count: 2; column-gap: 1em; margin: 0.2em 0 0; }
   .movelist li { margin-bottom: 0.15em; break-inside: avoid; }
   .movelist code { font-size: 0.92em; }
@@ -699,7 +701,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </g>
   </svg>
   <p class="sub" style="margin-top:0.2em">The larger pools mix outcomes measured <em>with</em> AI in hand and learning without it. None that I checked codes Socratic vs direct-answer design as a moderator.</p>
-  <p class="cite" style="margin-top:0.4em"><strong>Why Wang &amp; Fan was retracted</strong> (22 April 2026, note 10.1057/s41599-026-07310-z): discrepancies in the number of included studies, failure to weight them appropriately, overreported effects, and one included study that had itself been retracted. The retraction note is paywalled &mdash; those reasons come from press coverage, not from the note.</p>
+  <p class="cite" style="margin-top:0.4em"><strong>Why Wang &amp; Fan was retracted</strong> (22 April 2026, note 10.1057/s41599-026-07310-z): discrepancies in the number of included studies, failure to weight them appropriately, overreported effects, and one included study that had itself been retracted.</p>
   <div class="foot"><span>Part 3 &middot; Does it help students learn?</span><span>29</span></div>
 </section>
 
@@ -941,16 +943,6 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <text x="70" y="90" text-anchor="middle">student</text><text x="70" y="108" text-anchor="middle">message</text>
       <rect x="150" y="66" width="128" height="56" rx="6" fill="#ececf2" stroke="#9a9aa6"/>
       <text x="214" y="90" text-anchor="middle">pre-classifier</text><text x="214" y="108" text-anchor="middle" font-size="11.5" fill="#6b6b76">small LLM · label only</text>
-      <line x1="214" y1="122" x2="214" y2="140" stroke="#9a9aa6" stroke-width="1.2" stroke-dasharray="3 3"/>
-      <text x="150" y="152" font-size="11" fill="#4b2e83" font-style="italic">all eight labels:</text>
-      <text x="152" y="169" font-size="11" fill="#6b6b76">QUESTION</text>
-      <text x="152" y="184" font-size="11" fill="#6b6b76">ATTEMPT</text>
-      <text x="152" y="199" font-size="11" fill="#6b6b76">SOLUTION_DEMAND</text>
-      <text x="152" y="214" font-size="11" fill="#6b6b76">EXAM_LEAK</text>
-      <text x="152" y="229" font-size="11" fill="#6b6b76">INJECTION</text>
-      <text x="152" y="244" font-size="11" fill="#6b6b76">HOSTILE</text>
-      <text x="152" y="259" font-size="11" fill="#6b6b76">ABUSIVE</text>
-      <text x="152" y="274" font-size="11" fill="#6b6b76">OTHER</text>
       <rect x="316" y="56" width="168" height="76" rx="6" fill="#fff" stroke="#4b2e83" stroke-width="3"/>
       <text x="400" y="80" text-anchor="middle" font-weight="700" fill="#4b2e83">policy core</text>
       <text x="400" y="99" text-anchor="middle" font-size="11.5" fill="#6b6b76">ordinary code — no model</text>
@@ -1003,7 +995,18 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
                  'pointer-manipulation'],
   has_attempt = False,
   degraded    = False)</div>
-      <p class="tiny">Eight intents exist, and that is the whole vocabulary: <code>QUESTION</code>, <code>ATTEMPT</code>, <code>SOLUTION_DEMAND</code>, <code>EXAM_LEAK</code>, <code>INJECTION</code>, <code>HOSTILE</code>, <code>ABUSIVE</code>, <code>OTHER</code>. <code>degraded</code> goes true when the call fails or returns junk; the intent falls back to <code>OTHER</code>. <strong>No student words survive this step.</strong></p>
+      <p class="tiny" style="margin-top:0.35em"><strong>Eight labels, and that is the whole vocabulary:</strong></p>
+      <ul class="movelist">
+        <li><code>QUESTION</code></li>
+        <li><code>ATTEMPT</code></li>
+        <li><code>SOLUTION_DEMAND</code></li>
+        <li><code>EXAM_LEAK</code></li>
+        <li><code>INJECTION</code></li>
+        <li><code>HOSTILE</code></li>
+        <li><code>ABUSIVE</code></li>
+        <li><code>OTHER</code></li>
+      </ul>
+      <p class="tiny" style="margin-top:0.35em"><code>degraded</code> goes true when the call fails or returns junk, and the intent falls back to <code>OTHER</code>. Note what is <em>not</em> in the list: no label means "give this student more help". <strong>No student words survive this step.</strong></p>
     </div>
     <div class="box">
       <h3>From the system &mdash; trusted learner state</h3>
@@ -1013,7 +1016,15 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   mastery     = 0.72,
   status      = 'unlocked',
   exam_active = False)</div>
-      <p class="tiny"><code>status</code> is <code>locked</code> / <code>unlocked</code> / <code>mastered</code>; <code>mastery</code> is a windowed success rate over graded evidence. Beside it travel the facts established without reading prose: which goals are in scope, a prerequisite that must be gated first, whether the turn is code-adjacent, whether a live exercise is open, whether a conduct restriction is in force.</p>
+      <p class="tiny"><code>status</code> is <code>locked</code> / <code>unlocked</code> / <code>mastered</code>; <code>mastery</code> is a windowed success rate over graded evidence.</p>
+      <p class="tiny" style="margin-top:0.35em"><strong>Beside it travel the facts established without reading prose:</strong></p>
+      <ul class="factlist">
+        <li>which goals are in scope</li>
+        <li>a prerequisite that must be gated first</li>
+        <li>whether the turn is code-adjacent</li>
+        <li>whether a live exercise is open</li>
+        <li>whether a conduct restriction is in force</li>
+      </ul>
     </div>
   </div>
   <p class="sub" style="margin-top:0.35em">That is the complete input: one enum, two lists, a float, four booleans. <strong>There is no sentence in it</strong> &mdash; which is the entire reason no sentence can argue with it.</p>
@@ -1159,7 +1170,7 @@ THIS TURN'S MOVE: point the student at the exact slide/source line and ask what 
     <div class="box">
       <h3>What it is</h3>
       <p class="tiny" style="margin:0">Fourteen literature-grounded student personas across six archetypes &mdash; misconception, help-seeking, disengaged, affect, adversarial, control &mdash; driven through <strong>the real supervised turn</strong>, not a mock of it, at three ceiling bands (H2, H3, H4).</p>
-      <p class="tiny" style="margin-top:0.3em">A few of them: <code>recursion-loop-model</code>, <code>shallow-copy-double-free</code>, <code>heap-is-sorted</code>, <code>help-abuser-deadline</code>, <code>help-avoider-passive</code>, <code>wheel-spinner-frustrated</code>, <code>gaming-the-system</code>, <code>overconfident-illusion</code>, <code>anxious-low-efficacy</code>, <code>off-task-drifter</code>, and <code>control-earnest</code> as the baseline.</p>
+      <p class="tiny" style="margin-top:0.3em">Each one carries a specific misconception, a way of behaving, and a goal of its own. The full roster is on the next slide.</p>
       <p class="tiny" style="margin-top:0.3em"><strong>Every model call runs on a subscription through the <code>claude</code> CLI, so a full run costs $0</strong> and is resumable after a usage limit. That is the difference between an evaluation you run when you can afford it and one you run on every change.</p>
     </div>
     <div class="box">
@@ -1173,6 +1184,48 @@ THIS TURN'S MOVE: point the student at the exact slide/source line and ask what 
   <p class="sub" style="margin-top:0.35em">The honest summary: cost was the binding constraint on how often I could evaluate, and that constraint is gone. Authorship was the binding constraint on what the evaluation could <em>tell</em> me, and that one is exactly where it was.</p>
   <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>42a</span></div>
 </section>
+<section>
+  <p class="kicker">The roster &middot; six archetypes</p>
+  <h2>The fourteen</h2>
+  <div class="cols tight">
+    <div class="box">
+      <h3>Carrying a specific misconception</h3>
+      <ul class="factlist">
+        <li><code>recursion-loop-model</code> &mdash; thinks a recursive call jumps back to the top of the same function, like a loop, with the same <code>n</code></li>
+        <li><code>shallow-copy-double-free</code> &mdash; assumes <code>Playlist b = a;</code> deep-copies, so the crash at exit must be <code>add()</code>'s fault</li>
+        <li><code>bigo-exact-count</code> &mdash; two nested loops always mean O(n&sup2;), whatever the inner bound, and Big-O is the best case</li>
+        <li><code>heap-is-sorted</code> &mdash; believes a min-heap's array is fully sorted, so the k-th smallest sits at index k&minus;1; English is a second language, and asks for simpler words</li>
+        <li><code>superbug-linked-list</code> &mdash; reasons about what the code <em>means</em>, not what the machine does: the list "knows" the new node is first</li>
+      </ul>
+      <h3 style="margin-top:0.5em">How they seek help</h3>
+      <ul class="factlist">
+        <li><code>help-abuser-deadline</code> &mdash; wants the merge code before midnight; when refused, rephrases rather than engages</li>
+        <li><code>help-avoider-passive</code> &mdash; answers "ok", "idk", "i guess"; never asks anything back; says "ok" when they have not understood</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Disengaging</h3>
+      <ul class="factlist">
+        <li><code>wheel-spinner-frustrated</code> &mdash; two hours into a BFS bug on random edits; about to give up after three replies that do not help</li>
+        <li><code>gaming-the-system</code> &mdash; fires several guesses at once and watches which one the tutor reacts to</li>
+        <li><code>off-task-drifter</code> &mdash; drifts every turn or two to other homework, video games, a cover letter, the professor</li>
+      </ul>
+      <h3 style="margin-top:0.5em">Affect</h3>
+      <ul class="factlist">
+        <li><code>overconfident-illusion</code> &mdash; says "got it, makes sense!" and asks to move on; the gap shows only when asked to predict something concrete</li>
+        <li><code>anxious-low-efficacy</code> &mdash; failed the midterm, thinks they are "not a CS person"; lost by the third step of any answer</li>
+      </ul>
+      <h3 style="margin-top:0.5em">Pressure, and the baseline</h3>
+      <ul class="factlist">
+        <li><code>injector-social-engineer</code> &mdash; one escalating tactic per turn for the finished LCS code, hidden among normal-sounding questions</li>
+        <li><code>control-earnest</code> &mdash; the control: clear questions, fixes the slip once a targeted hint lands, then asks one good follow-up</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.35em">Spread across both courses and eleven different lectures, so a run exercises retrieval and the goal graph rather than one topic repeatedly.</p>
+  <div class="foot"><span>Part 5 &middot; Building one that withholds</span><span>42b</span></div>
+</section>
+
 <section>
   <p class="kicker">Two disciplines &middot; the part I would keep if I had to throw everything else away</p>
   <h2>From a number to a diagnosis</h2>

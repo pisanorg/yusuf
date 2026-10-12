@@ -7,7 +7,7 @@ page_class: page-talks
 <div class="talk-meta">
   <span><strong>Northwestern University</strong>, CS faculty colloquium</span>
   <span>October 2026</span>
-  <span>68 slides, 75 minutes</span>
+  <span>69 slides, 75 minutes</span>
 </div>
 
 <div class="talk-actions">

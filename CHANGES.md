@@ -12,3 +12,4 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-11 [doc] 202610Northwestern: four detail slides added (39a-39c under the trust boundary, 42a the fourteen-persona sim); slide counts 64 -> 68; preprint labels re-checked, all four still preprints; DEMO-RUNBOOK.md records what changed since it was verified on 10-09.
 
 2026-10-11 [doc] 202610Northwestern: slide 39 lists the eight pre-classifier intents; slides.pdf regenerated for the 68-slide deck (decktape needs --chrome-path here, and a Ghostscript pass to stay ~3 MB rather than 12 MB) and the two-step command is in the README.
+2026-10-11 [doc] 202610Northwestern: slide 29 drops the paywalled caveat from the visible line; the eight pre-classifier labels move onto 39a beside the classifier example; new slide 42b lists the fourteen personas, one line each. 69 slides; slides.pdf regenerated.
