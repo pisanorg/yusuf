@@ -11,3 +11,4 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-11 [scope] Deleted AI-log.md. It was world-readable here, logged instructions verbatim, and nothing requires it; left in history by choice. .githooks/pre-commit refuses a deck carrying speaker notes (install: git config core.hooksPath .githooks).
 2026-10-11 [doc] 202610Northwestern: four detail slides added (39a-39c under the trust boundary, 42a the fourteen-persona sim); slide counts 64 -> 68; preprint labels re-checked, all four still preprints; DEMO-RUNBOOK.md records what changed since it was verified on 10-09.
 
+2026-10-11 [doc] 202610Northwestern: slide 39 lists the eight pre-classifier intents; slides.pdf regenerated for the 68-slide deck (decktape needs --chrome-path here, and a Ghostscript pass to stay ~3 MB rather than 12 MB) and the two-step command is in the README.

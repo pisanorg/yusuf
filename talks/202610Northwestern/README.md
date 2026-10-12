@@ -26,7 +26,7 @@ carries its own copy of Reveal, so all three folders are independent.
 |------|-----------|
 | `slides.html` | The deck. 68 slides (8 section dividers). **No speaker notes** — this is the published copy, generated from a notes-bearing master kept in a private repo. Do not edit it here; the edit is lost the next time it is published. |
 | `img/` | The photographs and screenshots used by the opening slides (the Rock, the contribution graph, the digital twin, the banned session, and the five screens of YPDSA itself). |
-| `slides.pdf` | Slides only, no notes. Published; linked from the landing page. Regenerate with `decktape reveal http://localhost:8731/slides.html slides.pdf --size 1280x720` while serving the folder. |
+| `slides.pdf` | Slides only, no notes. Published; linked from the landing page. Regenerate it in two steps while serving the folder (see below) — decktape on its own now emits about 12 MB, and the second step brings it back to the ~3 MB the published file has always been. |
 | `index.md` | The published landing page at `pisanorg.github.io/yusuf/talks/202610Northwestern`: abstract, outline, links to the deck and the PDF. |
 | `vendor/reveal/` | Reveal.js 5.1.0 (core, white theme, notes plugin), vendored so the folder works with no network. |
 
@@ -36,6 +36,23 @@ public and serves `pisanorg.github.io/yusuf`, so it carries the deck as an
 audience sees it and nothing a presenter would rather keep. The references are
 the exception and stay public: `REFERENCES.md` and slides 61–63 carry every
 citation the notes used to.
+
+## Regenerating `slides.pdf`
+
+```bash
+cd talks/202610Northwestern && python3 -m http.server 8731 &
+decktape reveal http://localhost:8731/slides.html /tmp/raw.pdf --size 1280x720 \
+  --chrome-path "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/ebook \
+   -dNOPAUSE -dQUIET -dBATCH -sOutputFile=slides.pdf /tmp/raw.pdf
+```
+
+`--chrome-path` is needed because decktape's bundled Chrome for Testing is a
+half-extracted download on this machine (its Frameworks directory is missing);
+any installed Chrome works. The Ghostscript pass is not optional cosmetics: the
+raw decktape output is ~12 MB, and every previously published `slides.pdf` was
+~3 MB with the same per-glyph SVG text encoding that `/ebook` produces, so this
+is what keeps the published file the size it has always been.
 
 ## Running it
 
