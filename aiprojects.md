@@ -10,6 +10,96 @@ My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagramm
 Today's AI is a different beast: statistical models, billions of parameters, and the ability to hold a conversation and write production code. I started building with Claude, Gemini, ChatGPT, and GitHub Copilot in March 2026. Everything below was built with significant AI assistance, in reverse chronological order.
 </div>
 
+<!-- =============================================================
+     TABLE OF CONTENTS. Keep it in sync with the headings below.
+
+     NOTE FOR CLAUDE, or any other agent editing this page: when you add
+     a project, add a matching <li> here, in the same position the new
+     "###" heading takes on the page (newest first), and bump the number
+     in the toc-count line. The href is the heading's kramdown anchor:
+     the heading text lowercased, everything but letters, digits, spaces
+     and hyphens dropped, then spaces turned into hyphens. So
+     "### [Heap Arena Replay](url)" is reached by "#heap-arena-replay".
+     Where a heading carries a description after the link, the list uses
+     the link text alone, but the anchor still comes from the whole
+     heading: "### [MeetMe](url) - Joint Meeting Finder" is
+     "#meetme--joint-meeting-finder", two hyphens.
+     ============================================================= -->
+<nav class="project-toc" aria-label="Project index">
+<p class="toc-count">69 projects, newest first</p>
+<ul>
+  <li><a href="#outguess-me">Outguess Me</a></li>
+  <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
+  <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
+  <li><a href="#bombe-bench">Bombe Bench</a></li>
+  <li><a href="#state-space-atlas">State Space Atlas</a></li>
+  <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
+  <li><a href="#elevator-algorithm-lab">Elevator Algorithm Lab</a></li>
+  <li><a href="#where-does-it-say">Where Does It Say</a></li>
+  <li><a href="#cipher-ladder">Cipher Ladder</a></li>
+  <li><a href="#repo-weight-map">Repo Weight Map</a></li>
+  <li><a href="#css-scheduler">CSS Scheduler</a></li>
+  <li><a href="#agent-blast-radius">Agent Blast Radius</a></li>
+  <li><a href="#digital-student-assistant">Digital Student Assistant</a></li>
+  <li><a href="#mychessmaster">MyChessMaster</a></li>
+  <li><a href="#prompt-shrink-ray">Prompt Shrink Ray</a></li>
+  <li><a href="#summit-navigator">Summit Navigator</a></li>
+  <li><a href="#cron-cartographer">Cron Cartographer</a></li>
+  <li><a href="#type-witness">Type Witness</a></li>
+  <li><a href="#prompt-genome">Prompt Genome</a></li>
+  <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
+  <li><a href="#har-detective">HAR Detective</a></li>
+  <li><a href="#claude-for-stem-professors">Claude for STEM Professors</a></li>
+  <li><a href="#sql-replay">SQL Replay</a></li>
+  <li><a href="#sound-sketchpad">Sound Sketchpad</a></li>
+  <li><a href="#code-review-gauntlet">Code Review Gauntlet</a></li>
+  <li><a href="#ui-diff-lens">UI Diff Lens</a></li>
+  <li><a href="#shortcut-sprint">Shortcut Sprint</a></li>
+  <li><a href="#migration-diff-narrator">Migration Diff Narrator</a></li>
+  <li><a href="#schema-storyteller">Schema Storyteller</a></li>
+  <li><a href="#pathfinding-playground">Pathfinding Playground</a></li>
+  <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
+  <li><a href="#google-flights-mcp-server">Google Flights MCP Server</a></li>
+  <li><a href="#teaching-an-llm-tutor-to-withhold-the-answer">Teaching an LLM Tutor to Withhold the Answer</a></li>
+  <li><a href="#teaching-intro-ai-when-the-tools-can-do-the-homework">Teaching Intro AI When the Tools Can Do the Homework</a></li>
+  <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
+  <li><a href="#building-with-ai-a-mini-workshop">Building with AI: a mini workshop</a></li>
+  <li><a href="#ltms-a-truth-maintenance-system-in-python">LTMS: A Truth Maintenance System in Python</a></li>
+  <li><a href="#ladder-games">Ladder Games</a></li>
+  <li><a href="#computing-power-and-political-power">Computing Power and Political Power</a></li>
+  <li><a href="#emoji-lingua">Emoji Lingua</a></li>
+  <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
+  <li><a href="#accessibility-lens">Accessibility Lens</a></li>
+  <li><a href="#html-editor">HTML Editor</a></li>
+  <li><a href="#digital-yusuf">Digital Yusuf</a></li>
+  <li><a href="#daily-project-ideas">Daily Project Ideas</a></li>
+  <li><a href="#playful-interactions-with-ai">Playful Interactions with AI</a></li>
+  <li><a href="#letter-game">Letter Game</a></li>
+  <li><a href="#pastemd">PasteMD</a></li>
+  <li><a href="#grade-histogram-plotter">Grade Histogram Plotter</a></li>
+  <li><a href="#upvoteme">UpvoteMe</a></li>
+  <li><a href="#rankme">RankMe</a></li>
+  <li><a href="#the-ai-grading-paradox">The AI Grading Paradox</a></li>
+  <li><a href="#the-ai-learners-dilemma">The AI Learner&rsquo;s Dilemma</a></li>
+  <li><a href="#ranked-voting">Ranked Voting</a></li>
+  <li><a href="#40-greatest-innovations--ordering-game">40 Greatest Innovations – Ordering Game</a></li>
+  <li><a href="#claudebot">ClaudeBot</a></li>
+  <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
+  <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer</a></li>
+  <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver</a></li>
+  <li><a href="#grade-statistics">Grade Statistics</a></li>
+  <li><a href="#bullet-impact-simulator">Bullet Impact Simulator</a></li>
+  <li><a href="#cloud-games-portal">Cloud Games Portal</a></li>
+  <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
+  <li><a href="#stockreptile---a-chess-playing-web-app-and-learning-tool">StockReptile</a></li>
+  <li><a href="#teaching-evaluation-graph-generator">Teaching Evaluation Graph Generator</a></li>
+  <li><a href="#uw-course--professor-finder">UW Course &amp; Professor Finder</a></li>
+  <li><a href="#the-algorithmic-professor-ai-ethics-in-the-classroom">The Algorithmic Professor? AI Ethics in the Classroom</a></li>
+  <li><a href="#cs-prof-vs-gemini-prompts">CS Prof vs Gemini Prompts</a></li>
+  <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
+</ul>
+</nav>
+
 ### [Outguess Me](https://outguess-me.netlify.app)
 
 Ask a room to type a random sequence of two keys and almost everyone produces something a few lines of code can predict. Scott Aaronson has a classic demo of this, and Outguess Me is my version of it. You press F or J as unpredictably as you can for 50, 100 or 200 presses. Before each press the oracle makes its guess and shows you the SHA-256 hash of that guess plus a random nonce, so it is locked in before you choose. After the press it reveals the guess and the nonce and the page checks the hash, which means you can confirm it never peeked. Easy mode is Aaronson's original: a table of what you pressed after each run of five, falling back to shorter runs when a pattern is new. Hard mode runs six of these tables with different memory lengths and shifts weight toward whichever one is currently reading you, so changing strategy halfway helps for a few presses and then stops helping. A live chart plots the oracle's hit rate against the band a coin-flipping guesser would stay inside. When the game ends you get the breakdown: a confidence interval and a p-value against a coin, the six-press table that beat you, your run lengths next to a fair coin's, your alternation rate (people switch far too often), and bits per press measured by an adaptive compressor, where anything under 1.00 means your "random" sequence compresses. You can also paste any two-symbol string, say one a chatbot generated, or run the oracle on 200 real coin flips as a control. My scripted human-ish player, who switches keys 70% of the time, lost 34 to 16.
@@ -132,15 +222,15 @@ See [README](https://github.com/pisanuw/Claude-capstone/blob/main/agent-blast-ra
 
 (Last update September 2026)
 
-### [YPDSA](https://ypdsa.pisan.me/)
+### [Digital Student Assistant](https://digital-student-assistant.com/)
 
-A tutor that hands a data structures student working code is worse than no tutor at all. YPDSA is the digital teaching assistant for my CSS 342/343 courses, and the interesting part is what it refuses to do. Answer-withholding is enforced as a per-turn, machine-checkable contract rather than a line in a system prompt: a non-LLM policy core reads trusted learner state and sets a ceiling on an eight-rung help ladder, a deterministic detector strips solution code out of replies, and a separate judge checks each risky reply against the contract before it is sent. The design, and the method used to tune it against scripted student personas, are written up in [Teaching an LLM Tutor to Withhold the Answer](https://arxiv.org/abs/2608.12292).
+A tutor that hands a data structures student working code is worse than no tutor at all. Digital Student Assistant is the teaching assistant for my CSS 342/343 courses, and the interesting part is what it refuses to do. Answer-withholding is enforced as a per-turn, machine-checkable contract rather than a line in a system prompt: a non-LLM policy core reads trusted learner state and sets a ceiling on an eight-rung help ladder, a deterministic detector strips solution code out of replies, and a separate judge checks each risky reply against the contract before it is sent. The design, and the method used to tune it against scripted student personas, are written up in [Teaching an LLM Tutor to Withhold the Answer](https://arxiv.org/abs/2608.12292).
 
 What it does say comes from my own course rather than the internet. An offline pipeline ingests the real materials (existing PowerPoint lectures, Whisper transcripts of my own recordings, the textbook, assignment specs, Canvas PDFs, the course GitHub repos, even the course Discord) into roughly 12,000 indexed documents across nine collections, extracts a voice profile from them, and generated all 40 lecture decks plus a 40-chapter textbook the app serves next to the chat. Progress is gated by mastery: 136 learning goals, each with a pool of eight questions, where failing to show a prerequisite blocks a code attempt but never a conceptual question, and a deferred exam snoozes for a day instead of following the student around. Every reply carries a thumbs up and down, a thumbs down asks what was wrong, and anything flagged reaches me by email the next morning with a deep link straight to that message in the transcript.
 
 Two honest notes. This is the one project I run on a real Anthropic API key rather than the claude CLI, so every student turn costs money and clearing that key is the kill switch. The infrastructure is otherwise deliberately cheap: Render plus a free-tier Supabase Postgres that pauses itself after a week of no traffic, which took the login page down once before a keep-alive job and a database health indicator went in. The pilot numbers are modest and stated as such, 100 of 100 prompts answered without errors and 31 of them citing a specific slide, with correctness spot-checked on a sample rather than verified across the whole run. Login is whitelisted, so this is available to UW students at this point and not to the public.
 
-Source is not public for this one. Try it at <https://ypdsa.pisan.me/> (login required).
+Source is not public for this one. Try it at <https://digital-student-assistant.com/> (login required).
 
 (Last update September 2026)
 
@@ -346,7 +436,7 @@ The tuning method may be the more portable contribution. Scripted student person
 
 Claude was a heavy collaborator on this one, which is a slightly recursive situation: a language model helping write up how to stop a language model from being too helpful.
 
-The tutor it describes is [YPDSA](https://ypdsa.pisan.me/), deployed for CSS 342/343 and listed above.
+The tutor it describes is [Digital Student Assistant](https://digital-student-assistant.com/), deployed for CSS 342/343 and listed above.
 
 Read it at <https://arxiv.org/abs/2608.12292>
 

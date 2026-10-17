@@ -40,7 +40,7 @@ I have been building AI-assisted applications since March 2026 &mdash; games, vo
     <p>Stockfish finds the moves that lost the game, a coach model explains why, and your own mistakes become a spaced-repetition drill deck. Plus opponent scouting and a prep page for the next game.</p>
   </div>
   <div class="project-card">
-    <h3><a href="https://ypdsa.pisan.me">YPDSA</a></h3>
+    <h3><a href="https://digital-student-assistant.com/">Digital Student Assistant</a></h3>
     <p>A Claude-backed teaching assistant for my data structures courses: it asks before it answers, and gates code help behind prerequisite mastery checks. Available to UW students only at this point.</p>
   </div>
   <div class="project-card">

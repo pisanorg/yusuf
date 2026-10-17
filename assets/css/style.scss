@@ -337,6 +337,35 @@ a:hover { text-decoration: underline; color: var(--purple-dark); }
 }
 .page-aiprojects hr { margin: 2.5rem 0 1rem; }
 
+/* Table of contents at the top of the AI projects page */
+.project-toc {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 2.5rem;
+}
+.project-toc .toc-count {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .7rem;
+}
+.project-toc ul {
+  list-style: none;
+  margin: 0;
+  column-count: 3;
+  column-gap: 2rem;
+}
+.project-toc li {
+  break-inside: avoid;
+  margin-bottom: .3rem;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
 /* ----- RESEARCH PAGE ----- */
 .page-research h2 { color: var(--purple); }
 
@@ -449,6 +478,7 @@ a:hover { text-decoration: underline; color: var(--purple-dark); }
   .people-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-cols { grid-template-columns: 1fr 1fr; }
   .course-list { column-count: 1; }
+  .project-toc ul { column-count: 2; }
   .substack-cta { flex-direction: column; gap: 1rem; }
 }
 @media (max-width: 560px) {
@@ -457,4 +487,5 @@ a:hover { text-decoration: underline; color: var(--purple-dark); }
   .hero-name { font-size: 2rem; }
   .people-grid { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .project-toc ul { column-count: 1; }
 }
