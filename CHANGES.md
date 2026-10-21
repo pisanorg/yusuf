@@ -17,3 +17,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 
 2026-10-16 [doc] aiprojects: table of contents added at the top, 69 entries newest-first, 3-column .project-toc in style.scss, with an HTML-comment note telling future agents to keep it in sync.
 2026-10-16 [doc] YPDSA renamed Digital Student Assistant, now at digital-student-assistant.com (old ypdsa.pisan.me 302s there). Changed in aiprojects.md and index.md; talks/202610Northwestern left alone.
+
+2026-10-21 [doc] aiprojects: added Code Viva (code-viva.netlify.app) at the top; TOC now 70 entries.

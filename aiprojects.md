@@ -26,8 +26,9 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">69 projects, newest first</p>
+<p class="toc-count">70 projects, newest first</p>
 <ul>
+  <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
@@ -99,6 +100,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
 </ul>
 </nav>
+
+### [Code Viva](https://code-viva.netlify.app)
+
+Students now hand in polished code they cannot explain, and the fix everyone agrees on, a short oral defense, costs about 30 hours of TA time for a 36-student class. Code Viva is my attempt at a cheaper version. You upload a Gradescope or Canvas export, or point it at a GitHub Classroom assignment, and it reads each student's code and commit history and writes 4 to 6 questions about *their* submission: "`_sort` calls itself on line 56; what is the base case, and why does every call get closer to it?", "line 27 of `remove` checks `if cur is None`; what breaks if you delete it?", "what does `pv` hold, and what would be a clearer name?", and, when 99% of the code arrived in one commit at 2:47 am, "walk me through how you developed this". Each student gets a personal link to a timed text session, with extended time for accommodations and up to two follow-ups when an answer is vague, each aimed at what the answer left out. They send back a response code, and the review page shows each transcript with a proposed 0 to 3 score per question, the exact sentences the score rests on, and a flag queue (low scores, pasted answers, an unexplained commit, leaving the window) so TAs only talk to the few students who need it. Nothing is final until the instructor approves it, and the whole thing runs in the browser: the questions travel in the link's fragment and no server ever sees a submission.
+
+The idea called for Claude to write and grade the questions; I used deterministic templates over a small source analyser and a keyword rubric instead, so it costs nothing and cannot invent code that is not there. The honest limitation is that keyword scoring rewards vocabulary: a student who knows the words "base case" but not their own code can still pick up a point or two, which is why scores are proposals and the full transcript is always shown. Response codes are also not signed, so a determined student could edit their own paste counts. 79 vitest tests, 99.6% statement coverage on the core.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/code-viva/README.md) for more details on the code or try it at <https://code-viva.netlify.app>
+
+(Last update October 2026)
 
 ### [Outguess Me](https://outguess-me.netlify.app)
 
