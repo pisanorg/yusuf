@@ -26,8 +26,9 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">70 projects, newest first</p>
+<p class="toc-count">71 projects, newest first</p>
 <ul>
+  <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
@@ -100,6 +101,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
 </ul>
 </nav>
+
+### [Diagram Layout Engine](https://diagram-layout-engine.netlify.app)
+
+Mermaid made it normal to keep diagrams as text, and the standard complaint is that anything past a dozen boxes turns into spaghetti, with no easy way to see what changed between two versions. The idea was a five-week assignment: have students write the layout engine themselves. Diagram Layout Engine is my reference solution. A hand-written recursive-descent parser reads a subset of Mermaid flowchart syntax (14 node shapes, labelled links, chains, nested subgraphs with their own direction, `classDef` and `linkStyle`) and points at the line and column of the first mistake. Then the classic Sugiyama pipeline runs from scratch, with no Mermaid, dagre or ELK underneath: break cycles with a greedy feedback arc set, assign layers with network simplex, add dummy nodes for long edges, sweep the layers with barycenter or median ordering plus transposition to cut crossings, place nodes with Brandes-Köpf, and route edges as splines or orthogonal lines. The Pipeline tab steps through every stage on your own diagram, so you can watch the crossing count drop sweep by sweep. The Diff tab lays two versions out as one graph, so nothing moves and the additions, removals and changes light up. Ten examples, six themes that restyle without a new layout, SVG and PNG export, and share links.
+
+The part that surprised me was the benchmark: 50 seeded graphs and five pipeline configurations, ranked on crossings, area, edge length and bends. Median ordering, the textbook choice, lost to plain barycenter on crossings, so barycenter became the default, and no configuration wins everywhere. The honest limitation is subgraphs. Each one is laid out on its own and dropped into its parent as a fixed box, which keeps its direction but means the parent cannot interleave its nodes with outside ones, so a heavily connected subgraph comes out wider than dagre or ELK would draw it, and edges into it need extra bends. 88 vitest tests, including brute-force checks that network simplex finds the optimal layering on small graphs, 98.9% statement coverage on the core.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/diagram-layout-engine/README.md) for more details on the code or try it at <https://diagram-layout-engine.netlify.app>
+
+(Last update October 2026)
 
 ### [Code Viva](https://code-viva.netlify.app)
 

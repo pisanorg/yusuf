@@ -19,3 +19,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-16 [doc] YPDSA renamed Digital Student Assistant, now at digital-student-assistant.com (old ypdsa.pisan.me 302s there). Changed in aiprojects.md and index.md; talks/202610Northwestern left alone.
 
 2026-10-21 [doc] aiprojects: added Code Viva (code-viva.netlify.app) at the top; TOC now 70 entries.
+
+2026-10-22 [doc] aiprojects: added Diagram Layout Engine (diagram-layout-engine.netlify.app) at the top; TOC now 71 entries.
