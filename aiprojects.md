@@ -26,8 +26,9 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">71 projects, newest first</p>
+<p class="toc-count">72 projects, newest first</p>
 <ul>
+  <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
@@ -101,6 +102,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
 </ul>
 </nav>
+
+### [Letter Ledger](https://letter-ledger.netlify.app)
+
+Every fall the letter requests arrive by email: "can you write me a letter?", no deadline, no CV, and often a student I need a minute to place. Plenty of faculty now refuse unless they remember the student, and deadlines slip because everything lives in the inbox. Letter Ledger is the small tool I wanted. You set your policy once (three weeks' notice, at most eight programs, a B+ or better in one of my courses, CV and statement required, a question or two) and get a personal link. The student fills in one form: each program with its letter deadline and how the letter is submitted, the courses they took with you, their documents, their answers, and a FERPA release they sign by typing their name. The release names the records, the purpose and the programs, records whether they waived the right to read the letter, and is kept word for word with a hash, so an edit after signing shows up. The form warns them about short notice before they send it. Out comes one file, encrypted in their browser to a key only your browser holds, which they email to you. You drop the files on a dashboard that sorts every letter by deadline, flags the overdue and the due-this-week, exports calendar reminders, and writes the "yes, I will write this" or "submitted on Nov 20" email for your mail app. During the term you jot `Maya Okafor: great question on hashing #oh`, and when Maya's request arrives months later the notes are waiting. The fact outline pulls it all into a five-paragraph skeleton per program and leaves grades out when the release does not cover them.
+
+The idea called for Supabase, Resend, Stripe and Claude for drafting; I kept it entirely in the browser instead, so no server ever holds a student's CV, grades or my notes, and the outline only repeats facts someone recorded rather than writing prose. The honest limitations come with that choice: a typed name is a signature but not proof of identity, everything lives in one browser until you download the (encrypted) backup, and if you lose the key, files sent to your old link cannot be opened. 58 vitest tests, 100% statement coverage on the core.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/letter-ledger/README.md) for more details on the code or try it at <https://letter-ledger.netlify.app>
+
+(Last update October 2026)
 
 ### [Diagram Layout Engine](https://diagram-layout-engine.netlify.app)
 
