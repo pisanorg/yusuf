@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">74 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">75 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
-  <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
+  <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
   <li><a href="#elevator-algorithm-lab">Elevator Algorithm Lab</a></li>
@@ -140,6 +141,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Assignment Stress Test](https://assignment-stress-test.netlify.app)
+
+Every teaching center checklist now says "test your assignment with AI before you give it out", and almost nobody does, because doing it properly means pasting the assignment into several models, trying it the way a lazy student would and the way a careful one would, and then grading every reply against your own rubric. Assignment Stress Test does that evening of work in a few minutes. Paste the assignment and the rubric, and each Claude model makes three attempts: the assignment pasted as is, a request that includes the rubric and asks for full marks, and a three-turn conversation that plans against the rubric, writes, then checks and revises. For programming work your own pytest suite runs in the browser (Pyodide in a worker, with a time limit for the inevitable infinite loop), and the rest of the rubric is scored by a judge model reading your rubric. The report is a grid of scores by model and prompt style plus a verdict per rubric row: AI meets it, AI gets partway, or it holds up. Runs are kept term over term, so you can edit the assignment, re-test, see what changed, and spot the assignments that have aged badly as the models improved. Instructors bring their own API key, which goes straight from the browser to Anthropic, or paste replies from ChatGPT or Gemini by hand.
+
+The bundled demo is real replies, not made up. On a CS1 run-length-encoding lab, every model passed all ten tests on the first lazy paste; the only row that held up was the reflection on a bug the student hit. On a policy memo that has to answer a classmate's argument from an October 14 debate, no model could fake the debate, and Haiku more than once politely declined to write graded work at all. The honest limitation is that the scores are a lower bound: three prompt styles and one pass of a judge that can itself be wrong, so a low score is not proof an assignment is AI-proof. 53 vitest tests, with the pytest harness run for real under Python.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/assignment-stress-test/README.md) for more details on the code or try it at <https://assignment-stress-test.netlify.app>
+
+(Last update October 2026)
 
 ### [Fork Count](https://fork-count.netlify.app)
 
