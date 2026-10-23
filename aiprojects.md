@@ -13,9 +13,14 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 <!-- =============================================================
      TABLE OF CONTENTS. Keep it in sync with the headings below.
 
-     NOTE FOR CLAUDE, or any other agent editing this page: when you add
-     a project, add a matching <li> here, in the same position the new
-     "###" heading takes on the page (newest first), and bump the number
+     NOTE FOR CLAUDE, or any other agent editing this page: the list is
+     split into topic groups, each an <h4 class="toc-group"> and a <ul>.
+     The project descriptions below stay in plain newest-first order;
+     only this list is grouped. When you add a project, put its <li> at
+     the top of "Latest", which always holds the 7 newest projects, then
+     move the oldest "Latest" entry into the topic group it fits best
+     (other groups hold 3 to 10 entries; add or split a group if needed).
+     Inside every group keep page order, newest first. Bump the number
      in the toc-count line. The href is the heading's kramdown anchor:
      the heading text lowercased, everything but letters, digits, spaces
      and hyphens dropped, then spaces turned into hyphens. So
@@ -26,7 +31,8 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">74 projects, newest first</p>
+<p class="toc-count">74 projects, grouped by topic, newest first within each group</p>
+<h4 class="toc-group">Latest</h4>
 <ul>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
@@ -35,73 +41,103 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
+</ul>
+<h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
+<ul>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
-  <li><a href="#bombe-bench">Bombe Bench</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
-  <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
   <li><a href="#elevator-algorithm-lab">Elevator Algorithm Lab</a></li>
-  <li><a href="#where-does-it-say">Where Does It Say</a></li>
-  <li><a href="#cipher-ladder">Cipher Ladder</a></li>
-  <li><a href="#repo-weight-map">Repo Weight Map</a></li>
-  <li><a href="#css-scheduler">CSS Scheduler</a></li>
-  <li><a href="#agent-blast-radius">Agent Blast Radius</a></li>
-  <li><a href="#digital-student-assistant">Digital Student Assistant</a></li>
-  <li><a href="#mychessmaster">MyChessMaster</a></li>
-  <li><a href="#prompt-shrink-ray">Prompt Shrink Ray</a></li>
-  <li><a href="#summit-navigator">Summit Navigator</a></li>
-  <li><a href="#cron-cartographer">Cron Cartographer</a></li>
   <li><a href="#type-witness">Type Witness</a></li>
-  <li><a href="#prompt-genome">Prompt Genome</a></li>
-  <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
-  <li><a href="#har-detective">HAR Detective</a></li>
-  <li><a href="#claude-for-stem-professors">Claude for STEM Professors</a></li>
   <li><a href="#sql-replay">SQL Replay</a></li>
+  <li><a href="#pathfinding-playground">Pathfinding Playground</a></li>
+  <li><a href="#ltms-a-truth-maintenance-system-in-python">LTMS: A Truth Maintenance System in Python</a></li>
+  <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver</a></li>
+</ul>
+<h4 class="toc-group">Games, Puzzles &amp; Chess</h4>
+<ul>
+  <li><a href="#bombe-bench">Bombe Bench</a></li>
+  <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
+  <li><a href="#cipher-ladder">Cipher Ladder</a></li>
+  <li><a href="#mychessmaster">MyChessMaster</a></li>
+  <li><a href="#ladder-games">Ladder Games</a></li>
+  <li><a href="#letter-game">Letter Game</a></li>
+  <li><a href="#40-greatest-innovations--ordering-game">40 Greatest Innovations – Ordering Game</a></li>
+  <li><a href="#cloud-games-portal">Cloud Games Portal</a></li>
+  <li><a href="#stockreptile---a-chess-playing-web-app-and-learning-tool">StockReptile</a></li>
+</ul>
+<h4 class="toc-group">Playful Experiments</h4>
+<ul>
+  <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
   <li><a href="#sound-sketchpad">Sound Sketchpad</a></li>
+  <li><a href="#emoji-lingua">Emoji Lingua</a></li>
+  <li><a href="#bullet-impact-simulator">Bullet Impact Simulator</a></li>
+</ul>
+<h4 class="toc-group">Developer Tools</h4>
+<ul>
+  <li><a href="#repo-weight-map">Repo Weight Map</a></li>
+  <li><a href="#cron-cartographer">Cron Cartographer</a></li>
+  <li><a href="#har-detective">HAR Detective</a></li>
   <li><a href="#code-review-gauntlet">Code Review Gauntlet</a></li>
   <li><a href="#ui-diff-lens">UI Diff Lens</a></li>
   <li><a href="#shortcut-sprint">Shortcut Sprint</a></li>
   <li><a href="#migration-diff-narrator">Migration Diff Narrator</a></li>
   <li><a href="#schema-storyteller">Schema Storyteller</a></li>
-  <li><a href="#pathfinding-playground">Pathfinding Playground</a></li>
-  <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
-  <li><a href="#google-flights-mcp-server">Google Flights MCP Server</a></li>
-  <li><a href="#teaching-an-llm-tutor-to-withhold-the-answer">Teaching an LLM Tutor to Withhold the Answer</a></li>
-  <li><a href="#teaching-intro-ai-when-the-tools-can-do-the-homework">Teaching Intro AI When the Tools Can Do the Homework</a></li>
-  <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
-  <li><a href="#building-with-ai-a-mini-workshop">Building with AI: a mini workshop</a></li>
-  <li><a href="#ltms-a-truth-maintenance-system-in-python">LTMS: A Truth Maintenance System in Python</a></li>
-  <li><a href="#ladder-games">Ladder Games</a></li>
-  <li><a href="#computing-power-and-political-power">Computing Power and Political Power</a></li>
-  <li><a href="#emoji-lingua">Emoji Lingua</a></li>
-  <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
-  <li><a href="#accessibility-lens">Accessibility Lens</a></li>
   <li><a href="#html-editor">HTML Editor</a></li>
+</ul>
+<h4 class="toc-group">Accessibility</h4>
+<ul>
+  <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
+  <li><a href="#accessibility-lens">Accessibility Lens</a></li>
+  <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer</a></li>
+</ul>
+<h4 class="toc-group">Working with LLMs &amp; Agents</h4>
+<ul>
+  <li><a href="#agent-blast-radius">Agent Blast Radius</a></li>
+  <li><a href="#prompt-shrink-ray">Prompt Shrink Ray</a></li>
+  <li><a href="#prompt-genome">Prompt Genome</a></li>
+  <li><a href="#google-flights-mcp-server">Google Flights MCP Server</a></li>
   <li><a href="#digital-yusuf">Digital Yusuf</a></li>
   <li><a href="#daily-project-ideas">Daily Project Ideas</a></li>
-  <li><a href="#playful-interactions-with-ai">Playful Interactions with AI</a></li>
-  <li><a href="#letter-game">Letter Game</a></li>
-  <li><a href="#pastemd">PasteMD</a></li>
-  <li><a href="#grade-histogram-plotter">Grade Histogram Plotter</a></li>
-  <li><a href="#upvoteme">UpvoteMe</a></li>
-  <li><a href="#rankme">RankMe</a></li>
-  <li><a href="#the-ai-grading-paradox">The AI Grading Paradox</a></li>
-  <li><a href="#the-ai-learners-dilemma">The AI Learner&rsquo;s Dilemma</a></li>
-  <li><a href="#ranked-voting">Ranked Voting</a></li>
-  <li><a href="#40-greatest-innovations--ordering-game">40 Greatest Innovations – Ordering Game</a></li>
   <li><a href="#claudebot">ClaudeBot</a></li>
-  <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
-  <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer</a></li>
-  <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver</a></li>
-  <li><a href="#grade-statistics">Grade Statistics</a></li>
-  <li><a href="#bullet-impact-simulator">Bullet Impact Simulator</a></li>
-  <li><a href="#cloud-games-portal">Cloud Games Portal</a></li>
-  <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
-  <li><a href="#stockreptile---a-chess-playing-web-app-and-learning-tool">StockReptile</a></li>
-  <li><a href="#teaching-evaluation-graph-generator">Teaching Evaluation Graph Generator</a></li>
-  <li><a href="#uw-course--professor-finder">UW Course &amp; Professor Finder</a></li>
-  <li><a href="#the-algorithmic-professor-ai-ethics-in-the-classroom">The Algorithmic Professor? AI Ethics in the Classroom</a></li>
   <li><a href="#cs-prof-vs-gemini-prompts">CS Prof vs Gemini Prompts</a></li>
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
+</ul>
+<h4 class="toc-group">Teaching with AI: Tutors, Papers &amp; Talks</h4>
+<ul>
+  <li><a href="#where-does-it-say">Where Does It Say</a></li>
+  <li><a href="#digital-student-assistant">Digital Student Assistant</a></li>
+  <li><a href="#claude-for-stem-professors">Claude for STEM Professors</a></li>
+  <li><a href="#teaching-an-llm-tutor-to-withhold-the-answer">Teaching an LLM Tutor to Withhold the Answer</a></li>
+  <li><a href="#teaching-intro-ai-when-the-tools-can-do-the-homework">Teaching Intro AI When the Tools Can Do the Homework</a></li>
+  <li><a href="#building-with-ai-a-mini-workshop">Building with AI: a mini workshop</a></li>
+  <li><a href="#computing-power-and-political-power">Computing Power and Political Power</a></li>
+  <li><a href="#playful-interactions-with-ai">Playful Interactions with AI</a></li>
+</ul>
+<h4 class="toc-group">AI Ethics Classroom Exercises</h4>
+<ul>
+  <li><a href="#the-ai-grading-paradox">The AI Grading Paradox</a></li>
+  <li><a href="#the-ai-learners-dilemma">The AI Learner&rsquo;s Dilemma</a></li>
+  <li><a href="#the-algorithmic-professor-ai-ethics-in-the-classroom">The Algorithmic Professor? AI Ethics in the Classroom</a></li>
+</ul>
+<h4 class="toc-group">Course &amp; Department Tools</h4>
+<ul>
+  <li><a href="#css-scheduler">CSS Scheduler</a></li>
+  <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
+  <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
+  <li><a href="#grade-histogram-plotter">Grade Histogram Plotter</a></li>
+  <li><a href="#grade-statistics">Grade Statistics</a></li>
+  <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
+  <li><a href="#teaching-evaluation-graph-generator">Teaching Evaluation Graph Generator</a></li>
+  <li><a href="#uw-course--professor-finder">UW Course &amp; Professor Finder</a></li>
+</ul>
+<h4 class="toc-group">Sharing, Voting &amp; Scheduling</h4>
+<ul>
+  <li><a href="#summit-navigator">Summit Navigator</a></li>
+  <li><a href="#pastemd">PasteMD</a></li>
+  <li><a href="#upvoteme">UpvoteMe</a></li>
+  <li><a href="#rankme">RankMe</a></li>
+  <li><a href="#ranked-voting">Ranked Voting</a></li>
+  <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
 

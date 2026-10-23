@@ -23,3 +23,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-22 [doc] aiprojects: added Diagram Layout Engine (diagram-layout-engine.netlify.app) at the top; TOC now 71 entries.
 
 2026-10-23 [doc] aiprojects: added Fork Count (fork-count.netlify.app) at the top; TOC now 74 entries.
+
+2026-10-23 [doc] aiprojects: TOC grouped under topic headers (Latest = 7 newest, then 10 topic groups of 3-10); descriptions unchanged; .toc-group style in style.scss; maintainer note updated.

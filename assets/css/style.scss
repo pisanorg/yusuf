@@ -353,6 +353,15 @@ a:hover { text-decoration: underline; color: var(--purple-dark); }
   color: var(--gold);
   margin-bottom: .7rem;
 }
+.project-toc .toc-group {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 1rem 0 .4rem;
+  padding-bottom: .2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+.project-toc .toc-count + .toc-group { margin-top: 0; }
 .project-toc ul {
   list-style: none;
   margin: 0;
