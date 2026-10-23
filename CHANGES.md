@@ -21,3 +21,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-21 [doc] aiprojects: added Code Viva (code-viva.netlify.app) at the top; TOC now 70 entries.
 
 2026-10-22 [doc] aiprojects: added Diagram Layout Engine (diagram-layout-engine.netlify.app) at the top; TOC now 71 entries.
+
+2026-10-23 [doc] aiprojects: added Fork Count (fork-count.netlify.app) at the top; TOC now 74 entries.

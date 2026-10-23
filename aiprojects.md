@@ -26,8 +26,9 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">73 projects, newest first</p>
+<p class="toc-count">74 projects, newest first</p>
 <ul>
+  <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
@@ -103,6 +104,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
 </ul>
 </nav>
+
+### [Fork Count](https://fork-count.netlify.app)
+
+Every operating systems exam has the question: here are five lines of C with `fork()` in a loop and a `printf` at the bottom, how many times is hello printed, and which of these outputs could you see? Students guess, and the honest answer depends on things they have not been taught to track: which process exists when, what `wait()` forces to happen first, and whether text still sitting in the stdio buffer gets copied into the child. Fork Count answers it exhaustively. Paste a snippet and a small interpreter runs every process, draws the process tree, and lists every output any schedule could produce, with a switch for where stdout goes (a terminal is line-buffered, a pipe is not, which is why `printf("hello "); fork();` prints hello twice). Type an output you think is possible and it either shows a schedule that prints it or says why none can: "parent cannot come next: pid 1000 is blocked in wait() at line 12 until one of its children exits, and pid 1001 still has to print child". You can step one schedule at a time and watch processes go runnable, blocked, zombie and orphan, and a generator writes new exam questions whose answers are checked against every schedule, exported as Markdown or as a QTI file for Canvas.
+
+The trick that keeps it small is that each process is deterministic once you know which way each fork went, so the interpreter just reruns `main()` along that path, and the only real choice left is which process writes next. Sixteen identical processes would be millions of states, so states whose processes have the same future are treated as one, and a test checks the shortcut against brute force. The honest limitation is the C subset: one `main()`, no pointers, pipes, signals or threads, `exec` is a stub, and pids are one consistent numbering rather than whatever the kernel would hand out. 94 vitest tests, 99% statement coverage on the core.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/fork-count/README.md) for more details on the code or try it at <https://fork-count.netlify.app>
+
+(Last update October 2026)
 
 ### [Brocot Gear Finder](https://brocot-gear-finder.netlify.app)
 
