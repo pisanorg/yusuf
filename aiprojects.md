@@ -26,8 +26,9 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">72 projects, newest first</p>
+<p class="toc-count">73 projects, newest first</p>
 <ul>
+  <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
@@ -102,6 +103,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#history-of-ai-slides-by-gemini-pro">History of AI slides by Gemini Pro</a></li>
 </ul>
 </nav>
+
+### [Brocot Gear Finder](https://brocot-gear-finder.netlify.app)
+
+Gears have whole numbers of teeth, so a clockmaker who needs the hour hand to turn once for every 12 turns of the minute hand is fine, but one who needs a sidereal day, a lunar month or a year is stuck approximating. In the 1860s Achille Brocot, a Paris clockmaker, attacked this with hand-built tables that turn out to be the Stern-Brocot tree, the same tree CS students meet as a way to enumerate the rationals. Brocot Gear Finder is that problem as a toy. Type a target (`12`, `24*60`, `365.2422/366.2422`), set the tooth range and up to three stages, and it lists the most accurate compound gear trains with the error in parts per million and as a clock that gains or loses so many seconds a day. The trick is that a ratio N/D is buildable in k stages exactly when both N and D are products of k tooth counts in range, so the search marks every such product once and tests the numerators nearest each possible denominator; sidereal time with 8 to 120 teeth comes out at 2.3 parts per billion in three stages, about a fifth of a millisecond a day. A second panel shows the continued fraction, the path down the Stern-Brocot tree and which convergents you can actually build, which is Brocot's point: the best fraction usually has a prime factor no gear can carry, and a slightly worse neighbour that factors into small numbers wins. The chosen train turns on screen with involute teeth phased so they really mesh, a dial shows the hand drifting from where it should be over a million turns, and you can download the gears as an SVG for a laser cutter or share the design as a link.
+
+The idea suggested walking the tree to find candidates; I show the tree for understanding but the trains come from the exhaustive search, since the tree tells you which fractions are good, not which ones you can cut. The honest limitation is that the layout is a schematic: it does not check that a big wheel clears a neighbouring axle or that small pinions would be undercut, and it stops at three stages. 44 vitest tests, 100% statement coverage on the core.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/brocot-gear-finder/README.md) for more details on the code or try it at <https://brocot-gear-finder.netlify.app>
+
+(Last update October 2026)
 
 ### [Letter Ledger](https://letter-ledger.netlify.app)
 
