@@ -424,7 +424,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <h3>Wall 2: retrieval</h3>
       <ul>
         <li>Anything that did get indexed and looks like a solution or key is filtered out of <code>find_topic</code>.</li>
-        <li>A search keeps its course's chunks plus the shared ones, but only where the collection is stamped: an older, unstamped store is searched course-blind, never emptied.</li>
+        <li>A search keeps its course's chunks plus the shared ones, but only where the collection is stamped: an older, unstamped store is searched course-blind, never emptied. Production's store is that older kind until the rebuilt one ships with CSS 430.</li>
       </ul>
       <h3 style="margin-top:0.4em">And the repo itself</h3>
       <ul>
@@ -691,7 +691,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <div class="cols">
     <div>
       <ul style="font-size:0.62em">
-        <li><strong>Cuts</strong> any C++ block over 4 lines at any rung, and any C++ at all at H4 and below (signatures and blanked templates too).</li>
+        <li><strong>Cuts</strong> any C++ block over 4 lines, and any C++ at all at H4 and below (signatures and blanked templates too). At H5 and H6 a long block is held for the judge's code review instead.</li>
         <li><strong>Finds code</strong> in fences, tildes, indented blocks, raw <code>&lt;pre&gt;</code>, runs of single-span lines, bare code at the margin, and a block that closes braces an earlier one opened.</li>
         <li><strong>Decodes</strong> base64 runs and flags the ones that decode to C++.</li>
         <li><strong>Exempt:</strong> pseudocode with <code>___</code> blanks, four lines or fewer, inline spans in prose.</li>
@@ -723,10 +723,10 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       </ul>
     </div>
     <div style="flex:1">
-      <p class="tiny" style="margin-bottom:0.2em"><strong>A real verdict</strong>, from a local run this week (every model call through the <code>claude</code> CLI, a demo student, no production data):</p>
+      <p class="tiny" style="margin-bottom:0.2em"><strong>A real verdict</strong>, from a local run this week (every model call through the <code>claude</code> CLI, no knowledge base, a demo student, no production data):</p>
       <blockquote class="rev">"The draft shows a complete, compilable function solving a different problem (sumList), which is compliant at H5 as a worked example, but then immediately applies it to the student's own task by naming the exact bug in their insertBack code..."
         <span class="who">rule: <code>code_reveal</code> &middot; verdict: revise &middot; detector cut: yes</span></blockquote>
-      <p class="tiny">The worked example was allowed. Pointing it at the student's own bug was not.</p>
+      <p class="tiny">The worked example was allowed. Pointing it at the student's own bug was not. The rewrite failed too, so the student got the templated pointer to the slides.</p>
     </div>
   </div>
   <div class="foot"><span>Part 2 &middot; The supervised turn</span></div>
@@ -1025,7 +1025,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
         <li>It never blocks the live pipeline.</li>
       </ul>
       <h3 style="margin-top:0.4em">Flags decided by experiment</h3>
-      <p>Judging every code turn was switched off in production after a three-repeat comparison showed more revisions and no safety gain.</p>
+      <p>Judging every code turn is kept off in production after a three-repeat comparison showed more revisions and no safety gain.</p>
     </div>
   </div>
   <p class="cite" style="margin-top:0.4em">Caveat: simulated students learn faster than real ones. On the limits of simulated students: Scarlatos et al. (ACL 2026).</p>
