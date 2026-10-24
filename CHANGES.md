@@ -27,3 +27,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-23 [doc] aiprojects: TOC grouped under topic headers (Latest = 7 newest, then 10 topic groups of 3-10); descriptions unchanged; .toc-group style in style.scss; maintainer note updated.
 
 2026-10-24 [doc] talks: four DSA decks (HowItWorks 40, ForFaculty 26, YourCourse 28, ForStudents 14 slides), landing pages, PDFs, index cards. No speaker notes or production data in any.
+
+2026-10-24 [doc] talks/202610DSA-*: wording fixes from the notes read (explain mode, keys hidden by name, activity vs chat records, code review at H5/H6, judge flag); PDFs rebuilt.

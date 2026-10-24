@@ -247,7 +247,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     <div class="card warn">
       <h3>They ask for answers</h3>
       <p class="num-big" style="font-size:1.6em">~47%</p>
-      <p>of students' conversations with Claude were direct requests for answers or finished work. Computer science made up 38.6% of them.</p>
+      <p>of students' conversations with Claude were direct requests for answers or finished work. Computer science was 38.6% of all students' conversations, against 5.4% of US degrees.</p>
       <p class="cite">Anthropic Education Report (2025)</p>
     </div>
     <div class="card warn">
@@ -303,7 +303,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
       <text x="512" y="132" text-anchor="end" font-size="12.5" fill="#a3341f" font-style="italic">code starts above this line</text>
       <rect x="40" y="88" width="470" height="32" rx="6" fill="#ece8f3" stroke="#c9bfdd"/><text x="54" y="109"><tspan font-weight="700" fill="#4b2e83">H5</tspan>  worked example of a <tspan font-style="italic">different</tspan> problem</text>
       <rect x="40" y="52" width="470" height="32" rx="6" fill="#ece8f3" stroke="#c9bfdd"/><text x="54" y="73"><tspan font-weight="700" fill="#4b2e83">H6</tspan>  pseudocode, key lines left blank</text>
-      <rect x="40" y="16" width="470" height="32" rx="6" fill="#f4f0e6" stroke="#85754d" stroke-dasharray="5 4"/><text x="54" y="37"><tspan font-weight="700" fill="#4b2e83">H7</tspan>  full solution <tspan font-size="12.5" fill="#6b6b76">(never for students)</tspan></text>
+      <rect x="40" y="16" width="470" height="32" rx="6" fill="#f4f0e6" stroke="#85754d" stroke-dasharray="5 4"/><text x="54" y="37"><tspan font-weight="700" fill="#4b2e83">H7</tspan>  full solution <tspan font-size="12.5" fill="#6b6b76">(only in an admin's explain mode)</tspan></text>
     </g>
   </svg>
   </div>
@@ -349,7 +349,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <p class="kicker">Idea 2 &middot; built from your course</p>
   <h2>It teaches from your materials, beside your slides</h2>
   <div class="grid2" style="margin-top:0.3em">
-    <div class="card purple"><h3>Your materials</h3><p>Slides, lecture recordings (transcribed), the textbook, assignments, and your course's GitHub and Discord posts, searched by course. Exams and answer keys are kept out.</p></div>
+    <div class="card purple"><h3>Your materials</h3><p>Slides, lecture recordings (transcribed), the textbook, assignments, your course repos and your own Discord posts. Exams are never read, and anything named like a solution or answer key is hidden from the tutor.</p></div>
     <div class="card purple"><h3>Slides beside the chat</h3><p>When the answer is on a slide, the slide opens next to the conversation. Every lecture also exists as a narrated deck and a book chapter.</p></div>
     <div class="card gold"><h3>Class materials, live</h3><p>Upload a syllabus, reading or assignment and the tutor can use it at once, only for your class. Tick <em>graded</em> and any matching question is always reviewed and never escalated.</p></div>
     <div class="card gold"><h3>A goal graph and practice bank</h3><p>Each course has a map of learning goals with prerequisites, exercises, mastery questions with rubrics, and short programs with one bug each.</p></div>
@@ -558,7 +558,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
     </div>
     <div>
       <ul style="font-size:0.62em">
-        <li><strong>Usage records carry ids and counts,</strong> never what a student typed.</li>
+        <li><strong>Activity records</strong> (pages, clicks, time on slides) carry ids and counts, never what a student typed. Conversations are stored, and the class's instructors can read them.</li>
         <li><strong>Canvas:</strong> rosters come from a class list read in the instructor's browser. No grades in or out, no Canvas tokens.</li>
         <li><strong>Model provider:</strong> no training on the data is requested, under the API terms.</li>
         <li><strong>Encrypted backups</strong>, nightly, kept up to five weeks.</li>
@@ -577,7 +577,7 @@ blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); mar
   <div class="grid2" style="margin-top:0.3em">
     <div class="card purple"><h3>No solutions</h3><p>A ceiling set in code, an automatic cut of long code on every reply, and a second model reviewing risky replies. The full-solution rung exists only for an administrator's course-wide "explain mode".</p></div>
     <div class="card purple"><h3>Graded work stays protected</h3><p>A question matching an instructor's graded assignment is always reviewed and never escalated. While a mastery check or graded round is open, its topics are held.</p></div>
-    <div class="card purple"><h3>Exams stay out</h3><p>The content pipeline never reads an exam. Answer keys, hidden course files and private repositories come in only with explicit consent, and are never shown.</p></div>
+    <div class="card purple"><h3>Exams stay out</h3><p>The content pipeline never reads an exam. Files named like answer keys, hidden course files and private repositories come in only with explicit consent, and anything named like a solution is hidden from the tutor.</p></div>
     <div class="card warn"><h3>What it cannot do</h3><p>Stop a student opening an unguarded chatbot. So DSA aims to be the better path: course-specific, a logged way to get more help, and an email to the instructor one click away.</p></div>
   </div>
   <div class="foot"><span>Part 2 &middot; For administration</span></div>
