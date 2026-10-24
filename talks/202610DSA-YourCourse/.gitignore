@@ -1,0 +1,7 @@
+# Speaker-private. This repo is public and serves pisanorg.github.io/yusuf.
+# The notes live in the private dsa-instructor repo (research/<talk>/NOTES.md);
+# these entries are a guard, so a stray copy landing here cannot be committed.
+NOTES.md
+SCRIPT.md
+*-presenter.pdf
+slides-notes.html

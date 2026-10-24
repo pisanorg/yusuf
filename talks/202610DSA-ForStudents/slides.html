@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet DSA, Your Course Tutor</title>
+<link rel="stylesheet" href="vendor/reveal/dist/reveal.css">
+<link rel="stylesheet" href="vendor/reveal/dist/theme/white.css">
+<style>
+  :root {
+    --purple: #4b2e83;
+    --purple-soft: #6f54a8;
+    --gold: #85754d;
+    --ink: #22222a;
+    --muted: #6b6b76;
+    --rule: #dcdce4;
+    --warn: #a3341f;
+    --ok: #1f6b45;
+  }
+  .reveal {
+    font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: var(--ink);
+  }
+  .reveal h1, .reveal h2, .reveal h3 { color: var(--purple); text-transform: none; letter-spacing: -0.01em; }
+  .reveal h1 { font-size: 1.75em; line-height: 1.12; }
+  .reveal h2 { font-size: 1.28em; line-height: 1.18; margin-bottom: 0.5em; }
+  .reveal h3 { font-size: 1.0em; }
+  .reveal .slides section { text-align: left; }
+  .reveal .slides section.center { text-align: center; }
+  .reveal ul, .reveal ol { display: block; margin-left: 1.1em; }
+  .reveal li { margin: 0.26em 0; line-height: 1.32; }
+  .reveal li li { font-size: 0.9em; color: var(--muted); }
+  .reveal p { line-height: 1.38; }
+  .reveal em { color: var(--purple); font-style: italic; }
+  .reveal strong { color: var(--ink); }
+  .reveal code { font-size: 0.8em; background: #f2f2f6; padding: 0.05em 0.3em; border-radius: 3px; }
+
+  /* eyebrow label + footer */
+  .kicker {
+    font-size: 0.46em; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 0.35em 0; font-weight: 600;
+  }
+  .foot {
+    position: absolute; bottom: -0.2em; left: 0; right: 0;
+    font-size: 0.4em; color: #b9b9c4; display: flex; justify-content: space-between;
+  }
+  /* big statement slide */
+  .statement { font-size: 1.32em; line-height: 1.32; color: var(--purple); font-weight: 600; }
+  .sub { font-size: 0.72em; color: var(--muted); }
+  .tiny { font-size: 0.56em; color: var(--muted); line-height: 1.35; }
+  .cite { font-size: 0.5em; color: #9a9aa6; }
+  /* verbatim payloads on the boundary detail slides (39a-39c): real
+     objects and the real rendered contract, not prettified paraphrases */
+  .payload { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.46em;
+             line-height: 1.5; background: #f4f4f8; border: 1px solid var(--rule);
+             border-radius: 4px; padding: 0.5em 0.7em; white-space: pre-wrap;
+             color: var(--ink); margin: 0.3em 0; }
+  .payload .k { color: var(--purple); font-weight: 600; }
+  .payload .c { color: var(--muted); }
+  .factlist { font-size: 0.5em; line-height: 1.5; margin: 0.2em 0 0; padding-left: 1.1em; }
+  .factlist li { margin-bottom: 0.12em; }
+  .movelist { font-size: 0.5em; line-height: 1.5; column-count: 2; column-gap: 1em; margin: 0.2em 0 0; }
+  .movelist li { margin-bottom: 0.15em; break-inside: avoid; }
+  .movelist code { font-size: 0.92em; }
+  .cnum { color: var(--purple-soft); white-space: nowrap; }
+
+  /* links: the deck palette, not Reveal's default blue */
+  .reveal a { color: var(--purple-soft); text-decoration: underline;
+              text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .reveal a:hover { color: var(--purple); }
+
+  /* section divider */
+  section.divider { text-align: left; }
+  section.divider h2 { font-size: 1.7em; border-left: 8px solid var(--gold); padding-left: 0.5em; }
+  section.divider p { font-size: 0.78em; color: var(--muted); padding-left: 1.0em; }
+
+  /* two-column */
+  .cols { display: flex; gap: 1.3em; align-items: flex-start; }
+  .cols > * { flex: 1; min-width: 0; }
+  .cols.tight { gap: 0.9em; }
+  /* body text inside a column reads smaller than a full-width paragraph */
+  .cols > div:not(.box) > p, .cols > div:not(.box) > ul, .cols > div:not(.box) > ol { font-size: 0.86em; }
+  .cols > div:not(.box) > p.cite { font-size: 0.5em; }
+  .cols > div:not(.box) > p.tiny { font-size: 0.56em; }
+  .cols > div:not(.box) > p.sub { font-size: 0.72em; }
+
+  /* callout box */
+  .box {
+    border: 2px solid var(--rule); border-left: 6px solid var(--purple);
+    border-radius: 6px; padding: 0.55em 0.75em; background: #fbfbfd;
+  }
+  .box.warn { border-left-color: var(--warn); }
+  .box.ok { border-left-color: var(--ok); }
+  .box h3 { margin: 0 0 0.2em 0; font-size: 0.74em; }
+  .box p, .box ul, .box ol { font-size: 0.66em; margin: 0.14em 0; line-height: 1.32; }
+
+  /* tables */
+  .reveal table { font-size: 0.62em; border-collapse: collapse; width: 100%; }
+  .reveal table th {
+    text-align: left; border-bottom: 2px solid var(--purple); color: var(--purple);
+    padding: 0.3em 0.5em; font-weight: 600;
+  }
+  .reveal table td { border-bottom: 1px solid var(--rule); padding: 0.3em 0.5em; vertical-align: top; }
+  .reveal table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .reveal table th.num { text-align: right; }
+
+  /* screenshot slides */
+  .shotwrap { text-align: center; }
+  .shotwrap img { border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotpair { display: flex; gap: 0.7em; align-items: flex-start; justify-content: center; }
+  .shotpair img { border: 1px solid var(--rule); border-radius: 5px; max-width: 100%; max-height: 15.5em; }
+  .shotpair.photos img { max-height: 9.6em; }
+  .shotfull img { max-height: 16em; max-width: 100%; }
+  /* the two reference slides */
+  .refcols { font-size: 0.5em; align-items: flex-start; }
+  .refcols .refhead { color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em;
+                      font-size: 0.95em; font-weight: 600; margin: 0.5em 0 0.15em 0; }
+  .refcols .refhead:first-child { margin-top: 0; }
+  .reflist { margin: 0 0 0 1em; font-size: 1em; }
+  .reflist li { margin: 0.12em 0; line-height: 1.22; font-size: 1em; color: var(--ink); }
+  .reflist li em { color: var(--muted); font-style: italic; }
+
+  .statement .who { display: block; font-size: 0.5em; letter-spacing: 0.1em;
+                    text-transform: uppercase; color: var(--gold); font-weight: 600;
+                    margin-bottom: 0.1em; }
+  .up { color: var(--ok); font-weight: 700; }
+  .down { color: var(--warn); font-weight: 700; }
+  .flat { color: var(--muted); font-weight: 700; }
+  .fail { color: var(--warn); }
+  .pass { color: var(--ok); }
+
+  /* stat tiles (this deck) */
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5em; }
+  .tile { border: 2px solid var(--rule); border-radius: 6px; padding: 0.4em 0.6em; background: #fbfbfd; }
+  .tile .n { font-size: 1.15em; font-weight: 700; color: var(--purple); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .tile .n.warn { color: var(--warn); }
+  .tile .c { font-size: 0.5em; color: var(--muted); line-height: 1.3; margin-top: 0.2em; }
+  .status { font-size: 0.85em; color: var(--muted); white-space: nowrap; }
+
+  /* keep the footer clear of the last block on a full slide */
+  .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em; }
+  .reveal .slides section aside.notes { display: none !important; }
+  .reveal .slides section { overflow: visible; }
+  .reveal svg text { font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+
+  /* pull quotes, from the SIGCSE deck */
+  blockquote.rev {
+    border: none; box-shadow: none; background: #f7f5fa; border-left: 5px solid var(--purple-soft);
+    padding: 0.5em 0.8em; font-size: 0.66em; font-style: normal; width: 100%; margin: 0.4em 0;
+  }
+blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); margin-top: 0.3em; }
+
+  /* ---- added for the DSA talk series ---- */
+  .reveal .slide-number { font-size: 13px; color: #9a9aa6; background: transparent; right: auto; left: 50%; transform: translateX(-50%); bottom: 10px; }
+  .foot { justify-content: flex-start; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55em; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55em; }
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.5em; }
+  .card { border: 2px solid var(--rule); border-radius: 8px; padding: 0.45em 0.65em; background: #fbfbfd; }
+  .card h3 { margin: 0 0 0.2em 0; font-size: 0.7em; color: var(--purple); }
+  .card p, .card ul { font-size: 0.56em; margin: 0.12em 0; line-height: 1.34; }
+  .card ul { margin-left: 1em; }
+  .card .tag { display: inline-block; font-size: 0.42em; letter-spacing: 0.08em; text-transform: uppercase;
+               color: var(--gold); font-weight: 700; margin-bottom: 0.15em; }
+  .card.gold { border-top: 5px solid var(--gold); }
+  .card.purple { border-top: 5px solid var(--purple); }
+  .card.ok { border-top: 5px solid var(--ok); }
+  .card.warn { border-top: 5px solid var(--warn); }
+  .pill { display: inline-block; padding: 0.05em 0.5em; border-radius: 999px; background: #efeaf6;
+          color: var(--purple); font-size: 0.8em; font-weight: 600; white-space: nowrap; }
+  .pill.gold { background: #f4f0e6; color: #6d5f3a; }
+  .pill.ok { background: #e6f2ec; color: var(--ok); }
+  .pill.warn { background: #f7e7e3; color: var(--warn); }
+  .shotwrap.framed img { box-shadow: 0 6px 22px rgba(34,34,42,0.12); }
+  .shotside { display: flex; gap: 1em; align-items: flex-start; }
+  .shotside .shot { flex: 1.35; min-width: 0; }
+  .shotside .shot img { width: auto; max-width: 100%; max-height: 15.6em; border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotside .side { flex: 0.65; min-width: 0; }
+  .shotside .side p, .shotside .side ul { font-size: 0.62em; }
+  .phone img { max-height: 15.5em; border: 1px solid var(--rule); border-radius: 14px; }
+  .caption { font-size: 0.5em; color: var(--muted); margin-top: 0.35em; }
+  .quote { font-size: 0.95em; color: var(--purple); font-weight: 600; line-height: 1.3; }
+  .ladder td:first-child { font-weight: 700; color: var(--purple); white-space: nowrap; }
+  .chat { font-size: 0.52em; line-height: 1.38; }
+  .chat .s, .chat .t { border-radius: 10px; padding: 0.45em 0.7em; margin: 0.3em 0; }
+  .chat .s { background: #eceaf1; margin-left: 18%; }
+  .chat .t { background: #f3f0fa; border: 1px solid #e2dcf0; margin-right: 8%; }
+  .chat .who { font-size: 0.8em; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .do, .dont { font-size: 0.6em; line-height: 1.35; }
+  .do li::marker { content: "\2713  "; color: var(--ok); font-weight: 700; }
+  .dont li::marker { content: "\2717  "; color: var(--warn); font-weight: 700; }
+  .center-block { margin-left: auto; margin-right: auto; }
+  .num-big { font-size: 2.1em; font-weight: 800; color: var(--purple); line-height: 1; font-variant-numeric: tabular-nums; }
+  .reveal svg.diagram { display: block; margin: 0.2em auto 0; }
+  /* print-pdf drops the section padding that keeps the footer clear of the last block */
+  html.print-pdf .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em !important; box-sizing: content-box; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="center">
+  <p class="kicker">Week 1 orientation</p>
+  <h1>Meet DSA,<br>your course tutor</h1>
+  <p class="sub">What it does, what it will not do,<br>and how to get the most out of it</p>
+  <p style="margin-top:1.1em"><a href="https://digital-student-assistant.com"><strong>digital-student-assistant.com</strong></a></p>
+  <p class="tiny" style="margin-top:1.2em">DSA (Digital Student Assistant), formerly YPDSA</p>
+</section>
+
+<section>
+  <p class="kicker">What it is</p>
+  <h2>A tutor that knows your course, and asks before it tells</h2>
+  <div class="shotside">
+    <div class="shot"><img src="img/chat-full.png" alt="The DSA chat: a lecture deck on the left, a conversation with the tutor on the right."></div>
+    <div class="side">
+      <ul>
+        <li>It has read your course's <strong>lectures, slides and textbook</strong>, and anything your instructor adds.</li>
+        <li>It is open <strong>any time</strong>, on a laptop or a phone.</li>
+        <li>It is here to help you <strong>learn</strong> the material, not to do the course for you.</li>
+      </ul>
+      <div class="box" style="margin-top:0.5em">
+        <p>Think of it as office hours that never close, with a tutor who keeps asking <em>"what do you think?"</em></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Getting in</p>
+  <h2>Sign in with the address on your class roster</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.2"><img src="img/welcome.png" alt="The welcome page: pick one or more courses, then Continue to the chat."></div>
+    <div class="side" style="flex:0.8">
+      <ol>
+        <li>Go to <strong>digital-student-assistant.com</strong>.</li>
+        <li>Type your school email. You get a <strong>6-digit code</strong> and a link. No password.</li>
+        <li>Pick your course on the Welcome page, then <strong>Continue to the chat</strong>.</li>
+      </ol>
+      <p class="tiny" style="margin-top:0.6em">Told your address is not authorized? Your instructor adds you to the class roster. Ask them.</p>
+      <p class="tiny">You can add or drop a course any time in Settings.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">The main screen</p>
+  <h2>Ask in your own words. The slide opens beside you.</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.05"><img src="img/chat-refusal.png" alt="A student asks for the code for insertBack; the tutor declines and asks what the student already knows about nodes and pointers."></div>
+    <div class="side" style="flex:0.95">
+      <ul>
+        <li><strong>Slides beside the chat.</strong> When the answer is on a slide, it opens next to you. On a phone, tap <em>Slides</em>.</li>
+        <li><strong><code>&lt;/&gt;</code> for code.</strong> Paste code, or photograph handwritten code. It tells you what is wrong and where to look. First it asks what score you expect.</li>
+        <li><strong>💡 for ideas</strong> when you do not know what to ask.</li>
+        <li><strong>👍 / 👎</strong> under every reply. A 👎 with a word of why reaches the people who run it.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">The deal</p>
+  <h2>What it will do, and what it will not</h2>
+  <div class="cols">
+    <div class="box ok">
+      <h3>It will</h3>
+      <ul class="do">
+        <li>Work through a <strong>similar problem</strong> with you, and point you to the slide</li>
+        <li>Ask for <strong>your guess first</strong>, then confirm or correct it</li>
+        <li>Read your code and tell you <strong>what is wrong and where to look</strong></li>
+        <li>Quiz you, trace an algorithm step by step, or explain why an answer is wrong</li>
+        <li>Give <strong>one more step</strong> when you have tried and are still stuck</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>It will not</h3>
+      <ul class="dont">
+        <li>Write your <strong>assignment's solution</strong>. Push for it and it holds where it is, and says why</li>
+        <li>Paste long code. Long code blocks are cut automatically, every time</li>
+        <li>Confirm a final answer on a <strong>graded</strong> assignment your instructor uploaded</li>
+        <li>Do work for another class, or wander off topic</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box" style="margin-top:0.6em">
+    <p><strong>It can be wrong.</strong> Check anything important against the lecture or the book, and 👎 a reply that is off.</p>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Why it holds back</p>
+  <h2>You learn from the step you take, not the one you read</h2>
+  <div class="shotside">
+    <div class="side" style="flex:0.9">
+      <p class="statement" style="font-size:1.05em">An AI that hands out answers makes homework easier and exams harder.</p>
+      <p style="font-size:0.62em; margin-top:0.5em">In a large field study, students with an unrestricted chatbot did better on practice problems and <strong>worse on the exam</strong> than students with no AI. A version that gave hints instead of answers removed most of that harm.</p>
+      <p class="cite">Bastani et al. (2025), <em>PNAS</em> 122(26)</p>
+      <p style="font-size:0.62em; margin-top:0.5em">So DSA gives you the next step, and waits for you to take it.</p>
+    </div>
+    <div class="shot" style="flex:1.1"><img src="img/chat-attempt.png" alt="The student pastes an insertBack function; the tutor praises the traversal and asks what cur is when the list is empty."></div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">How much help you get</p>
+  <h2>Help grows with what you have shown it</h2>
+  <div class="grid2" style="margin-top:0.3em">
+    <div class="card purple"><h3>New topic? More help.</h3><p>On a topic you have not shown yet, it works a full example on a <em>different</em> problem. On one you know, it gives a pointer or a question, so you take the step.</p></div>
+    <div class="card purple"><h3>Show your attempt</h3><p>A question about your own code always gets at least the approach in words. Your work is what buys a sharper next step.</p></div>
+    <div class="card gold"><h3>Still stuck? Show me more</h3><p>The button under a reply raises help one step, up to explaining the answer and why it works. Twice per topic every six hours. If you stay stuck, it steps up on its own.</p></div>
+    <div class="card gold"><h3>Only graded work moves your level</h3><p>Mastery checks, quick checks, reviews, exercises and Find my bug. Chatting does not change it. Levels fade if you leave a topic for a while.</p></div>
+  </div>
+  <p class="sub" style="margin-top:0.7em">It never hands over the full solution. The most it gives is pseudocode with the key lines left blank.</p>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Asking well</p>
+  <h2>The more of your thinking you share, the better the next step fits</h2>
+  <table>
+    <thead><tr><th style="width:38%">Weaker</th><th>Stronger</th></tr></thead>
+    <tbody>
+      <tr><td>"my remove doesn't work, can you fix it"</td><td>"Here is my <code>remove</code>. <code>remove(3)</code> returns false and the list still prints <code>3 8</code>. I expected true and <code>8</code>. I think the loop never looks at the first node. Am I on the right track?"</td></tr>
+      <tr><td>"explain recursion"</td><td>"Here is my trace of <code>f(3)</code>. I think it returns 6, but it prints 3. Where does my trace go wrong?"</td></tr>
+      <tr><td>"what's the answer to question 4?"</td><td>"I got X because Y. Can you check my reasoning, and let me try each step?"</td></tr>
+      <tr><td>"what's the complexity?"</td><td>"I think this is O(n log n), because the inner loop halves each time."</td></tr>
+    </tbody>
+  </table>
+  <ul class="sub" style="margin-top:0.6em; font-size:0.62em">
+    <li>Paste the <strong>exact error</strong> or failing test. Say what you <strong>expected</strong>. One question at a time.</li>
+    <li>After a hint, say in your own words what you will try next.</li>
+  </ul>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Beyond the chat</p>
+  <h2>Practice that counts toward your map</h2>
+  <div class="cols">
+    <div style="flex:1.1">
+      <div class="grid2">
+        <div class="card"><h3>🗺 Map</h3><p>Every topic and its prerequisites: not started, started, practiced, solid.</p></div>
+        <div class="card"><h3>🔁 Review</h3><p>One question at a time on topics you answered before, timed so they stick.</p></div>
+        <div class="card"><h3>Mastery check</h3><p>Three questions on one topic. Two of three makes it solid.</p></div>
+        <div class="card"><h3>Quick check</h3><p>One or two short questions after a missed exercise or a lecture you watched.</p></div>
+        <div class="card"><h3>🐞 Find my bug</h3><p>A short program with exactly one bug. Say which line, why, and the fix.</p></div>
+        <div class="card"><h3>🙋 Teach-Back</h3><p>You explain a topic; Kit keeps asking <em>why</em> and <em>what if</em>. Never graded.</p></div>
+      </div>
+    </div>
+    <div style="flex:0.9">
+      <div class="shotwrap"><img src="img/readiness.png" alt="Am I ready? lists the exam's topics weakest first, each with its mastery and a Teach me button." style="max-height:14.5em; max-width:100%"></div>
+      <p class="caption"><strong>📝 Am I ready?</strong> lists your exam's topics, weakest first.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">When you need a person</p>
+  <h2>The tutor is not the only help</h2>
+  <div class="grid3" style="margin-top:0.4em">
+    <div class="card purple">
+      <span class="tag">In the chat</span>
+      <h3>✉️ Ask my instructor</h3>
+      <p>Sends the conversation to your class's instructors, by email. You see exactly what goes before you send, and any reply comes to your inbox.</p>
+      <p class="tiny">One email per conversation, three a day.</p>
+    </div>
+    <div class="card purple">
+      <span class="tag">🤝 Together</span>
+      <h3>Study with a classmate</h3>
+      <p>Find a partner in your class and ask the tutor together. Where your class has them, you can also ask for a Quantitative Skills Center tutor.</p>
+      <p class="tiny">Joint sessions are practice and do not count toward your progress.</p>
+    </div>
+    <div class="card purple">
+      <span class="tag">In person</span>
+      <h3>Lecture and office hours</h3>
+      <p>DSA adds to lecture, office hours and the textbook. It does not replace them. Bring what you tried in DSA to office hours.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Limits you might meet</p>
+  <h2>When it stops, the slides and the book stay open</h2>
+  <div class="cols">
+    <div>
+      <ul style="font-size:0.66em">
+        <li><strong>A daily limit</strong> on chat questions. It tells you when more open.</li>
+        <li><strong>A tutor budget</strong> for the day, week and month. A line under the chat box warns you when it runs low and says when it comes back.</li>
+        <li><strong>A mastery check waiting</strong> on a topic holds that topic until you answer it or say "not now".</li>
+        <li><strong>Keep it respectful.</strong> A rude message gets a warning; a second limits the tutor to restating the problem until the end of the next day.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="box">
+        <h3>Exam season</h3>
+        <p>Your instructor can set exam dates. In the week before, a code-free question on topics you have already mastered can get a worked example, and the tutor may confirm your answer.</p>
+        <p>Asking for mastery-check answers is noticed, and never raises the help level.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Your data</p>
+  <h2>Write as you would in office hours</h2>
+  <div class="cols">
+    <div>
+      <ul style="font-size:0.64em">
+        <li><strong>Kept:</strong> your conversations, code, scores and progress, and which pages and slides you open. Usage records carry numbers, never your email or what you wrote.</li>
+        <li><strong>Seen by:</strong> your class's instructors, who can read your conversations for that class and see your topic levels, and the site's administrator.</li>
+        <li><strong>Not a grade.</strong> Practice is never graded. Only a graded Teach-Back round your instructor assigns goes to them as a result.</li>
+      </ul>
+    </div>
+    <div>
+      <ul style="font-size:0.64em">
+        <li><strong>How long:</strong> identifiable records are kept for up to one year, then anonymized.</li>
+        <li><strong>Yours to take or remove:</strong> Settings has <em>Download my data</em> and <em>Delete my account</em>.</li>
+        <li><strong>Never sold</strong> or shared outside the course. The AI provider is not asked to train on it.</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.5em">The full wording is on the sign-in page and at <code>/privacy</code>.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Make it yours</p>
+  <h2>Change the voice, never the teaching</h2>
+  <div class="shotside">
+    <div class="side" style="flex:1">
+      <ul>
+        <li><strong>Bo's character:</strong> a pirate, a film noir detective, a Shakespearean bard and more. Same hints, same help level, same code.</li>
+        <li><strong>Interests:</strong> pick up to three, and the tutor sometimes uses one for an example (a chess board for a 2D array).</li>
+        <li><strong>Reply language:</strong> seven languages for the tutor's replies. The site and lectures stay in English.</li>
+        <li><strong>🔊 Hear it:</strong> where the voice is on, a reply can be read aloud in Prof. Pisan's voice.</li>
+        <li><strong>Light or dark</strong>, in Settings.</li>
+      </ul>
+    </div>
+    <div class="shot" style="flex:0.85"><img src="img/character.png" alt="Bo's character picker: Bo, Pirate, Film noir detective, Shakespearean bard, Cowboy." style="max-height:15em; width:auto; max-width:100%"></div>
+  </div>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+<section>
+  <p class="kicker">Six habits</p>
+  <h2>Getting the most out of it</h2>
+  <ol style="font-size:0.8em">
+    <li><strong>Show your work first:</strong> your attempt, the exact error, what you expected.</li>
+    <li><strong>Guess before you ask.</strong> A guess you can check teaches more than an answer you read.</li>
+    <li><strong>Stuck after trying?</strong> Say where, or press <em>Show me more</em>.</li>
+    <li><strong>Say "let me try each step"</strong> when you want to work it out yourself.</li>
+    <li><strong>Graded practice moves your map.</strong> Do the checks and come back to Review when items are due.</li>
+    <li><strong>It can be wrong.</strong> Check against the slides, and 👎 what is off.</li>
+  </ol>
+  <p style="margin-top:0.9em" class="sub"><a href="https://digital-student-assistant.com">digital-student-assistant.com</a> &middot; the ❓ Help page has all of this, any time</p>
+  <div class="foot"><span>Meet DSA</span></div>
+</section>
+
+</div>
+</div>
+<script src="vendor/reveal/dist/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0.055,
+    minScale: 0.2,
+    maxScale: 1.6,
+    hash: true,
+    slideNumber: 'c',
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>

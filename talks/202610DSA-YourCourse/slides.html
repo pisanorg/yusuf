@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Put Your Course on DSA</title>
+<link rel="stylesheet" href="vendor/reveal/dist/reveal.css">
+<link rel="stylesheet" href="vendor/reveal/dist/theme/white.css">
+<style>
+  :root {
+    --purple: #4b2e83;
+    --purple-soft: #6f54a8;
+    --gold: #85754d;
+    --ink: #22222a;
+    --muted: #6b6b76;
+    --rule: #dcdce4;
+    --warn: #a3341f;
+    --ok: #1f6b45;
+  }
+  .reveal {
+    font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: var(--ink);
+  }
+  .reveal h1, .reveal h2, .reveal h3 { color: var(--purple); text-transform: none; letter-spacing: -0.01em; }
+  .reveal h1 { font-size: 1.75em; line-height: 1.12; }
+  .reveal h2 { font-size: 1.28em; line-height: 1.18; margin-bottom: 0.5em; }
+  .reveal h3 { font-size: 1.0em; }
+  .reveal .slides section { text-align: left; }
+  .reveal .slides section.center { text-align: center; }
+  .reveal ul, .reveal ol { display: block; margin-left: 1.1em; }
+  .reveal li { margin: 0.26em 0; line-height: 1.32; }
+  .reveal li li { font-size: 0.9em; color: var(--muted); }
+  .reveal p { line-height: 1.38; }
+  .reveal em { color: var(--purple); font-style: italic; }
+  .reveal strong { color: var(--ink); }
+  .reveal code { font-size: 0.8em; background: #f2f2f6; padding: 0.05em 0.3em; border-radius: 3px; }
+
+  /* eyebrow label + footer */
+  .kicker {
+    font-size: 0.46em; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 0.35em 0; font-weight: 600;
+  }
+  .foot {
+    position: absolute; bottom: -0.2em; left: 0; right: 0;
+    font-size: 0.4em; color: #b9b9c4; display: flex; justify-content: space-between;
+  }
+  /* big statement slide */
+  .statement { font-size: 1.32em; line-height: 1.32; color: var(--purple); font-weight: 600; }
+  .sub { font-size: 0.72em; color: var(--muted); }
+  .tiny { font-size: 0.56em; color: var(--muted); line-height: 1.35; }
+  .cite { font-size: 0.5em; color: #9a9aa6; }
+  /* verbatim payloads on the boundary detail slides (39a-39c): real
+     objects and the real rendered contract, not prettified paraphrases */
+  .payload { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.46em;
+             line-height: 1.5; background: #f4f4f8; border: 1px solid var(--rule);
+             border-radius: 4px; padding: 0.5em 0.7em; white-space: pre-wrap;
+             color: var(--ink); margin: 0.3em 0; }
+  .payload .k { color: var(--purple); font-weight: 600; }
+  .payload .c { color: var(--muted); }
+  .factlist { font-size: 0.5em; line-height: 1.5; margin: 0.2em 0 0; padding-left: 1.1em; }
+  .factlist li { margin-bottom: 0.12em; }
+  .movelist { font-size: 0.5em; line-height: 1.5; column-count: 2; column-gap: 1em; margin: 0.2em 0 0; }
+  .movelist li { margin-bottom: 0.15em; break-inside: avoid; }
+  .movelist code { font-size: 0.92em; }
+  .cnum { color: var(--purple-soft); white-space: nowrap; }
+
+  /* links: the deck palette, not Reveal's default blue */
+  .reveal a { color: var(--purple-soft); text-decoration: underline;
+              text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .reveal a:hover { color: var(--purple); }
+
+  /* section divider */
+  section.divider { text-align: left; }
+  section.divider h2 { font-size: 1.7em; border-left: 8px solid var(--gold); padding-left: 0.5em; }
+  section.divider p { font-size: 0.78em; color: var(--muted); padding-left: 1.0em; }
+
+  /* two-column */
+  .cols { display: flex; gap: 1.3em; align-items: flex-start; }
+  .cols > * { flex: 1; min-width: 0; }
+  .cols.tight { gap: 0.9em; }
+  /* body text inside a column reads smaller than a full-width paragraph */
+  .cols > div:not(.box) > p, .cols > div:not(.box) > ul, .cols > div:not(.box) > ol { font-size: 0.86em; }
+  .cols > div:not(.box) > p.cite { font-size: 0.5em; }
+  .cols > div:not(.box) > p.tiny { font-size: 0.56em; }
+  .cols > div:not(.box) > p.sub { font-size: 0.72em; }
+
+  /* callout box */
+  .box {
+    border: 2px solid var(--rule); border-left: 6px solid var(--purple);
+    border-radius: 6px; padding: 0.55em 0.75em; background: #fbfbfd;
+  }
+  .box.warn { border-left-color: var(--warn); }
+  .box.ok { border-left-color: var(--ok); }
+  .box h3 { margin: 0 0 0.2em 0; font-size: 0.74em; }
+  .box p, .box ul, .box ol { font-size: 0.66em; margin: 0.14em 0; line-height: 1.32; }
+
+  /* tables */
+  .reveal table { font-size: 0.62em; border-collapse: collapse; width: 100%; }
+  .reveal table th {
+    text-align: left; border-bottom: 2px solid var(--purple); color: var(--purple);
+    padding: 0.3em 0.5em; font-weight: 600;
+  }
+  .reveal table td { border-bottom: 1px solid var(--rule); padding: 0.3em 0.5em; vertical-align: top; }
+  .reveal table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .reveal table th.num { text-align: right; }
+
+  /* screenshot slides */
+  .shotwrap { text-align: center; }
+  .shotwrap img { border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotpair { display: flex; gap: 0.7em; align-items: flex-start; justify-content: center; }
+  .shotpair img { border: 1px solid var(--rule); border-radius: 5px; max-width: 100%; max-height: 15.5em; }
+  .shotpair.photos img { max-height: 9.6em; }
+  .shotfull img { max-height: 16em; max-width: 100%; }
+  /* the two reference slides */
+  .refcols { font-size: 0.5em; align-items: flex-start; }
+  .refcols .refhead { color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em;
+                      font-size: 0.95em; font-weight: 600; margin: 0.5em 0 0.15em 0; }
+  .refcols .refhead:first-child { margin-top: 0; }
+  .reflist { margin: 0 0 0 1em; font-size: 1em; }
+  .reflist li { margin: 0.12em 0; line-height: 1.22; font-size: 1em; color: var(--ink); }
+  .reflist li em { color: var(--muted); font-style: italic; }
+
+  .statement .who { display: block; font-size: 0.5em; letter-spacing: 0.1em;
+                    text-transform: uppercase; color: var(--gold); font-weight: 600;
+                    margin-bottom: 0.1em; }
+  .up { color: var(--ok); font-weight: 700; }
+  .down { color: var(--warn); font-weight: 700; }
+  .flat { color: var(--muted); font-weight: 700; }
+  .fail { color: var(--warn); }
+  .pass { color: var(--ok); }
+
+  /* stat tiles (this deck) */
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5em; }
+  .tile { border: 2px solid var(--rule); border-radius: 6px; padding: 0.4em 0.6em; background: #fbfbfd; }
+  .tile .n { font-size: 1.15em; font-weight: 700; color: var(--purple); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .tile .n.warn { color: var(--warn); }
+  .tile .c { font-size: 0.5em; color: var(--muted); line-height: 1.3; margin-top: 0.2em; }
+  .status { font-size: 0.85em; color: var(--muted); white-space: nowrap; }
+
+  /* keep the footer clear of the last block on a full slide */
+  .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em; }
+  .reveal .slides section aside.notes { display: none !important; }
+  .reveal .slides section { overflow: visible; }
+  .reveal svg text { font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+
+  /* pull quotes, from the SIGCSE deck */
+  blockquote.rev {
+    border: none; box-shadow: none; background: #f7f5fa; border-left: 5px solid var(--purple-soft);
+    padding: 0.5em 0.8em; font-size: 0.66em; font-style: normal; width: 100%; margin: 0.4em 0;
+  }
+blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); margin-top: 0.3em; }
+
+  /* ---- added for the DSA talk series ---- */
+  .reveal .slide-number { font-size: 13px; color: #9a9aa6; background: transparent; right: auto; left: 50%; transform: translateX(-50%); bottom: 10px; }
+  .foot { justify-content: flex-start; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55em; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55em; }
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.5em; }
+  .card { border: 2px solid var(--rule); border-radius: 8px; padding: 0.45em 0.65em; background: #fbfbfd; }
+  .card h3 { margin: 0 0 0.2em 0; font-size: 0.7em; color: var(--purple); }
+  .card p, .card ul { font-size: 0.56em; margin: 0.12em 0; line-height: 1.34; }
+  .card ul { margin-left: 1em; }
+  .card .tag { display: inline-block; font-size: 0.42em; letter-spacing: 0.08em; text-transform: uppercase;
+               color: var(--gold); font-weight: 700; margin-bottom: 0.15em; }
+  .card.gold { border-top: 5px solid var(--gold); }
+  .card.purple { border-top: 5px solid var(--purple); }
+  .card.ok { border-top: 5px solid var(--ok); }
+  .card.warn { border-top: 5px solid var(--warn); }
+  .pill { display: inline-block; padding: 0.05em 0.5em; border-radius: 999px; background: #efeaf6;
+          color: var(--purple); font-size: 0.8em; font-weight: 600; white-space: nowrap; }
+  .pill.gold { background: #f4f0e6; color: #6d5f3a; }
+  .pill.ok { background: #e6f2ec; color: var(--ok); }
+  .pill.warn { background: #f7e7e3; color: var(--warn); }
+  .shotwrap.framed img { box-shadow: 0 6px 22px rgba(34,34,42,0.12); }
+  .shotside { display: flex; gap: 1em; align-items: flex-start; }
+  .shotside .shot { flex: 1.35; min-width: 0; }
+  .shotside .shot img { width: auto; max-width: 100%; max-height: 15.6em; border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotside .side { flex: 0.65; min-width: 0; }
+  .shotside .side p, .shotside .side ul { font-size: 0.62em; }
+  .phone img { max-height: 15.5em; border: 1px solid var(--rule); border-radius: 14px; }
+  .caption { font-size: 0.5em; color: var(--muted); margin-top: 0.35em; }
+  .quote { font-size: 0.95em; color: var(--purple); font-weight: 600; line-height: 1.3; }
+  .ladder td:first-child { font-weight: 700; color: var(--purple); white-space: nowrap; }
+  .chat { font-size: 0.52em; line-height: 1.38; }
+  .chat .s, .chat .t { border-radius: 10px; padding: 0.45em 0.7em; margin: 0.3em 0; }
+  .chat .s { background: #eceaf1; margin-left: 18%; }
+  .chat .t { background: #f3f0fa; border: 1px solid #e2dcf0; margin-right: 8%; }
+  .chat .who { font-size: 0.8em; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .do, .dont { font-size: 0.6em; line-height: 1.35; }
+  .do li::marker { content: "\2713  "; color: var(--ok); font-weight: 700; }
+  .dont li::marker { content: "\2717  "; color: var(--warn); font-weight: 700; }
+  .center-block { margin-left: auto; margin-right: auto; }
+  .num-big { font-size: 2.1em; font-weight: 800; color: var(--purple); line-height: 1; font-variant-numeric: tabular-nums; }
+  .reveal svg.diagram { display: block; margin: 0.2em auto 0; }
+  /* print-pdf drops the section padding that keeps the footer clear of the last block */
+  html.print-pdf .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em !important; box-sizing: content-box; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="center">
+  <p class="kicker">DSA &middot; Digital Student Assistant</p>
+  <h1>Put Your Course on DSA</h1>
+  <p class="sub">You bring the materials. I build the course. You review it.<br>With CSS 430 Operating Systems as the worked example.</p>
+  <p style="margin-top:1.1em"><strong>Yusuf Pisan</strong><br>
+  <span class="sub">University of Washington Bothell, Computing &amp; Software Systems</span></p>
+  <p class="sub" style="margin-top:0.6em">pisan@uw.edu &middot; <a href="https://digital-student-assistant.com/instructors">digital-student-assistant.com/instructors</a></p>
+</section>
+
+<section>
+  <p class="kicker">What your students get</p>
+  <h2>A tutor built from your course, that will not do the homework</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.2"><img src="img/chat-full.png" alt="The DSA chat: the lecture deck on the left, a conversation with the tutor on the right."></div>
+    <div class="side" style="flex:0.8">
+      <ul>
+        <li>A chat that answers from <strong>your</strong> slides, recordings, textbook and assignments, with the slide open beside it.</li>
+        <li>Hints instead of answers, set by what each student has shown on graded practice.</li>
+        <li>A topic map, mastery checks, spaced review, quick checks, Teach-Back and exam readiness, all for your course's goals.</li>
+        <li>A dashboard and a Sunday email for you.</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.4em">The companion talk <em>Hints, Not Answers</em> covers the pedagogy. This one is about how a course gets built.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Overview</span></div>
+</section>
+
+<section>
+  <p class="kicker">Under the hood</p>
+  <h2>A course is a registry entry plus a set of generated, checked files</h2>
+  <table>
+    <thead><tr><th style="width:30%">Part</th><th>What it is</th><th style="width:24%">Made by</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Registry entry</strong></td><td>Number, title, topics, 20 lectures, language, prerequisites, books, on or off, public or private</td><td>hand</td></tr>
+      <tr><td><strong>Lecture plan</strong></td><td>Twenty entries: topics, objectives, timing, examples, demos, readings</td><td>drafted, then edited</td></tr>
+      <tr><td><strong>Knowledge base</strong></td><td>Your materials, chunked and stamped with the course, searched only for your course</td><td>pipeline</td></tr>
+      <tr><td><strong>Goal graph</strong></td><td>About four learning goals per lecture, with prerequisite edges</td><td>pipeline, then reviewed</td></tr>
+      <tr><td><strong>Practice</strong></td><td>Exercises; mastery questions with rubrics; find-my-bug programs (C++ only)</td><td>pipeline, checked</td></tr>
+      <tr><td><strong>Decks and scripts</strong></td><td>Twenty slide decks and a teaching script for each lecture</td><td>pipeline, then read</td></tr>
+      <tr><td><strong>Teach-me openers</strong></td><td>A pre-written explanation per goal, at three depths</td><td>pipeline</td></tr>
+      <tr><td><strong>Narration</strong> <span class="tiny">(optional)</span></td><td>Each slide read aloud in a cloned voice</td><td>paid service</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><span>Overview</span></div>
+</section>
+
+<section>
+  <p class="kicker">The partnership</p>
+  <h2>Who does what</h2>
+  <div class="grid3" style="margin-top:0.4em">
+    <div class="card gold">
+      <span class="tag">You bring</span>
+      <h3>Your materials and your dates</h3>
+      <ul>
+        <li>Slides, recordings, textbook, assignments, course repos</li>
+        <li>A topic list or last term's syllabus</li>
+        <li>Exam dates and lecture ranges (not the exams)</li>
+        <li>Your consent to use them, and a decision about the voice</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <span class="tag">I build</span>
+      <h3>The course, through the pipeline</h3>
+      <ul>
+        <li>The knowledge base and the lecture plan</li>
+        <li>Goals, exercises, mastery questions, decks, openers</li>
+        <li>The checks, the dry runs, the deploy and the switch</li>
+      </ul>
+    </div>
+    <div class="card ok">
+      <span class="tag">You review</span>
+      <h3>What it will teach</h3>
+      <ul>
+        <li>The plan and the goal graph</li>
+        <li>A sample of exercises and mastery questions</li>
+        <li>Two or three decks against a rubric</li>
+        <li>The tutor itself, in a dry run before students see it</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.7em">Then you run your class in it yourself: roster, exams, materials, the dashboard.</p>
+  <div class="foot"><span>Overview</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 1</p>
+  <h2>What you hand over</h2>
+  <p>What the pipeline reads, and what it keeps out.</p>
+</section>
+
+<section>
+  <p class="kicker">Sources</p>
+  <h2>What the pipeline can read</h2>
+  <table>
+    <thead><tr><th style="width:24%">Source</th><th style="width:32%">Form</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lecture slides</strong></td><td>.pptx, or PDF decks</td><td>Text, speaker notes and code. PowerPoint decks are the ones that move the slide panel today.</td></tr>
+      <tr><td><strong>Canvas course files</strong></td><td>Fetched with a Canvas token on my machine</td><td>PDFs, slides, documents. The token never leaves that machine.</td></tr>
+      <tr><td><strong>Recordings</strong></td><td>Panopto captions, or video for Whisper</td><td>Transcripts are read before they are committed: they can hold a student's voice.</td></tr>
+      <tr><td><strong>Textbook</strong></td><td>A PDF or chapter PDFs</td><td>Copyrighted text stays out of git; an open book can be linked instead.</td></tr>
+      <tr><td><strong>Assignments</strong></td><td>.docx or .txt</td><td>Descriptions only. Solutions and answer keys are filtered.</td></tr>
+      <tr><td><strong>Course repos</strong></td><td>Public GitHub repos</td><td>Starter code and examples, in the course's language.</td></tr>
+      <tr><td><strong>Topic list</strong></td><td>A syllabus or topic outline</td><td>Seeds a draft lecture plan.</td></tr>
+    </tbody>
+  </table>
+  <p class="tiny" style="margin-top:0.4em">Every reader writes a manifest of what it read and what it left out.</p>
+  <div class="foot"><span>Part 1 &middot; What you hand over</span></div>
+</section>
+
+<section>
+  <p class="kicker">What stays out</p>
+  <h2>Exams, answer keys and student work never become tutor material</h2>
+  <div class="cols">
+    <div class="box warn">
+      <h3>Kept out automatically</h3>
+      <ul>
+        <li><strong>Exams:</strong> counted, never read.</li>
+        <li><strong>Anything named like a solution or key</strong> (solution, answer, quiz, midterm, exam, final, key): only with a yes typed at a terminal.</li>
+        <li><strong>Hidden or unpublished Canvas files:</strong> only on a flag. Each run lists what it skipped and why.</li>
+        <li><strong>Private repos</strong> (on GitHub Classroom, the students'): only on a flag.</li>
+        <li><strong>Discord:</strong> instructors' posts only, with no author names kept.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Never ingested</h3>
+      <ul>
+        <li>Student work, grades, rosters, grade pages, grader notes.</li>
+      </ul>
+      <h3 style="margin-top:0.4em">And a second wall</h3>
+      <ul>
+        <li>If a solution slips into the store, the tutor's search hides it.</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.4em">The name rule goes by names: an exam saved as "notes.pdf" in the assignments folder would be read. So we go through your folders together.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.5em">Send exam <em>dates</em>, not exams. The mastery questions are generated, not taken from your exams.</p>
+  <div class="foot"><span>Part 1 &middot; What you hand over</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 2</p>
+  <h2>How it gets built</h2>
+  <p>Three lanes, ten steps, and roughly how long each takes.</p>
+</section>
+
+<section>
+  <p class="kicker">Three lanes</p>
+  <h2>Most of the work costs nothing per call. The last steps are mine alone.</h2>
+  <svg class="diagram" viewBox="0 0 1000 250" width="96%" role="img" aria-label="Three lanes: a cloud coding session does the tracked files; the owner's Mac runs ingest and generation on a subscription; only the owner writes to production, deploys and switches the course on.">
+    <defs><marker id="ca" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#6b6b76"/></marker></defs>
+    <g font-size="14" fill="#22222a">
+      <rect x="10" y="20" width="300" height="200" rx="10" fill="#fbfbfd" stroke="#9a9aa6" stroke-width="2"/>
+      <text x="28" y="48" font-weight="700">A &middot; Cloud coding session</text>
+      <text x="28" y="76" font-size="13">registry entry, lecture plan</text>
+      <text x="28" y="98" font-size="13">goals, orders, exercises</text>
+      <text x="28" y="120" font-size="13">public repos, retrieval checks</text>
+      <text x="28" y="142" font-size="13">any code the course needs</text>
+      <text x="28" y="164" font-size="13">tests, then one pull request</text>
+      <text x="28" y="200" font-size="12.5" fill="#1f6b45" font-weight="700">$0 &middot; no token, no student data</text>
+      <line x1="310" y1="120" x2="346" y2="120" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#ca)"/>
+      <rect x="350" y="20" width="300" height="200" rx="10" fill="#f4f0e6" stroke="#85754d" stroke-width="2"/>
+      <text x="368" y="48" font-weight="700" fill="#6d5f3a">B &middot; The owner's Mac</text>
+      <text x="368" y="76" font-size="13">Canvas fetch, captions or Whisper</text>
+      <text x="368" y="98" font-size="13">ingest, rebuild the store</text>
+      <text x="368" y="120" font-size="13">generate decks and scripts</text>
+      <text x="368" y="142" font-size="13">anchors, openers, mastery bank</text>
+      <text x="368" y="164" font-size="13">the deck rubric read</text>
+      <text x="368" y="200" font-size="12.5" fill="#1f6b45" font-weight="700">$0 marginal: a subscription CLI</text>
+      <line x1="650" y1="120" x2="686" y2="120" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#ca)"/>
+      <rect x="690" y="20" width="300" height="200" rx="10" fill="#fff" stroke="#4b2e83" stroke-width="3"/>
+      <text x="708" y="48" font-weight="700" fill="#4b2e83">C &middot; Owner only</text>
+      <text x="708" y="76" font-size="13">seed the goals in production</text>
+      <text x="708" y="98" font-size="13">publish the seeds, deploy</text>
+      <text x="708" y="120" font-size="13">create your class, a dry run</text>
+      <text x="708" y="142" font-size="13">switch the course on</text>
+      <text x="708" y="164" font-size="13">any paid step (narration)</text>
+      <text x="708" y="200" font-size="12.5" fill="#a3341f" font-weight="700">production writes need a yes</text>
+    </g>
+  </svg>
+  <p class="cite">The repo's <code>add-course</code> checklist splits every step into these lanes, so a coding session can do lane A without my machine.</p>
+  <div class="foot"><span>Part 2 &middot; How it gets built</span></div>
+</section>
+
+<section>
+  <p class="kicker">The steps</p>
+  <h2>Roughly how long each part takes</h2>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:40%">Step</th><th style="width:22%">Time</th><th>What can go wrong</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Registry, plan, goals, exercises (lane A)</td><td>a few sessions</td><td>A lecture with no plan entry stops generation before any model call</td></tr>
+      <tr><td>2</td><td>Fetch and ingest your sources</td><td>an afternoon</td><td>Files indexed as "shared" reach every course</td></tr>
+      <tr><td>3</td><td>Rebuild the store, then the retrieval check</td><td>60&ndash;75 min, plus ~25</td><td>Must run where every course's text lives</td></tr>
+      <tr><td>4</td><td>Generate 20 decks and scripts</td><td>3&ndash;6 hours</td><td>A usage window can run out mid-way; resume fills the gaps</td></tr>
+      <tr><td>5</td><td>The rubric read of 2&ndash;3 decks</td><td>~75 min</td><td>This is where placeholders get caught</td></tr>
+      <tr><td>6</td><td>Slide anchors and hooks</td><td>~40 min</td><td>Regenerating decks afterwards breaks them</td></tr>
+      <tr><td>7</td><td>Teach-me openers</td><td>3&ndash;5 h, unattended</td><td>Runs after the anchors, since an opener quotes its slide</td></tr>
+      <tr><td>8</td><td>Mastery question bank</td><td>1&ndash;2 hours</td><td>Each goal's pool must pass its checks or it is not saved</td></tr>
+      <tr><td>9</td><td>Find-my-bug, narration</td><td>optional</td><td>Bug programs need C++; narration is paid</td></tr>
+      <tr><td>10</td><td>Seed, deploy, class, dry run, switch</td><td>a few hours</td><td>A few minutes of downtime; rollback is in layers</td></tr>
+    </tbody>
+  </table>
+  <p class="tiny" style="margin-top:0.3em">Times are the runbook's estimates and CSS 430's recorded runs.</p>
+  <div class="foot"><span>Part 2 &middot; How it gets built</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 3</p>
+  <h2>CSS 430, the worked example</h2>
+  <p>Operating Systems, in C, from the Winter 2026 offering.</p>
+</section>
+
+<section>
+  <p class="kicker">CSS 430 &middot; what went in</p>
+  <h2>One term's materials, three parts of OSTEP</h2>
+  <div class="cols">
+    <div style="flex:1.05">
+      <ul style="font-size:0.62em">
+        <li><strong>Plan:</strong> twenty lectures following OSTEP's three parts: virtualization (1&ndash;12), concurrency (13&ndash;17), persistence (18&ndash;20), with two exams.</li>
+        <li><strong>43 Canvas lecture PDFs</strong>, 39 of them mapped to lectures.</li>
+        <li><strong>24 assignment and page texts</strong>: the projects and in-class exercises.</li>
+        <li><strong>9 repos:</strong> the xv6 fork, C starters, and the OSTEP homework, projects and code.</li>
+        <li><strong>16 lecture recordings</strong> as Panopto captions.</li>
+        <li><strong>The textbook:</strong> OSTEP, read for the store and linked, not copied.</li>
+      </ul>
+    </div>
+    <div style="flex:0.95">
+      <div class="box warn">
+        <h3>Left out on purpose</h3>
+        <ul>
+          <li>The exams folder and homework answers</li>
+          <li>Rosters, grade pages, student folders, grader notes</li>
+          <li>Older lectures built on a different textbook</li>
+          <li>The chapter quizzes: mastery questions are generated instead</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 3 &middot; CSS 430</span></div>
+</section>
+
+<section>
+  <p class="kicker">CSS 430 &middot; what came back</p>
+  <h2>Goals, practice, decks, and a store that stays in its lane</h2>
+  <div class="grid4" style="margin-top:0.3em">
+    <div class="tile"><div class="n">80</div><div class="c">learning goals, four per lecture, with 33 prerequisite edges (one from CSS 343)</div></div>
+    <div class="tile"><div class="n">104</div><div class="c">exercises in C: 80 concept, 18 trace, 6 code</div></div>
+    <div class="tile"><div class="n">20</div><div class="c">decks and teaching scripts, generated in about four hours</div></div>
+    <div class="tile"><div class="n">80</div><div class="c">Teach-me openers, each anchored to a slide</div></div>
+    <div class="tile"><div class="n">6,291</div><div class="c">chunks of 430's material in the rebuilt store</div></div>
+    <div class="tile"><div class="n">51/54</div><div class="c">golden retrieval questions passed after the rebuild, across all three courses (threshold 90%)</div></div>
+    <div class="tile"><div class="n">8/8</div><div class="c">cross-course checks: no course's results held another course's decks</div></div>
+    <div class="tile"><div class="n">4</div><div class="c">suggestion orders, and 8 starter questions such as "What does fork() return?"</div></div>
+  </div>
+  <p class="sub" style="margin-top:0.5em">Content and test counts from the repo; no students have used it yet.</p>
+  <div class="foot"><span>Part 3 &middot; CSS 430</span></div>
+</section>
+
+<section>
+  <p class="kicker">CSS 430 &middot; what the review caught</p>
+  <h2>Generated is not the same as ready</h2>
+  <div class="cols">
+    <div class="box">
+      <h3>The rubric read</h3>
+      <p>Three decks (lectures 1, 14 and 19) scored on seven criteria: voice, coverage, technical accuracy, pacing, examples, structure, and whether the script could be delivered. Target 20 of 28; each reached 28 after fixes.</p>
+      <p>The read found:</p>
+      <ul>
+        <li><strong>Five instructor-only placeholders</strong> in lecture 1 that would have been projected to students.</li>
+        <li>Missing slide-header punctuation in two decks.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>Known weaknesses, left visible</h3>
+      <ul>
+        <li>About 35 of 80 goals anchor on a summary or agenda slide rather than the slide that teaches them.</li>
+        <li>The decks were styled with my CSS 342 style guide, since 430 had no PowerPoint decks or Whisper transcripts to learn a style from.</li>
+        <li>The exercises still need a hand read of a sample.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Part 3 &middot; CSS 430</span></div>
+</section>
+
+<section>
+  <p class="kicker">CSS 430 &middot; C, not C++</p>
+  <h2>The course's language changes what the tutor can do</h2>
+  <div class="cols">
+    <div>
+      <ul style="font-size:0.64em">
+        <li>The code sandbox compiles C++ only. In 430 the tutor <strong>reads and discusses C</strong>, and never runs it.</li>
+        <li>Code is graded by a rubric: "correct, clean, idiomatic C, free of memory errors and races".</li>
+        <li><strong>No find-my-bug bank</strong>, since every item must be verified by compiling and running it.</li>
+        <li>Decks, exercises and mastery code questions are in C.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="box">
+        <h3>For your course</h3>
+        <p>Any language works for the tutor, the map, checks, review and Teach-Back. Code execution and find-my-bug need a C++ course today, and production runs no student code for any course.</p>
+        <p class="tiny">The registry knows C++, Java, C and Python; the GitHub reader keeps C and C++ sources today.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 3 &middot; CSS 430</span></div>
+</section>
+
+<section>
+  <p class="kicker">CSS 430 &middot; where it is</p>
+  <h2>Built, but not yet in front of students</h2>
+  <table>
+    <thead><tr><th style="width:55%">Step</th><th>Status, late October 2026</th></tr></thead>
+    <tbody>
+      <tr><td>Registry (off, private), plan, goals, orders, exercises, sources</td><td class="pass">done, 13&ndash;16 Oct</td></tr>
+      <tr><td>Runbook hardened for a second course</td><td class="pass">done, 16 Oct</td></tr>
+      <tr><td>Ingest, store rebuild, retrieval check</td><td class="pass">done, 19 Oct</td></tr>
+      <tr><td>Twenty decks and scripts</td><td class="pass">done, 19 Oct</td></tr>
+      <tr><td>Rubric read, slide anchors, Teach-me openers</td><td class="pass">done, 22 Oct</td></tr>
+      <tr><td>Mastery bank; goals seeded in production; the seed swap</td><td>in progress</td></tr>
+      <tr><td>A class, a dry run, the switch; a hand read of the exercises</td><td>to come; no launch quarter set</td></tr>
+      <tr><td>Narration</td><td>skipped this term (paid)</td></tr>
+    </tbody>
+  </table>
+  <p class="sub" style="margin-top:0.5em">Nine days of elapsed time from the registry entry to generated decks, goals and openers. Plan on starting a quarter ahead.</p>
+  <div class="foot"><span>Part 3 &middot; CSS 430</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 4</p>
+  <h2>What you review, and whose voice it is</h2>
+</section>
+
+<section>
+  <p class="kicker">Your review</p>
+  <h2>What comes back to you, and how we fix it</h2>
+  <table>
+    <thead><tr><th style="width:22%">Deliverable</th><th>What you look at</th><th style="width:30%">How a fix happens</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lecture plan</strong></td><td>Twenty lectures: topics, objectives, timing, examples</td><td>Edited directly</td></tr>
+      <tr><td><strong>Goal graph</strong></td><td>About four goals per lecture and their prerequisites</td><td>Proposed changes, applied after your yes</td></tr>
+      <tr><td><strong>Exercises</strong></td><td>A sample, by lecture</td><td>Fix the template, not the item</td></tr>
+      <tr><td><strong>Mastery questions</strong></td><td>A sample, each with its rubric</td><td>Regenerate a goal's pool</td></tr>
+      <tr><td><strong>Decks</strong></td><td>Two or three, against the seven-criterion rubric</td><td>Edit the slide source and re-render</td></tr>
+      <tr><td><strong>The tutor</strong></td><td>A dry run as a student and as the instructor</td><td>Then, live: flagged replies and transcripts</td></tr>
+    </tbody>
+  </table>
+  <div class="box warn" style="margin-top:0.5em">
+    <p><strong>Honest about the tooling:</strong> today every review artefact is a file, and I walk you through them. There is no review screen, and a course that is switched off cannot be previewed on the live site.</p>
+  </div>
+  <div class="foot"><span>Part 4 &middot; Review and voice</span></div>
+</section>
+
+<section>
+  <p class="kicker">The voice question</p>
+  <h2>Today, every course is "Prof. Pisan's tutor"</h2>
+  <div class="cols">
+    <div class="box">
+      <h3>What exists</h3>
+      <ul>
+        <li>One persona, mine, built from my writing and lecture transcripts, cached once for every course.</li>
+        <li>The tutor introduces itself as "DSA, Prof. Pisan's tutor", and the slide, script and opener prompts name me.</li>
+        <li>One cloned voice for narration and spoken replies.</li>
+        <li>Students can still change its <em>surface</em> voice, with a character; the teaching stays the same.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>What your own voice would take</h3>
+      <ul>
+        <li>Your persona and profile files, and a cached prompt per voice.</li>
+        <li>The instructor's name as a field, not a constant.</li>
+        <li>A voice per class, since one course can have several instructors.</li>
+        <li>Recordings to learn a style from, and your consent for a cloned voice.</li>
+      </ul>
+      <p class="tiny">My inference from the code: not yet planned. A per-course instructor line is on the roadmap, waiting for the first colleague's course.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Part 4 &middot; Review and voice</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 5</p>
+  <h2>Running your class</h2>
+  <p>What you do each quarter, and what you see.</p>
+</section>
+
+<section>
+  <p class="kicker">Each quarter</p>
+  <h2>You run the class; nothing needs me after setup</h2>
+  <div class="grid3" style="margin-top:0.3em">
+    <div class="card purple"><h3>Roster</h3><p>Paste addresses, or import a Canvas Gradebook CSV that is read in your browser: only the addresses leave your computer, never grades or names.</p></div>
+    <div class="card purple"><h3>Exams</h3><p>Date, lecture range, minutes, format. The tutor knows them; a review window opens the week before.</p></div>
+    <div class="card purple"><h3>Class materials</h3><p>Paste or upload a syllabus, reading or assignment, live at once for your class only. Mark one <em>graded</em> and the tutor never escalates on it.</p></div>
+    <div class="card gold"><h3>People</h3><p>Co-instructors, and Quantitative Skills Center tutors who can study with one student.</p></div>
+    <div class="card gold"><h3>Teach-Back rounds</h3><p>Optional graded rounds: you set the topics and window, review flags, override, and release scores.</p></div>
+    <div class="card gold"><h3>Study pairs</h3><p>Two classmates ask the tutor together, at the stricter of their two help levels. On or off per class.</p></div>
+  </div>
+  <p class="tiny" style="margin-top:0.5em">An administrator creates the class and makes you its instructor; everything above is then yours.</p>
+  <div class="foot"><span>Part 5 &middot; Running your class</span></div>
+</section>
+
+<section>
+  <p class="kicker">During the quarter</p>
+  <h2>What you see</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.15"><img src="img/instructor.png" alt="The instructor dashboard for a demo class: who needs a look, flagged replies, and the roster." style="max-height:14.6em"></div>
+    <div class="side" style="flex:0.85">
+      <ul>
+        <li><strong>The dashboard:</strong> who needs a look, replies students flagged, the roster, topic levels by student.</li>
+        <li><strong>A Sunday email</strong> with the week, the hardest topics, and the flags.</li>
+        <li><strong>Transcripts</strong> of your students' conversations in your course.</li>
+        <li><strong>View as student</strong>, read-only, for 30 minutes.</li>
+        <li><strong>Ask my instructor:</strong> students can email you a conversation with a question.</li>
+      </ul>
+      <p class="caption">A demo class on a local copy; all names and numbers are made up.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Part 5 &middot; Running your class</span></div>
+</section>
+
+<section>
+  <p class="kicker">Cost and privacy</p>
+  <h2>Who pays, and who can see your course</h2>
+  <div class="cols">
+    <div class="box">
+      <h3>Who pays</h3>
+      <ol>
+        <li><strong>The site</strong> pays for students' questions, within daily and monthly caps.</li>
+        <li><strong>You may add your own Anthropic key</strong> for your rostered students, with your own monthly cap and per-student limits. It is encrypted at rest and used for chat only.</li>
+        <li><strong>A student</strong> may add their own key.</li>
+      </ol>
+      <p class="tiny" style="margin-top:0.3em">Building the course runs on a subscription, at no per-call cost. A planning estimate for tutoring: about $0.03 a question.</p>
+    </div>
+    <div class="box">
+      <h3>Who can see it</h3>
+      <ul>
+        <li>A <strong>private course</strong> opens only for students on an open class's roster, that class's instructors, and admins. Everyone else sees a locked card.</li>
+        <li>New courses are private until switched otherwise, so a new course fails closed.</li>
+        <li>Student data rights, the one-year anonymization and the consent notice apply to every course.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Part 5 &middot; Running your class</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 6</p>
+  <h2>Vision and roadmap</h2>
+  <p>Why this is a partnership today, and what self-serve would take.</p>
+</section>
+
+<section>
+  <p class="kicker">Why not self-serve yet</p>
+  <h2>The pipeline is an expert tool on one machine</h2>
+  <div class="grid2" style="margin-top:0.3em">
+    <div class="card warn"><h3>One machine</h3><p>Rebuilding the store needs every course's private source text and the Canvas token, which live only there.</p></div>
+    <div class="card warn"><h3>A course is a deploy</h3><p>The registry is in git and the content ships as release assets; goals reach production through an owner-only step.</p></div>
+    <div class="card warn"><h3>Review is files</h3><p>Proposals and diffs, read by hand. There is no screen for an instructor to review or edit.</p></div>
+    <div class="card warn"><h3>One voice, one tenant</h3><p>One persona, one deployment, one server instance, and a C++-only sandbox.</p></div>
+  </div>
+  <p class="sub" style="margin-top:0.6em">And a deliberate gate: no next course until CSS 430 has gone through every step.</p>
+  <div class="foot"><span>Part 6 &middot; Vision and roadmap</span></div>
+</section>
+
+<section>
+  <p class="kicker">Toward self-serve</p>
+  <h2>What already moved, and what would have to be built</h2>
+  <div class="cols">
+    <div class="box ok">
+      <h3>Already self-serve, or repeatable</h3>
+      <ul>
+        <li>Rosters, Canvas class-list import, exams, Teach-Back rounds</li>
+        <li><strong>Class materials:</strong> the one self-serve content path today</li>
+        <li>Private courses: only your students see yours</li>
+        <li>A runbook hardened for a second course: registry-driven, proposals instead of overwrites, checked banks, course-stamped retrieval</li>
+        <li>A checklist that tells a coding session which steps it may do</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Would have to be built</h3>
+      <ul>
+        <li>An upload flow that applies the same exclusion rules, with consent capture</li>
+        <li>A server-side pipeline run, paid per call or by an institution's key</li>
+        <li>Courses published without a deploy</li>
+        <li>A review screen: plan, goals, exercises, questions, decks, with a private preview</li>
+        <li>A voice per instructor; Canvas LTI 1.3 (a request to UW-IT is drafted)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Part 6 &middot; Vision and roadmap</span></div>
+</section>
+
+<section>
+  <p class="kicker">Getting started</p>
+  <h2>Start a quarter ahead, with five things</h2>
+  <ol style="font-size:0.74em">
+    <li><strong>A topic list</strong> or last term's syllabus, with the textbook.</li>
+    <li><strong>Your slides</strong> (PowerPoint is best) and assignment descriptions.</li>
+    <li><strong>Recordings</strong>, if you have them: a Panopto course is enough.</li>
+    <li><strong>Your course repos</strong>, if public.</li>
+    <li><strong>Exam dates</strong> and the lectures each covers. Not the exams.</li>
+  </ol>
+  <p style="margin-top:0.8em" class="sub">Then: we settle the details (language, prerequisites, what to leave out, the voice), I build, you review, we dry-run, and you run your class.</p>
+  <p class="sub" style="margin-top:0.5em"><strong>Yusuf Pisan</strong> &middot; pisan@uw.edu &middot; <a href="https://digital-student-assistant.com/instructors">digital-student-assistant.com/instructors</a></p>
+  <div class="foot"><span>Closing</span></div>
+</section>
+
+<section class="center">
+  <h1>Questions</h1>
+  <p class="sub" style="margin-top:1.4em"><strong>Yusuf Pisan</strong><br>pisan@uw.edu</p>
+  <p class="tiny" style="margin-top:1.6em">Slides at <a href="https://pisanorg.github.io/yusuf/talks/202610DSA-YourCourse/">pisanorg.github.io/yusuf/talks/202610DSA-YourCourse</a></p>
+</section>
+
+</div>
+</div>
+<script src="vendor/reveal/dist/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0.055,
+    minScale: 0.2,
+    maxScale: 1.6,
+    hash: true,
+    slideNumber: 'c',
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>
