@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hints, Not Answers</title>
+<link rel="stylesheet" href="vendor/reveal/dist/reveal.css">
+<link rel="stylesheet" href="vendor/reveal/dist/theme/white.css">
+<style>
+  :root {
+    --purple: #4b2e83;
+    --purple-soft: #6f54a8;
+    --gold: #85754d;
+    --ink: #22222a;
+    --muted: #6b6b76;
+    --rule: #dcdce4;
+    --warn: #a3341f;
+    --ok: #1f6b45;
+  }
+  .reveal {
+    font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: var(--ink);
+  }
+  .reveal h1, .reveal h2, .reveal h3 { color: var(--purple); text-transform: none; letter-spacing: -0.01em; }
+  .reveal h1 { font-size: 1.75em; line-height: 1.12; }
+  .reveal h2 { font-size: 1.28em; line-height: 1.18; margin-bottom: 0.5em; }
+  .reveal h3 { font-size: 1.0em; }
+  .reveal .slides section { text-align: left; }
+  .reveal .slides section.center { text-align: center; }
+  .reveal ul, .reveal ol { display: block; margin-left: 1.1em; }
+  .reveal li { margin: 0.26em 0; line-height: 1.32; }
+  .reveal li li { font-size: 0.9em; color: var(--muted); }
+  .reveal p { line-height: 1.38; }
+  .reveal em { color: var(--purple); font-style: italic; }
+  .reveal strong { color: var(--ink); }
+  .reveal code { font-size: 0.8em; background: #f2f2f6; padding: 0.05em 0.3em; border-radius: 3px; }
+
+  /* eyebrow label + footer */
+  .kicker {
+    font-size: 0.46em; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin: 0 0 0.35em 0; font-weight: 600;
+  }
+  .foot {
+    position: absolute; bottom: -0.2em; left: 0; right: 0;
+    font-size: 0.4em; color: #b9b9c4; display: flex; justify-content: space-between;
+  }
+  /* big statement slide */
+  .statement { font-size: 1.32em; line-height: 1.32; color: var(--purple); font-weight: 600; }
+  .sub { font-size: 0.72em; color: var(--muted); }
+  .tiny { font-size: 0.56em; color: var(--muted); line-height: 1.35; }
+  .cite { font-size: 0.5em; color: #9a9aa6; }
+  /* verbatim payloads on the boundary detail slides (39a-39c): real
+     objects and the real rendered contract, not prettified paraphrases */
+  .payload { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.46em;
+             line-height: 1.5; background: #f4f4f8; border: 1px solid var(--rule);
+             border-radius: 4px; padding: 0.5em 0.7em; white-space: pre-wrap;
+             color: var(--ink); margin: 0.3em 0; }
+  .payload .k { color: var(--purple); font-weight: 600; }
+  .payload .c { color: var(--muted); }
+  .factlist { font-size: 0.5em; line-height: 1.5; margin: 0.2em 0 0; padding-left: 1.1em; }
+  .factlist li { margin-bottom: 0.12em; }
+  .movelist { font-size: 0.5em; line-height: 1.5; column-count: 2; column-gap: 1em; margin: 0.2em 0 0; }
+  .movelist li { margin-bottom: 0.15em; break-inside: avoid; }
+  .movelist code { font-size: 0.92em; }
+  .cnum { color: var(--purple-soft); white-space: nowrap; }
+
+  /* links: the deck palette, not Reveal's default blue */
+  .reveal a { color: var(--purple-soft); text-decoration: underline;
+              text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .reveal a:hover { color: var(--purple); }
+
+  /* section divider */
+  section.divider { text-align: left; }
+  section.divider h2 { font-size: 1.7em; border-left: 8px solid var(--gold); padding-left: 0.5em; }
+  section.divider p { font-size: 0.78em; color: var(--muted); padding-left: 1.0em; }
+
+  /* two-column */
+  .cols { display: flex; gap: 1.3em; align-items: flex-start; }
+  .cols > * { flex: 1; min-width: 0; }
+  .cols.tight { gap: 0.9em; }
+  /* body text inside a column reads smaller than a full-width paragraph */
+  .cols > div:not(.box) > p, .cols > div:not(.box) > ul, .cols > div:not(.box) > ol { font-size: 0.86em; }
+  .cols > div:not(.box) > p.cite { font-size: 0.5em; }
+  .cols > div:not(.box) > p.tiny { font-size: 0.56em; }
+  .cols > div:not(.box) > p.sub { font-size: 0.72em; }
+
+  /* callout box */
+  .box {
+    border: 2px solid var(--rule); border-left: 6px solid var(--purple);
+    border-radius: 6px; padding: 0.55em 0.75em; background: #fbfbfd;
+  }
+  .box.warn { border-left-color: var(--warn); }
+  .box.ok { border-left-color: var(--ok); }
+  .box h3 { margin: 0 0 0.2em 0; font-size: 0.74em; }
+  .box p, .box ul, .box ol { font-size: 0.66em; margin: 0.14em 0; line-height: 1.32; }
+
+  /* tables */
+  .reveal table { font-size: 0.62em; border-collapse: collapse; width: 100%; }
+  .reveal table th {
+    text-align: left; border-bottom: 2px solid var(--purple); color: var(--purple);
+    padding: 0.3em 0.5em; font-weight: 600;
+  }
+  .reveal table td { border-bottom: 1px solid var(--rule); padding: 0.3em 0.5em; vertical-align: top; }
+  .reveal table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .reveal table th.num { text-align: right; }
+
+  /* screenshot slides */
+  .shotwrap { text-align: center; }
+  .shotwrap img { border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotpair { display: flex; gap: 0.7em; align-items: flex-start; justify-content: center; }
+  .shotpair img { border: 1px solid var(--rule); border-radius: 5px; max-width: 100%; max-height: 15.5em; }
+  .shotpair.photos img { max-height: 9.6em; }
+  .shotfull img { max-height: 16em; max-width: 100%; }
+  /* the two reference slides */
+  .refcols { font-size: 0.5em; align-items: flex-start; }
+  .refcols .refhead { color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em;
+                      font-size: 0.95em; font-weight: 600; margin: 0.5em 0 0.15em 0; }
+  .refcols .refhead:first-child { margin-top: 0; }
+  .reflist { margin: 0 0 0 1em; font-size: 1em; }
+  .reflist li { margin: 0.12em 0; line-height: 1.22; font-size: 1em; color: var(--ink); }
+  .reflist li em { color: var(--muted); font-style: italic; }
+
+  .statement .who { display: block; font-size: 0.5em; letter-spacing: 0.1em;
+                    text-transform: uppercase; color: var(--gold); font-weight: 600;
+                    margin-bottom: 0.1em; }
+  .up { color: var(--ok); font-weight: 700; }
+  .down { color: var(--warn); font-weight: 700; }
+  .flat { color: var(--muted); font-weight: 700; }
+  .fail { color: var(--warn); }
+  .pass { color: var(--ok); }
+
+  /* stat tiles (this deck) */
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5em; }
+  .tile { border: 2px solid var(--rule); border-radius: 6px; padding: 0.4em 0.6em; background: #fbfbfd; }
+  .tile .n { font-size: 1.15em; font-weight: 700; color: var(--purple); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .tile .n.warn { color: var(--warn); }
+  .tile .c { font-size: 0.5em; color: var(--muted); line-height: 1.3; margin-top: 0.2em; }
+  .status { font-size: 0.85em; color: var(--muted); white-space: nowrap; }
+
+  /* keep the footer clear of the last block on a full slide */
+  .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em; }
+  .reveal .slides section aside.notes { display: none !important; }
+  .reveal .slides section { overflow: visible; }
+  .reveal svg text { font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+
+  /* pull quotes, from the SIGCSE deck */
+  blockquote.rev {
+    border: none; box-shadow: none; background: #f7f5fa; border-left: 5px solid var(--purple-soft);
+    padding: 0.5em 0.8em; font-size: 0.66em; font-style: normal; width: 100%; margin: 0.4em 0;
+  }
+blockquote.rev .who { display: block; font-size: 0.8em; color: var(--muted); margin-top: 0.3em; }
+
+  /* ---- added for the DSA talk series ---- */
+  .reveal .slide-number { font-size: 13px; color: #9a9aa6; background: transparent; right: auto; left: 50%; transform: translateX(-50%); bottom: 10px; }
+  .foot { justify-content: flex-start; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55em; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55em; }
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.5em; }
+  .card { border: 2px solid var(--rule); border-radius: 8px; padding: 0.45em 0.65em; background: #fbfbfd; }
+  .card h3 { margin: 0 0 0.2em 0; font-size: 0.7em; color: var(--purple); }
+  .card p, .card ul { font-size: 0.56em; margin: 0.12em 0; line-height: 1.34; }
+  .card ul { margin-left: 1em; }
+  .card .tag { display: inline-block; font-size: 0.42em; letter-spacing: 0.08em; text-transform: uppercase;
+               color: var(--gold); font-weight: 700; margin-bottom: 0.15em; }
+  .card.gold { border-top: 5px solid var(--gold); }
+  .card.purple { border-top: 5px solid var(--purple); }
+  .card.ok { border-top: 5px solid var(--ok); }
+  .card.warn { border-top: 5px solid var(--warn); }
+  .pill { display: inline-block; padding: 0.05em 0.5em; border-radius: 999px; background: #efeaf6;
+          color: var(--purple); font-size: 0.8em; font-weight: 600; white-space: nowrap; }
+  .pill.gold { background: #f4f0e6; color: #6d5f3a; }
+  .pill.ok { background: #e6f2ec; color: var(--ok); }
+  .pill.warn { background: #f7e7e3; color: var(--warn); }
+  .shotwrap.framed img { box-shadow: 0 6px 22px rgba(34,34,42,0.12); }
+  .shotside { display: flex; gap: 1em; align-items: flex-start; }
+  .shotside .shot { flex: 1.35; min-width: 0; }
+  .shotside .shot img { width: auto; max-width: 100%; max-height: 15.6em; border: 1px solid var(--rule); border-radius: 5px; display: block; margin: 0 auto; }
+  .shotside .side { flex: 0.65; min-width: 0; }
+  .shotside .side p, .shotside .side ul { font-size: 0.62em; }
+  .phone img { max-height: 15.5em; border: 1px solid var(--rule); border-radius: 14px; }
+  .caption { font-size: 0.5em; color: var(--muted); margin-top: 0.35em; }
+  .quote { font-size: 0.95em; color: var(--purple); font-weight: 600; line-height: 1.3; }
+  .ladder td:first-child { font-weight: 700; color: var(--purple); white-space: nowrap; }
+  .chat { font-size: 0.52em; line-height: 1.38; }
+  .chat .s, .chat .t { border-radius: 10px; padding: 0.45em 0.7em; margin: 0.3em 0; }
+  .chat .s { background: #eceaf1; margin-left: 18%; }
+  .chat .t { background: #f3f0fa; border: 1px solid #e2dcf0; margin-right: 8%; }
+  .chat .who { font-size: 0.8em; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .do, .dont { font-size: 0.6em; line-height: 1.35; }
+  .do li::marker { content: "\2713  "; color: var(--ok); font-weight: 700; }
+  .dont li::marker { content: "\2717  "; color: var(--warn); font-weight: 700; }
+  .center-block { margin-left: auto; margin-right: auto; }
+  .num-big { font-size: 2.1em; font-weight: 800; color: var(--purple); line-height: 1; font-variant-numeric: tabular-nums; }
+  .reveal svg.diagram { display: block; margin: 0.2em auto 0; }
+  /* print-pdf drops the section padding that keeps the footer clear of the last block */
+  html.print-pdf .reveal .slides section:not(.center):not(.divider) { padding-bottom: 0.9em !important; box-sizing: content-box; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="center">
+  <p class="kicker">DSA &middot; Digital Student Assistant</p>
+  <h1>Hints, Not Answers</h1>
+  <p class="sub">A course tutor that makes students do the thinking,<br>and shows you what they have learned</p>
+  <p style="margin-top:1.1em"><strong>Yusuf Pisan</strong><br>
+  <span class="sub">University of Washington Bothell, Computing &amp; Software Systems</span></p>
+  <p class="sub" style="margin-top:0.6em">pisan@uw.edu &middot; <a href="https://digital-student-assistant.com">digital-student-assistant.com</a></p>
+</section>
+
+<section>
+  <p class="kicker">Three audiences, one deck</p>
+  <h2>What this talk covers</h2>
+  <div class="grid3" style="margin-top:0.5em">
+    <div class="card purple">
+      <span class="tag">Part 1 &middot; about 15 minutes</span>
+      <h3>For faculty</h3>
+      <p>What the tutor does for students, the learning science behind each feature, what you see as the instructor, and how much work it is.</p>
+    </div>
+    <div class="card gold">
+      <span class="tag">Part 2 &middot; about 5 minutes</span>
+      <h3>For administration</h3>
+      <p>Cost, privacy, academic integrity, and what it would take to support more courses.</p>
+    </div>
+    <div class="card ok">
+      <span class="tag">Part 3 &middot; about 4 minutes</span>
+      <h3>For other universities</h3>
+      <p>What is general and what is built per course, what adoption elsewhere needs, and where it sits among the alternatives.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.9em">The last part of Part 1 is what we do <em>not</em> know yet. Please hold me to it.</p>
+  <div class="foot"><span>Overview</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 1</p>
+  <h2>For faculty</h2>
+  <p>What it does for your students, and what it does for you.</p>
+</section>
+
+<section>
+  <p class="kicker">The problem</p>
+  <h2>Your students already have an AI tutor. It does their homework.</h2>
+  <div class="grid3" style="margin-top:0.4em">
+    <div class="card warn">
+      <h3>They ask for answers</h3>
+      <p class="num-big" style="font-size:1.6em">~47%</p>
+      <p>of students' conversations with Claude were direct requests for answers or finished work. Computer science made up 38.6% of them.</p>
+      <p class="cite">Anthropic Education Report (2025)</p>
+    </div>
+    <div class="card warn">
+      <h3>Answers can lower exam scores</h3>
+      <p class="num-big" style="font-size:1.6em">&minus;17%</p>
+      <p>on the unassisted exam for students given unrestricted GPT-4, against no AI. A version that gave hints instead scored about the same as no AI.</p>
+      <p class="cite">Bastani et al. (2025), <em>PNAS</em>, about 1,000 high-school students</p>
+    </div>
+    <div class="card warn">
+      <h3>A prompt alone leaks</h3>
+      <p class="num-big" style="font-size:1.6em">22%&ndash;53%</p>
+      <p>CS50's duck put code blocks in about 22% of replies despite a no-solutions prompt; CodeAid's "help write code" gave an exact solution in 53% of sampled cases.</p>
+      <p class="cite">Liu et al. (SIGCSE 2025); Kazemitabaar et al. (CHI 2024)</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.8em">And too strict fails too: students route around a tutor that only ever asks questions (the <em>assistance dilemma</em>, Koedinger &amp; Aleven 2007).</p>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">What DSA is</p>
+  <h2>A tutor built from your course, that will not do the homework</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.25"><img src="img/chat-full.png" alt="The DSA chat: the lecture deck on the left, a student asking for code and the tutor guiding instead on the right."></div>
+    <div class="side" style="flex:0.75">
+      <p style="font-size:0.66em">The course tutor for CSS 342 and 343, our C++ data structures sequence, in production with students since a June 2026 pilot.</p>
+      <div class="box" style="margin-top:0.4em">
+        <h3>Three ideas</h3>
+        <ol>
+          <li><strong>Hints, enforced.</strong> Code, not the model, decides how much help a reply may give.</li>
+          <li><strong>Built from your course.</strong> Your slides, recordings, textbook and assignments.</li>
+          <li><strong>Help follows evidence.</strong> Graded practice decides how much scaffolding a topic gets.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Idea 1 &middot; hints, enforced</p>
+  <h2>Asking for the answer does not unlock it</h2>
+  <div class="cols">
+  <div style="flex:1">
+  <svg class="diagram" viewBox="0 0 520 330" width="100%" role="img" aria-label="The help ladder from H0, encourage, to H7, the full solution, with a line marking where code begins">
+    <g font-size="15" fill="#22222a">
+      <rect x="40" y="290" width="470" height="32" rx="6" fill="#fbfbfd" stroke="#dcdce4"/><text x="54" y="311"><tspan font-weight="700" fill="#4b2e83">H0</tspan>  encourage</text>
+      <rect x="40" y="254" width="470" height="32" rx="6" fill="#fbfbfd" stroke="#dcdce4"/><text x="54" y="275"><tspan font-weight="700" fill="#4b2e83">H1</tspan>  restate or clarify the problem</text>
+      <rect x="40" y="218" width="470" height="32" rx="6" fill="#fbfbfd" stroke="#dcdce4"/><text x="54" y="239"><tspan font-weight="700" fill="#4b2e83">H2</tspan>  point to the concept or the slide</text>
+      <rect x="40" y="182" width="470" height="32" rx="6" fill="#fbfbfd" stroke="#dcdce4"/><text x="54" y="203"><tspan font-weight="700" fill="#4b2e83">H3</tspan>  a leading question about the next step</text>
+      <rect x="40" y="146" width="470" height="32" rx="6" fill="#fbfbfd" stroke="#dcdce4"/><text x="54" y="167"><tspan font-weight="700" fill="#4b2e83">H4</tspan>  the approach in words, no code</text>
+      <line x1="34" y1="138" x2="516" y2="138" stroke="#a3341f" stroke-width="2" stroke-dasharray="7 5"/>
+      <text x="512" y="132" text-anchor="end" font-size="12.5" fill="#a3341f" font-style="italic">code starts above this line</text>
+      <rect x="40" y="88" width="470" height="32" rx="6" fill="#ece8f3" stroke="#c9bfdd"/><text x="54" y="109"><tspan font-weight="700" fill="#4b2e83">H5</tspan>  worked example of a <tspan font-style="italic">different</tspan> problem</text>
+      <rect x="40" y="52" width="470" height="32" rx="6" fill="#ece8f3" stroke="#c9bfdd"/><text x="54" y="73"><tspan font-weight="700" fill="#4b2e83">H6</tspan>  pseudocode, key lines left blank</text>
+      <rect x="40" y="16" width="470" height="32" rx="6" fill="#f4f0e6" stroke="#85754d" stroke-dasharray="5 4"/><text x="54" y="37"><tspan font-weight="700" fill="#4b2e83">H7</tspan>  full solution <tspan font-size="12.5" fill="#6b6b76">(never for students)</tspan></text>
+    </g>
+  </svg>
+  </div>
+  <div style="flex:0.95">
+    <ul style="font-size:0.66em">
+      <li>Before the model writes a word, <strong>ordinary code</strong> sets a ceiling on this ladder for the turn, from what the student has shown on graded work.</li>
+      <li>Every reply is checked: long code is cut automatically, and a second model reviews risky replies and can rewrite or block them.</li>
+      <li>Pushing, pleading or "ignore your instructions" never raises the ceiling. It holds, warmly, and says why.</li>
+    </ul>
+    <p class="cite" style="margin-top:0.4em">Graduated help as a designed object: Aleven et al. (2003). Why a prompt alone is not enough: the leakage results on the previous slide.</p>
+  </div>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Idea 1, continued</p>
+  <h2>Elicit first. Tell when eliciting stops paying off.</h2>
+  <div class="grid3" style="margin-top:0.3em">
+    <div class="card purple">
+      <h3>Your guess first</h3>
+      <p>When there is an answer to find (a complexity, a base case, the buggy line), the tutor asks for the student's guess before it confirms or corrects.</p>
+      <p class="cite">Productive failure: Sinha &amp; Kapur (2021)</p>
+    </div>
+    <div class="card purple">
+      <h3>Predict before it explains</h3>
+      <p>On a topic with no evidence yet, it may first ask one quick prediction question, then answer at the level the new evidence sets.</p>
+      <p class="cite">Attempt before explanation: Kumar et al. (AIED 2025)</p>
+    </div>
+    <div class="card gold">
+      <h3>Stuck? One more step</h3>
+      <p>A sustained impasse, or a press of <em>Show me more</em>, raises help one level, at most to pseudocode. Escalated replies are always reviewed. Never the full solution.</p>
+      <p class="cite">Escalate rather than re-ask: Ahtisham et al. (2026, preprint)</p>
+    </div>
+  </div>
+  <div class="box" style="margin-top:0.6em">
+    <p><strong>Why the escape valve matters:</strong> students who cannot get unstuck leave for an unguarded chatbot. A logged way to get more keeps them inside a tool you can see, and shows you who needs a person.</p>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Idea 2 &middot; built from your course</p>
+  <h2>It teaches from your materials, beside your slides</h2>
+  <div class="grid2" style="margin-top:0.3em">
+    <div class="card purple"><h3>Your materials</h3><p>Slides, lecture recordings (transcribed), the textbook, assignments, and your course's GitHub and Discord posts, searched by course. Exams and answer keys are kept out.</p></div>
+    <div class="card purple"><h3>Slides beside the chat</h3><p>When the answer is on a slide, the slide opens next to the conversation. Every lecture also exists as a narrated deck and a book chapter.</p></div>
+    <div class="card gold"><h3>Class materials, live</h3><p>Upload a syllabus, reading or assignment and the tutor can use it at once, only for your class. Tick <em>graded</em> and any matching question is always reviewed and never escalated.</p></div>
+    <div class="card gold"><h3>A goal graph and practice bank</h3><p>Each course has a map of learning goals with prerequisites, exercises, mastery questions with rubrics, and short programs with one bug each.</p></div>
+  </div>
+  <p class="sub" style="margin-top:0.6em">For CSS 342 and 343: 40 lecture decks, 136 learning goals and over 200 exercises, generated from my materials.</p>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Idea 3 &middot; help follows evidence</p>
+  <h2>Only graded work moves a student's level</h2>
+  <div class="shotside">
+    <div class="shot" style="flex:1.15"><img src="img/map.png" alt="The topic map: a graph of the course's learning goals, coloured by not started, started, practiced and solid."></div>
+    <div class="side" style="flex:0.85">
+      <ul>
+        <li>Evidence comes from mastery checks, exercises, reviews, quick checks, Find my bug and Teach-Back. <strong>Chatting never changes a level.</strong></li>
+        <li>Less shown means more scaffolding (up to a worked example on a different problem); more shown means a pointer or a question.</li>
+        <li>Levels decay with time; "confirmed" needs a second success at least 16 hours later.</li>
+      </ul>
+      <p class="cite" style="margin-top:0.4em">Worked examples help novices and fade for experts: Kalyuga et al. (2003). Spacing: FSRS-4.5 scheduler.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Practice that counts</p>
+  <h2>Each practice mode comes from a result in the literature</h2>
+  <table>
+    <thead><tr><th style="width:22%">Mode</th><th>What the student does</th><th style="width:28%">Behind it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mastery check</strong></td><td>Three questions on a prerequisite before going deeper; two of three passes. A miss shows the key idea and offers <em>Teach me</em>.</td><td>Mastery learning; VanLehn (2011)</td></tr>
+      <tr><td><strong>Spaced review</strong></td><td>One question at a time on topics answered before, scheduled to come back just before they fade.</td><td>Retrieval practice: Roediger &amp; Karpicke (2006)</td></tr>
+      <tr><td><strong>Quick check</strong></td><td>One or two questions the system offers after a failed exercise or a mostly watched lecture.</td><td>Students skip optional help: Nie et al. (2025)</td></tr>
+      <tr><td><strong>Find my bug</strong></td><td>A short program with exactly one bug: name the line, why, and the fix. Every item is verified by compiling and testing it.</td><td>Diagnosing errors: Daheim et al. (2024)</td></tr>
+      <tr><td><strong>Teach-Back</strong></td><td>The student explains; a second character, Kit, keeps asking <em>why</em> and <em>what if</em>, from recall to analysis.</td><td>Learning by teaching: Jin et al. (CHI 2024)</td></tr>
+      <tr><td><strong>Reflection</strong></td><td>After a success: "In one sentence, what would you tell a classmate?"</td><td>Self-explanation: Bisra et al. (2018)</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Exams</p>
+  <h2>It knows when your exam is, and what is on it</h2>
+  <div class="shotside">
+    <div class="side" style="flex:0.95">
+      <ul>
+        <li>You enter the exam's date, lecture range and format. The tutor knows it, and the student's panel counts down to it.</li>
+        <li><strong>Am I ready?</strong> lists the exam's topics weakest first, with <em>Teach me</em>, <em>Quick check</em> and <em>Test me now</em>.</li>
+        <li><strong>Review week:</strong> in the days before the exam, a code-free question on topics the student has already mastered can get a worked example, and the tutor may confirm their answer.</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.4em">Not built yet: a practice-exam mode with exam-shaped items.</p>
+    </div>
+    <div class="shot" style="flex:1.05"><img src="img/readiness.png" alt="Am I ready? for the midterm: topics weakest first, each with mastery, last result and a Teach me button."></div>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Keeping them coming back</p>
+  <h2>Change the voice, never the teaching</h2>
+  <div class="cols">
+    <div style="flex:1.05">
+      <div class="grid2">
+        <div class="card"><h3>Characters</h3><p>Fourteen voices, from a pirate to a grumpy Unix greybeard. The snark lands on the code, never the student, and steps aside on escalated and exam turns.</p></div>
+        <div class="card"><h3>Interests</h3><p>Up to three picks from a fixed list (no free text, nothing sensitive), used now and then for an example.</p></div>
+        <div class="card"><h3>Reply language</h3><p>Seven languages for the tutor's replies; the course stays in English.</p></div>
+        <div class="card"><h3>Your voice</h3><p>A reply can be read aloud in the instructor's cloned voice, only ever the student's own replies.</p></div>
+      </div>
+    </div>
+    <div style="flex:0.95">
+      <div class="box">
+        <h3>And people</h3>
+        <ul>
+          <li><strong>Ask my instructor:</strong> emails you the conversation, with the student in copy. Three a day.</li>
+          <li><strong>Study together:</strong> two classmates ask the tutor jointly, at the stricter of their two help levels.</li>
+          <li><strong>QSC tutors:</strong> a Quantitative Skills Center tutor you add can study with one student.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">What you see</p>
+  <h2>Your class on one page, and a weekly email</h2>
+  <div class="cols tight">
+    <div style="flex:1.15"><div class="shotwrap"><img src="img/instructor.png" alt="The instructor dashboard for a demo class: tiles for active, went quiet, never started; flagged replies; the roster with questions, days used and topics reached solid." style="max-height:14.8em; max-width:100%"></div></div>
+    <div style="flex:0.85">
+      <ul style="font-size:0.6em">
+        <li><strong>Who needs a look:</strong> active, went quiet, never started, could not sign in.</li>
+        <li><strong>Replies students flagged as wrong</strong>, each one link from the transcript.</li>
+        <li><strong>The roster</strong>, least active first; open any student's progress and conversations, or view the app as them, read-only.</li>
+        <li><strong>Sunday email:</strong> who used it, the hardest topics (only those two or more students struggled with), and flagged replies.</li>
+        <li><strong>Exports</strong> of topic levels by student, as CSV.</li>
+      </ul>
+      <p class="tiny" style="margin-top:0.3em">"This is engagement, not a grade." Nothing here grades students unless you run a graded Teach-Back round.</p>
+    </div>
+  </div>
+  <p class="caption">A demo class on a local copy; every name and number is made up.</p>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">What it asks of you</p>
+  <h2>You run your class. I build the course.</h2>
+  <div class="cols">
+    <div class="box ok">
+      <h3>You decide</h3>
+      <ul>
+        <li>The roster: paste addresses or import a Canvas class list (only addresses leave your computer)</li>
+        <li>Exam dates and ranges, and the review window</li>
+        <li>Class materials, and which are graded</li>
+        <li>Graded Teach-Back rounds: when, which topics, and when results are released</li>
+        <li>Co-instructors, QSC tutors, study pairs, the weekly email</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Built for you, or fixed</h3>
+      <ul>
+        <li>Turning your materials into a course: decks, goal graph, exercises, mastery questions. A pipeline I run, then you review</li>
+        <li>The help ladder and its bands are code, the same for every class</li>
+        <li>The tutor speaks as "Prof. Pisan's tutor" today; a per-course instructor line is on the roadmap</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.6em">A separate talk, <em>Put Your Course on DSA</em>, walks through the build with CSS 430 as the example.</p>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section>
+  <p class="kicker">Honest limits</p>
+  <h2>What the evidence says, and what we do not know yet</h2>
+  <div class="cols">
+    <div class="box">
+      <h3>What the literature supports</h3>
+      <p>Guarded, hint-giving tutors mostly <strong>remove the harm</strong> of unrestricted AI; they rarely beat no AI by much. Pooled across studies with an unassisted test, budget about <strong>0.2 SD</strong>, not two sigma.</p>
+      <p class="cite">Bastani et al. (2025); Contractor &amp; Reyes (2026, working paper)</p>
+      <p style="margin-top:0.3em">Gains, where they appear, come from structure: diagnosis, timing, curriculum, practice. That is what DSA is built around.</p>
+    </div>
+    <div class="box warn">
+      <h3>What we have not shown</h3>
+      <ul>
+        <li>DSA has <strong>not been tested in a controlled study</strong>. No randomized comparison yet.</li>
+        <li>Its safety checks are tested with scripted and simulated students, not human-labelled transcripts.</li>
+        <li>Mastery checks are unproctored, and nothing stops a student opening another chatbot in another tab.</li>
+        <li>Most practice features shipped in October 2026.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.6em">If you adopt it, I would like to run the study with you.</p>
+  <div class="foot"><span>Part 1 &middot; For faculty</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 2</p>
+  <h2>For administration</h2>
+  <p>Cost, privacy, academic integrity, and what it needs to grow.</p>
+</section>
+
+<section>
+  <p class="kicker">Cost</p>
+  <h2>Cents per question, with caps at every level</h2>
+  <div class="cols">
+    <div>
+      <div class="tiles">
+        <div class="tile"><div class="n">~$0.03</div><div class="c">per tutor turn, a planning figure (estimate)</div></div>
+        <div class="tile"><div class="n">~$13.50</div><div class="c">per student per quarter at heavy use: 15 turns a day on 30 days (estimate)</div></div>
+      </div>
+      <p class="tiny" style="margin-top:0.4em">Both from scripted test runs in June 2026, not measured student use.</p>
+      <ul style="font-size:0.6em; margin-top:0.4em">
+        <li><strong>Small models supervise:</strong> the classifier, strategist and reviewer run on a small model; only the reply uses the larger one.</li>
+        <li><strong>Caching:</strong> the tutor's long, fixed instructions are cached between turns.</li>
+        <li><strong>Free paths:</strong> pre-written <em>Teach me</em> explanations need no model call.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="box">
+        <h3>Caps and who pays</h3>
+        <ul>
+          <li>A daily question limit per student, and a class-wide monthly cap, with optional exam-week values.</li>
+          <li>Per-student day, week and month budgets; students see "about N questions left", never dollars.</li>
+          <li><strong>Who pays, in order:</strong> the site, then an instructor's own key for their class, then a student's own key. Every refusal says when it lifts.</li>
+          <li>The first stop at the monthly cap emails the alert list.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 2 &middot; For administration</span></div>
+</section>
+
+<section>
+  <p class="kicker">Privacy</p>
+  <h2>FERPA applies, and students hold the controls</h2>
+  <div class="cols">
+    <div>
+      <ul style="font-size:0.62em">
+        <li><strong>Consent notice</strong> on the sign-in page, wording approved by the department.</li>
+        <li><strong>Course-tool use only.</strong> Any research analysis needs an IRB determination first.</li>
+        <li><strong>Practice is never graded.</strong> Data is never sold or shared outside the course.</li>
+        <li><strong>One year, then anonymized:</strong> a daily sweep removes identifiers and free text.</li>
+        <li><strong>Self-service:</strong> students download all their data, or delete their account, from Settings.</li>
+      </ul>
+    </div>
+    <div>
+      <ul style="font-size:0.62em">
+        <li><strong>Usage records carry ids and counts,</strong> never what a student typed.</li>
+        <li><strong>Canvas:</strong> rosters come from a class list read in the instructor's browser. No grades in or out, no Canvas tokens.</li>
+        <li><strong>Model provider:</strong> no training on the data is requested, under the API terms.</li>
+        <li><strong>Encrypted backups</strong>, nightly, kept up to five weeks.</li>
+      </ul>
+      <div class="box warn" style="margin-top:0.4em">
+        <p><strong>Open item:</strong> a UW Privacy Office review of the hosting and vendor terms.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Part 2 &middot; For administration</span></div>
+</section>
+
+<section>
+  <p class="kicker">Academic integrity</p>
+  <h2>Built so the honest path is the easy one</h2>
+  <div class="grid2" style="margin-top:0.3em">
+    <div class="card purple"><h3>No solutions</h3><p>A ceiling set in code, an automatic cut of long code on every reply, and a second model reviewing risky replies. The full-solution rung exists only for an administrator's course-wide "explain mode".</p></div>
+    <div class="card purple"><h3>Graded work stays protected</h3><p>A question matching an instructor's graded assignment is always reviewed and never escalated. While a mastery check or graded round is open, its topics are held.</p></div>
+    <div class="card purple"><h3>Exams stay out</h3><p>The content pipeline never reads an exam. Answer keys, hidden course files and private repositories come in only with explicit consent, and are never shown.</p></div>
+    <div class="card warn"><h3>What it cannot do</h3><p>Stop a student opening an unguarded chatbot. So DSA aims to be the better path: course-specific, a logged way to get more help, and an email to the instructor one click away.</p></div>
+  </div>
+  <div class="foot"><span>Part 2 &middot; For administration</span></div>
+</section>
+
+<section>
+  <p class="kicker">What it needs to grow</p>
+  <h2>Production-grade engineering, run by one person</h2>
+  <div class="cols">
+    <div class="box ok">
+      <h3>In place</h3>
+      <ul>
+        <li>Thousands of automated tests, including phone-width, keyboard and screen-reader checks</li>
+        <li>Kill switches, a maintenance mode, monitored errors, a tested restore from backup</li>
+        <li>Every model call priced and logged</li>
+        <li>Three courses in one registry; a new course is a pipeline run, not new code</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h3>Not yet</h3>
+      <ul>
+        <li><strong>One maintainer.</strong> I am the operator, the developer and the course builder.</li>
+        <li><strong>One server.</strong> Scaling past one instance needs state moved to the database.</li>
+        <li><strong>No LTI yet.</strong> A Canvas LTI 1.3 request to UW-IT is drafted.</li>
+        <li><strong>No external accessibility audit</strong> or VPAT; ADA Title II applies from April 2027.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:0.6em"><strong>The asks:</strong> an IT and privacy partner, support for an evaluation study, and help keeping it running.</p>
+  <div class="foot"><span>Part 2 &middot; For administration</span></div>
+</section>
+
+<section class="divider">
+  <p class="kicker">Part 3</p>
+  <h2>For other universities</h2>
+  <p>What travels, what adoption needs, and where it sits.</p>
+</section>
+
+<section>
+  <p class="kicker">What travels</p>
+  <h2>The teaching machinery is general. The content is built per course.</h2>
+  <div class="grid3" style="margin-top:0.3em">
+    <div class="card ok">
+      <span class="tag">Any course</span>
+      <h3>In the code</h3>
+      <ul>
+        <li>The supervised turn: the ladder, the checks, the review</li>
+        <li>The learner model, spaced review, quick checks</li>
+        <li>Teach-Back, which reads code but never runs it</li>
+        <li>Classes, rosters, exams, materials, the dashboard</li>
+        <li>Data rights, characters, pair study</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <span class="tag">Per course</span>
+      <h3>Built by the pipeline</h3>
+      <ul>
+        <li>The knowledge base from the course's materials</li>
+        <li>A 20-lecture plan, decks and narration</li>
+        <li>The goal graph, exercises, mastery questions</li>
+        <li>Find-my-bug items (C++ only today)</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <span class="tag">Specific today</span>
+      <h3>Would need work</h3>
+      <ul>
+        <li>One instructor's persona and voice</li>
+        <li>A sandbox that compiles C++ only</li>
+        <li>UW sign-in, rosters and consent text</li>
+        <li>Anthropic models only</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Part 3 &middot; For other universities</span></div>
+</section>
+
+<section>
+  <p class="kicker">Where it sits</p>
+  <h2>What is out there, and what DSA combines</h2>
+  <table>
+    <thead><tr><th style="width:26%">Kind</th><th style="width:30%">Examples</th><th>Strength, and the gap</th></tr></thead>
+    <tbody>
+      <tr><td>Study modes</td><td>ChatGPT Study Mode, Claude Learning mode, Gemini Guided Learning</td><td>Cheap and everywhere. The student can switch the mode off; no instructor can enforce it.</td></tr>
+      <tr><td>LMS AI</td><td>Canvas's AI features</td><td>Inside the LMS students already use. General purpose, not built from one course.</td></tr>
+      <tr><td>CS courseware</td><td>zyBooks, Codio, PrairieLearn</td><td>Enforced hints or code execution, on the vendor's content.</td></tr>
+      <tr><td>University-built</td><td>CS50's duck, Berkeley 61A's bot</td><td>Proven at scale in intro courses; withholding mostly by prompt.</td></tr>
+    </tbody>
+  </table>
+  <div class="box ok" style="margin-top:0.6em">
+    <p><strong>The combination we have not found elsewhere:</strong> the instructor's own materials and voice, withholding enforced by the system, mastery evidence, and upper-division CS.</p>
+  </div>
+  <div class="foot"><span>Part 3 &middot; For other universities</span></div>
+</section>
+
+<section>
+  <p class="kicker">Adopting it elsewhere</p>
+  <h2>Ready for design partners, not yet for procurement</h2>
+  <div class="cols">
+    <div class="box ok">
+      <h3>Now: a hosted pilot</h3>
+      <p>One instructor, one course, one quarter. You send your materials and dates; I build the course and run it; we look at the evidence together.</p>
+    </div>
+    <div class="box warn">
+      <h3>Before a campus purchase</h3>
+      <ul>
+        <li>LTI 1.3 and institutional sign-in</li>
+        <li>More than one institution per deployment</li>
+        <li>An accessibility audit and VPAT; security and privacy paperwork</li>
+        <li>Self-serve course setup, and more languages than C++</li>
+        <li>A quarter of outcome data</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Part 3 &middot; For other universities</span></div>
+</section>
+
+<section>
+  <p class="kicker">The ask</p>
+  <h2>Try it with one course, and help me measure it</h2>
+  <div class="grid3" style="margin-top:0.4em">
+    <div class="card purple"><span class="tag">Faculty</span><h3>Pilot a course</h3><p>Send your slides, recordings and assignments. We build it together; you run your class with it next quarter.</p></div>
+    <div class="card gold"><span class="tag">Administration</span><h3>Partner on support</h3><p>A privacy review, an IT contact for LTI, and a home for it beyond one faculty member.</p></div>
+    <div class="card ok"><span class="tag">Everyone</span><h3>Design the study</h3><p>An unassisted, delayed outcome measure, in a course where the stakes are real.</p></div>
+  </div>
+  <p style="margin-top:1em" class="sub"><strong>Yusuf Pisan</strong> &middot; pisan@uw.edu &middot; <a href="https://digital-student-assistant.com/instructors">digital-student-assistant.com/instructors</a></p>
+  <div class="foot"><span>Closing</span></div>
+</section>
+
+<section class="center">
+  <h1>Questions</h1>
+  <p class="sub" style="margin-top:1.4em"><strong>Yusuf Pisan</strong><br>pisan@uw.edu</p>
+  <p class="tiny" style="margin-top:1.6em">Slides at <a href="https://pisanorg.github.io/yusuf/talks/202610DSA-ForFaculty/">pisanorg.github.io/yusuf/talks/202610DSA-ForFaculty</a></p>
+</section>
+
+</div>
+</div>
+<script src="vendor/reveal/dist/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0.055,
+    minScale: 0.2,
+    maxScale: 1.6,
+    hash: true,
+    slideNumber: 'c',
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>

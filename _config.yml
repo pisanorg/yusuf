@@ -9,6 +9,10 @@ plugins:
 # future Jekyll default exclude can strip it from the built site.
 include:
   - talks/202610Northwestern/vendor
+  - talks/202610DSA-HowItWorks/vendor
+  - talks/202610DSA-ForFaculty/vendor
+  - talks/202610DSA-YourCourse/vendor
+  - talks/202610DSA-ForStudents/vendor
 
 # Speaker-private files that live beside the deck but must never be published.
 # Belt and braces: these are gitignored too, so GitHub Pages never sees them.
