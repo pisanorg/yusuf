@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">75 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">76 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
-  <li><a href="#outguess-me">Outguess Me</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
@@ -56,6 +56,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Games, Puzzles &amp; Chess</h4>
 <ul>
+  <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#bombe-bench">Bombe Bench</a></li>
   <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
   <li><a href="#cipher-ladder">Cipher Ladder</a></li>
@@ -141,6 +142,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Cache Miss Theater](https://cache-miss-theater.netlify.app)
+
+Every architecture course says loop order matters, shows the matrix multiply with the loops swapped, and asks students to take the speedup on faith. Cache Miss Theater makes the cache visible. Write a small C loop nest (arrays, `#define` constants, `for` loops, `min()` bounds for blocking) and it produces the exact address of every array access, then runs that trace through a cache you set up: size, line size, associativity, LRU, FIFO or random replacement, and the write policies. Every miss is labelled compulsory, capacity or conflict, by quietly running an infinite cache and a fully associative cache of the same size alongside the real one. Press play and watch lines land in their sets, labelled `B[14][0..3]`, and get evicted, while a map of each array shows which elements are in the cache right now. Put two kernels side by side (row order against column order, ijk against ikj, naive transpose against blocked), sweep a block size or the cache size and get the miss-rate curve, or generate exam questions whose answers come from the simulator, exported as Markdown or as a QTI file for Canvas.
+
+The presets are the classic lectures: the 8 KB array summed by rows misses 25% of the time and by columns 100%, two float arrays exactly a cache size apart in a direct-mapped cache knock each other out on every access until you pad one by a line, and blocking a 24 by 24 matrix multiply for a 1 KB cache drops the misses from 3,744 to 1,008. The idea asked for an analyser of affine loops; I wrote a small interpreter instead, which handles `min()` bounds and branches for free. The honest limitation is that it is one level of data cache with a fixed order for the reads in a statement, and array contents are not simulated, so no pointers, no `A[B[i]]`, and no compiler that keeps `C[i][j]` in a register. 62 vitest tests, with the cache checked against a naive reference on random traces.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/cache-miss-theater/README.md) for more details on the code or try it at <https://cache-miss-theater.netlify.app>
+
+(Last update October 2026)
 
 ### [Assignment Stress Test](https://assignment-stress-test.netlify.app)
 
