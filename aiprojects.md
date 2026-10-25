@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">76 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">77 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
-  <li><a href="#code-viva">Code Viva</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
@@ -106,6 +106,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Teaching with AI: Tutors, Papers &amp; Talks</h4>
 <ul>
+  <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#where-does-it-say">Where Does It Say</a></li>
   <li><a href="#digital-student-assistant">Digital Student Assistant</a></li>
   <li><a href="#claude-for-stem-professors">Claude for STEM Professors</a></li>
@@ -142,6 +143,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Edit Graph Lab](https://edit-graph-lab.netlify.app)
+
+Students run `diff` and `git diff` every day and almost none of them know it is a shortest-path search. Edit Graph Lab draws the picture. Type two texts, by line or by character, and you get the edit graph: a grid with the old text across the top and the new text down the side, a step right for every deletion, a step down for every insertion, and a free diagonal wherever the two texts share a token. Press play and Myers' 1986 algorithm spreads across it one edit at a time, each furthest-reaching path in its own colour, while the V array fills in beside the grid as the triangle from the paper, with a sentence per diagonal saying where each number came from. When the search reaches the corner the path turns into a unified diff, and hovering a hunk lights up its stretch of the path. A second view runs the textbook LCS table, Myers, patience and histogram diff on the same input and outlines where they disagree, and an exercise generator writes questions (predict the edit distance, fill in V[k] after step d, which of these two diffs did patience produce, how many hunks will `diff -U1` print) with answers from the code, exported as Markdown or as a QTI file for Canvas.
+
+The examples are the classic traps: the paper's ABCABBA against CBABAC, kitten and sitting (5 edits, not 3, because diff has no substitution), Bram Cohen's frobnitz, two swapped functions, and an inserted function whose braces can slide. Writing the notes for them taught me something: my straightforward Myers produced clean diffs on cases the blog posts use to show Myers at its worst, and it was the LCS table that interleaved the functions. So each note says what these implementations actually do, and a test checks the claims. The honest limitation is that this is raw algorithm output. Real git runs a clean-up pass afterwards that slides hunks to blank lines, and its Myers searches from both ends at once, so on the same input `git diff` can read better than what the lab shows. 36 vitest tests, with the edit distances and every generated patch checked against the `diff` npm package.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/edit-graph-lab/README.md) for more details on the code or try it at <https://edit-graph-lab.netlify.app>
+
+(Last update October 2026)
 
 ### [Cache Miss Theater](https://cache-miss-theater.netlify.app)
 
