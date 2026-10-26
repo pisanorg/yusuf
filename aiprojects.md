@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">77 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">78 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
-  <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
+  <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
@@ -143,6 +144,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Lockstep Lab](https://lockstep-lab.netlify.app)
+
+Real-time strategy games like Total Annihilation kept thousands of units in sync over a modem by sending only the players' clicks and running the exact same simulation on every machine. That only works if the simulation is perfectly deterministic, and determinism is very hard to teach from slides. Lockstep Lab runs a tiny RTS on two to four simulated clients side by side, connected by a fake network where you set the latency, jitter, packet loss and reordering. Every confirmed tick each client hashes its world, and a strip of green bars shows the hashes agreeing. Then switch on one source of nondeterminism: floats on two different platforms, a random number generator seeded from each machine's clock, iterating a Map in the order the units happened to be inserted, or advancing physics by the measured frame time on a 60 Hz and a 144 Hz machine. The bars turn red, the ghost of client A's units drifts away from client B's, and a table names the first unit and field that differed, down to the bit pattern. My favourite preset is "floats on identical machines", which stays in sync: floats are deterministic, platforms are not. A second view compares input-delay lockstep with GGPO-style rollback over input delays 0 to 8 on the same network, plotting input lag against stalls for one and re-simulation cost for the other, and five autograded exercises hand students a broken step function to fix until two simulated machines agree for 10,000 ticks.
+
+Everything runs in the browser with no backend, and a test checks that rollback, over a 200 ms network losing 15% of its packets, confirms exactly the same states as lockstep. The honest limitation is that the platform differences are simulated and exaggerated. JavaScript arithmetic is identical on every engine, so the lab invents a second machine that keeps extra precision and uses a sloppier sine, and the float preset diverges within the first ticks rather than after the minutes or hours it takes in a real game. 46 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/lockstep-lab/README.md) for more details on the code or try it at <https://lockstep-lab.netlify.app>
+
+(Last update October 2026)
 
 ### [Edit Graph Lab](https://edit-graph-lab.netlify.app)
 
