@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">79 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">80 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
-  <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
@@ -70,6 +70,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Playful Experiments</h4>
 <ul>
+  <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
   <li><a href="#sound-sketchpad">Sound Sketchpad</a></li>
   <li><a href="#emoji-lingua">Emoji Lingua</a></li>
@@ -145,6 +146,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Net Units](https://net-units.netlify.app)
+
+Students now hand in code that works but is twice as long as it needs to be, often because an AI wrote it, and "this is bloated" is a hard comment to defend. Net Units puts a number on it. Upload the starter code and a set of solutions (student submissions, my reference, AI baselines) and it counts how much each one added in coding units rather than lines: every name, keyword, literal and operator counts one, while brackets, commas, comments and blank lines count nothing, and units on deleted lines are subtracted. Cramming does not help. In the bundled sample a student squeezed their answer onto four lines and still comes out larger than my reference. Each solution lands on a scatter of size against tests passed, with marker size showing how many new branches it added or how much of it is copy-paste, and clicking one opens a side-by-side diff with every counted unit highlighted and a per-function breakdown. Then comes my favourite part, a "guess the author" round: the solutions get shuffled codenames, the class votes on which ones an AI wrote, and I reveal the answer and export an annotation sheet so sections can argue about where the extra code earned its keep.
+
+The idea came from the Parsimony benchmark, which ranks AI models by how much code they add to fix bugs. The suggested design used tree-sitter, a Flask backend and Claude-generated baselines; this version is a hand-written lexer for Python, JavaScript, Java and C++ that runs entirely in the browser, so student code never leaves the room. The honest limitation is that the three AI baselines in the sample were written by hand to show terse, balanced and defensive styles, so they are not real model output; for a real guessing round you upload your own. It also does not run the code, so you type in how many tests each solution passed. 39 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/net-units/README.md) for more details on the code or try it at <https://net-units.netlify.app>
+
+(Last update October 2026)
 
 ### [Tetromino Arcade](https://tetromino-arcade.netlify.app)
 
