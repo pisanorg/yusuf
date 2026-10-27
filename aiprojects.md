@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">80 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">81 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
-  <li><a href="#fork-count">Fork Count</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
+  <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
@@ -146,6 +147,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Study Buddy Matchmaker](https://study-buddy-matchmaker.netlify.app)
+
+When I tell students to form study groups, friends sit with friends, and two people who are both lost on graphs end up spending an hour being lost together. Study Buddy Matchmaker uses the gradebook instead. Upload a CSV export with one column per quiz question or homework problem, tag each column with its topic (it reads headers like `Q3 [recursion] /5`, and anything it guesses wrong can be fixed in a table), and it works out how much of each topic every student has mastered, counting only the work they attempted, so a missed quiz is not a zero. Then it pairs students so that each one is strong in something the other is still learning: someone who is good at recursion but shaky on graphs gets matched with someone who is the reverse. Every group gets a short agenda saying who leads which topic, with a link for each, plus the topics nobody in the group is strong in yet, which belong in office hours. Every student gets a printable card with who they are meeting, what they lead, what they get help with, and their own standing per topic. The card never shows a groupmate's scores, so I can hand them out without anyone seeing anyone else's weak spots.
+
+The suggested design used Claude to cluster students and write the agendas, with a Flask and Supabase backend. This version does it all with arithmetic in the browser, so the gradebook never leaves my laptop: the pairing is a maximum-weight matching, exact for classes up to 20 and very close to the best above that, with an option to keep particular students apart. The honest limitation is that the match score treats a gap in quiz scores as teaching value. It knows nothing about who gets along, who can actually explain, or who is free on Tuesday afternoons, so the pairs are a starting point I still look over. 29 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/study-buddy-matchmaker/README.md) for more details on the code or try it at <https://study-buddy-matchmaker.netlify.app>
+
+(Last update October 2026)
 
 ### [Net Units](https://net-units.netlify.app)
 
