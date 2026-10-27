@@ -31,3 +31,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-24 [doc] talks/202610DSA-*: wording fixes from the notes read (explain mode, keys hidden by name, activity vs chat records, code review at H5/H6, judge flag); PDFs rebuilt.
 
 2026-10-25 [doc] aiprojects: added Edit Graph Lab at top; Code Viva moved from Latest to Teaching with AI; count 77.
+
+2026-10-27 [doc] aiprojects: added Tetromino Arcade at top; Letter Ledger moved from Latest to Course & Department Tools; count 79.

@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">78 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">79 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
-  <li><a href="#letter-ledger">Letter Ledger</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
@@ -125,6 +125,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Course &amp; Department Tools</h4>
 <ul>
+  <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#css-scheduler">CSS Scheduler</a></li>
   <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
   <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
@@ -144,6 +145,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Tetromino Arcade](https://tetromino-arcade.netlify.app)
+
+Every one of these projects so far came off the daily ideas list. This one I just asked for: make a Tetris game, and add lots of features. What came back is a falling-block game that plays the way modern versions do. Pieces rotate with the Super Rotation System, so they kick off walls and slide into tight slots, they come from a shuffled bag of seven so you never wait forever for a long piece, and there is hold, a ghost piece, a short lock delay you can stretch by moving, and proper scoring for T-spins, back-to-back Tetrises, combos and perfect clears. There are seven modes: Marathon, a 40-line Sprint, two-minute Ultra, Dig through ten rows of garbage, Master where pieces land instantly, an endless Zen mode, and Versus against a CPU that you bury in garbage rows by clearing lines. A Daily Sprint gives everyone the same pieces for the day. Keys, auto-repeat speed and soft drop are all adjustable, gamepads work, and on a phone you get buttons and swipe controls. Every game is recorded as the random seed plus each key press, so your best run in each mode can be watched back exactly, at up to four times speed, or downloaded as a tiny file.
+
+The CPU is not an LLM. It tries every rotation and column for its current and held piece and scores each resulting board on height, holes, wells and how ragged the surface is, using the weights published for the El-Tetris bot, and the difficulty setting decides how fast it moves and how often it picks a worse spot on purpose. The honest limitation is that it only ever drops pieces straight down from above, so it never tucks a piece under an overhang or sets up a T-spin, and a player who can T-spin will beat even the Insane setting. Records are kept in your browser only, so the daily challenge has no shared leaderboard. 58 vitest tests, including a CPU clearing 40 lines and full versus matches.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/tetromino-arcade/README.md) for more details on the code or try it at <https://tetromino-arcade.netlify.app>
+
+(Last update October 2026)
 
 ### [Lockstep Lab](https://lockstep-lab.netlify.app)
 
