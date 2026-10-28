@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">81 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">82 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
-  <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
 </ul>
 <h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
 <ul>
@@ -109,6 +109,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Teaching with AI: Tutors, Papers &amp; Talks</h4>
 <ul>
+  <li><a href="#assignment-stress-test">Assignment Stress Test</a></li>
   <li><a href="#code-viva">Code Viva</a></li>
   <li><a href="#where-does-it-say">Where Does It Say</a></li>
   <li><a href="#digital-student-assistant">Digital Student Assistant</a></li>
@@ -147,6 +148,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Pluck Lab](https://pluck-lab.netlify.app)
+
+Karplus-Strong is my favourite algorithm to show students who think signal processing is not for them. Fill a queue with random noise, keep taking a sample off the front, average it with the one before, and put the result on the back. That is about twenty lines of code, and it sounds like a guitar string. Pluck Lab makes it playable. The home and bottom rows of the keyboard pick chords, H and J strum down and up, and every note is synthesized live as you play, with no recorded samples anywhere. The point is what is on screen: the delay line of the string you are watching, the strength of each of its harmonics, and the sound coming out, all of which you can slow down to one sample per frame while you talk. You can watch the jagged noise smooth out trip by trip and the high harmonics die first, which is the whole trick. Seven lecture scenes each set up one idea with buttons that play the example: why pitch is out of tune without a fractional-delay fix (and badly so at 8 kHz), why higher notes die faster, where you pick the string, and why a strum is nothing more than six plucks a few milliseconds apart. The last scene hands the loop filter to the students as a few lines of JavaScript that they can rewrite and hear immediately.
+
+The suggested design used Claude to explain a student's edited filter in plain language. This version measures the filter instead: it checks whether it is linear, runs test tones through it to get its gain and delay at each frequency, and turns that into sentences such as "low-pass, the A string will ring for about 9 seconds" or "unstable, it keeps more than it started with every trip", all in the browser. The honest limitation is that it is the textbook model, with no guitar body, no string stiffness and no bends, so it sounds like a plucked string rather than a good recorded guitar, and the student's filter code runs in their own browser tab with no sandbox. 53 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/pluck-lab/README.md) for more details on the code or try it at <https://pluck-lab.netlify.app>
+
+(Last update October 2026)
 
 ### [Study Buddy Matchmaker](https://study-buddy-matchmaker.netlify.app)
 
