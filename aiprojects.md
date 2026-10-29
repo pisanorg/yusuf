@@ -31,27 +31,31 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">82 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">83 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
-  <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
 </ul>
-<h4 class="toc-group">Algorithms, Systems &amp; Reasoning</h4>
+<h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
+  <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
-  <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
   <li><a href="#heap-arena-replay">Heap Arena Replay</a></li>
+  <li><a href="#sql-replay">SQL Replay</a></li>
+</ul>
+<h4 class="toc-group">Algorithms &amp; Reasoning</h4>
+<ul>
+  <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
   <li><a href="#elevator-algorithm-lab">Elevator Algorithm Lab</a></li>
   <li><a href="#type-witness">Type Witness</a></li>
-  <li><a href="#sql-replay">SQL Replay</a></li>
   <li><a href="#pathfinding-playground">Pathfinding Playground</a></li>
   <li><a href="#ltms-a-truth-maintenance-system-in-python">LTMS: A Truth Maintenance System in Python</a></li>
   <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver</a></li>
@@ -148,6 +152,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Pull the Pin](https://pull-the-pin-lab.netlify.app)
+
+Computer organization courses teach how a working computer runs. Debugging a broken one teaches more, because you have to reason about every signal on the way from symptom to cause. Pull the Pin is a Ben Eater style 8-bit computer (program counter, RAM, instruction register, A and B registers, an adder, flags, an output register and a microcode ROM driving 16 control lines on a shared bus) simulated pin by pin, with one thing broken: a bus line stuck at 0, a lifted pin, two bus lines shorted together, a flipped bit in the microcode, or a dead chip. Students run test programs for free and see what the output display shows compared to a healthy board. Then they click pins and bus lines and spend a limited budget of probes capturing waveforms on a logic analyzer, and finally name the fault. As they measure, the page lists every one of the 3,810 possible single faults that still fits what they have seen, and shows when probing has stopped helping and only a new test program will tell the remaining suspects apart. That is the lesson I care about: a diagnosis is only as good as the tests that exercise the broken path. There is also a sandbox with every signal visible and the faulty waveforms drawn over the healthy ones, and an instructor page that makes challenge links.
+
+The suggested design had Claude give Socratic hints. This version computes the hint instead: it picks the probe that would rule out the most remaining faults, using only what the student has already measured. The honest limitation is that each module is one idealized chip with cycle-level timing, not the real 74LS parts with propagation delays and glitches, and it only models one fault at a time, so it teaches diagnosis by elimination rather than what a real breadboard feels like. 74 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/pull-the-pin/README.md) for more details on the code or try it at <https://pull-the-pin-lab.netlify.app>
+
+(Last update October 2026)
 
 ### [Pluck Lab](https://pluck-lab.netlify.app)
 
