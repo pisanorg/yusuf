@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">85 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">86 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
-  <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -64,6 +64,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Games, Puzzles &amp; Chess</h4>
 <ul>
+  <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#bombe-bench">Bombe Bench</a></li>
   <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
@@ -154,6 +155,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Poincaré Paint](https://poincare-paint.netlify.app)
+
+Most people's first picture of non-Euclidean geometry is one of Escher's Circle Limit prints, and most never find out what makes them work. Poincaré Paint lets you draw one. You pick a tiling such as {7,3} (seven-sided polygons, three at every corner, which only fits on a hyperbolic plane) and doodle inside the disk. Every stroke is copied into every tile at once, shrinking towards the rim, so a few squiggles turn into a pattern. Underneath, each stroke is folded into one small triangle and redrawn by Möbius maps, the transformations that preserve hyperbolic angles and distances. A geodesic brush shows that straight lines here are arcs meeting the rim at right angles. Dragging slides the whole plane, and whatever you grab glides through the middle while the rim never gets any closer, which shows why the disk has no centre. A measure tool gives hyperbolic distances and the angles of any triangle you click; the angle sum always comes out under 180°, and the shortfall is the triangle's area. Drawings export as SVG or as a link that carries the whole picture in the URL.
+
+The honest limitation is speed on deep tilings. It draws with plain Canvas rather than WebGL, so a busy {7,3} picture with tiles drawn all the way to the rim takes tens of milliseconds a frame, and dragging can stutter on a weak phone unless you turn the detail down. Each stroke also gets a single width, so one long stroke does not taper along its length. 58 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/poincare-paint/README.md) for more details on the code or try it at <https://poincare-paint.netlify.app>
+
+(Last update October 2026)
 
 ### [Data Structure City](https://data-structure-city.netlify.app)
 
