@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">86 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">87 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
-  <li><a href="#net-units">Net Units</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -135,6 +135,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Course &amp; Department Tools</h4>
 <ul>
+  <li><a href="#net-units">Net Units</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#css-scheduler">CSS Scheduler</a></li>
   <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
@@ -155,6 +156,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Tamerlane Board](https://tamerlane-board.netlify.app)
+
+Chess has been rewritten many times. The queen used to move one square, and the bishop used to jump. Timur's chess, played in fourteenth-century Central Asia, is a good look at that history: an 11×10 board, giraffes, camels, war engines that leap two squares, and a citadel on each side where a losing king can run for a draw. Tamerlane Board lets you play it against an engine, and each piece has a short note on where it came from and what it turned into. The interesting part is underneath. No piece has its own code. Each one is a line of fairy-chess notation, so the giraffe is `F>R{3,}`: one diagonal step, then at least three squares straight out. The move generator, the move highlights and the engine all read that same line. That makes the piece lab possible. You type a new piece, watch the squares it reaches light up, drop blockers to see how it gets stopped, get a rough value in pawns, and then play it in Timur or ordinary chess. A balance test has the engine play itself a few times with your piece on one side to see whether it is too strong. A link shares the whole piece. It makes a good game-AI lecture demo too, since search, evaluation and move generation are all visible and none of them knows anything about chess in particular.
+
+The honest limitation is that the engine is small and the rules are simplified. It searches five or six moves (counting both sides) in a second, which is enough to punish blunders but not to judge a new piece from six quick balance games. Some historical rules are left out: the king's one-time swap, the extra royal pieces, and the pawn of pawns' three-stage promotion. The idea also called for Claude to turn plain English into notation. That step became clickable examples and a syntax table, so nothing needs a server. 82 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/tamerlane-board/README.md) for more details on the code or try it at <https://tamerlane-board.netlify.app>
+
+(Last update October 2026)
 
 ### [Poincaré Paint](https://poincare-paint.netlify.app)
 
