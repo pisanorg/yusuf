@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">84 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">85 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#four-ghosts-four-targets">Four Ghosts, Four Targets</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
-  <li><a href="#lockstep-lab">Lockstep Lab</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
+  <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
@@ -153,6 +154,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Four Ghosts, Four Targets](https://four-ghosts-four-targets.netlify.app)
+
+The ghosts in the 1980 arcade maze game do not search for a path. Each one has a target tile, and at every tile it takes the exit closest to that target in a straight line, never turns back, and breaks ties up, left, down, right. That is the whole AI. The four personalities come only from how each ghost picks its target: one aims at you, one four tiles ahead of you, one doubles the vector from the first ghost to a point two tiles ahead of you, and one chases until it gets within eight tiles and then runs for its corner. Four Ghosts, Four Targets puts four chasers with those rules on an original maze and draws everything they are thinking: each target tile, the candidate exits at the next decision with the squared distance on each, and a table of the last and next decision. You can step one tick at a time, forward or back, and turn on the old overflow bug that makes "four ahead" mean four up and four left when you face up. Six short scenarios set up a tie, the bug, the vector trick, the shy ghost that never closes in, the mode change where every ghost turns around, and a greedy ghost that circles a block forever while a BFS ghost reaches you in two seconds.
+
+The part I like best is the race. Switch the ghosts to BFS or A* and run a few dozen games against a simple autopilot. On the big maze the shortest-path ghosts catch you about twice as often, but they travel as one pack, bunched up most of the time. On the small maze the pack gets in its own way and catches you less. Personality and good play come from simple local rules with different goals, not from optimal search. The honest limitation is that the comparison uses one autopilot opponent and only level 1 timings, so it is a demonstration, not a benchmark. 55 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/four-ghosts/README.md) for more details on the code or try it at <https://four-ghosts-four-targets.netlify.app>
+
+(Last update October 2026)
 
 ### [Leap Second Lab](https://leap-second-lab.netlify.app)
 
