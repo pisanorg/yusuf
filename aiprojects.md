@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">84 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">85 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
-  <li><a href="#lockstep-lab">Lockstep Lab</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
+  <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
   <li><a href="#program-alarm-1202">Program Alarm 1202</a></li>
@@ -153,6 +154,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Data Structure City](https://data-structure-city.netlify.app)
+
+In CS2, students meet hash maps, B-trees and caches as static diagrams in a textbook, and "amortized O(1)" stays an abstract phrase. Data Structure City puts four data structures side by side: a hash map, a B-tree, a skip list and an LRU cache. All four take commands from one Redis-like console (SET, GET, DEL, EXPIRE, TICK, RANGE), so one command changes all four at once. Students see buckets fill until the table doubles and every entry moves, a full B-tree node split and push its middle key up, coin flips build skip-list towers, and the cache evict whatever was used least recently. Each structure has a cost meter showing the last operation, the running average and the worst case. Type FILL 16 and the hash map's worst insert is several times its average, which is what amortized cost means. RANGE is cheap for the two ordered structures and a full scan for the other two, and the meters show that as well. The LRU cache forgets on purpose, so a GET can miss in the cache while the other three find the key.
+
+There are five guided tours that ask students to predict what will happen before each step runs. Instructors can write their own tours as JSON and share them as a link, with the whole tour stored in the URL, so nothing needs a server or an account. Everything works from the keyboard, and a text narration mode describes each structure in words for screen reader users. The honest limitation is that changes show up as highlights and short notes, not animation. Students see the tree before and after a split, not the keys sliding into place, and there is no 3D view like the Redis model that inspired the idea. 71 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/data-structure-city/README.md) for more details on the code or try it at <https://data-structure-city.netlify.app>
+
+(Last update October 2026)
 
 ### [Leap Second Lab](https://leap-second-lab.netlify.app)
 
