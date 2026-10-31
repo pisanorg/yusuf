@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">87 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">88 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
-  <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -148,6 +148,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Sharing, Voting &amp; Scheduling</h4>
 <ul>
+  <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#summit-navigator">Summit Navigator</a></li>
   <li><a href="#pastemd">PasteMD</a></li>
   <li><a href="#upvoteme">UpvoteMe</a></li>
@@ -156,6 +157,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Tiny Brains League](https://tiny-brains-league.netlify.app)
+
+Students given a machine learning project tend to reach for a bigger model. Tiny Brains League takes that away. The task is to train the smallest neural network that can still play Connect Four well, with a hard cap of 5,000 weights. There is no search at play time: the network sees the board as 84 numbers and picks a column, and that is all it gets. Students can train in the browser, either by having the network copy one of the house bots or by evolving it, or train in Python with a small NumPy runtime that plays exactly like the browser one. A submission is just a JSON file of weights, so the ladder never runs anyone's code. There are three milestones: beat a random player, beat a scripted bot that wins when it can and blocks when it must, then climb the class ladder. The ladder is a round robin over fixed openings with each colour played, rated on an Elo scale, and a second board ranks Elo per thousand weights, so a small network that is nearly as good can win that one. A replay viewer shows the network's move probabilities at every turn and marks where it missed a win or a block, and every training run goes into a log that exports as the ablation table the write-up asks for.
+
+The honest limitation is that there is no server. Brains, the run log and ladder results live in one browser, so the instructor runs the official ladder by loading every student's file into their own browser rather than students submitting to a shared site. The training is plain JavaScript too, so anything beyond a few thousand games belongs in Python. And a network this small still misses tactics a one-move check would catch: the best sample brain still takes just under half the points against the scripted bot. 46 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/tiny-brains-league/README.md) for more details on the code or try it at <https://tiny-brains-league.netlify.app>
+
+(Last update October 2026)
 
 ### [Tamerlane Board](https://tamerlane-board.netlify.app)
 
