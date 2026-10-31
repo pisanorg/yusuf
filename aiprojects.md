@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">83 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">84 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#study-buddy-matchmaker">Study Buddy Matchmaker</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
-  <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -52,6 +52,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Algorithms &amp; Reasoning</h4>
 <ul>
+  <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
   <li><a href="#elevator-algorithm-lab">Elevator Algorithm Lab</a></li>
@@ -152,6 +153,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Leap Second Lab](https://leap-second-lab.netlify.app)
+
+Time is one of those topics where every programmer is sure they understand it until 23:59:60 shows up. Leap seconds are going away, which makes this a good moment to teach why they hurt. Leap Second Lab (the page calls itself 23:59:60) has four parts. A timeline puts TAI, UTC, GPS time, Unix time and UT1 on one chart since 1972, with a projection of how far UT1 drifts once leap seconds stop; you set the cutover date and how fast the Earth slows down. A clock simulator walks through one leap second with a stepping POSIX clock, a 24-hour smear, a 1,000-second smear and a monotonic clock, then replays a log from two servers with different clocks and counts the lines that come out in the wrong order and the replies logged before the requests that caused them. A test bench shows what JavaScript Date, Temporal, Python and Postgres actually do with leap-second inputs. These are recorded from real runs, not from documentation: Temporal quietly turns 23:59:60 into 23:59:59, and Postgres accepts 23:59:60 but rejects 23:59:60.5. Finally there are four bug-fix exercises (a timeout, a rate limiter, a billing duration, a log merge) with hidden tests that run a simulated leap second against the student's code.
+
+The suggested design used Claude to explain each library result. I wrote those explanations once by hand instead, since the results do not change. The honest limitation is that the UT1 history is a schematic sawtooth rather than real IERS measurements, and the future drift is a two-knob model, so the timeline teaches the mechanism, not the actual Earth. 47 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/leap-second-lab/README.md) for more details on the code or try it at <https://leap-second-lab.netlify.app>
+
+(Last update October 2026)
 
 ### [Pull the Pin](https://pull-the-pin-lab.netlify.app)
 
