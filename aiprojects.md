@@ -31,19 +31,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">89 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">90 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
-  <li><a href="#pull-the-pin">Pull the Pin</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
+  <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
   <li><a href="#cache-miss-theater">Cache Miss Theater</a></li>
   <li><a href="#fork-count">Fork Count</a></li>
@@ -158,6 +159,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Modulo Bias Microscope](https://modulo-bias-microscope.netlify.app)
+
+Randomness bugs are the ones that pass every test. rng.next() % 6 always returns a number from 0 to 5, a shuffle always returns the same items in some order, and no unit test with a fixed seed will tell you that some answers are more likely than others. Modulo Bias Microscope makes the bias visible. Students paste a sampling function and say what distribution they meant: uniform integers, every permutation equally likely, or weighted outcomes. In exact mode the tool runs the function against a deliberately tiny random source, say 8 bits, once for every possible sequence of draws, and adds up the probabilities as exact fractions. So rng.next() % 6 comes back as 43/256 for 0 to 3 and 42/256 for 4 and 5, which a student can check by hand. Statistical mode draws a few hundred thousand times from a 32-bit source and runs a chi-square test. The two modes teach together: on 32 bits the modulo bias is about one part in a billion, the chi-square test happily passes it, and exact mode shows it is still there. A gallery has seven classic bugs, each with a fix: modulo bias, scaling a float, an off-by-one range, the naive shuffle, sorting with a random comparator, Fisher-Yates with a biased index, and rounded weights that fall off the end and return undefined.
+
+Instructors turn whatever is in the editor into an exercise link, and the autograder grades exactly when it can and falls back to the chi-square test with a stated false-fail rate when it cannot. The idea suggested Python through Pyodide as well; I left it out, so it is JavaScript only. The honest limitation is that exact mode is exponential in the number of draws, so a shuffle of more than five or six items has to fall back to statistics, which can miss small biases. 68 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/modulo-bias-microscope/README.md) for more details on the code or try it at <https://modulo-bias-microscope.netlify.app>
+
+(Last update November 2026)
 
 ### [GPU Parallel Puzzler](https://gpu-parallel-puzzler.netlify.app)
 
