@@ -31,16 +31,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">88 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">89 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
-  <li><a href="#pluck-lab">Pluck Lab</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -78,6 +78,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Playful Experiments</h4>
 <ul>
+  <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
   <li><a href="#sound-sketchpad">Sound Sketchpad</a></li>
@@ -157,6 +158,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [GPU Parallel Puzzler](https://gpu-parallel-puzzler.netlify.app)
+
+Parallel programming is one of those skills students say they learned and then cannot use, because the cost of a bad kernel is invisible on a laptop. GPU Parallel Puzzler is twelve small puzzles on a simulated GPU. Students write kernels in a little CUDA-like language, pick the launch (how many blocks, how many threads each), and run them. The simulator executes every warp of 32 threads with the lanes that are actually active, so it can show exactly what happened: a branch on i % 2 that made every warp run both paths, threads reading memory in chunks so each warp touched eight times the segments it needed, a shared-memory tree whose threads queued up on the same bank, sixteen thousand atomics fighting over one counter. Every run gets stars against a reference solution, a GPU versus CPU estimate, a warp-by-warp trace with the lanes drawn as little cells, and a plain-language diagnosis that points at the line. A race detector catches the classic out[0] += 1 and the forgotten sync().
+
+The suggested design used Claude for the hints. I did not need it: the simulator already knows why a kernel is slow, so the hints are computed from its counters and are the same every time. Students export their progress as a file and the instructor loads the files into a class table. The honest limitation is that the GPU is a teaching model with made-up costs and no caches, so the cycle counts are for comparing your own attempts, not for predicting a real card. 36 vitest tests.
+
+See [README](https://github.com/pisanuw/Claude-capstone/blob/main/gpu-parallel-puzzler/README.md) for more details on the code or try it at <https://gpu-parallel-puzzler.netlify.app>
+
+(Last update October 2026)
 
 ### [Tiny Brains League](https://tiny-brains-league.netlify.app)
 
