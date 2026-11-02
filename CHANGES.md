@@ -37,3 +37,7 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-02 [doc] aiprojects: "Want one built?" box at the top (summary-block style) with builder@pisan.me, links to claude-built-apps and the ideas site. Footers on all apps link to this page.
 
 2026-11-02 [code] Site menu wraps under the name below 800px and stops being sticky below 560px; pages no longer scroll sideways on phones (was 561px wide at 390px).
+
+2026-11-02 [doc] aiprojects: 49 apps repointed from *.netlify.app to <folder>.pisan.me (98 links), 50 repo links from Claude-capstone to claude-built-apps. Other hosts unchanged.
+2026-11-02 [doc] aiprojects: added Mult Streak (mult-streak-edge, mult-streak.pisan.me), never listed before; Games group split into Games & Puzzles and Codes, Ciphers & Chess; count 91.
+2026-11-02 [note] aiprojects: Accessibility Lens still links accessibility-lens.onrender.com, which Render answers 503 (suspended); its new address accessibility-lens.pisan.me is not linked yet.
