@@ -66,7 +66,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#type-witness">Type Witness</a></li>
   <li><a href="#pathfinding-playground">Pathfinding Playground</a></li>
   <li><a href="#ltms-a-truth-maintenance-system-in-python">LTMS: A Truth Maintenance System in Python</a></li>
-  <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver</a></li>
+  <li><a href="#tps---thermodynamics-problem-solver">TPS - Thermodynamics Problem Solver (offline)</a></li>
 </ul>
 <h4 class="toc-group">Games &amp; Puzzles</h4>
 <ul>
@@ -111,7 +111,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 <ul>
   <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
   <li><a href="#accessibility-lens">Accessibility Lens</a></li>
-  <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer</a></li>
+  <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer (offline)</a></li>
 </ul>
 <h4 class="toc-group">Working with LLMs &amp; Agents</h4>
 <ul>
@@ -151,7 +151,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#css-scheduler">CSS Scheduler</a></li>
   <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
   <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
-  <li><a href="#grade-histogram-plotter">Grade Histogram Plotter</a></li>
+  <li><a href="#grade-histogram-plotter">Grade Histogram Plotter (offline)</a></li>
   <li><a href="#grade-statistics">Grade Statistics</a></li>
   <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
   <li><a href="#teaching-evaluation-graph-generator">Teaching Evaluation Graph Generator</a></li>
@@ -163,7 +163,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#summit-navigator">Summit Navigator</a></li>
   <li><a href="#pastemd">PasteMD</a></li>
   <li><a href="#upvoteme">UpvoteMe</a></li>
-  <li><a href="#rankme">RankMe</a></li>
+  <li><a href="#rankme">RankMe (offline)</a></li>
   <li><a href="#ranked-voting">Ranked Voting</a></li>
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
@@ -867,11 +867,11 @@ See [README](https://github.com/pisanuw/pastemd/blob/main/README.md) for more de
 
 (Last update April 2026)
 
-### [Grade Histogram Plotter](https://grade-histogram-plotter.onrender.com/)
+### Grade Histogram Plotter (offline) {#grade-histogram-plotter}
 
 A lightweight Flask web app for visualizing grade distributions. Paste scores one per line (or upload a file), optionally customize the grade-bucket cutoffs, and get an instant histogram with summary statistics — mean, median, standard deviation, min, max, and per-bucket counts and percentages. Non-numeric entries are tallied in a separate NaN bucket. Includes CSRF protection and rate limiting. Deployed on Render.
 
-See [README](https://github.com/pisanuw/grade-histogram-plotter/blob/main/README.md) for more details on the code or use it at <https://grade-histogram-plotter.onrender.com/>
+See [README](https://github.com/pisanuw/grade-histogram-plotter/blob/main/README.md) for more details on the code. The hosted copy is offline.
 
 (Last update April 2026)
 
@@ -883,11 +883,11 @@ See [README](https://github.com/pisanuw/upvote/blob/main/README.md) for more det
 
 (Last update April 2026)
 
-### [RankMe](https://rankme-1ttb.onrender.com/)
+### RankMe (offline) {#rankme}
 
 A head-to-head voting app that ranks anything using the ELO rating system. Anyone can create a topic (movies, foods, photos, etc.), add items with optional images, and vote by repeatedly choosing between two randomly matched items. Rankings update in real time after each vote using a variable K-factor ELO algorithm (K=40 for new items, tapering to K=10 for established ones). Sessions are tracked via cookies to prevent repeat matchups in the same browser session. An admin panel at a secret URL allows deletion of topics and items.
 
-See [README](https://github.com/pisanuw/rankme/blob/main/README.md) for more details on the code or use it at <https://rankme-1ttb.onrender.com/>
+See [README](https://github.com/pisanuw/rankme/blob/main/README.md) for more details on the code. The hosted copy is offline.
 
 (Last update April 2026)
 
@@ -935,19 +935,19 @@ See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more det
 
 (Last update April 2026)
 
-### [Canvas Accessibility Fixer](https://canvas-accessibility.onrender.com/login)
+### Canvas Accessibility Fixer (offline) {#canvas-accessibility-fixer}
 
 Improves the accessibility score for Canvas pages automatically. Needs a canvas token to access Canvas pages.
 
-See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md) for more details on the code or use it at <https://canvas-accessibility.onrender.com/>
+See [README](https://github.com/pisanuw/canvas-accessibility/blob/main/README.md) for more details on the code. The hosted copy is offline.
 
 (Last update April 2026)
 
-### [TPS - Thermodynamics Problem Solver](https://tps-thesis-recreation.onrender.com/)
+### TPS - Thermodynamics Problem Solver (offline) {#tps---thermodynamics-problem-solver}
 
 Based on my PhD thesis, starting to recreate the project from scratch.
 
-Use it at <https://tps-thesis-recreation.onrender.com/>
+The hosted copy is offline.
 
 To be completed at a later date!
 
