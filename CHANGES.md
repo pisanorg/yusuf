@@ -47,3 +47,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-02 [doc] aiprojects: Canvas Accessibility Fixer, Grade Histogram Plotter, RankMe and TPS marked (offline); their suspended onrender.com links removed, anchors kept with explicit ids.
 
 2026-11-02 [doc] aiprojects: Consent Leak Watch links moved to consent-leak-watch.pisan.me.
+
+2026-11-02 [doc] aiprojects: removed an unverified first-person claim ("I sit on the buying side") from the ACR Draft entry, written by the build routine.
