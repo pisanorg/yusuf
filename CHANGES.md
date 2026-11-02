@@ -35,3 +35,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-27 [doc] aiprojects: added Tetromino Arcade at top; Letter Ledger moved from Latest to Course & Department Tools; count 79.
 
 2026-11-02 [doc] aiprojects: "Want one built?" box at the top (summary-block style) with builder@pisan.me, links to claude-built-apps and the ideas site. Footers on all apps link to this page.
+
+2026-11-02 [code] Site menu wraps under the name below 800px and stops being sticky below 560px; pages no longer scroll sideways on phones (was 561px wide at 390px).
