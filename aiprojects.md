@@ -4,6 +4,11 @@ title: Adventures in AI
 page_class: page-aiprojects
 ---
 
+<div class="summary-block hire-box" markdown="0">
+<p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
+<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">50 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
+</div>
+
 <div class="intro-text">
 My PhD (Northwestern, 1998) was in AI &mdash; qualitative reasoning and diagrammatic problem-solving, what is now called GOFAI. I built a system that solved 150 problems from a university-level thermodynamics textbook.
 

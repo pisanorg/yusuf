@@ -33,3 +33,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-10-25 [doc] aiprojects: added Edit Graph Lab at top; Code Viva moved from Latest to Teaching with AI; count 77.
 
 2026-10-27 [doc] aiprojects: added Tetromino Arcade at top; Letter Ledger moved from Latest to Course & Department Tools; count 79.
+
+2026-11-02 [doc] aiprojects: "Want one built?" box at the top (summary-block style) with builder@pisan.me, links to claude-built-apps and the ideas site. Footers on all apps link to this page.
