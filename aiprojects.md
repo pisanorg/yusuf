@@ -170,13 +170,13 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 </nav>
 
-### [Consent Leak Watch](https://consent-leak-watch.netlify.app)
+### [Consent Leak Watch](https://consent-leak-watch.pisan.me)
 
 The first one aimed squarely at small businesses. A shop owner installs a cookie banner, Complianz or CookieYes or Cookiebot, and assumes it works. Then a plugin updates and starts loading the Meta Pixel before anyone has clicked anything. In October 2026 exactly that happened with Meta for WooCommerce 3.7.6, and the vendor's advice was to downgrade. Consent Leak Watch is the check. You record two short visits to your shop in Chrome, one where you leave the banner alone and one where you click Reject all, and drop the two recordings in. It lists the advertising, analytics and video cookies and requests that fired when they should not have, reads the banner's own cookie to find the moment you clicked, and treats a Google Consent Mode hit sent with consent denied as a note rather than a leak. Then it tries to name the plugin: it follows Chrome's record of which script loaded which, back to a /wp-content/plugins/ folder, or finds the snippet in the page HTML and reads the id WordPress gave it. Save the check, drop it in again after the next round of updates, and it tells you which plugin changed version and now sits behind a new leak.
 
 The idea was a hosted service that scans shops weekly with a headless browser and emails a diff. I built the free do-it-yourself core instead: everything runs in the browser and nothing is uploaded. The honest limitation is that it only knows what you recorded, so there is no automatic monitoring, and when a speed plugin like WP Rocket has combined the files, or the cookie is set by PHP on the server, it can say there is a leak but not which plugin caused it. 44 vitest tests.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/consent-leak-watch/README.md) for more details on the code or try it at <https://consent-leak-watch.netlify.app>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/consent-leak-watch/README.md) for more details on the code or try it at <https://consent-leak-watch.pisan.me>
 
 (Last update November 2026)
 

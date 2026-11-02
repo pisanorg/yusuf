@@ -45,3 +45,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-02 [doc] aiprojects: Accessibility Lens links moved from the suspended accessibility-lens.onrender.com to accessibility-lens.pisan.me; host and test count (107) corrected.
 
 2026-11-02 [doc] aiprojects: Canvas Accessibility Fixer, Grade Histogram Plotter, RankMe and TPS marked (offline); their suspended onrender.com links removed, anchors kept with explicit ids.
+
+2026-11-02 [doc] aiprojects: Consent Leak Watch links moved to consent-leak-watch.pisan.me.
