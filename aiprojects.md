@@ -36,16 +36,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">92 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">93 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#poincar-paint">Poincaré Paint</a></li>
-  <li><a href="#data-structure-city">Data Structure City</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -60,6 +60,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Algorithms &amp; Reasoning</h4>
 <ul>
+  <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
   <li><a href="#state-space-atlas">State Space Atlas</a></li>
@@ -169,6 +170,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [ACR Draft](https://acr-draft.pisan.me)
+
+Before a university buys software, its purchasing office now asks for a VPAT: the accessibility report where the vendor goes through WCAG criterion by criterion and says how well the product meets each one. I sit on the buying side, and I see small edtech companies stall here. They have no accessibility staff, and an agency charges a few hundred dollars per screen to audit and write the report. ACR Draft walks a small team through doing it themselves. You describe the product and answer twelve yes/no questions (any video? anything timed? can users pay or submit quiz answers?) that rule out criteria that cannot apply. You scan each key screen with the free axe-core checker, by pasting a snippet into the browser console on a signed-in screen, by running one command, or by pasting the page HTML, which the app scans itself. Then each of the 50 WCAG 2.1 A and AA criteria gets one plain sentence on what it asks, a short test you can do without training, what the scan found, and a place to record your result. Out comes the report in the VPAT 2.5 layout, as a Word file or HTML, with an evidence appendix. Save the project, and next release it shows you what got better or worse.
+
+The part I care about is that it will not let you inflate the report. A clean scan never earns "Supports", because scanners miss most of what actually blocks people. Mark something as passing when the scan found failures and the report says "Partially Supports" and points at the screens. Every claim needs a note, and the report stays stamped DRAFT until every criterion has an answer. The original idea had a hosted crawler and Claude drafting the remarks. I built the browser-only core instead, so nothing is uploaded and the remarks come from your own notes. The honest limitation: it cannot do the manual testing for you. If you click through the guided tests without really trying them, the report will be wrong. 48 vitest tests.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/acr-draft/README.md) for more details on the code or try it at <https://acr-draft.pisan.me>
+
+(Last update November 2026)
 
 ### [Consent Leak Watch](https://consent-leak-watch.pisan.me)
 
