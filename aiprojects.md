@@ -813,11 +813,11 @@ See [README](https://github.com/pisanuw/claude-built-apps/blob/main/mult-streak-
 
 (Last update June 2026)
 
-### [Accessibility Lens](https://accessibility-lens.onrender.com/)
+### [Accessibility Lens](https://accessibility-lens.pisan.me/)
 
-Paste any public URL and see it through four sets of eyes: low vision, color blindness, keyboard-only navigation, and screen reader. The app fetches the raw HTML, runs 11 WCAG 2.1 rules (missing alt text, broken heading structure, low color contrast, zoom disabled, duplicate IDs, unlabelled form controls, and more), and gives a concrete fix for each failure. The signature feature is a screen-reader view that strips all layout and shows the page as the linear stream of roles and text a blind user actually hears — making failures visceral rather than abstract. With an Anthropic API key, Claude rewrites each offending snippet into a corrected one; without it, rule-based fixes still cover every issue. Built as a TypeScript monorepo (React + Vite client, Express server), deployed on Render. 102 tests passing, ~96% server coverage. Built from the `daily-project-ideas` prompt for 2026-05-12.
+Paste any public URL and see it through four sets of eyes: low vision, color blindness, keyboard-only navigation, and screen reader. The app fetches the raw HTML, runs 11 WCAG 2.1 rules (missing alt text, broken heading structure, low color contrast, zoom disabled, duplicate IDs, unlabelled form controls, and more), and gives a concrete fix for each failure. The signature feature is a screen-reader view that strips all layout and shows the page as the linear stream of roles and text a blind user actually hears — making failures visceral rather than abstract. With an Anthropic API key, Claude rewrites each offending snippet into a corrected one; without it, rule-based fixes still cover every issue. Built as a TypeScript monorepo (React + Vite client, Express server), deployed on Netlify with the API as a serverless function. 107 tests. Built from the `daily-project-ideas` prompt for 2026-05-12.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-lens/README.md) for more details on the code or use it at <https://accessibility-lens.onrender.com/>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-lens/README.md) for more details on the code or use it at <https://accessibility-lens.pisan.me/>
 
 (Last update May 2026)
 

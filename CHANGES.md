@@ -41,3 +41,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-02 [doc] aiprojects: 49 apps repointed from *.netlify.app to <folder>.pisan.me (98 links), 50 repo links from Claude-capstone to claude-built-apps. Other hosts unchanged.
 2026-11-02 [doc] aiprojects: added Mult Streak (mult-streak-edge, mult-streak.pisan.me), never listed before; Games group split into Games & Puzzles and Codes, Ciphers & Chess; count 91.
 2026-11-02 [note] aiprojects: Accessibility Lens still links accessibility-lens.onrender.com, which Render answers 503 (suspended); its new address accessibility-lens.pisan.me is not linked yet.
+
+2026-11-02 [doc] aiprojects: Accessibility Lens links moved from the suspended accessibility-lens.onrender.com to accessibility-lens.pisan.me; host and test count (107) corrected.
