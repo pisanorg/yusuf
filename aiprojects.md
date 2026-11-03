@@ -6,7 +6,7 @@ page_class: page-aiprojects
 
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
-<p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code>.</p>
+<p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code> (no code needed).</p>
 <p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">51 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
 </div>
 
@@ -532,7 +532,7 @@ What it does say comes from my own course rather than the internet. An offline p
 
 Two honest notes. This is the one project I run on a real Anthropic API key rather than the claude CLI, so every student turn costs money and clearing that key is the kill switch. The infrastructure is otherwise deliberately cheap: Render plus a free-tier Supabase Postgres that pauses itself after a week of no traffic, which took the login page down once before a keep-alive job and a database health indicator went in. The pilot numbers are modest and stated as such, 100 of 100 prompts answered without errors and 31 of them citing a specific slide, with correctness spot-checked on a sample rather than verified across the whole run. Login is whitelisted, so this is available to UW students at this point and not to the public.
 
-Source is not public for this one. Try it at <https://digital-student-assistant.com/>: sign in with the demo account `demo@hintwise.org` to look around (student accounts are limited to UW addresses for now).
+Source is not public for this one. Try it at <https://digital-student-assistant.com/>: sign in with the demo account `demo@hintwise.org` (no code needed) to look around (student accounts are limited to UW addresses for now).
 
 (Last update September 2026)
 
