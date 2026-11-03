@@ -51,3 +51,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-02 [doc] aiprojects: removed an unverified first-person claim ("I sit on the buying side") from the ACR Draft entry, written by the build routine.
 
 2026-11-03 [doc] aiprojects: test counts and coverage figures removed from all 51 entries (owner: visitors read them as build trivia).
+
+2026-11-03 [doc] aiprojects: Digital Student Assistant featured in the hire box as the biggest project, in use by students.

@@ -6,6 +6,7 @@ page_class: page-aiprojects
 
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
+<p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions.</p>
 <p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">51 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
 </div>
 
