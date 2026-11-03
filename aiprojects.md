@@ -7,7 +7,7 @@ page_class: page-aiprojects
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
 <p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code> (no code needed).</p>
-<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">51 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
+<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">53 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
 </div>
 
 <div class="intro-text">
@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">94 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">95 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
-  <li><a href="#tamerlane-board">Tamerlane Board</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -84,6 +84,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Codes, Ciphers &amp; Chess</h4>
 <ul>
+  <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#bombe-bench">Bombe Bench</a></li>
   <li><a href="#cipher-ladder">Cipher Ladder</a></li>
   <li><a href="#mychessmaster">MyChessMaster</a></li>
@@ -172,6 +173,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Dossier Comment Reflector](https://dossier-comment-reflector.pisan.me)
+
+Promotion and tenure dossiers are moving away from average ratings and toward a reflection: a page or two on how student comments changed your teaching, with quotes, covering every year in rank. That means rereading hundreds of comments from a dozen course offerings, picking quotes that are fair rather than flattering, and connecting them to what you changed, usually in the same month everything else in the dossier is due. Dossier Comment Reflector does the sorting and counting. You upload the CSV exports from your evaluation system, or paste comments copied out of a PDF, tagged by course and term. It sorts every comment into the themes students actually write about (clarity, workload, exams, feedback, grading, availability and so on), reads each mention as praise or criticism, and shows each theme term by term. You record what you changed, in your own words, and the term it started, and it compares the comments before and after: in the sample, critical comments about exams drop from 73% to 13% after midterms were replaced by quizzes. Then it picks a balanced set of quotes, half praise and half criticism, with names replaced by [name], and drafts a reflection that fits your page limit, ready to edit and download for Word.
+
+Nothing is uploaded and no AI reads the comments, which matters on campuses that restrict putting evaluations into AI tools. The original idea had Claude cluster the comments and write the draft. I built it on word lists and counting instead, so every number can be traced back to the comments behind it. The honest limitation is that word lists miss sarcasm and unusual phrasing, and a before-and-after difference is a count, not proof that the change caused it. The draft is a starting point; it still needs to sound like you.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/dossier-comment-reflector/README.md) for more details on the code or try it at <https://dossier-comment-reflector.pisan.me>
+
+(Last update November 2026)
 
 ### [Student Journey Check](https://student-journey-check.pisan.me)
 
