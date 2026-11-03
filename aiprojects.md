@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">93 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">94 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
-  <li><a href="#poincar-paint">Poincaré Paint</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -91,6 +91,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Playful Experiments</h4>
 <ul>
+  <li><a href="#poincar-paint">Poincaré Paint</a></li>
   <li><a href="#pluck-lab">Pluck Lab</a></li>
   <li><a href="#brocot-gear-finder">Brocot Gear Finder</a></li>
   <li><a href="#code-analogy-forge">Code Analogy Forge</a></li>
@@ -171,6 +172,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Student Journey Check](https://student-journey-check.pisan.me)
+
+A yoga teacher or a small training academy sells courses from their own WordPress site with Tutor LMS. They update a plugin, the admin screen looks fine, and they move on. Then a student emails: the login page shows a critical error, the lesson video says "Error 153", the certificate page says "Nonce not matched". The Tutor LMS support forum had all of these between August and October 2026, and each owner found out from a student. Student Journey Check is the test student. You give it the site, the login of a student account you made for testing, and one course, and it walks the way a student would: log in, open the dashboard, the course, a lesson and its video, a quiz, a certificate, and the price a new customer sees. Each step comes back as works, look at this, or broken, in plain words, with what the page said and what to try next. You also get the email you would forward to whoever looks after your site. There is a demo tab with a pretend yoga academy where you can break things the way real updates broke real sites, a stuck welcome popup, a lost enrolment, a sale price left on, and watch the check catch them.
+
+The idea had a headless browser running every day, screenshots and email alerts. I built the on-demand version: press the button after an update. The password is used for the login step and then forgotten, and nothing is stored. The honest limitation is that it reads pages the way the server sends them, without running their scripts, so a dead button or a video that fails only when it plays can slip past it.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/student-journey-check/README.md) for more details on the code or try it at <https://student-journey-check.pisan.me>
+
+(Last update November 2026)
 
 ### [ACR Draft](https://acr-draft.pisan.me)
 
