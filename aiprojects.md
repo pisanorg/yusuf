@@ -7,7 +7,7 @@ page_class: page-aiprojects
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
 <p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code> (no code needed).</p>
-<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">53 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
+<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">55 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
 </div>
 
 <div class="intro-text">
@@ -37,19 +37,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">96 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">97 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
+  <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
-  <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
+  <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
   <li><a href="#leap-second-lab">Leap Second Lab</a></li>
   <li><a href="#pull-the-pin">Pull the Pin</a></li>
   <li><a href="#lockstep-lab">Lockstep Lab</a></li>
@@ -61,6 +62,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Algorithms &amp; Reasoning</h4>
 <ul>
+  <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
   <li><a href="#diagram-layout-engine">Diagram Layout Engine</a></li>
@@ -73,7 +75,6 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Games &amp; Puzzles</h4>
 <ul>
-  <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
@@ -182,6 +183,16 @@ A small web agency or a freelancer looks after thirty WordPress sites for local 
 The idea had a companion WordPress plugin on every client site and a hosted dashboard. I built the version that installs nothing: it runs in the browser, and only rule names, counts and page addresses are kept, never page content or visitor data. The statement is careful about what it claims. Any open problem makes it "partially conformant", and a clean automated check alone only says "not yet confirmed", because automated tools catch only some problems. The honest limitation is that it does not run checks for you: someone still has to run the checker each month, and the data lives in one browser unless you save the fleet file.
 
 See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-fleet-log/README.md) for more details on the code or try it at <https://accessibility-fleet-log.pisan.me>
+
+(Last update November 2026)
+
+### [Misrepresentation Preflight](https://misrepresentation-preflight.pisan.me)
+
+A small online shop sells through Google Shopping, and one day Merchant Center suspends the account for "Misrepresentation". Google does not say what it found. The owner fixes the footer, rewrites a policy, asks for a review, and gets rejected again, and each rejection makes the next wait longer. The replies in the Shopify Community threads from this summer and autumn keep saying the same thing: many small inconsistencies had piled up across the store, the policies, the product feed and the business details in Merchant Center. Misrepresentation Preflight looks for exactly those. You type the store's address, optionally add the product feed and what you told Merchant Center, and it reads the pages a reviewer would open: contact, about, shipping, returns, terms, the FAQ and up to fifteen product pages. Then it compares them. Two different phone numbers, a personal Gmail next to the store address, the old brand name still in the theme settings, a FAQ that says 14-day returns while the policy says 30, an announcement bar with a different free-shipping minimum, a product page whose hidden product data still has last month's price, a feed pointing at a deleted product. Each finding names the page, quotes the sentence and says what to change, most important first. A dated re-check log shows what you fixed since the last check, which is what you want in hand before spending the next review request. The sample shop, a made-up candle store, shows all of this without needing a store of your own.
+
+The idea had a crawler, a queue and a hosted database. I built it with one small server function that reads a single public page at a time and sends back only what it found, while the feed and the log stay in your browser. I ran it against several real Shopify and WooCommerce stores while building it, which caught a handful of false alarms. The honest limitation: it cannot tell you why Google suspended you. Some suspensions have causes no website check can see, and it reads wording with patterns, so an unusual sentence can be missed or misread.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/misrepresentation-preflight/README.md) for more details on the code or try it at <https://misrepresentation-preflight.pisan.me>
 
 (Last update November 2026)
 
