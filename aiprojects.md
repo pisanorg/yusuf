@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">95 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">96 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#gpu-parallel-puzzler">GPU Parallel Puzzler</a></li>
-  <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -73,6 +73,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Games &amp; Puzzles</h4>
 <ul>
+  <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#tetromino-arcade">Tetromino Arcade</a></li>
   <li><a href="#outguess-me">Outguess Me</a></li>
   <li><a href="#reverse-minesweeper-studio">Reverse Minesweeper Studio</a></li>
@@ -173,6 +174,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Accessibility Fleet Log](https://accessibility-fleet-log.pisan.me)
+
+A small web agency or a freelancer looks after thirty WordPress sites for local businesses: a bakery, a physiotherapy practice, a hardware store. Since the European Accessibility Act, more of those clients ask whether their site is accessible, and they want proof that someone is keeping an eye on it. The plugin many agencies used for this started pushing upsells and its own branding onto client dashboards, and the tools that track many separate sites at once are priced for large companies. Accessibility Fleet Log puts every client site on one screen. Once a month you run a free checker on each site, the axe browser extension, a bookmark the app gives you, pa11y or Lighthouse, and paste the results in. The log keeps the dates: when each problem was first found, when a later check showed it gone, and when one came back. From that it shows which sites need attention, which checks are overdue, and which problems turn up on several sites at once, usually one shared theme to fix. Each site gets a draft accessibility statement with EU or US wording, saved in dated versions, and each month a client report goes out under the agency's own name and color, ready to print as PDF.
+
+The idea had a companion WordPress plugin on every client site and a hosted dashboard. I built the version that installs nothing: it runs in the browser, and only rule names, counts and page addresses are kept, never page content or visitor data. The statement is careful about what it claims. Any open problem makes it "partially conformant", and a clean automated check alone only says "not yet confirmed", because automated tools catch only some problems. The honest limitation is that it does not run checks for you: someone still has to run the checker each month, and the data lives in one browser unless you save the fleet file.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-fleet-log/README.md) for more details on the code or try it at <https://accessibility-fleet-log.pisan.me>
+
+(Last update November 2026)
 
 ### [Dossier Comment Reflector](https://dossier-comment-reflector.pisan.me)
 
