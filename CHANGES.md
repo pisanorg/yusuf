@@ -55,3 +55,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-03 [doc] aiprojects: Digital Student Assistant featured in the hire box as the biggest project, in use by students.
 
 2026-11-03 [doc] aiprojects: Digital Student Assistant entries point visitors at the demo account demo@hintwise.org.
+
+2026-11-05 [doc] aiprojects: Popup Check added at the top of Latest (https://popup-check.pisan.me); Modulo Bias Microscope moved to Codes, Ciphers & Chess; count 98.

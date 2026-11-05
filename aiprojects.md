@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">97 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">98 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
-  <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -86,6 +86,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Codes, Ciphers &amp; Chess</h4>
 <ul>
+  <li><a href="#modulo-bias-microscope">Modulo Bias Microscope</a></li>
   <li><a href="#tamerlane-board">Tamerlane Board</a></li>
   <li><a href="#bombe-bench">Bombe Bench</a></li>
   <li><a href="#cipher-ladder">Cipher Ladder</a></li>
@@ -175,6 +176,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Popup Check](https://popup-check.pisan.me)
+
+A small online shop adds an email sign-up popup with 15% off, an age gate, a cookie banner and a chat button, each through a different app. To the owner they all look fine. To a shopper using a screen reader, a popup like that can be a wall: focus never moves into it, the close button is a bare × that is read out as "times", and Escape does nothing. One store owner's review of a popular popup app this year says they were sued over exactly that, and most free checkers test the page as it looks before any popup appears. Popup Check is a bookmark. You open your store, wait for the popup, and click it. A panel in the corner finds every popup, banner and chat button that is open and checks each one: does focus move in, does Tab stay inside, does Escape close it and where does focus land afterwards, does the close button have a name and is it big enough to tap, is the popup announced to screen readers, are the fields labelled, is the text readable. A guided test has you press Tab and Escape yourself while it records where focus really went. The report is dated, says for each problem what good looks like and whose fix it is, and when the popup comes from a known app (Klaviyo, Privy, OneTrust, Cookiebot, Tidio and about thirty others) it writes the message to send to that app's support, since a store owner usually cannot edit the app's code. Check again after changing an app and it lists what was fixed and what is new. A practice shop with five sample popups, some built badly on purpose, shows all of this before you try your own store.
+
+The idea had a headless browser that opens your store and triggers the popups itself, plus a weekly re-check service. I built the version that runs in your own browser instead: nothing is installed on the store, nothing is uploaded, and there is no bot protection to fight. The honest limitation is that it only checks popups that are open when you click the bookmark, and a web page cannot press real keys, so the automatic Tab and Escape tests are a simulation; the guided test, where you press the keys, is the one to trust. It also cannot look inside chat windows drawn in another company's frame, and it is test results, not a compliance certificate.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/popup-check/README.md) for more details on the code or try it at <https://popup-check.pisan.me>
+
+(Last update November 2026)
 
 ### [Accessibility Fleet Log](https://accessibility-fleet-log.pisan.me)
 
