@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">98 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">99 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
-  <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -117,6 +117,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Accessibility</h4>
 <ul>
+  <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
   <li><a href="#accessibility-lens">Accessibility Lens</a></li>
   <li><a href="#canvas-accessibility-fixer">Canvas Accessibility Fixer (offline)</a></li>
@@ -176,6 +177,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [StepWise](https://stepwise.pisan.me)
+
+Data structures make sense when you can watch them change, and a textbook figure shows only the before and after. StepWise lets students pick a structure or algorithm, run their own operations on it, and step through what happens: every step comes with a plain explanation, the pseudocode line that is running is highlighted, and the variables are shown. Insert 10 20 30 40 50 25 into an AVL tree and you see each comparison, each height update and the rotation that fixes the imbalance, then you can step back and watch it again. The code can be shown as pseudocode, plain English or a real programming language, and a Present mode is there for lectures.
+
+Anything a student builds can be shared as a link, embedded in Canvas, or saved as a file, so an instructor can hand out the exact tree to work on. The honest limitation: it is not finished. The catalog lists 108 structures and algorithms, and 60 of them are ready today; the rest show as coming.
+
+See [README](https://github.com/pisan-labs/visualizing-data-structures/blob/main/README.md) for more details on the code or try it at <https://stepwise.pisan.me>
+
+(Last update November 2026)
 
 ### [Popup Check](https://popup-check.pisan.me)
 
