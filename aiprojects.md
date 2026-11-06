@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">99 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">100 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
-  <li><a href="#acr-draft">ACR Draft</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -117,6 +117,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Accessibility</h4>
 <ul>
+  <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
   <li><a href="#accessibility-lens">Accessibility Lens</a></li>
@@ -177,6 +178,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Health Page Tracker Watch](https://health-page-tracker-watch.pisan.me)
+
+A small counseling practice's website is usually assembled from pieces: a booking widget, a chat box, an accessibility tool, an analytics tag, often an ad pixel someone added years ago. Each one tells its maker which page a visitor is on, and on a page about anxiety therapy, fertility or weight loss that can count as health information. Builders of these sites ask in public forums whether a widget sends anything from health pages and whether its maker will sign a Business Associate Agreement, and one accessibility plugin's maker confirmed this year that it sends the page address, IP address and device details and offered no BAA. Health Page Tracker Watch lists every outside company your booking, intake and service pages contact. You record those pages in your browser, or paste a page's source, and it says for each tool what it receives, whether it got the full page address, and what its maker says publicly about signing a BAA, from a hand-kept table of 82 common pixels, analytics and recording tools, chat and accessibility widgets, booking and practice systems, forms, fonts and maps. Tools that see what visitors do or type on a health page, from makers that do not sign a BAA, go to the top with options a web person can act on. Wellness businesses that HIPAA does not cover get the same findings explained in terms of consumer health data laws such as Washington's. Save the check, and next month it shows only what changed: a new tool, or an old one that spread onto the booking page after a plugin update. A made-up practice shows all of this before you try your own site.
+
+The idea was a hosted service that crawls the site every month and emails you. I built the version that runs in your own browser instead, with a calendar reminder to bring you back, so nothing is uploaded. The honest limitation is the vendor table: it is kept by hand, vendors change their plans and terms, and where I could not confirm what a vendor offers it says "ask the vendor" rather than guess. It is a list of what your pages sent, not legal advice.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/health-page-tracker-watch/README.md) for more details on the code or try it at <https://health-page-tracker-watch.pisan.me>
+
+(Last update November 2026)
 
 ### [StepWise](https://stepwise.pisan.me)
 
