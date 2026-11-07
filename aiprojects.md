@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">100 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">101 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
-  <li><a href="#student-journey-check">Student Journey Check</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -156,16 +156,20 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Course &amp; Department Tools</h4>
 <ul>
+  <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
   <li><a href="#css-scheduler">CSS Scheduler</a></li>
   <li><a href="#how-of-happiness-quizzes">How of Happiness Quizzes</a></li>
+  <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
+  <li><a href="#uw-course--professor-finder">UW Course &amp; Professor Finder</a></li>
+</ul>
+<h4 class="toc-group">Grades &amp; Evaluations</h4>
+<ul>
   <li><a href="#canvas-group-evaluate">Canvas Group Evaluate</a></li>
   <li><a href="#grade-histogram-plotter">Grade Histogram Plotter (offline)</a></li>
   <li><a href="#grade-statistics">Grade Statistics</a></li>
-  <li><a href="#choose-your-own-adventure">Choose Your Own Adventure</a></li>
   <li><a href="#teaching-evaluation-graph-generator">Teaching Evaluation Graph Generator</a></li>
-  <li><a href="#uw-course--professor-finder">UW Course &amp; Professor Finder</a></li>
 </ul>
 <h4 class="toc-group">Sharing, Voting &amp; Scheduling</h4>
 <ul>
@@ -178,6 +182,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Donation Receipts](https://donation-receipts.pisan.me)
+
+Most gifts to a small charity, church or community group now arrive as bank transfers, so there is no invoice in Xero to send a receipt from. Treasurers say so in a long-running thread on Xero's ideas forum: they build receipts one by one in Word, or raise an invoice for every gift just to get a receipt out, and then spend days at the end of June adding up each donor's giving for their tax statement. A bookkeeper who looks after several charities wrote that her clients keep asking her for exactly this. Donation Receipts starts from the gifts already in your books. Export Xero's Account Transactions report, or your bank's CSV, and drop it in. It finds the money that came in, and suggests the donor for each gift from the bank text: "OSKO PAYMENT FROM JANE CITIZEN", "T TRAN", an envelope number on a cash deposit. It remembers what each donor's gifts look like, so next month most of them link with one click. Then it issues numbered receipts with your ABN and the deductible-gift wording (or the right wording if you are not a DGR, or the gift is under $2), voids a wrong receipt without ever reusing its number, and at 30 June gives every donor one statement listing their gifts and receipt numbers. The receipt register goes to the auditor as a spreadsheet, and bookkeepers can keep each client as a separate organisation. A made-up community pantry shows the whole year before you try your own books.
+
+The idea was a hosted service connected to Xero that also sends the emails. I built the version that runs in your browser and reads the export instead, so donor details never leave your computer. The honest limitation is that it does not send anything itself: each email opens with the receipt in the message, and you attach the PDF. It also only knows Australian wording for now, and your records live in one browser, so the backup button matters.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/donation-receipts/README.md) for more details on the code or try it at <https://donation-receipts.pisan.me>
+
+(Last update November 2026)
 
 ### [Health Page Tracker Watch](https://health-page-tracker-watch.pisan.me)
 
