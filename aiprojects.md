@@ -7,7 +7,7 @@ page_class: page-aiprojects
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@pisan.me?subject=Project%20idea%20(via%20aiprojects)">builder@pisan.me</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
 <p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code> (no code needed).</p>
-<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">55 apps and their code</a> <a href="https://daily-project-ideas.netlify.app/">600+ ideas I could build for you</a></p>
+<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">55 apps and their code</a> <a href="https://daily-project-ideas.hintwise.org/">600+ ideas I could build for you</a></p>
 </div>
 
 <div class="intro-text">
@@ -183,413 +183,413 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 </nav>
 
-### [Donation Receipts](https://donation-receipts.pisan.me)
+### [Donation Receipts](https://donation-receipts.hintwise.org)
 
 Most gifts to a small charity, church or community group now arrive as bank transfers, so there is no invoice in Xero to send a receipt from. Treasurers say so in a long-running thread on Xero's ideas forum: they build receipts one by one in Word, or raise an invoice for every gift just to get a receipt out, and then spend days at the end of June adding up each donor's giving for their tax statement. A bookkeeper who looks after several charities wrote that her clients keep asking her for exactly this. Donation Receipts starts from the gifts already in your books. Export Xero's Account Transactions report, or your bank's CSV, and drop it in. It finds the money that came in, and suggests the donor for each gift from the bank text: "OSKO PAYMENT FROM JANE CITIZEN", "T TRAN", an envelope number on a cash deposit. It remembers what each donor's gifts look like, so next month most of them link with one click. Then it issues numbered receipts with your ABN and the deductible-gift wording (or the right wording if you are not a DGR, or the gift is under $2), voids a wrong receipt without ever reusing its number, and at 30 June gives every donor one statement listing their gifts and receipt numbers. The receipt register goes to the auditor as a spreadsheet, and bookkeepers can keep each client as a separate organisation. A made-up community pantry shows the whole year before you try your own books.
 
 The idea was a hosted service connected to Xero that also sends the emails. I built the version that runs in your browser and reads the export instead, so donor details never leave your computer. The honest limitation is that it does not send anything itself: each email opens with the receipt in the message, and you attach the PDF. It also only knows Australian wording for now, and your records live in one browser, so the backup button matters.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/donation-receipts/README.md) for more details on the code or try it at <https://donation-receipts.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/donation-receipts/README.md) for more details on the code or try it at <https://donation-receipts.hintwise.org>
 
 (Last update November 2026)
 
-### [Health Page Tracker Watch](https://health-page-tracker-watch.pisan.me)
+### [Health Page Tracker Watch](https://health-page-tracker-watch.hintwise.org)
 
 A small counseling practice's website is usually assembled from pieces: a booking widget, a chat box, an accessibility tool, an analytics tag, often an ad pixel someone added years ago. Each one tells its maker which page a visitor is on, and on a page about anxiety therapy, fertility or weight loss that can count as health information. Builders of these sites ask in public forums whether a widget sends anything from health pages and whether its maker will sign a Business Associate Agreement, and one accessibility plugin's maker confirmed this year that it sends the page address, IP address and device details and offered no BAA. Health Page Tracker Watch lists every outside company your booking, intake and service pages contact. You record those pages in your browser, or paste a page's source, and it says for each tool what it receives, whether it got the full page address, and what its maker says publicly about signing a BAA, from a hand-kept table of 82 common pixels, analytics and recording tools, chat and accessibility widgets, booking and practice systems, forms, fonts and maps. Tools that see what visitors do or type on a health page, from makers that do not sign a BAA, go to the top with options a web person can act on. Wellness businesses that HIPAA does not cover get the same findings explained in terms of consumer health data laws such as Washington's. Save the check, and next month it shows only what changed: a new tool, or an old one that spread onto the booking page after a plugin update. A made-up practice shows all of this before you try your own site.
 
 The idea was a hosted service that crawls the site every month and emails you. I built the version that runs in your own browser instead, with a calendar reminder to bring you back, so nothing is uploaded. The honest limitation is the vendor table: it is kept by hand, vendors change their plans and terms, and where I could not confirm what a vendor offers it says "ask the vendor" rather than guess. It is a list of what your pages sent, not legal advice.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/health-page-tracker-watch/README.md) for more details on the code or try it at <https://health-page-tracker-watch.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/health-page-tracker-watch/README.md) for more details on the code or try it at <https://health-page-tracker-watch.hintwise.org>
 
 (Last update November 2026)
 
-### [StepWise](https://stepwise.pisan.me)
+### [StepWise](https://stepwise.hintwise.org)
 
 Data structures make sense when you can watch them change, and a textbook figure shows only the before and after. StepWise lets students pick a structure or algorithm, run their own operations on it, and step through what happens: every step comes with a plain explanation, the pseudocode line that is running is highlighted, and the variables are shown. Insert 10 20 30 40 50 25 into an AVL tree and you see each comparison, each height update and the rotation that fixes the imbalance, then you can step back and watch it again. The code can be shown as pseudocode, plain English or a real programming language, and a Present mode is there for lectures.
 
 Anything a student builds can be shared as a link, embedded in Canvas, or saved as a file, so an instructor can hand out the exact tree to work on. The honest limitation: it is not finished. The catalog lists 108 structures and algorithms, and 60 of them are ready today; the rest show as coming.
 
-See [README](https://github.com/pisan-labs/visualizing-data-structures/blob/main/README.md) for more details on the code or try it at <https://stepwise.pisan.me>
+See [README](https://github.com/pisan-labs/visualizing-data-structures/blob/main/README.md) for more details on the code or try it at <https://stepwise.hintwise.org>
 
 (Last update November 2026)
 
-### [Popup Check](https://popup-check.pisan.me)
+### [Popup Check](https://popup-check.hintwise.org)
 
 A small online shop adds an email sign-up popup with 15% off, an age gate, a cookie banner and a chat button, each through a different app. To the owner they all look fine. To a shopper using a screen reader, a popup like that can be a wall: focus never moves into it, the close button is a bare × that is read out as "times", and Escape does nothing. One store owner's review of a popular popup app this year says they were sued over exactly that, and most free checkers test the page as it looks before any popup appears. Popup Check is a bookmark. You open your store, wait for the popup, and click it. A panel in the corner finds every popup, banner and chat button that is open and checks each one: does focus move in, does Tab stay inside, does Escape close it and where does focus land afterwards, does the close button have a name and is it big enough to tap, is the popup announced to screen readers, are the fields labelled, is the text readable. A guided test has you press Tab and Escape yourself while it records where focus really went. The report is dated, says for each problem what good looks like and whose fix it is, and when the popup comes from a known app (Klaviyo, Privy, OneTrust, Cookiebot, Tidio and about thirty others) it writes the message to send to that app's support, since a store owner usually cannot edit the app's code. Check again after changing an app and it lists what was fixed and what is new. A practice shop with five sample popups, some built badly on purpose, shows all of this before you try your own store.
 
 The idea had a headless browser that opens your store and triggers the popups itself, plus a weekly re-check service. I built the version that runs in your own browser instead: nothing is installed on the store, nothing is uploaded, and there is no bot protection to fight. The honest limitation is that it only checks popups that are open when you click the bookmark, and a web page cannot press real keys, so the automatic Tab and Escape tests are a simulation; the guided test, where you press the keys, is the one to trust. It also cannot look inside chat windows drawn in another company's frame, and it is test results, not a compliance certificate.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/popup-check/README.md) for more details on the code or try it at <https://popup-check.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/popup-check/README.md) for more details on the code or try it at <https://popup-check.hintwise.org>
 
 (Last update November 2026)
 
-### [Accessibility Fleet Log](https://accessibility-fleet-log.pisan.me)
+### [Accessibility Fleet Log](https://accessibility-fleet-log.hintwise.org)
 
 A small web agency or a freelancer looks after thirty WordPress sites for local businesses: a bakery, a physiotherapy practice, a hardware store. Since the European Accessibility Act, more of those clients ask whether their site is accessible, and they want proof that someone is keeping an eye on it. The plugin many agencies used for this started pushing upsells and its own branding onto client dashboards, and the tools that track many separate sites at once are priced for large companies. Accessibility Fleet Log puts every client site on one screen. Once a month you run a free checker on each site, the axe browser extension, a bookmark the app gives you, pa11y or Lighthouse, and paste the results in. The log keeps the dates: when each problem was first found, when a later check showed it gone, and when one came back. From that it shows which sites need attention, which checks are overdue, and which problems turn up on several sites at once, usually one shared theme to fix. Each site gets a draft accessibility statement with EU or US wording, saved in dated versions, and each month a client report goes out under the agency's own name and color, ready to print as PDF.
 
 The idea had a companion WordPress plugin on every client site and a hosted dashboard. I built the version that installs nothing: it runs in the browser, and only rule names, counts and page addresses are kept, never page content or visitor data. The statement is careful about what it claims. Any open problem makes it "partially conformant", and a clean automated check alone only says "not yet confirmed", because automated tools catch only some problems. The honest limitation is that it does not run checks for you: someone still has to run the checker each month, and the data lives in one browser unless you save the fleet file.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-fleet-log/README.md) for more details on the code or try it at <https://accessibility-fleet-log.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-fleet-log/README.md) for more details on the code or try it at <https://accessibility-fleet-log.hintwise.org>
 
 (Last update November 2026)
 
-### [Misrepresentation Preflight](https://misrepresentation-preflight.pisan.me)
+### [Misrepresentation Preflight](https://misrepresentation-preflight.hintwise.org)
 
 A small online shop sells through Google Shopping, and one day Merchant Center suspends the account for "Misrepresentation". Google does not say what it found. The owner fixes the footer, rewrites a policy, asks for a review, and gets rejected again, and each rejection makes the next wait longer. The replies in the Shopify Community threads from this summer and autumn keep saying the same thing: many small inconsistencies had piled up across the store, the policies, the product feed and the business details in Merchant Center. Misrepresentation Preflight looks for exactly those. You type the store's address, optionally add the product feed and what you told Merchant Center, and it reads the pages a reviewer would open: contact, about, shipping, returns, terms, the FAQ and up to fifteen product pages. Then it compares them. Two different phone numbers, a personal Gmail next to the store address, the old brand name still in the theme settings, a FAQ that says 14-day returns while the policy says 30, an announcement bar with a different free-shipping minimum, a product page whose hidden product data still has last month's price, a feed pointing at a deleted product. Each finding names the page, quotes the sentence and says what to change, most important first. A dated re-check log shows what you fixed since the last check, which is what you want in hand before spending the next review request. The sample shop, a made-up candle store, shows all of this without needing a store of your own.
 
 The idea had a crawler, a queue and a hosted database. I built it with one small server function that reads a single public page at a time and sends back only what it found, while the feed and the log stay in your browser. I ran it against several real Shopify and WooCommerce stores while building it, which caught a handful of false alarms. The honest limitation: it cannot tell you why Google suspended you. Some suspensions have causes no website check can see, and it reads wording with patterns, so an unusual sentence can be missed or misread.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/misrepresentation-preflight/README.md) for more details on the code or try it at <https://misrepresentation-preflight.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/misrepresentation-preflight/README.md) for more details on the code or try it at <https://misrepresentation-preflight.hintwise.org>
 
 (Last update November 2026)
 
-### [Dossier Comment Reflector](https://dossier-comment-reflector.pisan.me)
+### [Dossier Comment Reflector](https://dossier-comment-reflector.hintwise.org)
 
 Promotion and tenure dossiers are moving away from average ratings and toward a reflection: a page or two on how student comments changed your teaching, with quotes, covering every year in rank. That means rereading hundreds of comments from a dozen course offerings, picking quotes that are fair rather than flattering, and connecting them to what you changed, usually in the same month everything else in the dossier is due. Dossier Comment Reflector does the sorting and counting. You upload the CSV exports from your evaluation system, or paste comments copied out of a PDF, tagged by course and term. It sorts every comment into the themes students actually write about (clarity, workload, exams, feedback, grading, availability and so on), reads each mention as praise or criticism, and shows each theme term by term. You record what you changed, in your own words, and the term it started, and it compares the comments before and after: in the sample, critical comments about exams drop from 73% to 13% after midterms were replaced by quizzes. Then it picks a balanced set of quotes, half praise and half criticism, with names replaced by [name], and drafts a reflection that fits your page limit, ready to edit and download for Word.
 
 Nothing is uploaded and no AI reads the comments, which matters on campuses that restrict putting evaluations into AI tools. The original idea had Claude cluster the comments and write the draft. I built it on word lists and counting instead, so every number can be traced back to the comments behind it. The honest limitation is that word lists miss sarcasm and unusual phrasing, and a before-and-after difference is a count, not proof that the change caused it. The draft is a starting point; it still needs to sound like you.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/dossier-comment-reflector/README.md) for more details on the code or try it at <https://dossier-comment-reflector.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/dossier-comment-reflector/README.md) for more details on the code or try it at <https://dossier-comment-reflector.hintwise.org>
 
 (Last update November 2026)
 
-### [Student Journey Check](https://student-journey-check.pisan.me)
+### [Student Journey Check](https://student-journey-check.hintwise.org)
 
 A yoga teacher or a small training academy sells courses from their own WordPress site with Tutor LMS. They update a plugin, the admin screen looks fine, and they move on. Then a student emails: the login page shows a critical error, the lesson video says "Error 153", the certificate page says "Nonce not matched". The Tutor LMS support forum had all of these between August and October 2026, and each owner found out from a student. Student Journey Check is the test student. You give it the site, the login of a student account you made for testing, and one course, and it walks the way a student would: log in, open the dashboard, the course, a lesson and its video, a quiz, a certificate, and the price a new customer sees. Each step comes back as works, look at this, or broken, in plain words, with what the page said and what to try next. You also get the email you would forward to whoever looks after your site. There is a demo tab with a pretend yoga academy where you can break things the way real updates broke real sites, a stuck welcome popup, a lost enrolment, a sale price left on, and watch the check catch them.
 
 The idea had a headless browser running every day, screenshots and email alerts. I built the on-demand version: press the button after an update. The password is used for the login step and then forgotten, and nothing is stored. The honest limitation is that it reads pages the way the server sends them, without running their scripts, so a dead button or a video that fails only when it plays can slip past it.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/student-journey-check/README.md) for more details on the code or try it at <https://student-journey-check.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/student-journey-check/README.md) for more details on the code or try it at <https://student-journey-check.hintwise.org>
 
 (Last update November 2026)
 
-### [ACR Draft](https://acr-draft.pisan.me)
+### [ACR Draft](https://acr-draft.hintwise.org)
 
 Before a university buys software, its purchasing office now asks for a VPAT: the accessibility report where the vendor goes through WCAG criterion by criterion and says how well the product meets each one. Small edtech companies stall here. They have no accessibility staff, and an agency charges a few hundred dollars per screen to audit and write the report. ACR Draft walks a small team through doing it themselves. You describe the product and answer twelve yes/no questions (any video? anything timed? can users pay or submit quiz answers?) that rule out criteria that cannot apply. You scan each key screen with the free axe-core checker, by pasting a snippet into the browser console on a signed-in screen, by running one command, or by pasting the page HTML, which the app scans itself. Then each of the 50 WCAG 2.1 A and AA criteria gets one plain sentence on what it asks, a short test you can do without training, what the scan found, and a place to record your result. Out comes the report in the VPAT 2.5 layout, as a Word file or HTML, with an evidence appendix. Save the project, and next release it shows you what got better or worse.
 
 The part I care about is that it will not let you inflate the report. A clean scan never earns "Supports", because scanners miss most of what actually blocks people. Mark something as passing when the scan found failures and the report says "Partially Supports" and points at the screens. Every claim needs a note, and the report stays stamped DRAFT until every criterion has an answer. The original idea had a hosted crawler and Claude drafting the remarks. I built the browser-only core instead, so nothing is uploaded and the remarks come from your own notes. The honest limitation: it cannot do the manual testing for you. If you click through the guided tests without really trying them, the report will be wrong.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/acr-draft/README.md) for more details on the code or try it at <https://acr-draft.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/acr-draft/README.md) for more details on the code or try it at <https://acr-draft.hintwise.org>
 
 (Last update November 2026)
 
-### [Consent Leak Watch](https://consent-leak-watch.pisan.me)
+### [Consent Leak Watch](https://consent-leak-watch.hintwise.org)
 
 The first one aimed squarely at small businesses. A shop owner installs a cookie banner, Complianz or CookieYes or Cookiebot, and assumes it works. Then a plugin updates and starts loading the Meta Pixel before anyone has clicked anything. In October 2026 exactly that happened with Meta for WooCommerce 3.7.6, and the vendor's advice was to downgrade. Consent Leak Watch is the check. You record two short visits to your shop in Chrome, one where you leave the banner alone and one where you click Reject all, and drop the two recordings in. It lists the advertising, analytics and video cookies and requests that fired when they should not have, reads the banner's own cookie to find the moment you clicked, and treats a Google Consent Mode hit sent with consent denied as a note rather than a leak. Then it tries to name the plugin: it follows Chrome's record of which script loaded which, back to a /wp-content/plugins/ folder, or finds the snippet in the page HTML and reads the id WordPress gave it. Save the check, drop it in again after the next round of updates, and it tells you which plugin changed version and now sits behind a new leak.
 
 The idea was a hosted service that scans shops weekly with a headless browser and emails a diff. I built the free do-it-yourself core instead: everything runs in the browser and nothing is uploaded. The honest limitation is that it only knows what you recorded, so there is no automatic monitoring, and when a speed plugin like WP Rocket has combined the files, or the cookie is set by PHP on the server, it can say there is a leak but not which plugin caused it.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/consent-leak-watch/README.md) for more details on the code or try it at <https://consent-leak-watch.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/consent-leak-watch/README.md) for more details on the code or try it at <https://consent-leak-watch.hintwise.org>
 
 (Last update November 2026)
 
-### [Modulo Bias Microscope](https://modulo-bias-microscope.pisan.me)
+### [Modulo Bias Microscope](https://modulo-bias-microscope.hintwise.org)
 
 Randomness bugs are the ones that pass every test. rng.next() % 6 always returns a number from 0 to 5, a shuffle always returns the same items in some order, and no unit test with a fixed seed will tell you that some answers are more likely than others. Modulo Bias Microscope makes the bias visible. Students paste a sampling function and say what distribution they meant: uniform integers, every permutation equally likely, or weighted outcomes. In exact mode the tool runs the function against a deliberately tiny random source, say 8 bits, once for every possible sequence of draws, and adds up the probabilities as exact fractions. So rng.next() % 6 comes back as 43/256 for 0 to 3 and 42/256 for 4 and 5, which a student can check by hand. Statistical mode draws a few hundred thousand times from a 32-bit source and runs a chi-square test. The two modes teach together: on 32 bits the modulo bias is about one part in a billion, the chi-square test happily passes it, and exact mode shows it is still there. A gallery has seven classic bugs, each with a fix: modulo bias, scaling a float, an off-by-one range, the naive shuffle, sorting with a random comparator, Fisher-Yates with a biased index, and rounded weights that fall off the end and return undefined.
 
 Instructors turn whatever is in the editor into an exercise link, and the autograder grades exactly when it can and falls back to the chi-square test with a stated false-fail rate when it cannot. The idea suggested Python through Pyodide as well; I left it out, so it is JavaScript only. The honest limitation is that exact mode is exponential in the number of draws, so a shuffle of more than five or six items has to fall back to statistics, which can miss small biases.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/modulo-bias-microscope/README.md) for more details on the code or try it at <https://modulo-bias-microscope.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/modulo-bias-microscope/README.md) for more details on the code or try it at <https://modulo-bias-microscope.hintwise.org>
 
 (Last update November 2026)
 
-### [GPU Parallel Puzzler](https://gpu-parallel-puzzler.pisan.me)
+### [GPU Parallel Puzzler](https://gpu-parallel-puzzler.hintwise.org)
 
 Parallel programming is one of those skills students say they learned and then cannot use, because the cost of a bad kernel is invisible on a laptop. GPU Parallel Puzzler is twelve small puzzles on a simulated GPU. Students write kernels in a little CUDA-like language, pick the launch (how many blocks, how many threads each), and run them. The simulator executes every warp of 32 threads with the lanes that are actually active, so it can show exactly what happened: a branch on i % 2 that made every warp run both paths, threads reading memory in chunks so each warp touched eight times the segments it needed, a shared-memory tree whose threads queued up on the same bank, sixteen thousand atomics fighting over one counter. Every run gets stars against a reference solution, a GPU versus CPU estimate, a warp-by-warp trace with the lanes drawn as little cells, and a plain-language diagnosis that points at the line. A race detector catches the classic out[0] += 1 and the forgotten sync().
 
 The suggested design used Claude for the hints. I did not need it: the simulator already knows why a kernel is slow, so the hints are computed from its counters and are the same every time. Students export their progress as a file and the instructor loads the files into a class table. The honest limitation is that the GPU is a teaching model with made-up costs and no caches, so the cycle counts are for comparing your own attempts, not for predicting a real card.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/gpu-parallel-puzzler/README.md) for more details on the code or try it at <https://gpu-parallel-puzzler.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/gpu-parallel-puzzler/README.md) for more details on the code or try it at <https://gpu-parallel-puzzler.hintwise.org>
 
 (Last update October 2026)
 
-### [Tiny Brains League](https://tiny-brains-league.pisan.me)
+### [Tiny Brains League](https://tiny-brains-league.hintwise.org)
 
 Students given a machine learning project tend to reach for a bigger model. Tiny Brains League takes that away. The task is to train the smallest neural network that can still play Connect Four well, with a hard cap of 5,000 weights. There is no search at play time: the network sees the board as 84 numbers and picks a column, and that is all it gets. Students can train in the browser, either by having the network copy one of the house bots or by evolving it, or train in Python with a small NumPy runtime that plays exactly like the browser one. A submission is just a JSON file of weights, so the ladder never runs anyone's code. There are three milestones: beat a random player, beat a scripted bot that wins when it can and blocks when it must, then climb the class ladder. The ladder is a round robin over fixed openings with each colour played, rated on an Elo scale, and a second board ranks Elo per thousand weights, so a small network that is nearly as good can win that one. A replay viewer shows the network's move probabilities at every turn and marks where it missed a win or a block, and every training run goes into a log that exports as the ablation table the write-up asks for.
 
 The honest limitation is that there is no server. Brains, the run log and ladder results live in one browser, so the instructor runs the official ladder by loading every student's file into their own browser rather than students submitting to a shared site. The training is plain JavaScript too, so anything beyond a few thousand games belongs in Python. And a network this small still misses tactics a one-move check would catch: the best sample brain still takes just under half the points against the scripted bot.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tiny-brains-league/README.md) for more details on the code or try it at <https://tiny-brains-league.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tiny-brains-league/README.md) for more details on the code or try it at <https://tiny-brains-league.hintwise.org>
 
 (Last update October 2026)
 
-### [Tamerlane Board](https://tamerlane-board.pisan.me)
+### [Tamerlane Board](https://tamerlane-board.hintwise.org)
 
 Chess has been rewritten many times. The queen used to move one square, and the bishop used to jump. Timur's chess, played in fourteenth-century Central Asia, is a good look at that history: an 11×10 board, giraffes, camels, war engines that leap two squares, and a citadel on each side where a losing king can run for a draw. Tamerlane Board lets you play it against an engine, and each piece has a short note on where it came from and what it turned into. The interesting part is underneath. No piece has its own code. Each one is a line of fairy-chess notation, so the giraffe is `F>R{3,}`: one diagonal step, then at least three squares straight out. The move generator, the move highlights and the engine all read that same line. That makes the piece lab possible. You type a new piece, watch the squares it reaches light up, drop blockers to see how it gets stopped, get a rough value in pawns, and then play it in Timur or ordinary chess. A balance test has the engine play itself a few times with your piece on one side to see whether it is too strong. A link shares the whole piece. It makes a good game-AI lecture demo too, since search, evaluation and move generation are all visible and none of them knows anything about chess in particular.
 
 The honest limitation is that the engine is small and the rules are simplified. It searches five or six moves (counting both sides) in a second, which is enough to punish blunders but not to judge a new piece from six quick balance games. Some historical rules are left out: the king's one-time swap, the extra royal pieces, and the pawn of pawns' three-stage promotion. The idea also called for Claude to turn plain English into notation. That step became clickable examples and a syntax table, so nothing needs a server.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tamerlane-board/README.md) for more details on the code or try it at <https://tamerlane-board.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tamerlane-board/README.md) for more details on the code or try it at <https://tamerlane-board.hintwise.org>
 
 (Last update October 2026)
 
-### [Poincaré Paint](https://poincare-paint.pisan.me)
+### [Poincaré Paint](https://poincare-paint.hintwise.org)
 
 Most people's first picture of non-Euclidean geometry is one of Escher's Circle Limit prints, and most never find out what makes them work. Poincaré Paint lets you draw one. You pick a tiling such as {7,3} (seven-sided polygons, three at every corner, which only fits on a hyperbolic plane) and doodle inside the disk. Every stroke is copied into every tile at once, shrinking towards the rim, so a few squiggles turn into a pattern. Underneath, each stroke is folded into one small triangle and redrawn by Möbius maps, the transformations that preserve hyperbolic angles and distances. A geodesic brush shows that straight lines here are arcs meeting the rim at right angles. Dragging slides the whole plane, and whatever you grab glides through the middle while the rim never gets any closer, which shows why the disk has no centre. A measure tool gives hyperbolic distances and the angles of any triangle you click; the angle sum always comes out under 180°, and the shortfall is the triangle's area. Drawings export as SVG or as a link that carries the whole picture in the URL.
 
 The honest limitation is speed on deep tilings. It draws with plain Canvas rather than WebGL, so a busy {7,3} picture with tiles drawn all the way to the rim takes tens of milliseconds a frame, and dragging can stutter on a weak phone unless you turn the detail down. Each stroke also gets a single width, so one long stroke does not taper along its length.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/poincare-paint/README.md) for more details on the code or try it at <https://poincare-paint.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/poincare-paint/README.md) for more details on the code or try it at <https://poincare-paint.hintwise.org>
 
 (Last update October 2026)
 
-### [Data Structure City](https://data-structure-city.pisan.me)
+### [Data Structure City](https://data-structure-city.hintwise.org)
 
 In CS2, students meet hash maps, B-trees and caches as static diagrams in a textbook, and "amortized O(1)" stays an abstract phrase. Data Structure City puts four data structures side by side: a hash map, a B-tree, a skip list and an LRU cache. All four take commands from one Redis-like console (SET, GET, DEL, EXPIRE, TICK, RANGE), so one command changes all four at once. Students see buckets fill until the table doubles and every entry moves, a full B-tree node split and push its middle key up, coin flips build skip-list towers, and the cache evict whatever was used least recently. Each structure has a cost meter showing the last operation, the running average and the worst case. Type FILL 16 and the hash map's worst insert is several times its average, which is what amortized cost means. RANGE is cheap for the two ordered structures and a full scan for the other two, and the meters show that as well. The LRU cache forgets on purpose, so a GET can miss in the cache while the other three find the key.
 
 There are five guided tours that ask students to predict what will happen before each step runs. Instructors can write their own tours as JSON and share them as a link, with the whole tour stored in the URL, so nothing needs a server or an account. Everything works from the keyboard, and a text narration mode describes each structure in words for screen reader users. The honest limitation is that changes show up as highlights and short notes, not animation. Students see the tree before and after a split, not the keys sliding into place, and there is no 3D view like the Redis model that inspired the idea.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/data-structure-city/README.md) for more details on the code or try it at <https://data-structure-city.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/data-structure-city/README.md) for more details on the code or try it at <https://data-structure-city.hintwise.org>
 
 (Last update October 2026)
 
-### [Leap Second Lab](https://leap-second-lab.pisan.me)
+### [Leap Second Lab](https://leap-second-lab.hintwise.org)
 
 Time is one of those topics where every programmer is sure they understand it until 23:59:60 shows up. Leap seconds are going away, which makes this a good moment to teach why they hurt. Leap Second Lab (the page calls itself 23:59:60) has four parts. A timeline puts TAI, UTC, GPS time, Unix time and UT1 on one chart since 1972, with a projection of how far UT1 drifts once leap seconds stop; you set the cutover date and how fast the Earth slows down. A clock simulator walks through one leap second with a stepping POSIX clock, a 24-hour smear, a 1,000-second smear and a monotonic clock, then replays a log from two servers with different clocks and counts the lines that come out in the wrong order and the replies logged before the requests that caused them. A test bench shows what JavaScript Date, Temporal, Python and Postgres actually do with leap-second inputs. These are recorded from real runs, not from documentation: Temporal quietly turns 23:59:60 into 23:59:59, and Postgres accepts 23:59:60 but rejects 23:59:60.5. Finally there are four bug-fix exercises (a timeout, a rate limiter, a billing duration, a log merge) with hidden tests that run a simulated leap second against the student's code.
 
 The suggested design used Claude to explain each library result. I wrote those explanations once by hand instead, since the results do not change. The honest limitation is that the UT1 history is a schematic sawtooth rather than real IERS measurements, and the future drift is a two-knob model, so the timeline teaches the mechanism, not the actual Earth.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/leap-second-lab/README.md) for more details on the code or try it at <https://leap-second-lab.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/leap-second-lab/README.md) for more details on the code or try it at <https://leap-second-lab.hintwise.org>
 
 (Last update October 2026)
 
-### [Pull the Pin](https://pull-the-pin.pisan.me)
+### [Pull the Pin](https://pull-the-pin.hintwise.org)
 
 Computer organization courses teach how a working computer runs. Debugging a broken one teaches more, because you have to reason about every signal on the way from symptom to cause. Pull the Pin is a Ben Eater style 8-bit computer (program counter, RAM, instruction register, A and B registers, an adder, flags, an output register and a microcode ROM driving 16 control lines on a shared bus) simulated pin by pin, with one thing broken: a bus line stuck at 0, a lifted pin, two bus lines shorted together, a flipped bit in the microcode, or a dead chip. Students run test programs for free and see what the output display shows compared to a healthy board. Then they click pins and bus lines and spend a limited budget of probes capturing waveforms on a logic analyzer, and finally name the fault. As they measure, the page lists every one of the 3,810 possible single faults that still fits what they have seen, and shows when probing has stopped helping and only a new test program will tell the remaining suspects apart. That is the lesson I care about: a diagnosis is only as good as the tests that exercise the broken path. There is also a sandbox with every signal visible and the faulty waveforms drawn over the healthy ones, and an instructor page that makes challenge links.
 
 The suggested design had Claude give Socratic hints. This version computes the hint instead: it picks the probe that would rule out the most remaining faults, using only what the student has already measured. The honest limitation is that each module is one idealized chip with cycle-level timing, not the real 74LS parts with propagation delays and glitches, and it only models one fault at a time, so it teaches diagnosis by elimination rather than what a real breadboard feels like.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pull-the-pin/README.md) for more details on the code or try it at <https://pull-the-pin.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pull-the-pin/README.md) for more details on the code or try it at <https://pull-the-pin.hintwise.org>
 
 (Last update October 2026)
 
-### [Pluck Lab](https://pluck-lab.pisan.me)
+### [Pluck Lab](https://pluck-lab.hintwise.org)
 
 Karplus-Strong is my favourite algorithm to show students who think signal processing is not for them. Fill a queue with random noise, keep taking a sample off the front, average it with the one before, and put the result on the back. That is about twenty lines of code, and it sounds like a guitar string. Pluck Lab makes it playable. The home and bottom rows of the keyboard pick chords, H and J strum down and up, and every note is synthesized live as you play, with no recorded samples anywhere. The point is what is on screen: the delay line of the string you are watching, the strength of each of its harmonics, and the sound coming out, all of which you can slow down to one sample per frame while you talk. You can watch the jagged noise smooth out trip by trip and the high harmonics die first, which is the whole trick. Seven lecture scenes each set up one idea with buttons that play the example: why pitch is out of tune without a fractional-delay fix (and badly so at 8 kHz), why higher notes die faster, where you pick the string, and why a strum is nothing more than six plucks a few milliseconds apart. The last scene hands the loop filter to the students as a few lines of JavaScript that they can rewrite and hear immediately.
 
 The suggested design used Claude to explain a student's edited filter in plain language. This version measures the filter instead: it checks whether it is linear, runs test tones through it to get its gain and delay at each frequency, and turns that into sentences such as "low-pass, the A string will ring for about 9 seconds" or "unstable, it keeps more than it started with every trip", all in the browser. The honest limitation is that it is the textbook model, with no guitar body, no string stiffness and no bends, so it sounds like a plucked string rather than a good recorded guitar, and the student's filter code runs in their own browser tab with no sandbox.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pluck-lab/README.md) for more details on the code or try it at <https://pluck-lab.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pluck-lab/README.md) for more details on the code or try it at <https://pluck-lab.hintwise.org>
 
 (Last update October 2026)
 
-### [Study Buddy Matchmaker](https://study-buddy-matchmaker.pisan.me)
+### [Study Buddy Matchmaker](https://study-buddy-matchmaker.hintwise.org)
 
 When I tell students to form study groups, friends sit with friends, and two people who are both lost on graphs end up spending an hour being lost together. Study Buddy Matchmaker uses the gradebook instead. Upload a CSV export with one column per quiz question or homework problem, tag each column with its topic (it reads headers like `Q3 [recursion] /5`, and anything it guesses wrong can be fixed in a table), and it works out how much of each topic every student has mastered, counting only the work they attempted, so a missed quiz is not a zero. Then it pairs students so that each one is strong in something the other is still learning: someone who is good at recursion but shaky on graphs gets matched with someone who is the reverse. Every group gets a short agenda saying who leads which topic, with a link for each, plus the topics nobody in the group is strong in yet, which belong in office hours. Every student gets a printable card with who they are meeting, what they lead, what they get help with, and their own standing per topic. The card never shows a groupmate's scores, so I can hand them out without anyone seeing anyone else's weak spots.
 
 The suggested design used Claude to cluster students and write the agendas, with a Flask and Supabase backend. This version does it all with arithmetic in the browser, so the gradebook never leaves my laptop: the pairing is a maximum-weight matching, exact for classes up to 20 and very close to the best above that, with an option to keep particular students apart. The honest limitation is that the match score treats a gap in quiz scores as teaching value. It knows nothing about who gets along, who can actually explain, or who is free on Tuesday afternoons, so the pairs are a starting point I still look over.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/study-buddy-matchmaker/README.md) for more details on the code or try it at <https://study-buddy-matchmaker.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/study-buddy-matchmaker/README.md) for more details on the code or try it at <https://study-buddy-matchmaker.hintwise.org>
 
 (Last update October 2026)
 
-### [Net Units](https://net-units.pisan.me)
+### [Net Units](https://net-units.hintwise.org)
 
 Students now hand in code that works but is twice as long as it needs to be, often because an AI wrote it, and "this is bloated" is a hard comment to defend. Net Units puts a number on it. Upload the starter code and a set of solutions (student submissions, my reference, AI baselines) and it counts how much each one added in coding units rather than lines: every name, keyword, literal and operator counts one, while brackets, commas, comments and blank lines count nothing, and units on deleted lines are subtracted. Cramming does not help. In the bundled sample a student squeezed their answer onto four lines and still comes out larger than my reference. Each solution lands on a scatter of size against tests passed, with marker size showing how many new branches it added or how much of it is copy-paste, and clicking one opens a side-by-side diff with every counted unit highlighted and a per-function breakdown. Then comes my favourite part, a "guess the author" round: the solutions get shuffled codenames, the class votes on which ones an AI wrote, and I reveal the answer and export an annotation sheet so sections can argue about where the extra code earned its keep.
 
 The idea came from the Parsimony benchmark, which ranks AI models by how much code they add to fix bugs. The suggested design used tree-sitter, a Flask backend and Claude-generated baselines; this version is a hand-written lexer for Python, JavaScript, Java and C++ that runs entirely in the browser, so student code never leaves the room. The honest limitation is that the three AI baselines in the sample were written by hand to show terse, balanced and defensive styles, so they are not real model output; for a real guessing round you upload your own. It also does not run the code, so you type in how many tests each solution passed.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/net-units/README.md) for more details on the code or try it at <https://net-units.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/net-units/README.md) for more details on the code or try it at <https://net-units.hintwise.org>
 
 (Last update October 2026)
 
-### [Tetromino Arcade](https://tetromino-arcade.pisan.me)
+### [Tetromino Arcade](https://tetromino-arcade.hintwise.org)
 
 Every one of these projects so far came off the daily ideas list. This one I just asked for: make a Tetris game, and add lots of features. What came back is a falling-block game that plays the way modern versions do. Pieces rotate with the Super Rotation System, so they kick off walls and slide into tight slots, they come from a shuffled bag of seven so you never wait forever for a long piece, and there is hold, a ghost piece, a short lock delay you can stretch by moving, and proper scoring for T-spins, back-to-back Tetrises, combos and perfect clears. There are seven modes: Marathon, a 40-line Sprint, two-minute Ultra, Dig through ten rows of garbage, Master where pieces land instantly, an endless Zen mode, and Versus against a CPU that you bury in garbage rows by clearing lines. A Daily Sprint gives everyone the same pieces for the day. Keys, auto-repeat speed and soft drop are all adjustable, gamepads work, and on a phone you get buttons and swipe controls. Every game is recorded as the random seed plus each key press, so your best run in each mode can be watched back exactly, at up to four times speed, or downloaded as a tiny file.
 
 The CPU is not an LLM. It tries every rotation and column for its current and held piece and scores each resulting board on height, holes, wells and how ragged the surface is, using the weights published for the El-Tetris bot, and the difficulty setting decides how fast it moves and how often it picks a worse spot on purpose. The honest limitation is that it only ever drops pieces straight down from above, so it never tucks a piece under an overhang or sets up a T-spin, and a player who can T-spin will beat even the Insane setting. Records are kept in your browser only, so the daily challenge has no shared leaderboard.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tetromino-arcade/README.md) for more details on the code or try it at <https://tetromino-arcade.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/tetromino-arcade/README.md) for more details on the code or try it at <https://tetromino-arcade.hintwise.org>
 
 (Last update October 2026)
 
-### [Lockstep Lab](https://lockstep-lab.pisan.me)
+### [Lockstep Lab](https://lockstep-lab.hintwise.org)
 
 Real-time strategy games like Total Annihilation kept thousands of units in sync over a modem by sending only the players' clicks and running the exact same simulation on every machine. That only works if the simulation is perfectly deterministic, and determinism is very hard to teach from slides. Lockstep Lab runs a tiny RTS on two to four simulated clients side by side, connected by a fake network where you set the latency, jitter, packet loss and reordering. Every confirmed tick each client hashes its world, and a strip of green bars shows the hashes agreeing. Then switch on one source of nondeterminism: floats on two different platforms, a random number generator seeded from each machine's clock, iterating a Map in the order the units happened to be inserted, or advancing physics by the measured frame time on a 60 Hz and a 144 Hz machine. The bars turn red, the ghost of client A's units drifts away from client B's, and a table names the first unit and field that differed, down to the bit pattern. My favourite preset is "floats on identical machines", which stays in sync: floats are deterministic, platforms are not. A second view compares input-delay lockstep with GGPO-style rollback over input delays 0 to 8 on the same network, plotting input lag against stalls for one and re-simulation cost for the other, and five autograded exercises hand students a broken step function to fix until two simulated machines agree for 10,000 ticks.
 
 Everything runs in the browser with no backend, and a test checks that rollback, over a 200 ms network losing 15% of its packets, confirms exactly the same states as lockstep. The honest limitation is that the platform differences are simulated and exaggerated. JavaScript arithmetic is identical on every engine, so the lab invents a second machine that keeps extra precision and uses a sloppier sine, and the float preset diverges within the first ticks rather than after the minutes or hours it takes in a real game.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/lockstep-lab/README.md) for more details on the code or try it at <https://lockstep-lab.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/lockstep-lab/README.md) for more details on the code or try it at <https://lockstep-lab.hintwise.org>
 
 (Last update October 2026)
 
-### [Edit Graph Lab](https://edit-graph-lab.pisan.me)
+### [Edit Graph Lab](https://edit-graph-lab.hintwise.org)
 
 Students run `diff` and `git diff` every day and almost none of them know it is a shortest-path search. Edit Graph Lab draws the picture. Type two texts, by line or by character, and you get the edit graph: a grid with the old text across the top and the new text down the side, a step right for every deletion, a step down for every insertion, and a free diagonal wherever the two texts share a token. Press play and Myers' 1986 algorithm spreads across it one edit at a time, each furthest-reaching path in its own colour, while the V array fills in beside the grid as the triangle from the paper, with a sentence per diagonal saying where each number came from. When the search reaches the corner the path turns into a unified diff, and hovering a hunk lights up its stretch of the path. A second view runs the textbook LCS table, Myers, patience and histogram diff on the same input and outlines where they disagree, and an exercise generator writes questions (predict the edit distance, fill in V[k] after step d, which of these two diffs did patience produce, how many hunks will `diff -U1` print) with answers from the code, exported as Markdown or as a QTI file for Canvas.
 
 The examples are the classic traps: the paper's ABCABBA against CBABAC, kitten and sitting (5 edits, not 3, because diff has no substitution), Bram Cohen's frobnitz, two swapped functions, and an inserted function whose braces can slide. Writing the notes for them taught me something: my straightforward Myers produced clean diffs on cases the blog posts use to show Myers at its worst, and it was the LCS table that interleaved the functions. So each note says what these implementations actually do, and a test checks the claims. The honest limitation is that this is raw algorithm output. Real git runs a clean-up pass afterwards that slides hunks to blank lines, and its Myers searches from both ends at once, so on the same input `git diff` can read better than what the lab shows.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/edit-graph-lab/README.md) for more details on the code or try it at <https://edit-graph-lab.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/edit-graph-lab/README.md) for more details on the code or try it at <https://edit-graph-lab.hintwise.org>
 
 (Last update October 2026)
 
-### [Cache Miss Theater](https://cache-miss-theater.pisan.me)
+### [Cache Miss Theater](https://cache-miss-theater.hintwise.org)
 
 Every architecture course says loop order matters, shows the matrix multiply with the loops swapped, and asks students to take the speedup on faith. Cache Miss Theater makes the cache visible. Write a small C loop nest (arrays, `#define` constants, `for` loops, `min()` bounds for blocking) and it produces the exact address of every array access, then runs that trace through a cache you set up: size, line size, associativity, LRU, FIFO or random replacement, and the write policies. Every miss is labelled compulsory, capacity or conflict, by quietly running an infinite cache and a fully associative cache of the same size alongside the real one. Press play and watch lines land in their sets, labelled `B[14][0..3]`, and get evicted, while a map of each array shows which elements are in the cache right now. Put two kernels side by side (row order against column order, ijk against ikj, naive transpose against blocked), sweep a block size or the cache size and get the miss-rate curve, or generate exam questions whose answers come from the simulator, exported as Markdown or as a QTI file for Canvas.
 
 The presets are the classic lectures: the 8 KB array summed by rows misses 25% of the time and by columns 100%, two float arrays exactly a cache size apart in a direct-mapped cache knock each other out on every access until you pad one by a line, and blocking a 24 by 24 matrix multiply for a 1 KB cache drops the misses from 3,744 to 1,008. The idea asked for an analyser of affine loops; I wrote a small interpreter instead, which handles `min()` bounds and branches for free. The honest limitation is that it is one level of data cache with a fixed order for the reads in a statement, and array contents are not simulated, so no pointers, no `A[B[i]]`, and no compiler that keeps `C[i][j]` in a register.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cache-miss-theater/README.md) for more details on the code or try it at <https://cache-miss-theater.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cache-miss-theater/README.md) for more details on the code or try it at <https://cache-miss-theater.hintwise.org>
 
 (Last update October 2026)
 
-### [Assignment Stress Test](https://assignment-stress-test.pisan.me)
+### [Assignment Stress Test](https://assignment-stress-test.hintwise.org)
 
 Every teaching center checklist now says "test your assignment with AI before you give it out", and almost nobody does, because doing it properly means pasting the assignment into several models, trying it the way a lazy student would and the way a careful one would, and then grading every reply against your own rubric. Assignment Stress Test does that evening of work in a few minutes. Paste the assignment and the rubric, and each Claude model makes three attempts: the assignment pasted as is, a request that includes the rubric and asks for full marks, and a three-turn conversation that plans against the rubric, writes, then checks and revises. For programming work your own pytest suite runs in the browser (Pyodide in a worker, with a time limit for the inevitable infinite loop), and the rest of the rubric is scored by a judge model reading your rubric. The report is a grid of scores by model and prompt style plus a verdict per rubric row: AI meets it, AI gets partway, or it holds up. Runs are kept term over term, so you can edit the assignment, re-test, see what changed, and spot the assignments that have aged badly as the models improved. Instructors bring their own API key, which goes straight from the browser to Anthropic, or paste replies from ChatGPT or Gemini by hand.
 
 The bundled demo is real replies, not made up. On a CS1 run-length-encoding lab, every model passed all ten tests on the first lazy paste; the only row that held up was the reflection on a bug the student hit. On a policy memo that has to answer a classmate's argument from an October 14 debate, no model could fake the debate, and Haiku more than once politely declined to write graded work at all. The honest limitation is that the scores are a lower bound: three prompt styles and one pass of a judge that can itself be wrong, so a low score is not proof an assignment is AI-proof.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/assignment-stress-test/README.md) for more details on the code or try it at <https://assignment-stress-test.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/assignment-stress-test/README.md) for more details on the code or try it at <https://assignment-stress-test.hintwise.org>
 
 (Last update October 2026)
 
-### [Fork Count](https://fork-count.pisan.me)
+### [Fork Count](https://fork-count.hintwise.org)
 
 Every operating systems exam has the question: here are five lines of C with `fork()` in a loop and a `printf` at the bottom, how many times is hello printed, and which of these outputs could you see? Students guess, and the honest answer depends on things they have not been taught to track: which process exists when, what `wait()` forces to happen first, and whether text still sitting in the stdio buffer gets copied into the child. Fork Count answers it exhaustively. Paste a snippet and a small interpreter runs every process, draws the process tree, and lists every output any schedule could produce, with a switch for where stdout goes (a terminal is line-buffered, a pipe is not, which is why `printf("hello "); fork();` prints hello twice). Type an output you think is possible and it either shows a schedule that prints it or says why none can: "parent cannot come next: pid 1000 is blocked in wait() at line 12 until one of its children exits, and pid 1001 still has to print child". You can step one schedule at a time and watch processes go runnable, blocked, zombie and orphan, and a generator writes new exam questions whose answers are checked against every schedule, exported as Markdown or as a QTI file for Canvas.
 
 The trick that keeps it small is that each process is deterministic once you know which way each fork went, so the interpreter just reruns `main()` along that path, and the only real choice left is which process writes next. Sixteen identical processes would be millions of states, so states whose processes have the same future are treated as one, and a test checks the shortcut against brute force. The honest limitation is the C subset: one `main()`, no pointers, pipes, signals or threads, `exec` is a stub, and pids are one consistent numbering rather than whatever the kernel would hand out.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/fork-count/README.md) for more details on the code or try it at <https://fork-count.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/fork-count/README.md) for more details on the code or try it at <https://fork-count.hintwise.org>
 
 (Last update October 2026)
 
-### [Brocot Gear Finder](https://brocot-gear-finder.pisan.me)
+### [Brocot Gear Finder](https://brocot-gear-finder.hintwise.org)
 
 Gears have whole numbers of teeth, so a clockmaker who needs the hour hand to turn once for every 12 turns of the minute hand is fine, but one who needs a sidereal day, a lunar month or a year is stuck approximating. In the 1860s Achille Brocot, a Paris clockmaker, attacked this with hand-built tables that turn out to be the Stern-Brocot tree, the same tree CS students meet as a way to enumerate the rationals. Brocot Gear Finder is that problem as a toy. Type a target (`12`, `24*60`, `365.2422/366.2422`), set the tooth range and up to three stages, and it lists the most accurate compound gear trains with the error in parts per million and as a clock that gains or loses so many seconds a day. The trick is that a ratio N/D is buildable in k stages exactly when both N and D are products of k tooth counts in range, so the search marks every such product once and tests the numerators nearest each possible denominator; sidereal time with 8 to 120 teeth comes out at 2.3 parts per billion in three stages, about a fifth of a millisecond a day. A second panel shows the continued fraction, the path down the Stern-Brocot tree and which convergents you can actually build, which is Brocot's point: the best fraction usually has a prime factor no gear can carry, and a slightly worse neighbour that factors into small numbers wins. The chosen train turns on screen with involute teeth phased so they really mesh, a dial shows the hand drifting from where it should be over a million turns, and you can download the gears as an SVG for a laser cutter or share the design as a link.
 
 The idea suggested walking the tree to find candidates; I show the tree for understanding but the trains come from the exhaustive search, since the tree tells you which fractions are good, not which ones you can cut. The honest limitation is that the layout is a schematic: it does not check that a big wheel clears a neighbouring axle or that small pinions would be undercut, and it stops at three stages.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/brocot-gear-finder/README.md) for more details on the code or try it at <https://brocot-gear-finder.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/brocot-gear-finder/README.md) for more details on the code or try it at <https://brocot-gear-finder.hintwise.org>
 
 (Last update October 2026)
 
-### [Letter Ledger](https://letter-ledger.pisan.me)
+### [Letter Ledger](https://letter-ledger.hintwise.org)
 
 Every fall the letter requests arrive by email: "can you write me a letter?", no deadline, no CV, and often a student I need a minute to place. Plenty of faculty now refuse unless they remember the student, and deadlines slip because everything lives in the inbox. Letter Ledger is the small tool I wanted. You set your policy once (three weeks' notice, at most eight programs, a B+ or better in one of my courses, CV and statement required, a question or two) and get a personal link. The student fills in one form: each program with its letter deadline and how the letter is submitted, the courses they took with you, their documents, their answers, and a FERPA release they sign by typing their name. The release names the records, the purpose and the programs, records whether they waived the right to read the letter, and is kept word for word with a hash, so an edit after signing shows up. The form warns them about short notice before they send it. Out comes one file, encrypted in their browser to a key only your browser holds, which they email to you. You drop the files on a dashboard that sorts every letter by deadline, flags the overdue and the due-this-week, exports calendar reminders, and writes the "yes, I will write this" or "submitted on Nov 20" email for your mail app. During the term you jot `Maya Okafor: great question on hashing #oh`, and when Maya's request arrives months later the notes are waiting. The fact outline pulls it all into a five-paragraph skeleton per program and leaves grades out when the release does not cover them.
 
 The idea called for Supabase, Resend, Stripe and Claude for drafting; I kept it entirely in the browser instead, so no server ever holds a student's CV, grades or my notes, and the outline only repeats facts someone recorded rather than writing prose. The honest limitations come with that choice: a typed name is a signature but not proof of identity, everything lives in one browser until you download the (encrypted) backup, and if you lose the key, files sent to your old link cannot be opened.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/letter-ledger/README.md) for more details on the code or try it at <https://letter-ledger.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/letter-ledger/README.md) for more details on the code or try it at <https://letter-ledger.hintwise.org>
 
 (Last update October 2026)
 
-### [Diagram Layout Engine](https://diagram-layout-engine.pisan.me)
+### [Diagram Layout Engine](https://diagram-layout-engine.hintwise.org)
 
 Mermaid made it normal to keep diagrams as text, and the standard complaint is that anything past a dozen boxes turns into spaghetti, with no easy way to see what changed between two versions. The idea was a five-week assignment: have students write the layout engine themselves. Diagram Layout Engine is my reference solution. A hand-written recursive-descent parser reads a subset of Mermaid flowchart syntax (14 node shapes, labelled links, chains, nested subgraphs with their own direction, `classDef` and `linkStyle`) and points at the line and column of the first mistake. Then the classic Sugiyama pipeline runs from scratch, with no Mermaid, dagre or ELK underneath: break cycles with a greedy feedback arc set, assign layers with network simplex, add dummy nodes for long edges, sweep the layers with barycenter or median ordering plus transposition to cut crossings, place nodes with Brandes-Köpf, and route edges as splines or orthogonal lines. The Pipeline tab steps through every stage on your own diagram, so you can watch the crossing count drop sweep by sweep. The Diff tab lays two versions out as one graph, so nothing moves and the additions, removals and changes light up. Ten examples, six themes that restyle without a new layout, SVG and PNG export, and share links.
 
 The part that surprised me was the benchmark: 50 seeded graphs and five pipeline configurations, ranked on crossings, area, edge length and bends. Median ordering, the textbook choice, lost to plain barycenter on crossings, so barycenter became the default, and no configuration wins everywhere. The honest limitation is subgraphs. Each one is laid out on its own and dropped into its parent as a fixed box, which keeps its direction but means the parent cannot interleave its nodes with outside ones, so a heavily connected subgraph comes out wider than dagre or ELK would draw it, and edges into it need extra bends.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/diagram-layout-engine/README.md) for more details on the code or try it at <https://diagram-layout-engine.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/diagram-layout-engine/README.md) for more details on the code or try it at <https://diagram-layout-engine.hintwise.org>
 
 (Last update October 2026)
 
-### [Code Viva](https://code-viva.pisan.me)
+### [Code Viva](https://code-viva.hintwise.org)
 
 Students now hand in polished code they cannot explain, and the fix everyone agrees on, a short oral defense, costs about 30 hours of TA time for a 36-student class. Code Viva is my attempt at a cheaper version. You upload a Gradescope or Canvas export, or point it at a GitHub Classroom assignment, and it reads each student's code and commit history and writes 4 to 6 questions about *their* submission: "`_sort` calls itself on line 56; what is the base case, and why does every call get closer to it?", "line 27 of `remove` checks `if cur is None`; what breaks if you delete it?", "what does `pv` hold, and what would be a clearer name?", and, when 99% of the code arrived in one commit at 2:47 am, "walk me through how you developed this". Each student gets a personal link to a timed text session, with extended time for accommodations and up to two follow-ups when an answer is vague, each aimed at what the answer left out. They send back a response code, and the review page shows each transcript with a proposed 0 to 3 score per question, the exact sentences the score rests on, and a flag queue (low scores, pasted answers, an unexplained commit, leaving the window) so TAs only talk to the few students who need it. Nothing is final until the instructor approves it, and the whole thing runs in the browser: the questions travel in the link's fragment and no server ever sees a submission.
 
 The idea called for Claude to write and grade the questions; I used deterministic templates over a small source analyser and a keyword rubric instead, so it costs nothing and cannot invent code that is not there. The honest limitation is that keyword scoring rewards vocabulary: a student who knows the words "base case" but not their own code can still pick up a point or two, which is why scores are proposals and the full transcript is always shown. Response codes are also not signed, so a determined student could edit their own paste counts.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-viva/README.md) for more details on the code or try it at <https://code-viva.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-viva/README.md) for more details on the code or try it at <https://code-viva.hintwise.org>
 
 (Last update October 2026)
 
-### [Outguess Me](https://outguess-me.pisan.me)
+### [Outguess Me](https://outguess-me.hintwise.org)
 
 Ask a room to type a random sequence of two keys and almost everyone produces something a few lines of code can predict. Scott Aaronson has a classic demo of this, and Outguess Me is my version of it. You press F or J as unpredictably as you can for 50, 100 or 200 presses. Before each press the oracle makes its guess and shows you the SHA-256 hash of that guess plus a random nonce, so it is locked in before you choose. After the press it reveals the guess and the nonce and the page checks the hash, which means you can confirm it never peeked. Easy mode is Aaronson's original: a table of what you pressed after each run of five, falling back to shorter runs when a pattern is new. Hard mode runs six of these tables with different memory lengths and shifts weight toward whichever one is currently reading you, so changing strategy halfway helps for a few presses and then stops helping. A live chart plots the oracle's hit rate against the band a coin-flipping guesser would stay inside. When the game ends you get the breakdown: a confidence interval and a p-value against a coin, the six-press table that beat you, your run lengths next to a fair coin's, your alternation rate (people switch far too often), and bits per press measured by an adaptive compressor, where anything under 1.00 means your "random" sequence compresses. You can also paste any two-symbol string, say one a chatbot generated, or run the oracle on 200 real coin flips as a control. My scripted human-ish player, who switches keys 70% of the time, lost 34 to 16.
 
 The idea asked for React, Tailwind and Recharts; this is plain TypeScript and SVG, about 22 KB of JavaScript, with share links that carry the presses and recompute the score when opened, so a link cannot brag beyond what its sequence earns. The honest limitation is that the commitment only proves the page is honest, not the player: oracle and player run in the same browser tab, so anyone who opens the developer tools can see the next guess. A 50-press game is also short enough that a coin's band runs from about 36% to 64%, so a short game's verdict is often "can't tell yet".
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/outguess-me/README.md) for more details on the code or try it at <https://outguess-me.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/outguess-me/README.md) for more details on the code or try it at <https://outguess-me.hintwise.org>
 
 (Last update October 2026)
 
-### [Program Alarm 1202](https://program-alarm-1202.pisan.me)
+### [Program Alarm 1202](https://program-alarm-1202.hintwise.org)
 
 Margaret Hamilton died this week, and the obituaries all retold the 1202 alarms on Apollo 11 in a sentence: the computer was overloaded and her software coped. Program Alarm 1202 lets you watch it cope. You fly the last kilometre and a half of a lunar descent while a slider stands in for the mis-set rendezvous radar switch, stealing CPU cycles nobody budgeted for. A small Executive runs the real mix in miniature (landing guidance, radar processing, telemetry, the DSKY refresh and the crew's Verb 16 Noun 68 monitor) with priorities and the real fixed pools of 7 core sets and 5 VAC areas, all drawn as slots coloured by the job holding them. At 15% steal with the monitor on, the low-priority display jobs starve, keep holding their slots, and about sixteen seconds in a new request finds nothing free and 1202 fires; no script decides when. The restart then flushes everything, re-establishes only the restart-protected jobs at their last completed phase, and guidance carries on. My run lands with five alarms, the same number Apollo 11 had, which I did not tune for and was pleased to see. Turn the monitor off and the same steal fits; push to 20% and the VAC pool runs out first, so you get 1201 instead. A compare tab replays the same load on an Executive that halts on overflow (abort at the first alarm) and on a naive round-robin scheduler (guidance misses its deadlines and the lander comes down hard), with a sweep across every steal level, and an Apollo 11 tab lines the model up against the real transcript.
 
 The idea asked for React, Tailwind and a canvas descent view; this is plain TypeScript and canvas, 27 KB of JavaScript. The honest limitation is that the numbers are invented. The job sizes are chosen to reproduce the real load level and the way the pools drained, not measured from the Luminary code, the descent is vertical only, and the model is kinder to the AGC than reality: the protected jobs fit even at the 30% maximum steal, so guidance never misses a deadline under the AGC Executive.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/program-alarm-1202/README.md) for more details on the code or try it at <https://program-alarm-1202.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/program-alarm-1202/README.md) for more details on the code or try it at <https://program-alarm-1202.hintwise.org>
 
 (Last update October 2026)
 
-### [Heap Arena Replay](https://heap-arena-replay.pisan.me)
+### [Heap Arena Replay](https://heap-arena-replay.hintwise.org)
 
 Every systems course teaches malloc with one static box-and-arrow figure, and then students spend a week of the malloc lab staring at a segfault with no picture at all. Heap Arena Replay is the picture, one operation at a time. You paste a trace (the malloc-lab format works as is, or `p0 = malloc(24)` lines) or generate a seeded one, and the page replays it on a word-accurate heap in the CS:APP style: header and footer boundary tags, a prologue block, an epilogue header, alignment padding drawn to the byte, and for explicit and segregated free lists the pred and succ pointers sitting in the first two payload words of each free block, with arcs following the list from its head. Each step outlines the blocks the search examined, the one it returned, the split remainder and the merged region, and a sentence explains the adjusted size, why first-fit or best-fit or next-fit picked that block, and which of the four coalescing cases a free hit. The policy can be switched partway through with every block left in place, a compare tab replays the same trace under eight policies with utilization, fragmentation and blocks-examined charts, and the presets are built to make a point: two holes where first-fit fails and best-fit does not, a rover that walks past a hole, alternating frees that leave 208 free bytes and no room for 72. The part instructors will use is the quiz generator. It picks a point in the trace and asks which address the next malloc returns, how many blocks merge on this free, how many padding bytes the block carries, and so on, with every answer read off the simulator, exports Markdown or a Canvas QTI zip, and a diff tab takes a student allocator's own trace with addresses and reports the first op where it leaves the reference, plus misaligned, overlapping and out-of-bounds blocks that are wrong under any policy.
 
 The idea asked for React, Tailwind, Recharts and Supabase; this is plain TypeScript and SVG with share links in the URL, and the QTI zip is written by sixty lines of my own zip code rather than a dependency. The honest limitation is that the arena is fixed. A real allocator grows the heap with sbrk, so the malloc-lab utilization score is not reproduced; here a request that does not fit simply returns NULL, which is what the fragmentation demos are built around but not what a grader measures. The diff mode also only knows the addresses a student's allocator printed, so it can draw where their blocks claim to be but not their headers or free lists, and the QTI export has been checked against Canvas's own format rather than by importing into a live course.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/heap-arena-replay/README.md) for more details on the code or try it at <https://heap-arena-replay.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/heap-arena-replay/README.md) for more details on the code or try it at <https://heap-arena-replay.hintwise.org>
 
 (Last update October 2026)
 
-### [Bombe Bench](https://bombe-bench.pisan.me)
+### [Bombe Bench](https://bombe-bench.hintwise.org)
 
 Every Enigma simulator lets you encrypt. Almost none let you do what Bletchley Park actually did, which was break it. Bombe Bench starts with the machine: three of the five rotors, a reflector, ring settings, up to thirteen plugboard leads, and the double step of the middle rotor that the textbooks get wrong as often as not. Type a letter and the current is drawn through the plugboard, the three rotors, the reflector and back, with the full wiring faint behind it, and a slider replays any keypress. The cycle structure of each rotor and of the whole stack is printed underneath, because the fact that the machine is always thirteen swapped pairs (so no letter ever becomes itself) is the crack the attack uses. Then you switch to the Attack tab. Paste an intercept, type a crib like WETTERVORHERSAGE, and slide it: every offset where a letter would encrypt to itself goes red. The surviving offset becomes a menu, a little graph with one edge per crib position, and the loops in it light up in colour. Press Run and a Web Worker tries all 60 rotor orders and 17,576 positions, following each loop around the composed scramblers (Turing's test) and then flooding the implications through Welchman's diagonal board, with a running count of positions rejected. A million positions take about a second, and what comes out is a short table of stops with the plugs each one implies and a checking-machine verdict. A tracer lets you pick any position and watch one hypothesis spread until the test register lights twice, with the diagonal board switchable off so you can see why loops mattered so much before Welchman. Instructors generate challenges from a bank of stereotyped WWII traffic and hand out a link; the page grades the decryption letter by letter.
 
 The idea asked for React and Tailwind; this is plain TypeScript and SVG, and it builds in half a second. The honest limitation is the one the real Bombe had: it assumes the middle rotor does not step during the crib, and it reports positions with the ring settings at A. The challenge generator guarantees the first condition, but a "hard" challenge with random rings decrypts correctly through the crib and then drifts after the first turnover, and sorting out the ring setting is left to the student with no help beyond a hint. The checking machine is also just a consistency check on the implied plugs, not a model of the historical one.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/bombe-bench/README.md) for more details on the code or try it at <https://bombe-bench.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/bombe-bench/README.md) for more details on the code or try it at <https://bombe-bench.hintwise.org>
 
 (Last update October 2026)
 
-### [State Space Atlas](https://state-space-atlas.pisan.me)
+### [State Space Atlas](https://state-space-atlas.hintwise.org)
 
 Search algorithms get taught on toy grids, and students never see the shape of the space being searched. State Space Atlas draws the whole thing. Pick a puzzle (Towers of Hanoi, the 8-puzzle and its smaller cousins, the classic Klotski, a couple of Rush Hour boards, or your own JSON definition) and a Web Worker enumerates every reachable state: 181,440 for the 8-puzzle, 13,011 for Klotski once identical pieces and mirror images are merged. Each state becomes a dot in the column of its distance from the start, so the silhouette of the drawing is the frontier size at every depth and "exponential growth" is something you can point at. Then press Play. BFS floods the columns one at a time, DFS threads a thin line, iterative deepening re-sweeps the shallow states round after round, greedy darts, and A* carves a narrow channel toward the goal, with live counts of expanded states, frontier size and peak memory, and a table that keeps every run on the same atlas side by side. The part I like most is the heuristic editor. You type the body of a JavaScript function, and because the atlas already knows the true distance of every state, it checks admissibility and consistency on all of them, reports the worst overestimate, and paints the offending states red. The presets include one heuristic that is inadmissible on purpose and one for Hanoi that is admissible but not consistent, which is a distinction most students only meet as a sentence in a textbook. Instructors can export a puzzle and an expansion target as a link and ask students to beat it.
 
 The idea called for WebGL and a graph library; this is a single 2D canvas with edges cached in an offscreen bitmap, and it draws the 8-puzzle in a few milliseconds. The honest limitation is the cap of 400,000 states, which keeps the 15-puzzle and bigger block boards out of reach, and the layout only has two shapes, layered and radial, so a dot's horizontal position tells you its depth and nothing else. Heuristics also run on the main thread, so a slow one on the 8-puzzle freezes the page for a couple of seconds while it checks.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/state-space-atlas/README.md) for more details on the code or try it at <https://state-space-atlas.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/state-space-atlas/README.md) for more details on the code or try it at <https://state-space-atlas.hintwise.org>
 
 (Last update October 2026)
 
-### [Reverse Minesweeper Studio](https://reverse-minesweeper-studio.pisan.me)
+### [Reverse Minesweeper Studio](https://reverse-minesweeper-studio.hintwise.org)
 
 Minesweeper's worst moment is the forced guess: you have done everything right and the last two cells are a coin flip. Reverse Minesweeper Studio turns the game around. You paint a picture with mines (a heart, your initials, a logo), choose the safe cell a player opens first, and a solver plays the board from that opening using only logic. It climbs the same ladder a good player does: single numbers first, then two overlapping numbers compared against each other, then every possible mine layout around a region, and finally the total number of mines left, which is the only thing that clears the inside of a walled box. If it finishes, the board is certified guess-free and gets a difficulty rating from the hardest step it needed. If it gets stuck, the cells where a player would have to gamble turn amber, two mine layouts that both fit every visible number can be flipped back and forth, and a background search tries toggling each nearby cell and lists the smallest edits that fix it. A slider replays the deduction one step at a time, which makes it a decent first lesson in constraint satisfaction. A finished board travels in the link itself, and the friend who opens it plays to uncover your drawing.
 
 The idea suggested React and Tailwind; this is plain TypeScript and a single canvas so a 40 by 40 board stays smooth while you drag. The honest limitation is that the fix search only tries one-cell edits near the trouble. Some boards need two coordinated changes, and then the list offers the edit that gets furthest and you fix it one step at a time. The difficulty meter is also coarse: it reports the hardest kind of reasoning needed, not how long a person will take, so a board with one pairwise step rates the same as one with fifty.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/reverse-minesweeper-studio/README.md) for more details on the code or try it at <https://reverse-minesweeper-studio.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/reverse-minesweeper-studio/README.md) for more details on the code or try it at <https://reverse-minesweeper-studio.hintwise.org>
 
 (Last update October 2026)
 
-### [Elevator Algorithm Lab](https://elevator-algorithm-lab.pisan.me)
+### [Elevator Algorithm Lab](https://elevator-algorithm-lab.hintwise.org)
 
 Operating systems courses teach disk scheduling as lists of cylinder numbers: FCFS, SSTF, SCAN, LOOK, and the students dutifully add up head movement without ever feeling why starvation matters. Elevator Algorithm Lab makes the same algorithms physical. A policy is one JavaScript function, `dispatch(car, state)`, that sees the car, the other cars and the people waiting on each floor, and returns the next floor to go to. Run it and an animated building plays the trace: cars climb, doors open, orange dots pile up on floors nobody is serving. Each run reports mean, 95th percentile and maximum wait (the last one is the starvation number), energy as floors travelled, stops, and how many passengers were still waiting when time ran out. Pick a second policy and both replay in sync on the same traffic with the better number highlighted. Then flip to the disk view and the identical run is redrawn as cylinder across, time down, one zigzag per car: the diagram from the textbook, with the lesson that SCAN on a building is SCAN on a disk made literal. Six presets come as readable starting code, and on the textbook trace they move exactly 640, 236, 236 and 208 cylinders. Instructors write scenarios as small JSON files with seeded traffic generators (morning rush, lunch spike, a trap where one person on floor 1 waits while a stream rides between 30 and 40 and SSTF never comes down), can mark a scenario hidden for grading, and share everything by link.
 
 The idea called for Supabase to hold scenarios and a class leaderboard. There is no server: the leaderboard lives in the browser, stores only names, scores and an eight-character hash of the policy, and travels as CSV or JSON that students hand in or merge. The honest limitation is that "hidden" is hidden in the interface only; the scenario is compressed inside the share link, so a student who decodes the URL can read the traffic. The model is also deliberately simple: a car goes straight to the floor the policy named and does not stop for anyone on the way, which is exactly what a disk head does and what makes the two views the same algorithm, but it is less like a real elevator than a controller that picks up hall calls en route.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/elevator-algorithm-lab/README.md) for more details on the code or try it at <https://elevator-algorithm-lab.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/elevator-algorithm-lab/README.md) for more details on the code or try it at <https://elevator-algorithm-lab.hintwise.org>
 
 (Last update October 2026)
 
-### [Where Does It Say](https://where-does-it-say.pisan.me)
+### [Where Does It Say](https://where-does-it-say.hintwise.org)
 
 Students ask the same logistics questions all term ("can I use AI on lab 3?", "is the late penalty per day?"), and a general chatbot answers them confidently even when the syllabus says nothing. Where Does It Say turns that around: it may only answer by pointing at a sentence. The instructor drops in the syllabus, assignment specs and course policies (PDF, Markdown or plain text), and every answer is a passage copied from them, checked word for word against the document and highlighted in place in a side-by-side viewer, with the section and page it came from. If nothing qualifies, it says "Not stated in the course documents," names the words in the question the documents never use, and logs the question. A student can also mark a real quote as not answering the question. Students export their logs, and the instructor loads them into a gap report: unanswered questions grouped by week and by similar wording, plus the words students keep using that the syllabus never contains. A second tab checks quotes pasted from anywhere, such as a chatbot's answer; a changed quote ("10% per week" for "10% per day") is shown next to the closest real passage with the altered words marked. The whole course pack travels compressed inside the share link, so there is no server and nothing is uploaded.
 
 The idea called for Claude Haiku behind a serverless function to propose quotes, with code verifying them. I kept the verifier and replaced the model with keyword retrieval (BM25 over sentences, a small synonym table for course logistics, and matching that knows "lab 3" falls inside "labs 1 to 4" but not "labs 5 to 8"). It is free, instant and gives the same answer every time. The limitation is that a verified quote is real but not necessarily relevant, and a question worded very differently from the syllabus can be refused even when the answer is there. Both cases end up in the gap report, which is the point. PDF support extracts the text layer, so scanned syllabi need OCR first.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/where-does-it-say/README.md) for more details on the code or try it at <https://where-does-it-say.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/where-does-it-say/README.md) for more details on the code or try it at <https://where-does-it-say.hintwise.org>
 
 (Last update September 2026)
 
-### [Cipher Ladder](https://cipher-ladder.pisan.me)
+### [Cipher Ladder](https://cipher-ladder.hintwise.org)
 
 A frontier model cracking a 370-year-old cipher made the news this month, which is a good excuse to teach the old craft. Cipher Ladder is a six-rung course in classical cryptanalysis: Caesar, affine, Vigenere, columnar transposition, monoalphabetic substitution, and homophonic substitution, each unlocked only after the previous one is solved. Beside the ciphertext sits the workbench a student actually needs: letter, bigram and trigram frequencies drawn against the English baseline, index of coincidence for every candidate key length with the English and random lines marked, a Kasiski table of repeated trigrams and the periods that divide their distances, a per-column chart for Vigenere, and keyboard-only substitution and symbol boards that update the decryption as you type. Hints come from a budget the instructor sets and each one reveals a single piece of the key. After a solve, a deterministic solver attacks the same ciphertext and its step log appears next to your own path: which shift chi-squared preferred and whether the "tallest bar is E" guess held, where Kasiski and IC disagreed, every read order tried for the columns, how the trigram hill-climb converged, and, for the homophonic rung, exactly which letters it still had wrong. Instructors build their own ladder (cipher, key, text, hint budget per rung) and the whole assignment is encoded in the link; students download a progress file and a dashboard reads any number of them.
 
 The idea called for an LLM debrief and a Supabase roster. I replaced the LLM with a written-out program because a program can show its evidence, is free, and fails honestly: on the homophonic rung it usually leaves a couple of rare letters swapped and says so. The limitation is the language model behind the solvers, which is trained on only about eleven thousand letters of the bundled public-domain passages. It is calibrated for texts of a few hundred letters; give the substitution or homophonic solver a short instructor text and it will overfit garbage into fluent-looking English, which the confidence score now discounts but does not cure. There is no server, so the dashboard only knows about the files a student hands in.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cipher-ladder/README.md) for more details on the code or try it at <https://cipher-ladder.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cipher-ladder/README.md) for more details on the code or try it at <https://cipher-ladder.hintwise.org>
 
 (Last update September 2026)
 
-### [Repo Weight Map](https://repo-weight-map.pisan.me)
+### [Repo Weight Map](https://repo-weight-map.hintwise.org)
 
 Every term a student repo arrives with a virtualenv, a node_modules, a 400 MB dataset, or a build folder committed, and nobody notices until a push fails or a clone takes ten minutes. Repo Weight Map is the diagnostic: pick a folder in the browser and it draws a zoomable treemap of where the bytes are, colored by what they are (source, dependencies, generated output, data, media, the .git directory itself), then runs nineteen rules that know what junk looks like in Python, Node, JVM, .NET, Unity, C++, Rust, and Terraform projects, including a committed venv spotted by its pyvenv.cfg, bin/ and obj/ only when a .csproj sits next to them, and Unity's Library/ only under a folder that also has Assets/ and ProjectSettings/. Each finding explains why the files do not belong in git, shows the bytes at stake, and contributes its .gitignore lines. Untick the ones that are wrong for your project and the before/after estimate and the diff against your existing .gitignore update. A standalone HTML report can be downloaded and attached to a help request. Files never leave the tab: only names and sizes are read, plus the root .gitignore so it does not suggest lines you already have.
 
 The treemap is a hand-written squarified layout rather than d3, and there is no backend, no API, and no runtime dependency. The limitation is the half of the idea I skipped: history mode, which would read the .git packfiles to find large blobs that were deleted from the tree but still live in every clone, and print the filter-repo command to purge them. That needs a delta-resolving pack reader in the browser and it did not fit the weekend. The app does count .git and will tell you, usually correctly, that it is bigger than the cleaned tree, but it cannot tell you what is inside.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/repo-weight-map/README.md) for more details on the code or try it at <https://repo-weight-map.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/repo-weight-map/README.md) for more details on the code or try it at <https://repo-weight-map.hintwise.org>
 
 (Last update September 2026)
 
@@ -605,13 +605,13 @@ See [README](https://github.com/pisanuw/css-scheduler/blob/main/README.md) for m
 
 (Last update September 2026)
 
-### [Agent Blast Radius](https://agent-blast-radius.pisan.me)
+### [Agent Blast Radius](https://agent-blast-radius.hintwise.org)
 
 Every MCP server, browser AI sidebar, and coding-agent allow rule was a reasonable yes on the day you clicked it. Added up, most of us have no idea what our AI tools can now reach. Agent Blast Radius reads the configs you already have (Claude Desktop, Cursor, VS Code and Claude Code MCP files, Claude Code permission settings, Chrome extension manifests, VS Code extension `package.json`s) and scores every tool from 0 to 100 across five dimensions: filesystem, shell, network, credentials, and browser data. A filesystem server pointed at your home directory is not the same as one pointed at a project folder. A Docker server with the Docker socket mounted is root on your machine. A `Bash(curl:*)` allow rule is broader than it looks. Each capability comes with one plain sentence on what could go wrong and the exact bit of config that triggered it. Along the way it catches plaintext API keys, database passwords sitting in command-line arguments, unpinned `npx` packages that fetch whatever was published last night, and tools set to auto-approve. You drop the files into the page, nothing gets uploaded, and you can download the report as a single HTML file.
 
 The idea asked for a local CLI that finds the files by itself. I built a static web page instead, so there is nothing to install, but the price is that you have to go find the files yourself (the page lists where each tool keeps them). The honest limitation is that it only scores what a config declares. It never reads a server's code, so it recognizes known servers by name and treats anything it does not recognize as a program running with your full privileges. That is the right default, but a scary fork with a friendly name will look friendly.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/agent-blast-radius/README.md) for more details on the code or try it at <https://agent-blast-radius.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/agent-blast-radius/README.md) for more details on the code or try it at <https://agent-blast-radius.hintwise.org>
 
 (Last update September 2026)
 
@@ -639,73 +639,73 @@ Source is not public for this one. Try it at <https://mychessmaster.net/>
 
 (Last update September 2026)
 
-### [Prompt Shrink Ray](https://prompt-shrink-ray.pisan.me)
+### [Prompt Shrink Ray](https://prompt-shrink-ray.hintwise.org)
 
 Every production prompt accumulates cruft: "please," "in order to," the same instruction restated in three sections because nobody remembers writing it the first time. Prompt Shrink Ray takes the whole thing apart into labeled sections (system, context, examples, task) by explicit label or by shape (a `You are...` opener, matched `Input:`/`Output:` pairs), then compresses each one at a level you pick: strip filler words, simplify verbose phrasing (`in order to` becomes `to`), drop a sentence that already appeared earlier in the prompt, or trim a long run of few-shot examples down to two with a note of how many got cut. Fenced code is hidden behind a placeholder before any of that runs, so a rule never touches the code you actually pasted. What comes back is a live token-and-cost estimate, a word-level diff of exactly what moved, and a retention score that names every number, quoted string, or proper noun the compression dropped, so "it looks shorter" comes with a receipt.
 
 The idea wanted two Claude calls: one to compress, one to judge whether the compressed version still meant the same thing. Both are rule tables instead, so the same prompt always compresses the same way, offline and free, and "did it still mean the same thing" becomes a narrower but checkable question: did it keep every number and code fragment, not a fuzzy judgment call from a second model. Token counts use the characters-over-4 rule of thumb providers themselves quote for English text, not a real tokenizer, so they are for comparing before and after, not for an actual invoice.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/prompt-shrink-ray/README.md) for more details on the code or try it at <https://prompt-shrink-ray.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/prompt-shrink-ray/README.md) for more details on the code or try it at <https://prompt-shrink-ray.hintwise.org>
 
 (Last update September 2026)
 
-### [Summit Navigator](https://summit-navigator.pisan.me)
+### [Summit Navigator](https://summit-navigator.hintwise.org)
 
 Conference programs are laid out for desktop monitors and read in hotel hallways on phones. Summit Navigator takes the inaugural ACM AI Leadership Summit (Hyatt Regency Atlanta, Aug 30 to Sep 2, 2026) and turns the program into something you can drive with a thumb: day tabs pinned to the top, sessions grouped by start time, eleven color-coded track chips, search that matches titles, speakers, rooms, and descriptions, and a star on every session that builds a "my agenda" view saved in the browser. A now/next banner works off the conference clock in Atlanta no matter where you are, and one toggle flips every listed time into your own timezone with exact IANA math. The whole conference lives in one JSON file the app validates loudly on startup, so pointing it at a different conference is a data edit, not a rewrite.
 
 The honest limitation is the data itself: the build machine could not reach aisummit.acm.org (network egress policy), so the bundled schedule is reconstructed from ACM's public announcements. Real venue, real dates, real tracks and keynote speakers (LeCun, Barto, Brooks), illustrative session times and rooms, and the footer admits as much. Also, the summit ended the day before this was built. Oh well: the app is the reusable part.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/summit-navigator/README.md) for more details on the code or try it at <https://summit-navigator.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/summit-navigator/README.md) for more details on the code or try it at <https://summit-navigator.hintwise.org>
 
 (Last update September 2026)
 
-### [Cron Cartographer](https://cron-cartographer.pisan.me)
+### [Cron Cartographer](https://cron-cartographer.hintwise.org)
 
 `15 4 * * 1-5` tells you nothing at a glance. Paste it here and it comes back as "At 04:15 on Monday through Friday" plus a calendar heatmap of the next 30, 90, or 365 days with every firing marked; hover a day for the exact times. It reads five-field cron (names, steps, wrap-around ranges like `FRI-MON`, the `@daily` shortcuts), a working subset of RRULE, a pasted GitHub Actions `schedule:` snippet, or plain English: type "every weekday at 4:15am" and get the cron expression back, with a note for every assumption it made. Two timezone pickers, one for where the job runs and one for where you are, and the daylight-saving edges are handled the way cron actually behaves: the 2:30am job in Los Angeles simply does not fire on March 8, and the page tells you so, while the ambiguous 1:30am in November fires once, not twice. Even the odd corner where `0 0 13 * 5` means the 13th OR any Friday is honored. A share link carries the whole thing in the URL.
 
 The idea wanted the Claude API for the English-to-cron part and npm packages for the parsing. Hand-written rules do both: same phrase, same cron, offline, free, zero runtime dependencies, and the timezone math builds exact offset tables from the browser's own IANA data instead of trusting a library. The limitation is the usual one for rules: the English parser knows a fixed set of phrasings, and anything past them gets "could not understand" rather than a guess. Ask for "every 2 weeks" and it tells you plain cron cannot say that, which no cron string ever warned anyone about.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cron-cartographer/README.md) for more details on the code or try it at <https://cron-cartographer.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/cron-cartographer/README.md) for more details on the code or try it at <https://cron-cartographer.hintwise.org>
 
 (Last update September 2026)
 
-### [Type Witness](https://type-witness.pisan.me)
+### [Type Witness](https://type-witness.hintwise.org)
 
 Paste a TypeScript snippet and the compiler's reasoning plays back as a story, one narrated step per expression. `const x = 42` keeps the literal type 42 while `let y = 42` widens to number, and the step says why. A call to a generic function shows the declared signature, the binding the compiler picked (T = string), and the resolved signature side by side. The unannotated `word` in `["a"].map(word => word.length)` explains that its type flowed in from the array, and inside `if (typeof v === "string")` the same v that was declared `string | number` shows up narrowed, with the declared and narrowed types both on the card. Compiler errors are threaded into the story right after the step where inference went astray, so you can rewind to the exact moment the code and the compiler stopped agreeing. Hover any expression for its type, click it to jump to its step, or hit play and watch the whole thing unfold. Students see the type system think; I have watched plenty of them treat it as a wall that says no.
 
 For once the idea had nothing for me to replace: no LLM, no backend, just the real TypeScript compiler (pinned at 5.6.3) running in a Web Worker with all 57 ES2022 lib files bundled in, so analysis is exact, offline, and nothing you paste leaves the browser. Every sentence of narration is filled in from what the checker actually computed, so the explanation cannot drift from the code. Two honest caveats: recovering the T = string bindings reads internal compiler state that the public API does not expose (it degrades gracefully if that ever changes shape), and shipping a compiler to the browser costs about 1 MB gzipped on first load.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/type-witness/README.md) for more details on the code or try it at <https://type-witness.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/type-witness/README.md) for more details on the code or try it at <https://type-witness.hintwise.org>
 
 (Last update August 2026)
 
-### [Prompt Genome](https://prompt-genome.pisan.me)
+### [Prompt Genome](https://prompt-genome.hintwise.org)
 
 Paste a prompt and it comes back as a strand of typed genes: role, persona, context, task, constraint, format, example, each color-coded and each showing why it got its label ("forbids something", "imperative verb"). A lint pass scores the genome 0 to 100 and points at the weak spots: no task, "various things, etc.", asking for brief and comprehensive in the same breath, constraints that only say what to avoid. Every gene offers three canned rewrites (Harden it, Soften it, Make it checkable), previewed with the changed words highlighted, and a side-by-side diff shows the prompt as pasted against the prompt as edited. Good genes go into a library with tags and search, and a share link carries the whole genome inside the URL hash, so there is no server to keep alive.
 
 The idea wanted Claude to do the parsing and write the alternatives. I used rules instead: cue patterns for segmentation, hand-written templates for the mutations, an LCS diff for the comparison. Same paste, same genome, offline, free. The limitation follows directly: the classifier only knows the cues it ships with, so an unusual sentence lands in "context" with an honest "no strong signal" note, and the mutations are mechanical rephrasings, not fresh ideas. The idea also wanted to diff model responses, and without API calls there are no responses to diff; the prompt diff and the lint score stand in for that.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/prompt-genome/README.md) for more details on the code or try it at <https://prompt-genome.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/prompt-genome/README.md) for more details on the code or try it at <https://prompt-genome.hintwise.org>
 
 (Last update August 2026)
 
-### [Code Analogy Forge](https://code-analogy-forge.pisan.me)
+### [Code Analogy Forge](https://code-analogy-forge.hintwise.org)
 
 Paste a code snippet or just type "recursion", pick your audience (curious child, high school student, CS undergrad, non-technical adult), and get three analogies from three different everyday domains, each with a small table mapping code terms to the analogy. Switching the audience swaps the entire text, not just the vocabulary: the child hears about a present that is a box inside a box inside a box, the undergrad gets the same imagery tied to base cases, unwinding, and stack frames. A detector works out what your paste shows from keyword mentions and code shapes (lo/hi/mid bounds for binary search, .push() plus .pop() for a stack), and for recursion it extracts the actual function body, by brace matching or Python indentation, to check the function really calls itself. Save the good ones to a library with tags and search, copy any card as Markdown for slides, or send a read-only share link that needs no server: the link encodes ids into the URL hash and resolves against the corpus shipped with the app.
 
 The idea called for Claude to write the analogies and Supabase to store them. I wrote the analogies up front instead: 47 concepts times 3 domains times 4 audiences is 564 short texts, every mapping checked by a person, same input same output, offline, free. localStorage replaces Supabase. The limitation is the flip side of the corpus: the forge knows exactly 47 concepts (variables through heaps, HTTP, garbage collection, and operating systems), and anything outside them gets an honest "no known concept detected" rather than a fresh analogy. The original pitch wanted the open-ended tail, and that part really did need the LLM.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-analogy-forge/README.md) for more details on the code or try it at <https://code-analogy-forge.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-analogy-forge/README.md) for more details on the code or try it at <https://code-analogy-forge.hintwise.org>
 
 (Last update August 2026)
 
-### [HAR Detective](https://har-detective.pisan.me)
+### [HAR Detective](https://har-detective.hintwise.org)
 
 Export a HAR file from the DevTools Network panel (right-click, "Save all as HAR"), drop it on the page, and get the analysis you normally do by squinting at a wall of requests: an interactive waterfall plus a ranked list of what is actually wrong. Ten detectors cover the classics: N+1 loops (/api/products/1 through /8 becomes one finding with the batch-endpoint fix attached), static assets served without cache headers, hundreds of KB of JSON that never met gzip, redirect chains, API calls running single-file when they could run together, duplicate fetches, failing requests, slow server think-time, oversized payloads, and HTTP/1.1 origins paying DNS and TLS over and over. Each finding shows the guilty requests, the wasted bytes or milliseconds, and a copy-paste fix; click one and the rows light up in the waterfall. The whole report exports as Markdown for a PR.
 
 The idea called for Claude to read the request data and write the report. HTTP performance problems are a small, well-known catalogue, so hand-written rules do the job: same HAR, same report, offline, and the file never leaves the browser (HAR exports are stuffed with cookies and session tokens, so this matters more than usual). The limitation is that rules judge shape, not intent: a detector can see that three API calls ran strictly one after another, but not that your app needed the first response to build the second request, so some findings are the app working as designed. It flags; you decide.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/har-detective/README.md) for more details on the code or try it at <https://har-detective.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/har-detective/README.md) for more details on the code or try it at <https://har-detective.hintwise.org>
 
 (Last update August 2026)
 
@@ -719,93 +719,93 @@ See [README](https://github.com/pisanuw/claude-for-stem-professors/blob/main/REA
 
 (Last update August 2026)
 
-### [SQL Replay](https://sql-replay.pisan.me)
+### [SQL Replay](https://sql-replay.hintwise.org)
 
 Type a SELECT, paste some CSV (or use the bundled customers/orders tables), and watch the query execute one stage at a time: FROM, JOIN, WHERE, GROUP BY, HAVING, SELECT, DISTINCT, ORDER BY, LIMIT. Every stage shows the actual rows: joined rows merge with their partners, LEFT JOIN survivors get NULL padding, rows that fail WHERE are struck through with the evaluated condition sitting next to them, groups collapse with their member lists. A narrator explains each stage from the real execution counts ("3 rows pass, while 2 rows fail and are removed"). Students pick up SQL syntax in a week and then spend a quarter with no mental model of what the database does with it. Watching the rows move is the model. The whole workspace, query plus data, is encoded into the URL hash, so a puzzle query goes to a class as a plain link.
 
 The idea suggested an optional Claude API narrator. I made it the mandatory non-Claude narrator instead: every sentence is a template filled with numbers the executor just computed, so the explanation cannot drift from the screen, and the semantics underneath are the real thing (three-valued logic, Kleene AND/OR, COUNT(x) skipping NULLs, inclusive BETWEEN). The limitation is the point: it replays the logical clause order on tables capped at 200 rows, with no planner, no indexes, and no subqueries. A real engine would almost never execute a query this literally, so this teaches what a query means, not how a database makes it fast.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/sql-replay/README.md) for more details on the code or try it at <https://sql-replay.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/sql-replay/README.md) for more details on the code or try it at <https://sql-replay.hintwise.org>
 
 (Last update August 2026)
 
-### [Sound Sketchpad](https://sound-sketchpad.pisan.me)
+### [Sound Sketchpad](https://sound-sketchpad.hintwise.org)
 
 Type "muffled explosion heard from underground" and it plays one. The description runs through a word-to-DSP recipe book: 20 base sounds (explosion, coin, laser, rain, bell, heartbeat) and 18 modifiers (muffled, tiny, metallic, underwater, retro), each modifier rewriting the recipe by re-filtering, re-pitching, or bolting on ringing partials. The app shows exactly which words matched, draws the waveform, lists every layer's signal chain (oscillator to filter to envelope to gain), and gives you sliders for pitch, length, brightness, echo, and volume. One button exports a WAV at 16 or 24 bit. Same words, same sound, every time; a Variation button re-rolls only the noise seed.
 
 The idea called for Claude to turn the description into Web Audio code. I replaced it with the recipe book, and skipped Web Audio for synthesis too: a pure sample-by-sample DSP engine (swept oscillators, seeded noise, ADSR envelopes, biquad filters, echo, bit crush) renders the exact buffer the browser plays, which means the tests assert on the actual samples you hear and the WAV export is a byte-for-byte re-render. The limitation is the vocabulary: 20 bases and 18 modifiers cover the game-jam staples, but describe anything outside them and you get a generic whoosh and a hint about words that work. The open-ended tail really did need the LLM.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/sound-sketchpad/README.md) for more details on the code or try it at <https://sound-sketchpad.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/sound-sketchpad/README.md) for more details on the code or try it at <https://sound-sketchpad.hintwise.org>
 
 (Last update August 2026)
 
-### [Code Review Gauntlet](https://code-review-gauntlet.pisan.me)
+### [Code Review Gauntlet](https://code-review-gauntlet.hintwise.org)
 
 A code snippet appears with one to three planted defects and a countdown. Click the lines you would flag in review, submit, and everything is revealed: the off-by-one you caught, the SQL injection you sailed past, each with its root cause and fix. Scoring punishes spraying: 100 points per defect found, minus 25 for every clean line flagged, and the time bonus only pays out when you found them all. A radar chart tracks accuracy across logic, null-safety, security, performance, and style, so after a dozen rounds you can see which category you keep missing. There is also a daily challenge: the date is hashed into the puzzle seed, so everyone gets the same round with no server behind it.
 
 The idea called for Claude to generate endless fresh puzzles and Supabase for a leaderboard. I skipped both. Puzzles come from a seeded mutation engine: 11 hand-written clean snippets (JavaScript, Python, SQL) and a catalogue of 51 single-line defects, from inverted guards to timing-unsafe hash comparisons, each rewriting exactly one line so the generated code always parses. Same seed, same puzzle, offline, free. The honest limitation is the flip side: 51 defects is not an infinite supply, and a regular player will start recognizing templates within a week or two. The original pitch really did need an LLM for that part.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-review-gauntlet/README.md) for more details on the code or play it at <https://code-review-gauntlet.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/code-review-gauntlet/README.md) for more details on the code or play it at <https://code-review-gauntlet.hintwise.org>
 
 (Last update August 2026)
 
-### [UI Diff Lens](https://ui-diff-lens.pisan.me)
+### [UI Diff Lens](https://ui-diff-lens.hintwise.org)
 
 Drop in before and after screenshots of a UI and every changed region gets boxed and named: layout shift, spacing nudge, color restyle, text edit, visibility fade, added, or removed. Each box carries a confidence and the actual evidence ("the same content reappears 8px right, match 100%"). Pixel-diff tools already tell you where pixels differ; the useful part is naming the kind of change, so a reviewer can wave through nine color tweaks and stare hard at the one layout shift. Filter the overlay by type, then export an annotated PNG or a standalone HTML report for the PR.
 
 The idea called for Claude Vision to do the classifying. It turned out to be classical image processing all the way down: a perceptual pixel diff with anti-aliasing detection finds the changes, clustering groups them into regions, and each region runs a gauntlet of checks (is one side just background, does the content reappear at an offset within 48px, is one side an alpha-blend of the other, do the edges correlate while the palette moved). Deterministic, offline, and screenshots never leave the browser. Heuristics have edges, though: a wide element nudged a few pixels produces two thin changed strips, and if they land far enough apart the tool reports an add plus a remove instead of one spacing change.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/ui-diff-lens/README.md) for more details on the code or try it at <https://ui-diff-lens.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/ui-diff-lens/README.md) for more details on the code or try it at <https://ui-diff-lens.hintwise.org>
 
 (Last update August 2026)
 
-### [Shortcut Sprint](https://shortcut-sprint.pisan.me)
+### [Shortcut Sprint](https://shortcut-sprint.hintwise.org)
 
 A flashcard app for your fingers. It shows a task ("Go to definition", "delete the current line"), you press the shortcut, and SM-2 spaced repetition (the SuperMemo algorithm from 1990, same family as Anki) decides when you see that card again: instant recall pushes it out days, then weeks; fumbling brings it back tomorrow. VS Code, Chrome DevTools, Figma, and Vim come bundled, including multi-chord sequences like Ctrl+K Ctrl+S and Vim's ciw, and instructors can upload a JSON set for whatever tool their course uses. A per-tool mastery radar and a daily streak provide just enough guilt to keep the habit going.
 
 The idea called for Supabase to hold progress. I skipped it: localStorage does the job, so there are no accounts and nothing leaves the browser. The matching layer turned out to be the interesting part, because a keypress has two readings (the physical key and the character it produced) and Vim's $ needs one while Ctrl+Shift+[ needs the other, so every press is matched both ways. The limitation is baked into the platform: a web page cannot capture browser-reserved shortcuts, Ctrl+W closes the tab no matter how much preventDefault you throw at it, so the one shortcut everyone knows is the one this app cannot teach.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/shortcut-sprint/README.md) for more details on the code or try it at <https://shortcut-sprint.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/shortcut-sprint/README.md) for more details on the code or try it at <https://shortcut-sprint.hintwise.org>
 
 (Last update August 2026)
 
-### [Migration Diff Narrator](https://migration-diff-narrator.pisan.me)
+### [Migration Diff Narrator](https://migration-diff-narrator.hintwise.org)
 
 Paste two versions of a database schema, or two versions of your TypeScript interfaces, and get every change named and judged: safe, caution, or breaking, each with a one-sentence migration note ("Existing NULLs make this fail; backfill the column before adding the constraint"). Renames are inferred instead of being reported as a drop plus an add, so `user_name` becoming `username` shows up as a rename warning rather than a data-losing delete. One button copies the whole thing as a Markdown checklist ready for a PR description. Schema changes are the most dangerous part of a deploy, and the diff between two migration files is usually raw SQL a reviewer has to simulate in their head. This turns that into a ten-second scan.
 
 The project idea called for the Claude API to classify each change. I skipped it. The taxonomy of schema changes is small and enumerable, so a fixed rule set does the job: same diff, same verdict, every time, offline, nothing you paste leaves the page. The honest limitation is parser coverage: it reads the common subset of SQL DDL (CREATE TABLE, ALTER, indexes, enums) and object-shape TypeScript interfaces, not every dialect corner, and it warns you when it skips something it does not understand.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/migration-diff-narrator/README.md) for more details on the code or try it at <https://migration-diff-narrator.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/migration-diff-narrator/README.md) for more details on the code or try it at <https://migration-diff-narrator.hintwise.org>
 
 (Last update August 2026)
 
-### [Schema Storyteller](https://schema-storyteller.pisan.me)
+### [Schema Storyteller](https://schema-storyteller.hintwise.org)
 
 Point it at a schema (SQL DDL, Prisma, or JSON Schema) and it tells you the story: which entities exist, how they relate, which tables are just join tables, and what `usr_actv_flg` was probably meant to say. A rule-based reviewer then lists what is likely missing: primary keys, indexes on foreign keys, uniqueness constraints. Export the whole narrative as Markdown and paste it into the design doc that should have existed in the first place.
 
 No LLM here either, on purpose. A hand-written parser and a fixed rule set replace the suggested Claude API calls, so the narrative is free, offline, and reproducible, which also means it is templated: the prose will not win any literary awards, and the reviewer only knows the rules I taught it.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/schema-storyteller/README.md) for more details on the code or try it at <https://schema-storyteller.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/schema-storyteller/README.md) for more details on the code or try it at <https://schema-storyteller.hintwise.org>
 
 (Last update August 2026)
 
-### [Pathfinding Playground](https://pathfinding-playground.pisan.me)
+### [Pathfinding Playground](https://pathfinding-playground.hintwise.org)
 
 Draw a grid map, drop in walls and mud (mud costs 5 to enter), then watch A*, Dijkstra, BFS, DFS, and greedy best-first think one expansion at a time, each step narrated from the live algorithm state: which cell got picked, why, and what the g, h, and f values were. The project idea suggested Claude API calls for the narration. I skipped that. Every line is a template filled with the numbers the algorithm just computed, so narration is free, instant, works offline, and always matches what the search actually did, which an LLM cannot promise.
 
 Each algorithm is a generator emitting a uniform event trace, and the canvas renderer and the narrator both consume the same events, so what you see and what you read cannot drift apart. Neighbor order and tie-breaking are fixed, so the same map always produces the identical trace; there is a test for that. The classroom payoff is compare mode plus share links: sprinkle mud, run BFS against Dijkstra side by side, watch BFS march straight through the expensive terrain while Dijkstra detours around it, then hand the exact puzzle to a class as a plain link, because the whole map, start, goal, and algorithm picks are run-length encoded into the URL hash. React + Vite, no backend, 20 vitest cases covering optimality, path validity, maze solvability, and trace determinism.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pathfinding-playground/README.md) for more details on the code or play it at <https://pathfinding-playground.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/pathfinding-playground/README.md) for more details on the code or play it at <https://pathfinding-playground.hintwise.org>
 
 (Last update August 2026)
 
-### [Game Palette Inspector](https://game-palette-inspector.pisan.me)
+### [Game Palette Inspector](https://game-palette-inspector.hintwise.org)
 
 Check a game palette against WCAG contrast and eight kinds of color vision deficiency, then get replacement colors that keep the art style. Roughly 8% of male players see color differently, and most game color tooling ignores them. Build a palette by hand, load a preset, or drop a screenshot and have its eight dominant colors pulled out; the vision lab then shows the palette, and the full frame, through protanopia, deuteranopia, tritanopia, their milder forms, and full and partial achromatopsia.
 
 Two parts I like. The confusion report measures color pairs perceptually in OKLab and flags the ones that are clearly distinct with typical vision but collapse under a specific deficiency, naming the worst-case vision type. And the fix studio repairs a failing color by binary-searching OKLCH lightness with hue pinned, so the contrast target is met without repainting the art direction. It is also honest about impossibility: 7:1 against a mid-tone background is sometimes unreachable, and the tool says so instead of inventing a color. The simulation is Machado, Oliveira and Fernandes (2009), applied in linear sRGB and verified against the colour-science reference data. Everything runs in the browser: no accounts, no uploads, no tracking, no runtime dependencies beyond React, all the color math hand-rolled and unit tested. The interface follows its own advice, too: the accent is a protan/deutan-safe cyan and no pass/fail state is carried by color alone. Simulations are good approximations, not ground truth; individual perception varies.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/game-palette-inspector/README.md) for more details on the code or use it at <https://game-palette-inspector.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/game-palette-inspector/README.md) for more details on the code or use it at <https://game-palette-inspector.hintwise.org>
 
 (Last update August 2026)
 
@@ -903,11 +903,11 @@ Read the drafts at <https://pisanuw.github.io/turkey-study-abroad/>
 
 (Last update August 2026)
 
-### [Emoji Lingua](https://emoji-lingua.pisan.me)
+### [Emoji Lingua](https://emoji-lingua.hintwise.org)
 
 Translate English into emoji, and emoji back into English. `I love pizza on a rainy night` becomes 👤 ❤️ 🍕 🔛 🌧️ 🌙; unknown words stay in place rather than disappearing, and a hint under the result tells you how many there were. The dictionary has 18,474 word-to-emoji entries (1,535 of them multi-word phrases) and 4,218 emoji-to-word glosses, generated from the Unicode CLDR annotations and then layered with hand-authored vocabulary: composed entries for abstractions (`democracy` → 🗳️, `justice` → ⚖️), function words that get dropped so the output reads cleanly, and curated overrides so the obvious choice wins (`cat` → 🐱, not 🐈). Phrases match greedily longest-first, so `good morning` → 🌅 rather than 👍 🌅, and a suffix-rule fallback catches forms the generator never materialized. The engine is hybrid: the dictionary is deterministic and always available, while Claude (when an API key is configured) handles context and can read an emoji sequence as a sentence instead of a word list. The AI path always degrades to the dictionary on any error, and the UI labels which engine produced each result, so a model outage cannot break the app. Honest limitation: emoji to English is a gloss, not grammar, so 🐱🍕 gives you `cat pizza`, not `the cat ate pizza`.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/emoji-lingua/README.md) for more details on the code or use it at <https://emoji-lingua.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/emoji-lingua/README.md) for more details on the code or use it at <https://emoji-lingua.hintwise.org>
 
 (Last update August 2026)
 
@@ -919,19 +919,19 @@ See [README](https://github.com/pisanuw/canvas-group-evaluate/blob/main/README.m
 
 (Last update May 2026)
 
-### [Mult Streak](https://mult-streak.pisan.me)
+### [Mult Streak](https://mult-streak.hintwise.org)
 
 A small multiplication-streak game: you get two factors of 2 to 3 digits and type the product, ten right answers in a row win a crown and lock you out for 24 hours, and one wrong answer resets the streak to zero. Players are anonymous and all game state lives in a signed cookie, so on Netlify the game and the lockout work exactly as they do on Render. The one thing that is not dependable on Netlify is the "player stopped" email to the admin, which needs server-side storage that Netlify Functions do not keep; the Render copy of the same code sends it.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/mult-streak-edge/README.md) for more details on the code or play it at <https://mult-streak.pisan.me>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/mult-streak-edge/README.md) for more details on the code or play it at <https://mult-streak.hintwise.org>
 
 (Last update June 2026)
 
-### [Accessibility Lens](https://accessibility-lens.pisan.me/)
+### [Accessibility Lens](https://accessibility-lens.hintwise.org/)
 
 Paste any public URL and see it through four sets of eyes: low vision, color blindness, keyboard-only navigation, and screen reader. The app fetches the raw HTML, runs 11 WCAG 2.1 rules (missing alt text, broken heading structure, low color contrast, zoom disabled, duplicate IDs, unlabelled form controls, and more), and gives a concrete fix for each failure. The signature feature is a screen-reader view that strips all layout and shows the page as the linear stream of roles and text a blind user actually hears — making failures visceral rather than abstract. With an Anthropic API key, Claude rewrites each offending snippet into a corrected one; without it, rule-based fixes still cover every issue. Built as a TypeScript monorepo (React + Vite client, Express server), deployed on Netlify with the API as a serverless function. Built from the `daily-project-ideas` prompt for 2026-05-12.
 
-See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-lens/README.md) for more details on the code or use it at <https://accessibility-lens.pisan.me/>
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/accessibility-lens/README.md) for more details on the code or use it at <https://accessibility-lens.hintwise.org/>
 
 (Last update May 2026)
 
@@ -1041,11 +1041,11 @@ See [README](https://github.com/pisanuw/claude-discordbot/blob/main/README.md) f
 
 (Last update April 2026)
 
-### [MeetMe](https://meetme.pisan.me/) — Joint Meeting Finder
+### [MeetMe](https://meetme.hintwise.org/) — Joint Meeting Finder
 
 Allows gathering information from multiple people on their availability, so you can find a common meeting time. You can also set it up to let users "book" you based on your availability. Combination of <https://www.when2meet.com/> <https://calendly.com/> and <https://doodle.com/>
 
-See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more details on the code or use it at <https://meetme.pisan.me/>
+See [README](https://github.com/pisanuw/meetme/blob/main/README.md) for more details on the code or use it at <https://meetme.hintwise.org/>
 
 (Last update April 2026)
 

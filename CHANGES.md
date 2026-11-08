@@ -59,3 +59,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-05 [doc] aiprojects: Popup Check added at the top of Latest (https://popup-check.pisan.me); Modulo Bias Microscope moved to Codes, Ciphers & Chess; count 98.
 
 2026-11-05 [doc] aiprojects: StepWise (stepwise.pisan.me) added at the top of Latest; Consent Leak Watch moved from Latest to Accessibility; count 99.
+
+2026-11-08 [doc] App links moved to <app>.hintwise.org (branch hintwise; merge after DNS move).
