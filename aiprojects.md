@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">101 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">102 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#us-duty-price-sheet">US Duty Price Sheet</a></li>
   <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
-  <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -156,6 +156,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Course &amp; Department Tools</h4>
 <ul>
+  <li><a href="#dossier-comment-reflector">Dossier Comment Reflector</a></li>
   <li><a href="#student-journey-check">Student Journey Check</a></li>
   <li><a href="#net-units">Net Units</a></li>
   <li><a href="#letter-ledger">Letter Ledger</a></li>
@@ -182,6 +183,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [US Duty Price Sheet](https://us-duty-price-sheet.hintwise.org)
+
+Since the US stopped letting small parcels in duty-free, a UK maker who posts a mug or a scarf to an American customer has to send it duty paid. Every product needs its own 10-digit US code (UK codes are not accepted), the duty has to go into the price or the postage before the sale, and the rates keep moving. Makers on the Folksy forum describe the result: one gave up on US postage because she could not find a suitable code, another worked out a tote bag at 17.6% on top of 10%, and the ones who cope keep their own spreadsheet and redo it by hand at every change. US Duty Price Sheet keeps that spreadsheet for them. Pick what you make, from silver earrings and cotton totes to knitted hats, candles and soft toys, and it suggests the codes makers usually choose between, with the official wording to check before you confirm one; anything else can be searched in the US tariff itself. It adds the code's own rate, the extra 10% on goods made in the UK and Royal Mail's handling fee, and gives either a US postage table (with an "each extra item" figure for Folksy postage profiles) or a separate US price that still leaves you your UK price after duty. Once your shop matches the sheet you save it, and when a rate, your postage or a product changes, it lists exactly which prices to update and why. You can also type in a different UK rate to see what it would do before it happens.
+
+The idea was a hosted service that watches the US tariff every night and emails you. I built the version that runs in your browser, with a dated copy of the official US tariff data inside it, so your catalogue never leaves your computer. The honest limitation is that it only learns about a new US rate when the app's data is updated, and it never emails you. It is an estimate, not a customs ruling, and the postage prices are yours to enter, since Royal Mail changes them.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/us-duty-price-sheet/README.md) for more details on the code or try it at <https://us-duty-price-sheet.hintwise.org>
+
+(Last update November 2026)
 
 ### [Donation Receipts](https://donation-receipts.hintwise.org)
 
