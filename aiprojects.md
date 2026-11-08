@@ -943,11 +943,11 @@ See [README](https://github.com/pisanuw/html-editor/blob/main/README.md) for mor
 
 (Last update May 2026)
 
-### [Digital Yusuf](https://chatwithdigitalme.netlify.app/)
+### [Digital Yusuf](https://ypai.hintwise.org/)
 
 A web app that lets you chat with a digital version of Yusuf Pisan. Built on a knowledge base of 10 structured persona files (~155K characters) covering bio, teaching philosophy, research, communication style, opinions, quirks, and full Substack articles — assembled from 30+ public sources including faculty pages, teaching evaluations, 63+ GitHub repos, Google Scholar, and promotion documents. The entire persona is loaded into the system prompt (no RAG needed at this scale). The digital Yusuf speaks in first person, matching his voice, humor, and opinions. Features streaming responses via SSE, optional Google Sign-In, BYOK (users can supply their own Anthropic API key), an admin dashboard with usage analytics and cost controls, and auto-email of finished conversations. Frontend is React + Vite on Netlify; backend is FastAPI on Render (Docker).
 
-Chat with it at <https://chatwithdigitalme.netlify.app/>
+Chat with it at <https://ypai.hintwise.org/>
 
 (Last update May 2026)
 

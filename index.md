@@ -32,7 +32,7 @@ I have been building AI-assisted applications since March 2026 &mdash; games, vo
 
 <div class="project-grid">
   <div class="project-card">
-    <h3><a href="https://chatwithdigitalme.netlify.app/">Digital Yusuf</a></h3>
+    <h3><a href="https://ypai.hintwise.org/">Digital Yusuf</a></h3>
     <p>Chat with an AI version of me, built on 155&thinsp;K characters of persona data from 30+ public sources. No RAG &mdash; the entire persona lives in the system prompt.</p>
   </div>
   <div class="project-card">
