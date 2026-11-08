@@ -7,7 +7,7 @@ page_class: page-aiprojects
 <div class="summary-block hire-box" markdown="0">
 <p><strong>Want one built?</strong> I build tools like these with Claude, for small businesses, startups and educators. Email <a href="mailto:builder@hintwise.org?subject=Project%20idea%20(via%20aiprojects)">builder@hintwise.org</a> with a paragraph about the problem. Paid projects welcome, interesting ones may be done for free :-)</p>
 <p><strong>My biggest project:</strong> <a href="#digital-student-assistant">Digital Student Assistant</a>, the AI teaching assistant my data structures students are using now. It asks before it tells and will not hand over homework solutions. Look around with the demo account <code>demo@hintwise.org</code> (no code needed).</p>
-<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">55 apps and their code</a> <a href="https://daily-project-ideas.hintwise.org/">600+ ideas I could build for you</a></p>
+<p class="summary-links"><a href="https://github.com/pisanuw/claude-built-apps">55 apps and their code</a> <a href="https://studio.hintwise.org/">600+ ideas I could build for you</a></p>
 </div>
 
 <div class="intro-text">
