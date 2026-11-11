@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">102 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">103 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#qualified-overtime-checker">Qualified Overtime Checker</a></li>
   <li><a href="#us-duty-price-sheet">US Duty Price Sheet</a></li>
   <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
-  <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -105,6 +105,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Developer Tools</h4>
 <ul>
+  <li><a href="#misrepresentation-preflight">Misrepresentation Preflight</a></li>
   <li><a href="#repo-weight-map">Repo Weight Map</a></li>
   <li><a href="#cron-cartographer">Cron Cartographer</a></li>
   <li><a href="#har-detective">HAR Detective</a></li>
@@ -183,6 +184,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Qualified Overtime Checker](https://qualified-overtime-checker.hintwise.org)
+
+From tax year 2026, every W-2 has to show the extra half of overtime pay on its own line, Box 12 code TT, and employees can deduct only what is reported there. Payroll software handles the simple case and not much else. On the QuickBooks community forum a user found the figure "didn't calculate at all" for staff with two overtime lines, and Intuit's moderator confirmed the feature does not handle several pay rates; on the accountants' forum a test W-2 from EasyAcct put the whole overtime pay in the box instead of the premium, and preparers expect to adjust every W-2 by hand. Qualified Overtime Checker does that check. Upload a timesheet export (Toast and QuickBooks Online time activities are recognised, any other CSV is mapped once) and type or upload the figures your payroll shows. It rebuilds every workweek the way the overtime rules define it, across pay periods and the year end, works out the regular rate from all the pay (two rates in a week, shift differentials, servers on a tip credit, bonuses spread back over the weeks they were earned in), and gives each employee's correct figure, the difference and the likely cause: a single rate where there were two, overtime counted per pay period, the whole overtime pay in the box, a bonus left out. You get an employer summary and a week-by-week worksheet per employee as PDFs, and the list of W-2s to correct. Social Security numbers are dropped the moment a file is read. A made-up employer shows the whole thing first.
+
+Bookkeepers can keep one file per client, in the browser or, after signing in, in their account so it follows them to another computer. The honest limitation is that it reads exports rather than connecting to payroll, so you need a timesheet with dated hours, and it does not cover hospitals' 8-and-80 schedules, public-safety overtime or state daily overtime. It is a worksheet, not tax advice.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/qualified-overtime-checker/README.md) for more details on the code or try it at <https://qualified-overtime-checker.hintwise.org>
+
+(Last update November 2026)
 
 ### [US Duty Price Sheet](https://us-duty-price-sheet.hintwise.org)
 
