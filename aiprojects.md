@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">103 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">104 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#delivery-canary">Delivery Canary</a></li>
   <li><a href="#qualified-overtime-checker">Qualified Overtime Checker</a></li>
   <li><a href="#us-duty-price-sheet">US Duty Price Sheet</a></li>
   <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#popup-check">Popup Check</a></li>
-  <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -118,6 +118,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Accessibility</h4>
 <ul>
+  <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
   <li><a href="#game-palette-inspector">Game Palette Inspector</a></li>
@@ -184,6 +185,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Delivery Canary](https://delivery-canary.hintwise.org)
+
+People who sell files on Shopify (sewing patterns, ebooks, presets, printables) rely on a delivery app to email a download link after each sale, and nothing tells them when that email stops reaching buyers. On the Shopify community forum a seller found her download emails going to customers' spam or promotions and wrote "I've tried everything in terms of verification ... with no luck"; a Sky Pilot review says the same, "emails go to customer's spam". Shopify's own help page says the download destination "isn't monitored" and tells merchants to place a test order themselves, which nobody keeps doing. Delivery Canary places that test order for you. You connect your shop with a small app you create in Shopify's Dev Dashboard, keep a Gmail account just for test orders, and pick a download product. Weekly or daily, it places a free, tagged order addressed to that inbox, waits for the download email, and records how long it took, whether Gmail put it in the Inbox, Promotions or Spam, whether it passed the sender checks Gmail uses (SPF, DKIM, DMARC), and whether the link still gives the same file as your saved copy. When the email lands in Spam, never comes, or the link fails, it emails you, with a weekly digest if you want one and an 8-week table of where your canaries landed.
+
+It also works without connecting anything: drop in one delivery email to get the same findings with what to change, or drop Shopify's orders export to list paid download orders that were never delivered (customer names, emails and addresses are never read from the file). The honest limitation is that it measures one Gmail inbox, not Outlook or Yahoo, and it has not yet run against a real shop, so the first real canary may turn up a fix; whether every delivery app sends its email for an order made this way is still to be confirmed.
+
+See [README](https://github.com/pisanuw/claude-built-apps/blob/main/delivery-canary/README.md) for more details on the code or try it at <https://delivery-canary.hintwise.org>
+
+(Last update November 2026)
 
 ### [Qualified Overtime Checker](https://qualified-overtime-checker.hintwise.org)
 
