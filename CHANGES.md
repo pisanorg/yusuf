@@ -63,3 +63,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-08 [doc] App links moved to <app>.hintwise.org (branch hintwise; merge after DNS move).
 
 2026-11-11 [doc] aiprojects: Qualified Overtime Checker added at the top of Latest; Misrepresentation Preflight moved from Latest to Developer Tools; count 103.
+
+2026-11-25 [doc] aiprojects: add Screen Reader Journeys (launched 25 Nov); Popup Check moves from Latest to Accessibility; 105 projects

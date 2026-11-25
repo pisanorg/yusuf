@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">104 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">105 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#screen-reader-journeys">Screen Reader Journeys</a></li>
   <li><a href="#delivery-canary">Delivery Canary</a></li>
   <li><a href="#qualified-overtime-checker">Qualified Overtime Checker</a></li>
   <li><a href="#us-duty-price-sheet">US Duty Price Sheet</a></li>
   <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
   <li><a href="#stepwise">StepWise</a></li>
-  <li><a href="#popup-check">Popup Check</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -118,6 +118,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Accessibility</h4>
 <ul>
+  <li><a href="#popup-check">Popup Check</a></li>
   <li><a href="#accessibility-fleet-log">Accessibility Fleet Log</a></li>
   <li><a href="#acr-draft">ACR Draft</a></li>
   <li><a href="#consent-leak-watch">Consent Leak Watch</a></li>
@@ -185,6 +186,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Screen Reader Journeys](https://screen-reader-journeys.hintwise.org)
+
+Most accessibility checkers look at a page and list what is wrong with the markup. A screen reader user does not read markup. They press Tab, hear something (or nothing), and press Tab again. Screen Reader Journeys tries to record that. Sign in, give a public web address and pick a journey such as "Home page: Tab order", and a real browser on the server walks the page by keyboard. The report lists every stop, what a screen reader would announce there, and the checks that pass or fail: a button with no name, focus landing inside something hidden from screen readers, no visible focus, a keyboard trap, an announcement that never comes. It was built to test the STEM Accessibility project's braille, tactile-graphic and sonification features, and the Tab-order journey works on any public site. It is for web developers, designers and accessibility testers who want to hear their pages without installing a screen reader.
+
+The transcripts are evidence for a person reviewing a change. They do not replace testing with real screen readers, or with the people who use them. It also runs on a free server. The first visit after a quiet spell can take up to a minute while it wakes up, each person gets 10 runs a day and everyone together 40, and a run with several journeys or both modes (the accessibility-tree walker and the emulated screen reader) can hit the 15-minute limit. Start small.
+
+README: [github.com/pisan-labs/screen-reader-journeys](https://github.com/pisan-labs/screen-reader-journeys)
+
+(Last update November 2026)
 
 ### [Delivery Canary](https://delivery-canary.hintwise.org)
 
