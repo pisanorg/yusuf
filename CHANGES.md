@@ -65,3 +65,5 @@ Format: `YYYY-MM-DD [type] description` (max 200 chars). Types: decision, plan, 
 2026-11-11 [doc] aiprojects: Qualified Overtime Checker added at the top of Latest; Misrepresentation Preflight moved from Latest to Developer Tools; count 103.
 
 2026-11-25 [doc] aiprojects: add Screen Reader Journeys (launched 25 Nov); Popup Check moves from Latest to Accessibility; 105 projects
+
+2026-11-26 [doc] aiprojects: add Tagging Doctor (launched 26 Nov); StepWise moves from Latest to Algorithms & Reasoning (now 11 entries); 106 projects

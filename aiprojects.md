@@ -37,16 +37,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
      "#meetme--joint-meeting-finder", two hyphens.
      ============================================================= -->
 <nav class="project-toc" aria-label="Project index">
-<p class="toc-count">105 projects, grouped by topic, newest first within each group</p>
+<p class="toc-count">106 projects, grouped by topic, newest first within each group</p>
 <h4 class="toc-group">Latest</h4>
 <ul>
+  <li><a href="#tagging-doctor">Tagging Doctor</a></li>
   <li><a href="#screen-reader-journeys">Screen Reader Journeys</a></li>
   <li><a href="#delivery-canary">Delivery Canary</a></li>
   <li><a href="#qualified-overtime-checker">Qualified Overtime Checker</a></li>
   <li><a href="#us-duty-price-sheet">US Duty Price Sheet</a></li>
   <li><a href="#donation-receipts">Donation Receipts</a></li>
   <li><a href="#health-page-tracker-watch">Health Page Tracker Watch</a></li>
-  <li><a href="#stepwise">StepWise</a></li>
 </ul>
 <h4 class="toc-group">Systems &amp; Architecture</h4>
 <ul>
@@ -62,6 +62,7 @@ Today's AI is a different beast: statistical models, billions of parameters, and
 </ul>
 <h4 class="toc-group">Algorithms &amp; Reasoning</h4>
 <ul>
+  <li><a href="#stepwise">StepWise</a></li>
   <li><a href="#tiny-brains-league">Tiny Brains League</a></li>
   <li><a href="#data-structure-city">Data Structure City</a></li>
   <li><a href="#edit-graph-lab">Edit Graph Lab</a></li>
@@ -186,6 +187,16 @@ Today's AI is a different beast: statistical models, billions of parameters, and
   <li><a href="#meetme--joint-meeting-finder">MeetMe</a></li>
 </ul>
 </nav>
+
+### [Tagging Doctor](https://tagging-doctor.hintwise.org)
+
+A lot of math, statistics, CS and physics courses run on years of LaTeX lecture notes, problem sets and exams. To make the PDFs accessible, the usual advice is "turn on tagging". Then the template breaks and nobody can tell you why. Tagging Doctor tries to. Drop a zip of a LaTeX project (or one `.tex` file) and in a few seconds it lists each class and package that blocks a tagged PDF, the file and line where it is loaded, what the LaTeX Project's tagging status list says about it, and a suggested fix. The scan runs in your browser, so nothing is uploaded for it. It suggests fixes you accept one at a time, gives you a patched copy with a diff, and drafts alt text for figures (with your own key, or HintWise's, which has a daily limit). Sign in to save scans under a course, see the whole course in one report, and run a real LuaLaTeX compile with a PDF/UA-2 check from veraPDF.
+
+It does not make a document accessible, and tagging in LaTeX is still a work in progress. Common packages such as `caption` and `pgfplots` are blockers today, so most real course documents will show a few. Beamer cannot be tagged at all. The test document, 22 pages of lecture notes with equations and TikZ pictures, went from 4,785 failed PDF/UA checks to 181 with the default fixes. That is progress. It is not a pass. The rest needs work by hand.
+
+README: [github.com/pisanuw/claude-built-apps/tree/main/tagging-doctor](https://github.com/pisanuw/claude-built-apps/tree/main/tagging-doctor)
+
+(Last update November 2026)
 
 ### [Screen Reader Journeys](https://screen-reader-journeys.hintwise.org)
 
